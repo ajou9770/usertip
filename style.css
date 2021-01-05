@@ -1,6 +1,5 @@
 body {
     display: flex;
-    box-sizing:border-box;
     justify-content: center;
     align-items: center;
     background-color: wheat;
@@ -9,6 +8,8 @@ body {
 }
 div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding-left: 200px;
     align-items: center;
 }
