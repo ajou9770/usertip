@@ -1,6 +1,5 @@
 body {
-    display:inline-block;
-    flex-direction: column;
+    display:flex;
     justify-content: center;
     align-items: center;
     background-color: wheat;
@@ -8,8 +7,8 @@ body {
     font-weight: 700;
 }
 div {
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    text-align: justify;
     justify-content: center;
     padding-left: 200px;
     align-items: center;
