@@ -1,6 +1,6 @@
 body {
     display:flex;
-    justify-content: center;
+    justify-content:end;
     align-items: center;
     background-color: wheat;
     font-size: xx-large;
@@ -8,8 +8,7 @@ body {
 }
 div {
     display:flex;
-    text-align: justify;
+    align-items:center;
     justify-content: center;
-    padding-left: 200px;
-    align-items: center;
+    margin-left: 300px;
 }
