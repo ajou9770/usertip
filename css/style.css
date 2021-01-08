@@ -1,0 +1,14 @@
+body {
+    display:flex;
+    justify-content:end;
+    align-items: center;
+    background-color: wheat;
+    font-size: xx-large;
+    font-weight: 700;
+}
+div {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-left: 300px;
+}
