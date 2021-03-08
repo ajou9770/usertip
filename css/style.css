@@ -4,7 +4,6 @@ body {
     align-items: center;
     background-color: wheat;
     font-size: xx-large;
-    font-weight: 700;
 }
 div {
     display:flex;
