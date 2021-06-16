@@ -118,19 +118,26 @@
     <br/><br/><br/>
     <div>
         <div class="card">    
-            <a href="http://pf.kakao.com/_dfhkK/72091020">1.해외(직구)겸용 Visa체크 카드 출시 이벤트 <i class="fas fa-chevron-right fa-lg"></i></a>
-            </div>
-            <br/>
-        <div class="card">    
-                <a href="http://pf.kakao.com/_dfhkK/72198958">2.신협 "ON뱅크" 100만 돌파 기념 이벤트 <i class="fas fa-chevron-right fa-lg"></i></a>
+                <a href="http://pf.kakao.com/_dfhkK/72198958">1.신협 "ON뱅크" 100만 돌파 기념 이벤트 <i class="fas fa-chevron-right fa-lg"></i></a>
                 </div>
                 <br/>    
     <div class="channel">    
-        <a href="http://pf.kakao.com/_dfhkK/70794928">3.카카오톡 채널 오픈 기념 이벤트 바로가기  <i class="fas fa-chevron-right fa-lg"></i></a>
+        <a href="http://ajou9770.github.io/notice/event.html">2.급여이체 변경 이벤트 바로가기  <i class="fas fa-chevron-right fa-lg"></i></a>
         </div>
         <br/>   
         <a href="http://pf.kakao.com/_dfhkK"></i><img src="img/id_type@2x.png"></a>
-        <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+        <div class="text"> 상담톡(1:1채팅 문의)<br/>
+            <i class="fas fa-sort-down fa-lg"></i></div>
+            <div
+  id="kakao-talk-channel-chat-button"
+  data-channel-public-id="_dfhkK"
+  data-title="consult"
+  data-size="small"
+  data-color="yellow"
+  data-shape="mobile"
+  data-support-multiple-densities="true"
+></div><br/>
     <div class="back">
     <a href="https://ajou9770.github.io/usertip/"><i class="fas fa-chevron-left fa-lg"></i>  이전화면으로 돌아가기</a>
     </div>
@@ -144,6 +151,21 @@
     <script
     src="https://kit.fontawesome.com/6478f529f2.js"
     crossorigin="anonymous"
-    ></script>    
+    ></script>
+    <script>
+        window.kakaoAsyncInit = function() {
+          Kakao.Channel.createChatButton({
+            container: '#kakao-talk-channel-chat-button',
+          });    
+        };
+       
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'kakao-js-sdk');
+      </script>     
 </body>
 </html>
