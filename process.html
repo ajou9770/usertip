@@ -134,7 +134,7 @@
             background-color:wheat;
             justify-content: left;
             border-radius: 10px;
-            height: 350px;
+            height:auto;
             width: 650px;
             text-align: left;
             font-size: 30px;
@@ -148,7 +148,7 @@
             border-radius: 10px;
             padding-left: 10px;
             padding-right: 10px;
-            height: 300px;
+            height:auto;
             width: 650px;
             margin-top: 10px;
             text-align: left;
@@ -171,6 +171,19 @@
             font-size:x-large;
             font-weight: 500;
             font-family: 'Times New Roman', Times, serif;
+        }
+        .text {
+            background-color:ivory;
+            border-radius: 30px;
+            opacity: 0.9;
+            height:auto;
+            width: 650px;
+            font-size:35px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:darkorange;
+            font-weight: 800;
+            padding-top: 10px;
+            padding-bottom: 10px;
         } 
   </style>
 </head>
@@ -216,8 +229,18 @@
     </div><br/>
     <a href="https://drive.google.com/file/d/1aTEyIzBPdnUw7TiMRQpjjRSOry3r_4uy/view?usp=sharing"> <img src="img/ajoumc.JPG"> </a>
                <br/>
-               </div>
-               <br/>
+               </div><br/>
+               <div class="text"> 상담톡(1:1채팅 문의)<br/>
+                <i class="fas fa-sort-down fa-lg"></i></div>
+                <div
+      id="kakao-talk-channel-chat-button"
+      data-channel-public-id="_dfhkK"
+      data-title="consult"
+      data-size="small"
+      data-color="yellow"
+      data-shape="mobile"
+      data-support-multiple-densities="true"
+    ></div><br/>
         <div class="mile">    
             <a href="https://ajou9770.github.io/usertip/"><i class="fas fa-chevron-left fa-lg"></i>  이전화면으로 돌아가기</a>
         </div><br/>
@@ -229,6 +252,21 @@
     <script
     src="https://kit.fontawesome.com/6478f529f2.js"
     crossorigin="anonymous"
-    ></script> 
+    ></script>
+    <script>
+        window.kakaoAsyncInit = function() {
+          Kakao.Channel.createChatButton({
+            container: '#kakao-talk-channel-chat-button',
+          });    
+        };
+       
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'kakao-js-sdk');
+      </script> 
 </body>   
 </html>
