@@ -189,13 +189,13 @@
         }
         .in {
         width: 30%;
-        height: 50px;
+        height: 100px;
         font-size: 30px;
         font-weight: 500;
       }
       .in-term {
         width: 10%;
-        height: 50px;
+        height: 100px;
         font-size: 30px;
         font-weight: 500;
       }
@@ -240,14 +240,7 @@
            (중도상환방법: 모바일 온뱅크에서 직접상환 또는 조합으로 유선 요청)<br/><br/>
         # 중도상환수수료: 없음<br/><br/>
         # 인지세: 1억원까지 면제<br/><br/>
-         <span><h2>1.대출금액을 입력하세요</h2></span>
-    <form>
-      <input class="in" type="number" required /><span class="dan"> 원</span>
-      <h2><span>2.대출기간을 입력하세요</span></h2>
-      <input class="in-term" type="number" required/><span class="dan"> 년</span><br/>
-      <div class="submit"><input class="out" type="submit"></div>
-    </form><br/>
-    <h1></h1>
+        <img src="img/insurnce_pee.JPG"><br/>
         <mark>※ 원금분활상환의 경우 상기 보증보험료의 약 60%내외로 산출됨<br/></mark><br/>
         ※ 대출상담(문의): 신협 ☎ 219-6052, 6971<br/></p>   
     </div><br/>
@@ -274,29 +267,6 @@
     src="https://kit.fontawesome.com/6478f529f2.js"
     crossorigin="anonymous"
     ></script>
-    <script>
-      const calInput = document.querySelector(".in");
-      const h = document.querySelector("h1");
-      const calForm = document.querySelector("form");
-      const term = document.querySelector(".in-term")
-
-      function cal(event) {
-        event.preventDefault();
-        const value = calInput.value;
-        const te = term.value;
-        if(te > 5) {
-           return alert("5년 까지만 입력하세요~~~😜")
-        }
-        let calculate = Math.round(value *1.1* 0.002317*te/10)*10;
-        if(calculate <10000) {
-            calculate = 10000;
-          return h.innerText =`최소 보증보험료 ${calculate.toLocaleString("ko-KR")} 원입니다`
-        }
-        h.innerText = `보증보험료는 ${calculate.toLocaleString("ko-KR")} 원입니다`;
-      }
-    
-      calForm.addEventListener("submit", cal);
-    </script>
     <script>
         window.kakaoAsyncInit = function() {
           Kakao.Channel.createChatButton({
