@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <title>우리조합 이용고 배당 지급 현황</title>
+    <title>신협 비과세 및 이용고 배당 안내</title>
     <style>
         body {
             display:flex;
@@ -17,16 +17,17 @@
             margin-bottom: 20px;  
         }
         div {
-            display: flex;
+            display: inline-flexbox;
             flex-direction: column;
-            text-align: end;
+            text-align: left;
             border-color: black;            
             border-radius: 10px;
             justify-content: center;
             align-items: center;
-            color: seashell;
+            color: black; 
         }
         .quzi {
+            display: flex;
             background-color:seagreen;
             border-radius: 30px;
             opacity: 0.8;
@@ -39,6 +40,7 @@
             margin-bottom: 5px;
         }
         .mile {
+            display: flex;
             background-color:seagreen;
             border-radius: 20px;
             opacity: 0.8;
@@ -55,7 +57,13 @@
             color: white;
             text-decoration: none;
         }
+        .content a {
+            text-decoration: none;
+            color:lightseagreen;
+            font-size: 30px;
+        }
         .back {
+            display: flex;
             background-color:indigo;
             border-radius: 30px;
             opacity: 0.8;
@@ -83,6 +91,7 @@
             font-family: 'Times New Roman', Times, serif;
         }
         .text {
+            display: flex;
             background-color:ivory;
             border-radius: 30px;
             opacity: 0.9;
@@ -95,26 +104,76 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
+        .content {
+            display: flex;
+            background-color:ivory;
+            padding: 10px;
+            border-radius: 10px;
+            border-width: 4px 1px;
+            border-style: solid;
+            border-color: cadetblue ivory;
+            opacity: 0.9;
+            height:auto;
+            width: 650px;
+            font-size:30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 800;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        #toc-content {
+           display: flex;
+  }
+        #toc-toggle {
+           cursor: pointer;
+           color: black;
+           font-size: 25px;
+           font-weight: 600;
+           text-align: left;
+  }
+        #toc-toggle:hover {
+         text-decoration: underline;
+  }
+        .list {
+           color:brown;
+           font-family:Arial, Helvetica, sans-serif;
+           font-weight: 600;
+           text-align: left;
+        }
     </style>
 </head>
 <body>
     <br/>
     <div>
-    <br/>
-    <img src="img/milethe(1).JPG"><br/>
-    <br/>
-    <img src="img/freerate_img.jpg"><br/>
-    <br/>
-    <img src="img/milethe(3).JPG"><br/>
-    <br/>
-    <img src="img/milego(1).JPG"><br/>
-    <br/>
-    <img src="img/miletop.JPG"><br/>
+        <h1>🤷‍♀️ 신협 비과세(저율) 예적금 </h1>
+        <img src="img/freerate_img.jpg"><br/>
+        <h1>🤷‍♀️이용고 배당이란(?)</h1>
+        <h2 class="content">
+            아주대의료원 신협 이용 실적에 따른 실적 배당을 말하며, 대출금, 요구불(입출금)예금, 적금, 체크카드사용, 자동납부(이체)실적, 보험료 납입 실적 등이
+            실적에 반영되어, 사업수익에 따른 배당율에 따라 지급됨.<br/><br/>
+            ✔거래실적(항목)별 이용고 배당 산출 (예시)<br/><br/>
+            ▶ 대출금 : 연 평균잔액 * 0.25%내외<br/>
+            ▶ 요구불(입출금)예금: 연 평균잔액 * 1.2%내외<br/>
+            ▶ 적금 : 연 평균잔액 * 0.45%내외 <br/>
+            ▶ 체크카드 : 연 사용액 * 0.85%내외<br/>
+            ▶ 자동납부(이체) : 월평균 건수 * 8,000원 내외<br/><br/>
+            ✔ 이용고배당 지급시기: 매년 2월경 (정기총회 배당율 결정 후)<br/>
+            </h2>
+            <h2 class="content"><a href="https://ajou9770.github.io/usertip/mile2019.html">☞ 최근3개년 이용고 배당 지급 현황 (자세히 보기)<i class="fas fa-chevron-right fa-lg"></i></a>
+            </h2>
+   <!-- ☞<span id="toc-toggle" onclick="openCloseToc()">자세히보기</span>
+<ol id="toc-content">
+  <li>거래 항목별 이용고 배당 산출 예시 <br/>
+   ✔ 요구불(입.출금)예금 : 급여이체 등 평균잔액의 약 1.2%정도 <br/>
+   ✔대출금:  
+   , 체크카드사용, 자동납부(이체)실적 등을 포함. <br/>
+   ☞ 위의 거래실적에 따라, 매년 2월 정기총회에서 배당율에 따라 이용고 배당 지급</li>
+</ol>-->
     <div class="mile">    
-    <a href="https://ajou9770.github.io/notice/milecal.html"> 예상 이용고 배당 조회(계산) <i class="fas fa-chevron-right fa-lg"></i> <i class="fas fa-chevron-right fa-lg"></i> </a>
+    <a href="https://ajou9770.github.io/notice/milecal.html"> 셀프 (예상)이용고 배당 조회(계산) <i class="fas fa-chevron-right fa-lg"></i> <i class="fas fa-chevron-right fa-lg"></i> </a>
     </div><br/>
     <div class="text"> 상담톡(1:1채팅 문의)<br/>
-        <i class="fas fa-sort-down fa-2x"></i></div>
+        <i class="fas fa-sort-down fa-2x"></i>
         <div
 id="kakao-talk-channel-chat-button"
 data-channel-public-id="_dfhkK"
@@ -128,12 +187,11 @@ data-support-multiple-densities="true"
         <div class="quzi">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsGT8JqYmZBVchaF5vKDJaedqUmaOleYeRNmw/viewform?usp=sf_link"
                 >간단한 퀴즈 풀고 응모 하기  <i class="fas fa-chevron-right fa-lg"></i></a>
-            </div><br/><br/>
+            </div><br/>
         <div class="back">    
     <a href="https://ajou9770.github.io/usertip/"><i class="fas fa-chevron-left fa-lg"></i>  이전화면으로 돌아가기</a>
-    </div><br/>
     </div>
-    <br />
+    </div>
     <br/>
     <div class="footer"> 
     <footer><h2>&copy ajou9770@ajoucu.page 아주대학교의료원 신협 031)219-6048 조합가입 또는 금융상담:219-6052,6971</h2></footer>
@@ -156,6 +214,17 @@ data-support-multiple-densities="true"
           js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
           fjs.parentNode.insertBefore(js, fjs);
         })(document, 'script', 'kakao-js-sdk');
+      </script>
+      <script>
+        function openCloseToc() {
+          if(document.getElementById('toc-content').style.display === 'block') {
+            document.getElementById('toc-content').style.display = 'none';
+            document.getElementById('toc-toggle').textContent = '자세히보기';
+          } else {
+            document.getElementById('toc-content').style.display = 'block';
+            document.getElementById('toc-toggle').textContent = '닫기';
+          }
+        }
       </script>    
 </body>
 </html>
