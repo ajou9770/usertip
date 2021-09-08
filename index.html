@@ -27,6 +27,7 @@
             color: seashell;
         }
         .quzi {
+          cursor: pointer;
             background-color:rebeccapurple;
             border-radius: 30px;
             height: 90px;
@@ -105,6 +106,42 @@
             color: snow;
             margin-bottom: 5px;  
        }
+       #modal {
+         width: 100%;
+         height: 220vh;
+         position: absolute;
+         z-index: 2;
+        }
+        #box {
+          border-radius: 10px;
+          opacity: 1;
+          position: absolute;
+          top: 50vh;
+          left: 75vh;
+          width: 500px;
+          height: 500px;
+          background-color: darkblue;
+        }
+        #box_btn{
+          cursor: pointer;
+          width: 100%;
+          display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+        }
+        #box_btn div:first-child {
+width: 250px;
+height: 100px;
+background-color: darkcyan;
+        }
+        #box_btn div:last-child {
+          width: 250px;
+height: 100px;
+background-color: dodgerblue;
+        }
+        .none {
+          display: none;
+        }
     </style>
 </head>
 <body>
@@ -128,7 +165,7 @@
     <a href="https://ajou9770.github.io/usertip/cham.html"> 참조합원 우대서비스 더 알아보기  <i class="fas fa-chevron-right fa-lg"></i></a>
     </div><br/><br/>
     <div class="quzi">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsGT8JqYmZBVchaF5vKDJaedqUmaOleYeRNmw/viewform?usp=sf_link">신입교직원 웰컴쿠폰(심플퀴즈&응모)  <i class="fas fa-chevron-right fa-lg"></i></a>
+    <a>신입교직원 웰컴쿠폰(심플퀴즈&응모)  <i class="fas fa-chevron-right fa-lg"></i></a>
     </div>
     <br />
     <br/>
@@ -173,6 +210,34 @@ data-support-multiple-densities="true"
     <div class="footer"> 
     <footer><h2>&copy ajou9770@ajoucu.page 아주대학교의료원 신협 031)219-6438 조합가입 또는 금융상담:219-6052,6971</h2></footer>
     </div>
+    <aside class="none" id="modal">
+     <div id="box">
+       <h2>신입교직원 맞나요? (신입교직원만 응모 가능) </h2>
+       <div id="box_btn">
+         <div>네</div>
+         <div>아니오</div>
+       </div>
+     </div>
+    </aside>
+    <script>
+      const modal = document.querySelector("#modal");
+      const link = document.querySelector(".quzi");
+      function handleLinkClick(){
+        modal.classList.remove("none");
+      }
+      function handleModalClick(event){
+        const target = event.target;
+if(target === modal || target === modal.querySelector("#box_btn div:last-child")){
+  modal.classList.add("none");
+} else if(target === modal.querySelector("#box_btn div:first-child")) {
+window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsGT8JqYmZBVchaF5vKDJaedqUmaOleYeRNmw/viewform?usp=sf_link";
+} else {
+  console.log("다른거 클랙해주시요")
+}
+      }
+      modal.addEventListener("click", handleModalClick)
+          link.addEventListener("click", handleLinkClick);
+    </script>
     <script
     src="https://kit.fontawesome.com/6478f529f2.js"
     crossorigin="anonymous"
