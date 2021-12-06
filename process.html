@@ -230,7 +230,7 @@
           width: 500px;
           height: 300px;
           color: whitesmoke;
-          background-color: rgb(47, 47, 119);
+          background-color: rgb(73, 73, 172);
           padding: 10px;
         }
         #box_btn{
@@ -276,7 +276,7 @@
         ▶ 출자 배당금: 매년2월 지급(2%~3%내외/비과세)<br/><br/>
         ☞ 가입 및 상담 (신협): 219-6052,6971<br/></p>
         <div class="mov"> 
-        <a>🖱출자금 급여공제 (변경)신청(가입 완료후)<i class="fas fa-chevron-right fa-lg"></i></a></div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYOjT7lh-0tBlFN0I2hKTekayoHqKhOPXjpbAeJoVJbEgwaQ/viewform?usp=sf_link">🖱출자금 급여공제 (변경)신청(가입 완료후)<i class="fas fa-chevron-right fa-lg"></i></a></div>
         </div><br/>
     <div class="app">
     <span><br/>
@@ -287,9 +287,9 @@
     </div><br/>
     <div class="sinhyup"> 
     <div class="cubank">    
-     신협 모바일 뱅킹 서비스 "온뱅크" 설치하기<br/>(아래 모바일 사양에 따라 클릭하세요) 
+      <a>신협 모바일 뱅킹 서비스 "온뱅크" 설치하기<i class="fas fa-download"></i></a> 
     </div><br/>
-    <a href="https://play.google.com/store/apps/details?id=kr.co.cu.onbank"><img src="img/googleplayimg.JPG"></a>
+    <!--<a href="https://play.google.com/store/apps/details?id=kr.co.cu.onbank"><img src="img/googleplayimg.JPG"></a>
     (안드로이드 계열_구글플레이)<br/><br/>
     <a href="https://apps.apple.com/kr/app/id1484456647"><img src="img/appstoreimg.JPG"></a>
     (아이폰 계열_애플)<br/<br/><br/><br/>
@@ -297,7 +297,7 @@
         <a href="https://app.ajoumc.or.kr/miaps/app">의료원 교직원 전용 모바일 앱 설치 <i class="fas fa-download fa-lg"></i></a>
     </div><br/>
     <a href="https://drive.google.com/file/d/1aTEyIzBPdnUw7TiMRQpjjRSOry3r_4uy/view?usp=sharing"> <img src="img/ajoumc.JPG"> </a>
-    (의료원 모바일 앱 포털 사용자 메뉴얼)<br/></div><br/>
+    (의료원 모바일 앱 포털 사용자 메뉴얼)<br/></div><br/>-->
                <div class="text"> 상담톡(1:1채팅 문의)<br/>
                 <i class="fas fa-sort-down fa-2x"></i></div>
                 <div
@@ -316,16 +316,25 @@
     <div class="end"> 
     <footer>&copy ajou9770@ajoucu.page 아주대학교의료원 신협 031)219-6438 조합가입 또는 금융상담:219-6052,6971</footer>
     </div>
-    <aside class="none" id="modal">
+    <!--<aside class="none" id="modal">
         <div id="box">
           <h2>조합원가입이 완료 되었나요?(출자금통장 개설 후 신청가능) </h2>
           <div id="box_btn">
             <div>👌네</div>
             <div>😥아니오</div>
           </div>
+        </div>-->
+       </aside>
+       <aside class="none" id="modal">
+        <div id="box">
+          <h2> 모바일기기 사양에 따라 "앱"을 설치하세요 </h2>
+          <div id="box_btn">
+            <div><i class="fab fa-google-play"></i>안드로이드</div>
+            <div><i class="fab fa-apple"></i>아이폰계열</div>
+          </div>
         </div>
        </aside>
-       <script>
+       <!--<script>
          const modal = document.querySelector("#modal");
          const link = document.querySelector(".mov");
          function handleLinkClick(){
@@ -335,7 +344,7 @@
            const target = event.target;
    if(target === modal || target === modal.querySelector("#box_btn div:last-child")){
      modal.classList.add("none");
-     <!--(아니오선택후 링크걸기)window.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";-->
+     (아니오선택후 링크걸기)window.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
    } else if(target === modal.querySelector("#box_btn div:first-child")) {
    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfYOjT7lh-0tBlFN0I2hKTekayoHqKhOPXjpbAeJoVJbEgwaQ/viewform?usp=sf_link";
    } else {
@@ -344,7 +353,27 @@
          }
          modal.addEventListener("click", handleModalClick)
              link.addEventListener("click", handleLinkClick);
-       </script>
+       </script>-->
+       <script>
+        const modal = document.querySelector("#modal");
+        const link = document.querySelector(".cubank");
+        function handleLinkClick(){
+          modal.classList.remove("none");
+        }
+        function handleModalClick(event){
+          const target = event.target;
+  if(target === modal || target === modal.querySelector("#box_btn div:last-child")){
+    modal.classList.add("none");
+    window.location.href = "https://apps.apple.com/kr/app/id1484456647";
+    } else if(target === modal.querySelector("#box_btn div:first-child")) {
+    window.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+  } else {
+    console.log("다른거 클릭해주시요")
+  }
+        }
+        modal.addEventListener("click", handleModalClick)
+            link.addEventListener("click", handleLinkClick);
+      </script>
     </div>
     <script
     src="https://kit.fontawesome.com/6478f529f2.js"
