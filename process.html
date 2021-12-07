@@ -359,13 +359,12 @@
         }
         function handleModalClick(event){
           const target = event.target;
-  if(target === modal || target === modal.querySelector("#box_btn div:last-child")){
-    modal.classList.add("none");
+  if(target === modal.querySelector("#box_btn div:last-child")){
     window.location.href = "https://apps.apple.com/kr/app/id1484456647";
-    } else if(target === modal.querySelector("#box_btn div:first-child")) {
+  } else if(target === modal.querySelector("#box_btn div:first-child")) {
     window.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
-  } else {
-    console.log("다른거 클릭해주시요")
+  } else if(target === modal){
+    modal.classList.add("none");
   }
         }
         modal.addEventListener("click", handleModalClick)
