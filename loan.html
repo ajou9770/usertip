@@ -22,7 +22,7 @@
             color: darkcyan;
             text-decoration: none;
             font-weight: 700;
-            font-size: 35px;
+            font-size: 15px;
         }
         a:active {
         transform: scale(0.98);
@@ -264,6 +264,41 @@
     padding: 10px;
     background-color:whitesmoke;
     }
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: 600;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
   </style>
 </head>
 <body>
@@ -299,7 +334,19 @@
            (중도상환방법: 모바일 온뱅크에서 직접상환 또는 조합으로 유선 요청)<br/><br/>
         # 중도상환수수료: 없음<br/><br/>
         # 인지세: 1억원까지 면제<br/>
-        <div class="loanbox">
+        
+<div class="dropdown">
+  <button class="dropbtn">대출계산기(클릭)</button>
+  <div class="dropdown-content">
+    <a href="http://ajou9770.github.io/notice/loanlimit.html">🔎대출한도조회</a>
+    <a href="http://ajou9770.github.io/notice/loanrate.html">🔎대출이자조회</a>
+    <a href="http://ajou9770.github.io/notice/loaninsu.html">🔎보증보험료조회</a>
+    <a href="http://ajou9770.github.io/notice/sgicsign.html">🔎보증보험개인정보동의방법</a>
+</div>
+</div>
+<br/>
+        
+        <!--<div class="loanbox">
             <h2><mark style="background:linear-gradient(to top, darkgoldenrod 20%, transparent 30%)">[대출 계산기(한도, 금리 등)]</mark></h2>
             <a href="http://ajou9770.github.io/notice/loanlimit.html"> 🔎 셀프 신용(보증)대출한도 조회 <i class="fas fa-chevron-right fa-lg"></i></a>
             <br/>
@@ -308,7 +355,7 @@
             </div>
             <a href="http://ajou9770.github.io/notice/sgicsign.html" class="boxstyle"> ✔<mark style="background:linear-gradient(to top, blue 10%, transparent 20%)">서울보증 개인정보동의.전자서명 방법 </mark><i class="fas fa-chevron-right fa-lg"></i></a><br/>        
             ※ 대출상담(문의): 신협<a href="tel:031-219-6052">☎ 219-6052, 6971</a><br/>
-        </div>
+        </div>-->
             <!--<div class="mile">
         <a style="color: brown"> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBQx5DIakh9L_yfk9pQncO76LeS5aPPMgqWfdb76a7pAU3ZQ/viewform?usp=sf_link"> 비대면(온라인)대출 상담 신청 <i class="fas fa-chevron-right fa-lg"></i> </a></div>
         (구글계정 로그인 및 개인신용정보수집.이용동의 필요) 
