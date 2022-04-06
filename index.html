@@ -186,6 +186,47 @@
         }
         .none {
           display: none;
+        }
+          #infomodalBox {
+              position: absolute;
+              left: 5px;
+              right: 5px;
+              top: 20vh;
+            }
+            #infomodal {                
+              width: auto;
+              height: auto;
+              border-radius: 10px;
+              margin: 10px;
+              background-color: peru;
+              padding: 20px;
+              font-size: 20px;
+              font-weight: 500;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              display: flex;
+              flex-direction: column;
+              justify-content: left;
+              align-items:center;
+              text-align: left;
+            }
+          #infobtn {
+              font-size:13px;
+              font-weight:600;
+              height:auto;
+              width:auto;
+              padding:5px;
+              background-color: white;
+              border: 2px 6px 6px 2px;
+              }
+            #infomodal_input {
+              width: 100%;
+              padding: 10px;
+              font-size:20px;
+              background-color: tomato;
+              font-weight:650;  
+              display:inline-block;
+              justify-content: space-between;
+            }  
     </style>
 </head>
 <body>
@@ -275,6 +316,20 @@ data-support-multiple-densities="true"
        </div>
      </div>
     </aside>
+    <section id="infomodalBox">
+      <aside id="infomodal">
+        <div></div>
+       <span> 신입 교직원의 아주대의료원 신협 이용편의 제공을 위해, 이용방법 및 혜택을 정리하였습니다. 
+          잠깐 둘러 보시면 신협 이용에 많은 도움이 되실 것입니다. 아울러, 신입교직원은 🎁월컴쿠폰(심플퀴즈응모)도 신청하세요. </span>
+          <div id="infomodal_input">
+          <div>
+            <label for="infoinput">하루동안 안보기</label>
+            <input id="infoinput" type="checkbox" />
+          </div>
+          <button id="infobtn">확인</button>
+        </div>
+      </aside>
+    </section>
     <script>
       const modal = document.querySelector("#modal");
       const link = document.querySelector(".quzi");
@@ -324,6 +379,30 @@ window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsG
           js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
           fjs.parentNode.insertBefore(js, fjs);
         })(document, 'script', 'kakao-js-sdk');
-      </script>   
+      </script>
+      <script>
+        const section = document.getElementById("infomodalBox");
+        const btn = document.getElementById("infobtn");
+        const input = document.getElementById("infoinput");
+        const localItem = parseInt(localStorage.getItem("alertTime"));
+        const newDate = Date.now();
+        const calculate = newDate - localItem;
+
+        console.log(newDate);
+
+        btn.addEventListener("click", () => {
+          section.classList.add("none");
+        });
+  
+        input.addEventListener("click", () => {
+          section.classList.add("none");
+          localStorage.setItem("alertTime", JSON.stringify(newDate));
+        });
+        if (calculate < 1000 * 60 * 60 * 24 * 1) {
+          section.classList.add("none");
+        } else {
+          console.log("good");
+        }
+      </script>      
 </body>
 </html>
