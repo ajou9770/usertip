@@ -30,29 +30,57 @@
             color: seashell;
         }
         .quzi {
-            height: 80px;
-            width: 600px;
-            font-size:30px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 700;
-            color: snow;
-            margin-bottom: 5px;
-            border-radius: 50px;
-            background-color: #75cf36; 
-            border-color: #366713; 
-            -webkit-box-shadow: 0 3px 0 #366713; 
-            box-shadow: 0 3px 0 #366713;
-        }
-        .quzi:hover{
-          background-color: tomato;
-        } 
-        .quzi:active {
-          outline: none; 
-          -webkit-box-shadow: none; 
+          width: 380px;
+          height: 60px;
+          font-size: 20px;
+          color: #fff;
+          border-radius: 5px;
+          padding: 10px 25px;
+          font-family: 'Lato', sans-serif;
+          font-weight: 550;
+          background: transparent;
+          cursor: pointer;
+          transition: all 0.3s ease;
           position: relative;
-          top: 2px;
-          box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+          display: inline-block;
+          box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+          7px 7px 20px 0px rgba(0,0,0,.1),
+          4px 4px 5px 0px rgba(0,0,0,.1);
+          outline: none;  
         }
+        .btn-9 {
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-9:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-color: #1fd1f9;
+background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  transition: all 0.3s ease;
+}
+.btn-9:hover {
+  background: transparent;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  color: #fff;
+}
+.btn-9:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
         .cham {
             height: 60px;
             width: 450px;
@@ -60,7 +88,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 700;
             color: snow;
-            border-radius: 50px;
+            border-radius: 10px;
             margin-bottom: 5px;
             background-color: #75cf36; 
             border-color: #366713; 
@@ -78,24 +106,92 @@
           box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
         }
         .mile {
-          background-color: #1d7794 ; 
-          border-color: #114657; 
-          -webkit-box-shadow: 0 3px 0 #114657; 
-          box-shadow: 0 3px 0 #114657;
+          width: 580px;
           height: 80px;
-          width: 600px;
-          font-size:30px;
-          font-weight: 600;
-        }
-        .mile:hover {
-          background-color:#01a183;
-        }
-        .mile:active {
-          outline: none; 
-          -webkit-box-shadow: none; 
+          font-size: large;
+          color: #fff;
+          border-radius: 5px;
+          padding: 10px 25px;
+          font-family: 'Lato', sans-serif;
+          font-weight: 500;
+          background: transparent;
+          cursor: pointer;
+          transition: all 0.3s ease;
           position: relative;
-          top: 2px;
-          box-shadow: 1px 1px 0 rgb(0,0,0,0.5) }
+          display: inline-block;
+          box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+          7px 7px 20px 0px rgba(0,0,0,.1),
+          4px 4px 5px 0px rgba(0,0,0,.1);
+          outline: none;
+        }
+        .btn-3 {
+         background: rgb(0,172,238);
+         background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+         width: 200px;
+         height: 50px;
+         line-height: 42px;
+         padding: 0;
+         border: none;
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+   box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
         a {
             text-decoration-color: none;
             color: white;
@@ -105,7 +201,7 @@
         transform: scale(0.98);
         }
         .call a {
-            font-size: 35px;
+            font-size: 25px;
             text-align: center;
             font-weight: 600;
             color:chocolate;
@@ -131,7 +227,7 @@
             opacity: 0.9;
             height:auto;
             width: 650px;
-            font-size:35px;
+            font-size:25px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color:darkorange;
             font-weight: 800;
@@ -157,26 +253,64 @@
         transform: scale(0.98);
         }
        .proce {
-            height: 80px;
-            width: 600px;
-            font-size:30px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 500;
-            background-color: #2c3d51; 
-            border-color: #2c3d51; 
-            -webkit-box-shadow: 0 3px 0 #080c0f; 
-            box-shadow: 0 3px 0 #080c0f;  
+        width: 580px;
+          height: 80px;
+          font-size: large;
+          color: #fff;
+          border-radius: 5px;
+          padding: 10px 25px;
+          font-family: 'Lato', sans-serif;
+          font-weight: 500;
+          background: transparent;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          position: relative;
+          display: inline-block;
+          box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+          7px 7px 20px 0px rgba(0,0,0,.1),
+          4px 4px 5px 0px rgba(0,0,0,.1);
+          outline: none;     
        }
-       .proce:hover {
-        background-color:#01a183;
-       }
-       .proce:active { 
-        outline: none; 
-        -webkit-box-shadow: none; 
-        position: relative;
-        top: 2px;
-        box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
-        }
+       .btn-5 {
+  width: 200px;
+  height: 50px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255,27,0);
+background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+}
+.btn-5:hover {
+  color: #f0094a;
+  background: transparent;
+   box-shadow:none;
+}
+.btn-5:before,
+.btn-5:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-5:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
        .mile:active {
         transform: scale(0.98);
         }
@@ -284,7 +418,7 @@
               width: max-content;
               height: max-content;
               text-align: left;
-              font-size: 25px;
+              font-size: 28px;
               padding: 10px;
             }
             input[type=checkbox] {
@@ -312,62 +446,66 @@
         우리신협은 이용실적에 따른 이용고 배당을 드립니다. 
       </div>
       <br/>
-    <div class="mile">    
-    <a href="https://ajou9770.github.io/usertip/mile.html">💰비과세&이용고 배당 자세히 보기 <i class="fas fa-chevron-right fa-lg"></i></a>
-    </div><br/>
+    <button class="mile btn-3">    
+    <a href="https://ajou9770.github.io/usertip/mile.html">💰More Read <i class="fas fa-chevron-right fa-lg"></i></a>
+    </button><br/>
     <div class="smalltitle">
-      비과세출자금 통장을 개설하시면 조합원 가입 완료<br/>
-      신협 비과세 예적금도 만들어 보세요 
+    비과세출자금 통장을 개설하시면 조합원 가입 완료<br/>
+    신협 비과세 예적금으로 절세 혜택도 챙기세요~~ 
     </div>
     <br/>
-    <div class="proce">
-        <a href="https://ajou9770.github.io/usertip/process.html"> 📝조합가입(온라인)& 예적금 개설하기  <i class="fas fa-chevron-right fa-lg"></i></a>
-        </div>
+    <button class="proce btn-5">
+        <a href="https://ajou9770.github.io/usertip/process.html"> 📝 More Read <i class="fas fa-chevron-right fa-lg"></i></a>
+    </button>
         <br/>
         <div class="smalltitle">
           교직원은 최대 2억원까지 저금리 대출을 받으실 수 있습니다<br/>
           신협 대출은 중도상환이 자유롭고, 인지세가 면제 됩니다. 
         </div>
         <br/>
-        <div class="mile">
-            <a href="https://ajou9770.github.io/usertip/loan.html"> 💵 신협 대출 자세히 보기  <i class="fas fa-chevron-right fa-lg"></i></a>
-            </div>
+        <button class="mile btn-3">
+            <a href="https://ajou9770.github.io/usertip/loan.html"> 💵 More Read  <i class="fas fa-chevron-right fa-lg"></i></a>
+        </button>
             <br/>
             <div class="smalltitle">
               전국 소노호텔앤리조트(구, 대명리조트) 실시간 예약 가능 <br/>
               조합원번호로 간편 로그인하시고 회원가로 이용 하세요 
             </div>
             <br/>
-    <div class="proce">
-        <a href="https://ajou9770.github.io/usertip/dm.html"> ⛺소노호텔앤리조트(구,대명)이용 방법 보기<i class="fas fa-chevron-right fa-lg"></i></a>
-        </div>
+    <button class="proce btn-5">
+        <a href="https://ajou9770.github.io/usertip/dm.html"> ⛺ More Read <i class="fas fa-chevron-right fa-lg"></i></a>
+    </button>
         <br/>
         <div class="smalltitle">
           신협을 주거래로 이용하시면 참조합원이 됩니다.<br/>
           생일쿠폰, 소노호텔앤리조트 우대 혜택 등이 있어요 
         </div>
         <br/>
-        <div class="mile">    
-          <a href="https://ajou9770.github.io/usertip/cham.html"> 🏅참조합원 우대서비스 자세히 보기  <i class="fas fa-chevron-right fa-lg"></i></a>
-           </div><br/>
-           <button class="cham">
+        <button class="mile btn-3">    
+          <a href="https://ajou9770.github.io/usertip/cham.html"> 🏅 More Read  <i class="fas fa-chevron-right fa-lg"></i></a>
+        </button><br/>
+          <!-- <button class="cham">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeea0KWUPrBB_G6YsGjXibbNnmSy-NxY_ok5xN6u4soKfM91Q/viewform?usp=sf_link">참조합원세트완성 🎫쿠폰신청하기<i class="fas fa-chevron-right fa-lg"></i></a></button>
             <div class="smalltitle" style="font-size: 20px; color: red;">
             ※참조합원 세트: 신협급여이체+체크카드+신협모바일ON뱅크 
             </div>
-            <br/>
-            <div class="proce">
-            <a href="https://ajou9770.github.io/usertip/event.html"> 🎉진행중인 이벤트 보기  <i class="fas fa-chevron-right fa-lg"></i></a>
-            </div>
+            <br/>-->
+            <div class="smalltitle">
+              진행중인 이벤트가 있습니다.. <br/>
+              자세한 사항은 아래 이벤트 보기... 
+            </div><br/>
+            <button class="proce btn-5">
+            <a href="https://ajou9770.github.io/usertip/event.html"> 🎉 Read Event!!  <i class="fas fa-chevron-right fa-lg"></i></a>
+            </button>
             <br/>
             <div class="smalltitle">
             신입 교직원에게 드리는 특별한 🎁선물<br/>
             웰컴쿠폰 신청하세요.(간단퀴즈 응모 후 전송) 
           </div>
           <br/>
-        <div class="quzi">
+        <button class="quzi btn-9">
           <a> 🎁웰컴쿠폰 (심플퀴즈&쿠폰신청)  <i class="fas fa-chevron-right fa-lg"></i></a>
-          </div>
+        </button>
           <br />
         <br/>
     <!--<a href="http://pf.kakao.com/_dfhkK"><img src="img/id_type.png"></a>
@@ -389,11 +527,11 @@ data-support-multiple-densities="true"
 id="kakao-talk-channel-chat-button"
 data-channel-public-id="_dfhkK"
 data-title="consult"
-data-size="large"
+data-size="small"
 data-color="yellow"
 data-shape="mobile"
 data-support-multiple-densities="true"
-></div><br/>
+></div>
 <!--<a href="http://ajou9770.github.io/usertip/xmascake.html"><img src="img/banner_cake02.jpg"></a>-->
     <div class="footer"> 
     <footer><h2> 아주대학교의료원 신용협동조합 <br/>⏰업무시간: 평일 8시30분 ~ 17시<br/> ⛳병원본관 지하2층(유전체자원센타옆)<address>
@@ -418,7 +556,7 @@ data-support-multiple-densities="true"
           <div id="infomodal_input">
           <div>
             <label for="infoinput" style="font-size:x-large; font-weight: 600;">하루동안 안보기</label>
-            <input id="infoinput" type="checkbox" size="10px" />
+            <input id="infoinput" type="checkbox" />
           </div>
           <button id="infobtn">닫기</button>
         </div>
@@ -448,7 +586,7 @@ window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsG
     crossorigin="anonymous"
     ></script>
     <script>
-    const Button = document.querySelector("button"); 
+    const Button = document.querySelector(".cham button"); 
     
     function handleBtnClick () {
       alert("신협 조합원 가입(출자금통장 개설) 후 신청하실 수 있습니다.")
