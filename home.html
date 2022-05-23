@@ -35,7 +35,7 @@
     <br/>
     <br/>
     <div>
-        <button class="print"><a href="http://gw.aumc.ac.kr/">🖨️원천징수영수증출력<br/>(그룹웨어로그인)</a></button>
+        <button id="print"><a href="http://gw.aumc.ac.kr/">🖨️원천징수영수증출력<br/>(그룹웨어로그인)</a></button>
     </div>
     <div>
         <button class="sign"><a href="https://www.sgic.co.kr/chp/main.mvc">📝서울보증보험전자서명</a></button>
@@ -48,12 +48,14 @@
         <button class="usertip"><a href="http://ajou9770.github.io/usertip">🔊신협이용안내(이용꿀팁)</a></button>
     </div>
     <script>
-        const Button = document.querySelector(".print button"); 
-        function handleBtnClick () {
+       const button = document.querySelector("#print");
+
+       function buttonhandleClick () {
+             console.log("버튼클릭");
           alert("원천징수영수증 출력시 첫페이지만 지정하여 출력해 주시기 바랍니다")
         }
-    
-        Button.addEventListener("click", handleBtnClick);
+
+        button.addEventListener("click", buttonhandleClick);
     </script>    
 </body>
 
