@@ -423,8 +423,42 @@ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
             }
             input[type=checkbox] {
               transform : scale(1.5);
-            }  
-    </style>
+            }
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  width: 450px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 35px;
+  font-weight: 600;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 450px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.none {
+ display: none;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}  
+</style>
 </head>
 <body>
   <!--
@@ -533,7 +567,12 @@ data-shape="mobile"
 data-support-multiple-densities="true"
 ></div>
 <!--<a href="http://ajou9770.github.io/usertip/xmascake.html"><img src="img/banner_cake02.jpg"></a>-->
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYOjT7lh-0tBlFN0I2hKTekayoHqKhOPXjpbAeJoVJbEgwaQ/viewform?embedded=true" width="720" height="2284" frameborder="0" marginheight="0" marginwidth="0">출자금급여공제(변경)신청서</iframe> 
+<div class="dropdown">
+<button class="dropbtn">출자금급여공제 신청</button>
+<div class="dropdown-content">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYOjT7lh-0tBlFN0I2hKTekayoHqKhOPXjpbAeJoVJbEgwaQ/viewform?embedded=true" width="720" height="2284" frameborder="0" marginheight="0" marginwidth="0">출자금급여공제(변경)신청서</iframe>
+</div>
+</div>
 <br/>
 <div class="footer"> 
     <footer><h2> 아주대학교의료원 신용협동조합 <br/>⏰업무시간: 평일 8시30분 ~ 17시<br/> ⛳병원본관 지하2층(유전체자원센타옆)<address>
