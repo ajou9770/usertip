@@ -2974,7 +2974,7 @@ function handleSumbit(event) {
   value = formInput.value;
   const show = localStorage.getItem(value);
   if(value === "") {
-    alert("사번을 입력 후 제출해 주세요😃"); 
+    alert("사번 입력 후 조회 바랍니다 😃"); 
     h3.innerText="";
   }else if(show === null) {
     h3.innerText = `["${value}"는 찾을수가 없네요😢. 2022년 4월 30일까지 가입 조합원에 한해 조회 가능합니다. 그 외 조합원은 신협으로 문의 바랍니다.👌]`;
