@@ -178,6 +178,22 @@
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+.form-input-one {
+ width: 60%;
+ height: 60px;
+ font-size: 30px;
+ font-weight: 600;
+ margin-right: 10px;
+}
+.form-input-two {
+ width: 35%;
+ height: 60px;
+ font-weight: 600;
+ font-size: 30px;
+}
+.form-input-two:active {
+ transform: scale(0.98);
+}
 </style>
 </head>
 <body>
@@ -194,13 +210,13 @@
                  ☞ 아이디: <mark>조합원번호</mark><br/> 
                  ☞ 초기비밀번호:<mark>조합원번호</mark><br/><br/>
                  </span>
-                 <div class="dropdown">
-                    <button class="dropbtn">🔎조합원번호 조회하기</button>
-                    <div class="dropdown-content">
-                    <iframe src="http://ajou9770.github.io/notice/member.html" width="680px" height="750px">조합원번호조회</iframe>
-                  </div>
-                  </div>
-                  <br/>
+                 <h3><mark style="background: linear-gradient(to top, mediumspringgreen 20%, transparent 30%);">✔본인의 의료원 "사원번호"로 조합원 번호를 조회하세요</mark><br/></h3>
+                 <form>
+                 <input class="form-input-one" type="number" placeholder=" 사번 입력" />
+                 <input class="form-input-two" type="submit" value="조회하기"/>
+                 </form>
+                 <u><h2 style="color: blue;"></h2></u>
+                 <br/>
                  ○ 조합원 년간 이용가능일: 주말(공휴일)2박, 주중5일<br/>
                  ○ 예약방법: 전용사이트에서 실시간 예약 (단, 주말.공휴일은 관리자 승인 후 확정)<br/><br/>
                  
@@ -274,6 +290,7 @@
           js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
           fjs.parentNode.insertBefore(js, fjs);
         })(document, 'script', 'kakao-js-sdk');
-      </script>    
+      </script>
+      <script src="member.js"></script>    
 </body>
 </html>
