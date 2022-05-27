@@ -144,7 +144,41 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
-    </style>
+        .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  width: 450px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 35px;
+  font-weight: 600;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 450px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.none {
+  display: none;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
 </head>
 <body>
   <div style="width: 100;">
@@ -156,12 +190,20 @@
                ○ 회원아이디: 조합원번호(기등록되어 있음)<br/>
                   <mark>※ 신규입사자는 매월 등록후 안내(카카오톡 알림톡)</mark> <br/>
                ○ 이용절차: 비밀번호 변경 및 개인정보 입력 후 이용.<br/><br/>      
-                 ☞ 법인사코드: AJOUMCCU<br/>
-                 ☞ 아이디: 조합원번호<br/> 
-                 ☞ 초기비밀번호: 조합원번호<br/><br/>
+                <span>☞ 법인사코드:<mark>AJOUMCCU</mark><br/>
+                 ☞ 아이디: <mark>조합원번호</mark><br/> 
+                 ☞ 초기비밀번호:<mark>조합원번호</mark><br/><br/>
+                 </span>
+                 <div class="dropdown">
+                    <button class="dropbtn">🔎조합원번호 조회하기</button>
+                    <div class="dropdown-content">
+                    <iframe src="http://ajou9770.github.io/notice/member.html" width="680px" height="750px">조합원번호조회</iframe>
+                  </div>
+                  </div>
+                  <br/>
                  ○ 조합원 년간 이용가능일: 주말(공휴일)2박, 주중5일<br/>
                  ○ 예약방법: 전용사이트에서 실시간 예약 (단, 주말.공휴일은 관리자 승인 후 확정)<br/><br/>
-               
+                 
                  ※ 조합원번호는 아래 "조합원번호(ID) 조회"에서 확인 가능합니다.<br/><br/> 
                   ✔그 외 비밀번호 초기화 등은 상담톡으로 직원에게 요청해 주세요<br/><br/>
                   ✔1년 이상 로그인이 되지 않는 경우, 계정휴면상태로 전환됩니다. <br/>
@@ -170,6 +212,13 @@
                     ○ 할인적용 골프장: 비발디CC(9GC포함), 델피노CC (속초) 그외 제휴 골프장<br/>
                     ○ 이용방법: 무기명 회원카드 일회용 바코드를 발급받아(아래 버튼) 그린피 계산시 제출.(라운딩 당일사용)<br/>
                     ※ 무기명회원 일회용 바코드는 가급적 라운딩 전일까지 신청해 주시기 바랍니다. (공휴일 등은 바코드 발급이 어려움)<br/><br/>
+                    <div class="dropdown">
+                        <button class="dropbtn">💳무기명회원 바코드 신청</button>
+                        <div class="dropdown-content">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEzg6LrPX98VBL_Dz8o76eSY1kWEKefrrmVZM8GruxBB9_Yw/viewform?usp=sf_link" width="680px" height="750px">무기명회원바코드신청</iframe>
+                      </div>
+                      </div>
+                      <br/>
                     <div class="mile">
                       <a href="https://www.dgolfclub.com/"> ⛳소노펠리체 골프클럽 홈페이지 <i class="fas fa-chevron-right fa-lg"></i></a>
                       </div><br/>
@@ -184,14 +233,8 @@
                     </div>
                     </div><br/>
           <div class="mile">
-          <a href="https://iris.daemyung.com/iris/common/dispatcher/dmparse.do?menuCd=IRSMMain">💻조합원 전용 예약사이트 <i class="fas fa-chevron-right fa-lg"></i></a>
+          <a href="https://iris.daemyung.com/iris/common/dispatcher/dmparse.do?menuCd=IRSMMain">📅예약 하기 <i class="fas fa-chevron-right fa-lg"></i></a>
           </div><br/>
-          <div class="mile">
-            <a href="https://ajou9770.github.io/notice/member.html">🔎조합원번호(ID) 조회 <i class="fas fa-chevron-right fa-lg"></i></a>
-            </div><br/>
-            <div class="mile">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScEzg6LrPX98VBL_Dz8o76eSY1kWEKefrrmVZM8GruxBB9_Yw/viewform?usp=sf_link"> 🎫무기명 카드 일회용바코드 신청하기 <i class="fas fa-chevron-right fa-lg"></i></a>
-              </div>
           <br/>
           <div class="text"> 상담톡(1:1채팅 문의)<br/>
             <i class="fas fa-sort-down fa-2x"></i></div>
