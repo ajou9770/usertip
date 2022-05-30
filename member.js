@@ -2973,6 +2973,7 @@ function handleSumbit(event) {
   event.preventDefault();
   value = formInput.value;
   const show = localStorage.getItem(value);
+
   if (value === "") {
     alert("사번 입력 후 조회 바랍니다 😃");
     h3.innerText = "";
