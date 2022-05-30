@@ -3,7 +3,7 @@ const formInput = form.querySelector("input:first-child");
 const h2 = document.querySelector("h2");
 const h3 = document.querySelector("h3");
 
-// ※ 개인정보 도용시 법적 처벌을 받을 수 있습니다. // 
+// ※ 개인정보 도용시 법적 처벌을 받을 수 있습니다. //
 localStorage.setItem("1998001", "4795484");
 localStorage.setItem("2003001", "4796584");
 localStorage.setItem("2007003", "4798180");
@@ -2771,27 +2771,27 @@ localStorage.setItem("803014", "19565562");
 localStorage.setItem("803260", "4794037");
 localStorage.setItem("1998001", "4795484");
 localStorage.setItem("2000003", "4795888");
-localStorage.setItem("107910"," 24826949");
-localStorage.setItem("114199"," 26056421");
-localStorage.setItem("113977"," 26075543");
-localStorage.setItem("112963"," 26076406");
-localStorage.setItem("113819"," 26094227");
-localStorage.setItem("113783"," 26094236");
-localStorage.setItem("113960"," 26096180");
-localStorage.setItem("114146"," 26100510");
-localStorage.setItem("114111"," 26108264");
-localStorage.setItem("114037"," 26112097");
-localStorage.setItem("114023"," 26112293");
-localStorage.setItem("113948"," 26115782");
-localStorage.setItem("114222"," 26116372");
-localStorage.setItem("114096"," 26116504");
-localStorage.setItem("500979"," 26117946");
-localStorage.setItem("114088"," 26118985");
-localStorage.setItem("703993"," 26119266");
-localStorage.setItem("113764"," 26124227");
-localStorage.setItem("114036"," 26125534");
-localStorage.setItem("500978"," 26126853");
-localStorage.setItem("500862"," 26128763");
+localStorage.setItem("107910", " 24826949");
+localStorage.setItem("114199", " 26056421");
+localStorage.setItem("113977", " 26075543");
+localStorage.setItem("112963", " 26076406");
+localStorage.setItem("113819", " 26094227");
+localStorage.setItem("113783", " 26094236");
+localStorage.setItem("113960", " 26096180");
+localStorage.setItem("114146", " 26100510");
+localStorage.setItem("114111", " 26108264");
+localStorage.setItem("114037", " 26112097");
+localStorage.setItem("114023", " 26112293");
+localStorage.setItem("113948", " 26115782");
+localStorage.setItem("114222", " 26116372");
+localStorage.setItem("114096", " 26116504");
+localStorage.setItem("500979", " 26117946");
+localStorage.setItem("114088", " 26118985");
+localStorage.setItem("703993", " 26119266");
+localStorage.setItem("113764", " 26124227");
+localStorage.setItem("114036", " 26125534");
+localStorage.setItem("500978", " 26126853");
+localStorage.setItem("500862", " 26128763");
 localStorage.setItem("114134", "26288501");
 localStorage.setItem("500862", "26128763");
 localStorage.setItem("114114", "26161484");
@@ -2970,29 +2970,30 @@ localStorage.setItem("114758", "27187194");
 localStorage.setItem("500863", "25804090");
 
 function handleSumbit(event) {
-  event.preventDefault(); 
+  event.preventDefault();
   value = formInput.value;
   const show = localStorage.getItem(value);
-  if(value === "") {
-    alert("사번 입력 후 조회 바랍니다 😃"); 
-    h3.innerText="";
-  }else if(show === null) {
+  if (value === "") {
+    alert("사번 입력 후 조회 바랍니다 😃");
+    h3.innerText = "";
+  } else if (show === null) {
     h3.innerText = `["${value}"는 찾을수가 없네요😢. 2022년 4월 30일까지 가입 조합원에 한해 조회 가능합니다. 그 외 조합원은 신협으로 문의 바랍니다.👌]`;
   } else {
-    h3.innerText =`[조합원번호(ID)는 ${show} 입니다]`;
+    h3.innerText = `[조합원번호(ID)는 ${show} 입니다]`;
   }
   formInput.value = "";
 }
 form.addEventListener("submit", handleSumbit);
 
-document.addEventListener('contextmenu', event => event.preventDefault());
+/*document.addEventListener("contextmenu", (event) => event.preventDefault());*/
 
-  const submitInput = document.querySelector(".form-input-two");
-  const Input_value = form-input-one.value;
+const submitInput = document.querySelector(".form-input-two");
+const Input_value = form - input - one.value;
 
-  function handleClick() {
-    alert(`${Input_value}로 입력하셨습니다. 2022년 4월 30일기준 가입 조합원 기준으로 조회 가능합니다. 조회가 되지 않을 경우 신협(☏4939)로 문의 주세요`);
-  }
-  
-  submitInput.addEventListener("click", handleClick);  
-  
+function handleClick() {
+  alert(
+    `${Input_value}로 입력하셨습니다. 2022년 4월 30일기준 가입 조합원 기준으로 조회 가능합니다. 조회가 되지 않을 경우 신협(☏4939)로 문의 주세요`
+  );
+}
+
+submitInput.addEventListener("click", handleClick);
