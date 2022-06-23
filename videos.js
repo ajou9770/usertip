@@ -1,4 +1,4 @@
-const videos = ["sono.mp4"];
+const videos = ["sono_newvideo.mp4"];
 
 const chosenVideos = videos[Math.floor(Math.random() * videos.length)];
 
