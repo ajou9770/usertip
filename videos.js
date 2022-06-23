@@ -1,4 +1,4 @@
-const videos = ["Beach_bike.mp4","sea_v.mp4", "beach_v.mp4","pado.mp4","Ocean.mp4","sun.mp4","fall.mp4","Lake.mp4"];
+const videos = ["sono.mp4"];
 
 const chosenVideos = videos[Math.floor(Math.random() * videos.length)];
 
