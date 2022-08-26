@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신협 웰컴쿠폰 신청 안내</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"/>
+</head>
+<style>
+    body {
+        text-align: center;
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    div {
+        display: inline-block;
+        margin-top: 15px;
+        width: 600px;
+        text-align: center;
+        justify-content: center;
+        height: 120px;
+        font-size: 30px;
+        font-weight: 550;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button {
+        width: 450px;
+        height: 100px;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .dropdown {
+  position: relative;
+  display: flex;
+  margin-left: 20px;
+}
+.dropdown-content {
+  display: none;
+  text-align: left;
+  position: relative;
+  height: 250px;
+  width: 350px;
+  background-color: #f1f1f1;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  height: auto;
+  text-decoration: none;
+  display: block;
+  font-size: medium;
+}
+.dropdown-content a:hover {
+  color: black;
+  padding: 10px 12px;
+  height: auto;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+}
+.dropbtn {
+  background-color: #04AA6D;
+  margin-left: 50px;
+  color: white;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+}
+.dropbtn:hover {
+  font-size: 17px;
+} 
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+    height: auto;
+    }
+    .box {
+        display: inline-block;
+        height: auto;
+        width: auto;
+        border-color: black;
+        padding: 5px;
+    }
+</style>
+<body>
+    <br/>
+    <h1> 🎁 신입교직원 웰컴쿠폰 신청하기</h1>
+    <br/>
+    <div >
+        <img src="img/qrcode_usertip.png" style="height: 500px; width:500px; border: solid; border:1px 5px 5px 1px;">
+        <br/>
+        <br/>
+        <h2> < 선택 > </h2>
+        <img src="img/hollys_coupon.jpg">
+        <img src="img/seven_coupon.jpg">
+    </div>
+    <script>
+       const button = document.querySelector("#print");
+
+       function buttonhandleClick () {
+          alert("원천징수영수증 출력시 첫페이지만 지정하여 출력해 주시기 바랍니다")
+        }
+
+        button.addEventListener("click", buttonhandleClick);
+    </script>    
+</body>
+
+</html>
