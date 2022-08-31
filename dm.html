@@ -240,6 +240,21 @@ video {
   width: 95%;
   border: 3px solid teal;
 }
+#barcode {
+  width:65%;
+  height: 65px; 
+  padding-top: 10px;
+  border: 3px solid darkblue white; 
+  margin:5px; 
+  border-radius:5px;
+  background-color: teal;
+  color: whitesmoke;
+  text-align: center;
+}
+#codebox {
+  width: 95%;
+  border: 3px solid teal;
+}
 </style>
 </head>
 <body>
@@ -299,7 +314,7 @@ video {
                     <source src="img/SONO_video.mp4">
                     </video>
                   </details><br/>
-                    <!-- 펼치기 닫기 동작 코드-->
+                    펼치기 닫기 동작 코드-->
                     <span id="sonovideo" style="CURSOR: hand" onclick = "if(videobox.style.display==`none`)
                     {videobox.style.display=``; sonovideo.innerText = `🎞️동영상 닫기`} else {videobox.style.display = `none`; 
                     sonovideo.innerText = `로그인 방법 🎞️영상보기`}">로그인 방법 🎞️동영상보기</span>
@@ -319,11 +334,15 @@ video {
                     ○ 할인적용 골프장: 비발디웨스트CC(9GC포함), 델피노CC (속초) 골프장 <br/>
                     ○ 이용방법: 무기명 회원카드 일회용 바코드를 발급받아(아래 버튼) 그린피 계산시 제출.(라운딩 당일사용)<br/>
                     ※ 무기명회원 일회용 바코드는 가급적 라운딩 전일까지 신청해 주시기 바랍니다. (공휴일 등은 바코드 발급이 어려움)<br/><br/>
-                        <details style="width:95%; padding-left:5px; padding-right:5px; border: 3px solid darkblue; margin:5px; border-radius:5px;">
+                       <!-- <details style="width:95%; padding-left:5px; padding-right:5px; border: 3px solid darkblue; margin:5px; border-radius:5px;">
                         <summary>💳무기명회원 바코드 신청(닫기)</summary>
                         <hr><br/>
                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEzg6LrPX98VBL_Dz8o76eSY1kWEKefrrmVZM8GruxBB9_Yw/viewform?usp=sf_link" width="600px" height="750px">무기명회원바코드신청</iframe>
-                        </details><br/>
+                        </details><br/>-->
+                        <span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
+                    {codebox.style.display=``; barcode.innerText = `닫기`} else {codebox.style.display = `none`; 
+                      barcode.innerText = `💳무기명회원 바코드 신청 하기`}">💳무기명회원 바코드 신청 하기</span>
+                    <div id="codebox" style="display: none"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEzg6LrPX98VBL_Dz8o76eSY1kWEKefrrmVZM8GruxBB9_Yw/viewform?usp=sf_link" width="600px" height="750px">무기명회원바코드신청</iframe></div>
                         <div class="mile">
                       <a href="https://www.dgolfclub.com/"> ⛳소노펠리체 골프클럽 홈페이지 <i class="fas fa-chevron-right fa-lg"></i></a>
                       </div><br/>
