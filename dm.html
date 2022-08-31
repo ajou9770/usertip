@@ -225,6 +225,21 @@ video {
   max-width: 100%; display: block; margin: 20px auto;
   border-radius: 10px;
 }
+#sonovideo {
+  width:65%; 
+  padding-left:3px; 
+  padding-right: 3px; 
+  border: 3px solid darkblue white; 
+  margin:5px; 
+  border-radius:5px;
+  background-color: teal;
+  color: whitesmoke;
+  text-align: center;
+}
+#videobox {
+  width: 95%;
+  border: 3px solid teal;
+}
 </style>
 </head>
 <body>
@@ -276,15 +291,24 @@ video {
                   <div class="dropdown-content">
                   <img src="img/sono_login.JPG" width="550px" height="750px"/>
                 </div>
-                </div>-->
+                </div>
                 <details style="width:95%; padding-left:3px; padding-right:3px; border: 3px solid darkblue; margin:5px; border-radius:5px;">
                   <summary>로그인 방법 🎞️동영상 보기[닫기]</summary>
                   <hr><br/>
                   <video controls>
                     <source src="img/SONO_video.mp4">
                     </video>
+                  </details><br/>
+                    <!-- 펼치기 닫기 동작 코드-->
+                    <span id="sonovideo" style="CURSOR: hand" onclick = "if(videobox.style.display==`none`)
+                    {videobox.style.display=``; sonovideo.innerText = `🎞️동영상 닫기`} else {videobox.style.display = `none`; 
+                    sonovideo.innerText = `로그인 방법 🎞️영상보기`}">로그인 방법 🎞️동영상보기</span>
+                    <div id="videobox" style="display: none"><HR><video controls>
+                      <source src="img/SONO_video.mp4">
+                      </video><HR></div>
+                        <br/>
                   <!--<img src="img/sono_login.JPG" width="600px" height="750px"/>-->
-                </details><br/>
+                
                  ○ 조합원 년간 이용가능일: 주말(공휴일)2박, 주중5일<br/>
                  ○ 예약방법: 전용사이트에서 실시간 예약 (단, 주말.공휴일은 관리자 승인 후 확정)<br/><br/>
                  
@@ -300,7 +324,7 @@ video {
                         <hr><br/>
                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEzg6LrPX98VBL_Dz8o76eSY1kWEKefrrmVZM8GruxBB9_Yw/viewform?usp=sf_link" width="600px" height="750px">무기명회원바코드신청</iframe>
                         </details><br/>
-                    <div class="mile">
+                        <div class="mile">
                       <a href="https://www.dgolfclub.com/"> ⛳소노펠리체 골프클럽 홈페이지 <i class="fas fa-chevron-right fa-lg"></i></a>
                       </div><br/>
                     <a href ="https://www.samaksancablecar.com/home/">📢 <mark style="background:linear-gradient(to top, gold 20%, transparent 30%)">춘천 삼악산 호수케이블카상시 할인(20%) 안내 </a></mark><br/>
