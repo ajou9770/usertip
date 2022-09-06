@@ -47,7 +47,7 @@ function handleSumbit(event) {
     } else if (show === null) {
       h3.innerText = `["${value}"(은)는 찾을수가 없네요😢. 조회가 안될 경우 신협으로 문의 바랍니다.👌]`;
     } else {
-      h3.innerText = `[택배사&송장번호는 ${show} 입니다]`;
+      h3.innerText = `[송장번호는 ${show} 입니다]`;
     }
     formInput.value = "";
   }
