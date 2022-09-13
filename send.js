@@ -61,7 +61,6 @@ localStorage.setItem("함정화", "우체국택배6865238198127");
 localStorage.setItem("허문희", "우체국택배6865238198128");
 localStorage.setItem("현석무", "우체국택배6865238198129");
 
-
 function handleSumbit(event) {
     event.preventDefault();
     value = formInput.value;
