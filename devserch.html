@@ -269,53 +269,53 @@
         display: none;
       }
       #t_key {
-        width:auto;
-        height:auto; 
+        width: auto;
+        height: auto;
         padding: 10px;
         font-size: large;
-        border: 3px solid darkblue white; 
-        margin:5px; 
-        border-radius:5px;
+        border: 3px solid darkblue white;
+        margin: 5px;
+        border-radius: 5px;
         background-color: teal;
         color: whitesmoke;
         text-align: center;
       }
       #t_invoice {
-        width:250px;
+        width: 250px;
         height: 55px;
-        font-size: large; 
+        font-size: x-large;
         padding-left: 10px;
         padding-right: 10px;
-        border: 3px solid darkblue white; 
-        margin:5px; 
-        border-radius:5px;
+        border: 3px solid darkblue white;
+        margin: 5px;
+        border-radius: 5px;
         background-color: whitesmoke;
         color: black;
         text-align: center;
       }
       #selectbox {
-        width:250px;
+        width: 250px;
         height: 55px;
-        font-size: large; 
+        font-size: x-large;
         padding: 10px;
-        border: 3px solid darkblue white; 
-        margin:5px; 
-        border-radius:5px;
+        border: 3px solid darkblue white;
+        margin: 5px;
+        border-radius: 5px;
         background-color: whitesmoke;
         color: black;
-        text-align: center; 
+        text-align: center;
       }
       button {
-        width:150px;
+        width: 150px;
         height: 50px;
-        font-size: large; 
+        font-size: large;
         padding: 10px;
-        border: 3px solid darkblue white; 
-        margin:5px; 
-        border-radius:5px;
+        border: 3px solid darkblue white;
+        margin: 5px;
+        border-radius: 5px;
         background-color: teal;
         color: whitesmoke;
-        text-align: center; 
+        text-align: center;
       }
       div {
         display: inline-block;
@@ -324,6 +324,7 @@
       #devserch {
         display: inline-block;
         justify-content: center;
+        width: 100;
         align-items: center;
         font-size: larger;
         text-align: center;
@@ -339,126 +340,86 @@
       <!--<img src="img/sono_imgnew.jpg"><br/>
     <a href="http://ajoucu.com"><img src="img/sono_summer_b.jpg"/></a><br/>
     </div>-->
-      <span style="font-size: 35px; color: black; font-weight: 600"
-        >[신협 특판몰 송장번호 조회&배송 조회 안내]</span
-      ><br />
-      <span style="font-size: 30px; color: black; font-weight: 600"
-        ><mark
-          style="
-            background: linear-gradient(
-              to top,
-              mediumspringgreen 20%,
-              transparent 30%
-            );
-          "
-          >🎁보내는 분: 아주대병원 산부인과학교실
-        </mark></span
-      ><br />
-      <div class="dmyung">
-        <mark>🔍 아래 폼에 "이름"을 입력하시면 🚛송장번호가 조회 됩니다. </mark>
-        <br />
-        <span
-          ><mark
-            style="
-              background: linear-gradient(
-                to top,
-                mediumspringgreen 20%,
-                transparent 30%
-              );
-            "
-            >✔본인의 "성명"을 입력하신 후 조회 하세요</mark
-          ></span
-        ><br />
-        <form>
-          <input class="form-input-one" type="text" placeholder=" 성명 입력" />
-          <input class="form-input-two" type="submit" value="조회하기" />
-        </form>
-        <u><h3 style="color: blue"></h3></u>
-        <sapn>
-          ☞ 조회된 <mark>송장번호(↑ ↑)</mark>를 길게 누르면
-          <mark>복사</mark>하실 수 있습니다.
-        </sapn>
-        <h3>
-          🔍조회된 송장번호를 아래 🚛실시간배송조회에서 "등기번호" 입력란에
-          붙여넣기(길게누르기) 하신 후 조회하세요.<br />
-          <br />
-          <mark
-            style="
-              background: linear-gradient(
-                to top,
-                mediumspringgreen 20%,
-                transparent 30%
-              );
-            "
-            >🚛 9월 7일(수) 도착 예정입니다.</mark
-          >
-        </h3>
-        <!--<span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
+      <!--<span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
                     {codebox.style.display=``; barcode.innerText = `배송조회 닫기▲`} else {codebox.style.display = `none`; 
                       barcode.innerText = `🚛실시간 배송 조회하기▼`}">🚛실시간 배송 조회하기 ▼</span>
                     <div id="codebox" style="display: none"><iframe src="https://m.epost.go.kr/postal/mobile/mobile.trace.postDeliverySearch.comm" width="600px" height="750px">무기명회원바코드신청</iframe></div>
                     <br/>-->
-        <div id="barcode">
-          <a
-            href="https://m.epost.go.kr/postal/mobile/mobile.trace.postDeliverySearch.comm"
-            >🚛우체국택배 조회하기🔍</a
-          >
-        </div>
-        <div id="devserch">
-          <form action="http://info.sweettracker.co.kr/tracking/5" method="post">
-                <div class="form-group">
-                <label for="t_key" style="font-weight:600; color: black;">🔍배송 조회를 선택하여 주세요 =></label>
-                <select type="text" id="t_key" name="t_key" class="form-control">
-                  <option id="t_key" value=x9JltmD4RvxFectoB3zDPQ>실시간 배송조회</option>
-                  </select>
-                  <div class="form-group">
-                <select id="selectbox" name="selectbox" onchange="changeLangSelect()">
-                  <option value="택배사선택" selected="selected">택배사 선택하기</option>
-                  <option value=01>우체국택배</option>
-                  <option value=04>CJ대한통운</option> 
-                  <option value=05>한진택배</option>
-                  <option value=06>로젠택배</option> 
-                  <option value=08>롯데택배</option>   
-                </select>
-                <div id="hidden_div">
-                <label for="t_code">택배사 코드</label>
-                <input type="text" class="form-control" name="t_code" id="t_code" placeholder="">
-              </div>
-              <div class="form-group">
-              <input type="text" class="form-control" name="t_invoice" id="t_invoice" placeholder="송장 번호 입력">
-              </div>
-              </div>
-              <button type="submit" class="btn btn-default">조회하기</button>
-          </form>
-          </div>
-        <hr style="color: teal" />
+      <div id="devserch">
+        <h2 style="color: black">🚛실시간 배송 조회하기🔍</h2>
 
-        <div class="call">
-          <a href="tel:031-219-6971">📞 문의(전화걸기) ☎ 219-6971</a><br />
-        </div>
+        <form action="http://info.sweettracker.co.kr/tracking/5" method="post">
+          <div id="hidden_div">
+            <div class="form-group">
+              <label for="t_key" style="font-weight: 600; color: black"
+                >🔍배송 조회를 선택하여 주세요 =></label
+              >
+              <select type="text" id="t_key" name="t_key" class="form-control">
+                <option id="t_key" value="x9JltmD4RvxFectoB3zDPQ">
+                  실시간 배송조회
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <select
+              id="selectbox"
+              name="selectbox"
+              onchange="changeLangSelect()"
+            >
+              <option value="택배사선택" selected="selected">
+                택배사 선택하기
+              </option>
+              <option value="01">우체국택배</option>
+              <option value="04">CJ대한통운</option>
+              <option value="05">한진택배</option>
+              <option value="06">로젠택배</option>
+              <option value="08">롯데택배</option>
+            </select>
+            <div id="hidden_div">
+              <label for="t_code">택배사 코드</label>
+              <input
+                type="text"
+                class="form-control"
+                name="t_code"
+                id="t_code"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" name="t_invoice"
+              id="t_invoice" placeholder="송장 번호 입력" required= />
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-default"
+            style="font-size: x-large"
+          >
+            조회하기
+          </button>
+        </form>
+
+        <hr style="color: teal" />
+        <br />
+        <br />
+        <div
+          id="kakao-talk-channel-chat-button"
+          data-channel-public-id="_dfhkK"
+          data-title="consult"
+          data-size="small"
+          data-color="yellow"
+          data-shape="mobile"
+          data-support-multiple-densities="true"
+        ></div>
       </div>
-      <br />
-      <br />
-      <div class="text">
-        상담톡(1:1채팅 문의)<br />
-        <i class="fas fa-sort-down fa-2x"></i>
-      </div>
-      <div
-        id="kakao-talk-channel-chat-button"
-        data-channel-public-id="_dfhkK"
-        data-title="consult"
-        data-size="small"
-        data-color="yellow"
-        data-shape="mobile"
-        data-support-multiple-densities="true"
-      ></div>
       <br />
     </div>
     <br />
     <br />
     <div class="footer">
       <footer>
-        <h2>
+        <h2 style="font-family: Arial, Helvetica, sans-serif">
           &copy ajou9770@ajoucu.page 아주대학교의료원 신협 031)219-6048 조합가입
           또는 금융상담:219-6052,6971
         </h2>
@@ -485,7 +446,6 @@
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "kakao-js-sdk");
     </script>
-    <script src="send_san.js"></script>
     <script>
       const memnum = document.querySelector("h3");
 
@@ -498,16 +458,14 @@
       }
     </script>
     <script>
-     
       function changeLangSelect() {
         console.log("ok");
-        document.getElementById("t_key").text = "x9JltmD4RvxFectoB3zDPQ" ;
+        document.getElementById("t_key").text = "x9JltmD4RvxFectoB3zDPQ";
         var langSelect = document.getElementById("selectbox");
         var selectValue = langSelect.options[langSelect.selectedIndex].value;
         console.log(selectValue);
-        document.getElementById("t_code").value = selectValue; 
-        
+        document.getElementById("t_code").value = selectValue;
       }
-  </script>
+    </script>
   </body>
 </html>
