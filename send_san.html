@@ -322,8 +322,10 @@
         justify-content: center;
       }
       #devserch {
-        display: flexbox;
+        display: inline-block;
         justify-content: center;
+        align-items: center;
+        text-align: center;
         background-color: beige;
         border: solid;
         border-width: 1px 3px 3px 1px;
@@ -404,7 +406,7 @@
         <div id="devserch">
           <form action="http://info.sweettracker.co.kr/tracking/5" method="post">
                 <div class="form-group">
-                <label for="t_key" style="font-weight:600;">🔍배송 조회를 선택하여 주세요 =></label>
+                <label for="t_key" style="font-weight:600; color: black;">🔍배송 조회를 선택하여 주세요 =></label>
                 <select type="text" id="t_key" name="t_key" class="form-control">
                   <option id="t_key" value=x9JltmD4RvxFectoB3zDPQ>실시간 배송조회</option>
                   </select>
