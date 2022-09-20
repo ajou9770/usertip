@@ -361,15 +361,14 @@
           <div id="hidden_div">
             <div class="form-group">
               <label for="t_key" style="font-weight: 600; color: black"
-                >🔍배송 조회를 선택하여 주세요 =></label
-              >
+                >🔍배송 조회를 선택하여 주세요 =></label>
               <select type="text" id="t_key" name="t_key" class="form-control">
                 <option id="t_key" value="x9JltmD4RvxFectoB3zDPQ">
-                  실시간 배송조회
+                실시간 배송조회
                 </option>
               </select>
             </div>
-          </div>
+          </div><!-- hidden_div-->
           <div class="form-group">
             <select
               id="selectbox"
@@ -401,7 +400,7 @@
                 id="t_code"
                 placeholder=""
               />
-            </div>
+            </div><!--hedden_div-->
             <div class="form-group">
               <input type="number" class="form-control" name="t_invoice"
               id="t_invoice" placeholder="송장 번호 입력" required= />
@@ -472,17 +471,6 @@
         js.src = "https://developers.kakao.com/sdk/js/kakao.channel.min.js";
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "kakao-js-sdk");
-    </script>
-    <script>
-      const memnum = document.querySelector("h3");
-
-      function copy_to_clipboard() {
-        var copyText = document.getElementById("memnum");
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);
-        document.execCommand("copy");
-        alert("복사되었습니다. 예약사이트로 이동하여 로그인 폼에 붙여넣어세요");
-      }
     </script>
     <script>
       function changeLangSelect() {
