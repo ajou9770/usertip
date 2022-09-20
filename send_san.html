@@ -265,6 +265,70 @@
         width: 95%;
         border: 3px solid teal;
       }
+      #hidden_div {
+        display: none;
+      }
+      #t_key {
+        width:auto;
+        height:auto; 
+        padding: 10px;
+        font-size: medium;
+        border: 3px solid darkblue white; 
+        margin:5px; 
+        border-radius:5px;
+        background-color: teal;
+        color: whitesmoke;
+        text-align: center;
+      }
+      #t_invoice {
+        width:200px;
+        height: 40px;
+        font-size: medium; 
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 3px solid darkblue white; 
+        margin:5px; 
+        border-radius:5px;
+        background-color: whitesmoke;
+        color: black;
+        text-align: center;
+      }
+      #selectbox {
+        width:200px;
+        height: 40px;
+        font-size: medium; 
+        padding: 10px;
+        border: 3px solid darkblue white; 
+        margin:5px; 
+        border-radius:5px;
+        background-color: whitesmoke;
+        color: black;
+        text-align: center; 
+      }
+      button {
+        width:100px;
+        height: 40px;
+        font-size: medium; 
+        padding: 10px;
+        border: 3px solid darkblue white; 
+        margin:5px; 
+        border-radius:5px;
+        background-color: teal;
+        color: whitesmoke;
+        text-align: center; 
+      }
+      div {
+        display: inline-block;
+        justify-content: center;
+      }
+      #devserch {
+        display: flexbox;
+        justify-content: center;
+        background-color: beige;
+        border: solid;
+        border-width: 1px 3px 3px 1px;
+        border-radius: 10px;
+      }
     </style>
   </head>
   <body>
@@ -337,6 +401,33 @@
             >🚛우체국택배 조회하기🔍</a
           >
         </div>
+        <div id="devserch">
+          <form action="http://info.sweettracker.co.kr/tracking/5" method="post">
+                <div class="form-group">
+                <label for="t_key" style="font-weight:600;">🔍배송 조회를 선택하여 주세요 =></label>
+                <select type="text" id="t_key" name="t_key" class="form-control">
+                  <option id="t_key" value=x9JltmD4RvxFectoB3zDPQ>실시간 배송조회</option>
+                  </select>
+                  <div class="form-group">
+                <select id="selectbox" name="selectbox" onchange="changeLangSelect()">
+                  <option value="택배사선택" selected="selected">택배사 선택하기</option>
+                  <option value=01>우체국택배</option>
+                  <option value=04>CJ대한통운</option> 
+                  <option value=05>한진택배</option>
+                  <option value=06>로젠택배</option> 
+                  <option value=08>롯데택배</option>   
+                </select>
+                <div id="hidden_div">
+                <label for="t_code">택배사 코드</label>
+                <input type="text" class="form-control" name="t_code" id="t_code" placeholder="">
+              </div>
+              <div class="form-group">
+              <input type="text" class="form-control" name="t_invoice" id="t_invoice" placeholder="송장 번호 입력">
+              </div>
+              </div>
+              <button type="submit" class="btn btn-default">조회하기</button>
+          </form>
+          </div>
         <hr style="color: teal" />
 
         <div class="call">
@@ -403,5 +494,17 @@
         alert("복사되었습니다. 예약사이트로 이동하여 로그인 폼에 붙여넣어세요");
       }
     </script>
+    <script>
+     
+      function changeLangSelect() {
+        console.log("ok");
+        document.getElementById("t_key").text = "x9JltmD4RvxFectoB3zDPQ" ;
+        var langSelect = document.getElementById("selectbox");
+        var selectValue = langSelect.options[langSelect.selectedIndex].value;
+        console.log(selectValue);
+        document.getElementById("t_code").value = selectValue; 
+        
+      }
+  </script>
   </body>
 </html>
