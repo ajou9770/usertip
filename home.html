@@ -84,6 +84,25 @@
     background-color: #3e8e41;
     height: auto;
     }
+  #barcode {
+  width:40%;
+  height: 70px; 
+  padding: 10px;
+  border: 3px solid darkblue white; 
+  margin:5px;
+  font-size: larger;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif; 
+  border-radius:5px;
+  background-color: teal;
+  color: whitesmoke;
+  text-align: center;
+}
+#codebox {
+  width: auto;
+  height: auto;
+  border: 0px solid white;
+}
 </style>
 <body>
     <br/>
@@ -117,7 +136,12 @@
           <a href="http://ajou9770.github.io/notice/milecal.html">🔎이용고배당 셀프계산기</a>
         </div>
       </div>
-    <script>
+      <span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
+                    {codebox.style.display=``; barcode.innerText = `계산기 닫기▲`} else {codebox.style.display = `none`; 
+                      barcode.innerText = `🔢간편 계산기 열기▼`}">🔢간편 계산기 열기 ▼</span>
+                    <div id="codebox" style="display: none"><iframe src="https://ajou9770.github.io/notice/calculate.html" width="600px" height="750px">무기명회원바코드신청</iframe></div>
+                    <br/>
+      <script>
        const button = document.querySelector("#print");
 
        function buttonhandleClick () {
