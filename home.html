@@ -1,155 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>신협대출등 증빙출력 및 안내</title>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css"/>
-</head>
-<style>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="cal.css" rel="stylesheet" />
+  </head>
+  <style>
     body {
-        text-align: center;
-        align-items: center;
+      text-align: center;
+      align-items: center;
     }
     a {
-        text-decoration: none;
-        color: whitesmoke;
+      text-decoration: none;
+      color: whitesmoke;
     }
     div {
-        display: inline-block;
-        margin-top: 15px;
-        width: 600px;
-        height: 120px;
-        font-size: 30px;
-        font-weight: 550;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: inline-block;
+      margin-top: 15px;
+      width: 600px;
+      height: 120px;
+      font-size: 30px;
+      font-weight: 550;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
     button {
-        width: 450px;
-        height: 100px;
-        font-size: 25px;
-        font-weight: 500;
+      width: 450px;
+      height: 100px;
+      font-size: 25px;
+      font-weight: 500;
     }
-  .dropdown {
-  position: relative;
-  display: inline-flex;
-  margin-left: 20px;
-}
-.dropdown-content {
-  display: none;
-  text-align: left;
-  position: relative;
-  height: 250px;
-  width: 350px;
-  background-color: #f1f1f1;
-  min-width: 300px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color: black;
-  padding: 10px 12px;
-  height: auto;
-  text-decoration: none;
-  display: block;
-  font-size: medium;
-}
-.dropdown-content a:hover {
-  color: black;
-  padding: 10px 12px;
-  height: auto;
-  text-decoration: none;
-  display: block;
-  font-size: 18px;
-}
-.dropbtn {
-  background-color: #04AA6D;
-  margin-left: 50px;
-  color: white;
-  width: 300px;
-  height: auto;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  border: none;
-}
-.dropbtn:hover {
-  font-size: 17px;
-} 
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-    height: auto;
+    .dropdown {
+      position: relative;
+      display: inline-flex;
+      margin-left: 20px;
     }
-  #barcode {
-  width:40%;
-  height: 70px; 
-  padding: 10px;
-  border: 3px solid darkblue white; 
-  margin:5px;
-  font-size: larger;
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif; 
-  border-radius:5px;
-  background-color: teal;
-  color: whitesmoke;
-  text-align: center;
-}
-#codebox {
-  width: auto;
-  height: auto;
-  border: 0px solid white;
-}
-</style>
-<body>
-    <br/>
-    <br/>
+    .dropdown-content {
+      display: none;
+      text-align: left;
+      position: relative;
+      height: 250px;
+      width: 350px;
+      background-color: #f1f1f1;
+      min-width: 300px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 10px 12px;
+      height: auto;
+      text-decoration: none;
+      display: block;
+      font-size: medium;
+    }
+    .dropdown-content a:hover {
+      color: black;
+      padding: 10px 12px;
+      height: auto;
+      text-decoration: none;
+      display: block;
+      font-size: 18px;
+    }
+    .dropbtn {
+      background-color: #04aa6d;
+      margin-left: 50px;
+      color: white;
+      width: 300px;
+      height: auto;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      border: none;
+    }
+    .dropbtn:hover {
+      font-size: 17px;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+      height: auto;
+    }
+    #barcode {
+      width: 40%;
+      height: 70px;
+      padding: 20px;
+      border: 3px solid darkblue white;
+      margin: 5px;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 5px;
+      background-color: teal;
+      color: whitesmoke;
+      text-align: center;
+    }
+    #barcode:hover {
+      font-size: 23px;
+      background-color: #3e8e41;
+    }
+    #codebox {
+      width: auto;
+      height: auto;
+      border: 0px solid white;
+    }
+  </style>
+  <body>
+    <br />
+    <br />
     <div>
-        <button id="print"><a href="http://gw.aumc.ac.kr/">🖨️원천징수영수증출력<br/>(그룹웨어로그인)</a></button>
+      <button id="print">
+        <a href="http://gw.aumc.ac.kr/"
+          >🖨️원천징수영수증출력<br />(그룹웨어로그인)</a
+        >
+      </button>
     </div>
     <div>
-        <button class="sign"><a href="https://www.sgic.co.kr/chp/main.mvc">📝서울보증보험전자서명</a></button>
+      <button class="sign">
+        <a href="https://www.sgic.co.kr/chp/main.mvc">📝서울보증보험전자서명</a>
+      </button>
     </div>
     <div>
-        <button class="sono"><a href="http://ajou9770.github.io/usertip/dm.html">🏕️소노호텔앤리조트이용안내<br/>
-        (조합원번호 조회 등)</a></button>
+      <button class="sono">
+        <a href="http://ajou9770.github.io/usertip/dm.html"
+          >🏕️소노호텔앤리조트이용안내<br />
+          (조합원번호 조회 등)</a
+        >
+      </button>
     </div>
     <div>
-        <button class="usertip"><a href="http://ajou9770.github.io/usertip">🔊신협이용안내(이용꿀팁)</a></button>
+      <button class="usertip">
+        <a href="http://ajou9770.github.io/usertip">🔊신협이용안내(이용꿀팁)</a>
+      </button>
     </div>
     <div>
-      <button class="usertip"><a href="http://ajoucu.com">🛍️ 신협 특판몰 바로가기</a></button>
-  </div>
-  <div>
-    <button class="usertip"><a href="http://ajou9770.github.io/usertip/post.html">🚛택배 실시간 배송조회</a></button>
-</div>
+      <button class="usertip">
+        <a href="http://ajoucu.com">🛍️ 신협 특판몰 바로가기</a>
+      </button>
+    </div>
+    <div>
+      <button class="usertip">
+        <a href="http://ajou9770.github.io/usertip/post.html"
+          >🚛택배 실시간 배송조회</a
+        >
+      </button>
+    </div>
     <div class="dropdown">
-        <button class="dropbtn">🧮대출(이용고배당)계산기(=>)</button>
-        <div class="dropdown-content">
-          <a href="http://ajou9770.github.io/notice/loanlimit.html">🔎대출한도계산기</a>
-          <a href="http://ajou9770.github.io/notice/loanrate.html">🔎대출원리금(이자)계산기</a>
-          <a href="http://ajou9770.github.io/notice/loaninsu.html">🔎보증보험료계산기</a>
-          <a href="http://ajou9770.github.io/notice/sgicsign.html">🔎보증보험개인정보동의방법</a>
-          <a href="http://ajou9770.github.io/notice/milecal.html">🔎이용고배당 셀프계산기</a>
+      <button class="dropbtn">🧮대출(이용고배당)계산기(=>)</button>
+      <div class="dropdown-content">
+        <a href="http://ajou9770.github.io/notice/loanlimit.html"
+          >🔎대출한도계산기</a
+        >
+        <a href="http://ajou9770.github.io/notice/loanrate.html"
+          >🔎대출원리금(이자)계산기</a
+        >
+        <a href="http://ajou9770.github.io/notice/loaninsu.html"
+          >🔎보증보험료계산기</a
+        >
+        <a href="http://ajou9770.github.io/notice/sgicsign.html"
+          >🔎보증보험개인정보동의방법</a
+        >
+        <a href="http://ajou9770.github.io/notice/milecal.html"
+          >🔎이용고배당 셀프계산기</a
+        >
+      </div>
+    </div>
+    <!--<div class="container">
+      <div class="calculator">
+        <div class="calculator__display--bare">
+          <span class="calculator__operend--left">0</span>
+          <span class="calculator__operator">+</span>
+          <span class="calculator__operend--right">0</span>
+          <span class="calculator__equal">=</span>
+          <span class="calculator__result">0</span>
+        </div>
+        <div class="calculator__display--intermediate">0</div>
+        <div class="calculator__buttons">
+          <div class="clear__and__enter">
+            <button class="clear">Reset</button>
+            <button class="calculate">=</button>
+          </div>
+          <div class="button__row">
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">+</button>
+          </div>
+          <div class="button__row">
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">-</button>
+          </div>
+          <div class="button__row">
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">*</button>
+          </div>
+          <div class="button__row">
+            <button class="number double">0</button>
+            <button class="decimal">.</button>
+            <button class="operator">/</button>
+          </div>
+          <h3
+            style="
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-weight: 500;
+              color: whitesmoke;
+            "
+          >
+            아주대의료원신협
+          </h3>
         </div>
       </div>
-      <span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
+      <img class="logo" src="data/codestates-logo.png">
+    <script src="calculate.js"></script>-->
+
+    <span
+      id="barcode"
+      style="cursor: hand"
+      onclick="if(codebox.style.display==`none`)
                     {codebox.style.display=``; barcode.innerText = `계산기 닫기▲`} else {codebox.style.display = `none`; 
-                      barcode.innerText = `🔢간편 계산기 열기▼`}">🔢간편 계산기 열기 ▼</span>
-                    <div id="codebox" style="display: none"><iframe src="https://ajou9770.github.io/notice/calculate.html" width="600px" height="750px">무기명회원바코드신청</iframe></div>
-                    <br/>
-      <script>
-       const button = document.querySelector("#print");
+                      barcode.innerText = `🔢간편 계산기 열기▼`}"
+      >🔢간편 계산기 열기 ▼</span
+    >
+    <div id="codebox" style="display: none">
+      <iframe
+        src="https://ajou9770.github.io/notice/calculate.html"
+        width="600px"
+        height="750px"
+        >무기명회원바코드신청</iframe
+      >
+    </div>
+    <br />
+    <script>
+      const button = document.querySelector("#print");
 
-       function buttonhandleClick () {
-          alert("원천징수영수증 출력시 첫페이지만 지정하여 출력해 주시기 바랍니다")
-        }
+      function buttonhandleClick() {
+        alert(
+          "원천징수영수증 출력시 첫페이지만 지정하여 출력해 주시기 바랍니다"
+        );
+      }
 
-        button.addEventListener("click", buttonhandleClick);
-    </script>    
-</body>
-
+      button.addEventListener("click", buttonhandleClick);
+    </script>
+  </body>
 </html>
