@@ -175,6 +175,46 @@
             a[href^="tel"]::before {
              content: "📞 ";
             }
+            video {
+  max-width: 100%; display: block; margin: 20px auto;
+  border-radius: 10px;
+}
+#sonovideo {
+  width:auto;
+  height: 65px; 
+  padding : 10px;
+  border: 3px solid darkblue white; 
+  margin:5px; 
+  border-radius:5px;
+  background-color: teal;
+  color: whitesmoke;
+  text-align: center;
+}
+#videobox {
+  width: 95%;
+  border: 3px solid teal;
+}
+#barcode {
+  width:auto;
+  height: 65px; 
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 3px solid darkblue white; 
+  margin:5px; 
+  border-radius:5px;
+  background-color: teal;
+  color: whitesmoke;
+  text-align: center;
+}
+#barcode:active {
+  transform: scale(0.98);
+  background-color: black;  
+}
+#codebox {
+  width: 95%;
+  border: 3px solid teal;
+}    
     </style>
 </head>
 <body>
@@ -184,6 +224,17 @@
             <mark style="background:linear-gradient(to top, yellow 20%, transparent 30%)">✔ 예탁금액: 3,000만원 / 금리: 2.0% 적용시</mark> </h1>
         <img src="img/freerate_img02.JPG"><br/>
         <img src="img/freerate_img03.JPG"><br/>
+        <!-- 펼치기 박스 >
+        <span id="sonovideo" style="CURSOR: hand" onclick = "if(videobox.style.display==`none`)
+         {videobox.style.display=``; sonovideo.innerText = `🎞️유튜브 닫기 ▲`} else {videobox.style.display = `none`; 
+          sonovideo.innerText = `비과세VS과세 유튜브 영상 보기 ▼`}">💰비과세VS과세 🎞️유튜브 영상 보기 ▼</span>
+          <div id="videobox" style="display: none"><video controls>
+          <source src="https://youtu.be/jzjsg5sZRbo">
+          </video></div>-->
+
+          <button id="barcode"><a href="https://youtu.be/jzjsg5sZRbo">💰신협 VS 은행 차이점 🎞️유튜브 영상보기<i class="fas fa-chevron-right fa-lg"></i></a> </button>
+
+          <br/><br/><br/>
         <span style="text-align: center; font-size: 40px; font-family: 800;"><b>🤷‍♀️이용고 배당이란(?)</b></span>
         <h2 class="content">
             아주대의료원 신협 이용 실적에 따른 실적 배당을 말하며, 대출금, 요구불(입출금)예금, 적금, 체크카드사용, 자동납부(이체)실적, 보험료 납입 실적 등이
