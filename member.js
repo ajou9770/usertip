@@ -3132,7 +3132,7 @@ function handleSumbit(event) {
 }
 form.addEventListener("submit", handleSumbit);
 
-document.addEventListener("contextmenu", (event) => event.preventDefault());
+/*document.addEventListener("contextmenu", (event) => event.preventDefault());*/
 
 const submitInput = document.querySelector(".form-input-two");
 const Input_value = form - input - one.value;
