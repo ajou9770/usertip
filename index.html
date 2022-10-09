@@ -511,11 +511,25 @@ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
               flex-wrap: nowrap;
               flex-direction: row;
               width: 400px;
-              justify-content: space-between;            } 
+              justify-content: center;            } 
             video {
               width: 100%;
               height: 350px;
-            }
+            }#icon { 
+                border: none;
+                width: 150px;
+                height: 50px;
+                font-size: 15px;
+                position: fixed;
+                bottom: 50px;
+                right: 35px;
+                border-radius: 10px;
+                background: none;
+                line-height: 40px;
+                text-align: center;
+                color: white;
+                font-weight: bold;    
+             }
     </style>
   </head>
   <body>
@@ -622,12 +636,13 @@ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
   data-channel-public-id="_dfhkK"
   data-size="large"
   data-support-multiple-densities="true"
-  ></div>
+  ></div></div>
+   <div id="icon">
           <div
   id="kakao-talk-channel-chat-button"
   data-channel-public-id="_dfhkK"
   data-title="consult"
-  data-size="small"
+  data-size="large"
   data-color="yellow"
   data-shape="mobile"
   data-support-multiple-densities="true"
