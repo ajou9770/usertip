@@ -377,6 +377,21 @@
             a[href^="tel"]::before {
              content: "📞 ";
             }
+            #icon { 
+           border: none;
+           width: 150px;
+           height: 50px;
+           font-size: 15px;
+           position: fixed;
+           bottom: 50px;
+           right: 35px;
+           border-radius: 10px;
+           background: none;
+           line-height: 40px;
+           text-align: center;
+           color: white;
+           font-weight: bold;    
+          }    
   </style>
 </head>
 <body>
@@ -451,8 +466,7 @@
         <a style="color: brown"> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBQx5DIakh9L_yfk9pQncO76LeS5aPPMgqWfdb76a7pAU3ZQ/viewform?usp=sf_link"> 비대면(온라인)대출 상담 신청 <i class="fas fa-chevron-right fa-lg"></i> </a></div>
         (구글계정 로그인 및 개인신용정보수집.이용동의 필요) 
     </div><br/>-->
-               <div class="text"> 상담톡(1:1채팅 문의)<br/>
-                <i class="fas fa-sort-down fa-2x"></i></div>
+                <div id="icon">
                 <div
       id="kakao-talk-channel-chat-button"
       data-channel-public-id="_dfhkK"
@@ -461,7 +475,7 @@
       data-color="yellow"
       data-shape="mobile"
       data-support-multiple-densities="true"
-    ></div><br/>
+    ></div></div><br/>
         <div class="back">    
             <a href="https://ajou9770.github.io/usertip/"><i class="fas fa-chevron-left fa-lg"></i>  이전(홈)화면으로 돌아가기</a>
         </div><br/>
