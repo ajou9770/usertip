@@ -651,7 +651,7 @@ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
           <br/>
       <!--<a href="http://pf.kakao.com/_dfhkK"><img src="img/id_type.png"></a>
       <br/></div>-->
-      <div id="icon_call">
+      <div onclick="callon()" id="icon_call">
       <a href="tel:031-219-6052">상담(문의)</a><br/>
       </div>
       <div class="kakao">
@@ -715,6 +715,11 @@ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
         </div>
       </div>
     </div>
+    <script>
+      function callon() {
+        alert("☎유선상담가능시간: 업무시간(평일 8시30분~오후 5시)내")
+      }
+    </script>
     <script>
       const modal = document.querySelector("#modal");
       const link = document.querySelector(".quzi");
