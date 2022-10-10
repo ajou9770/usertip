@@ -535,10 +535,11 @@
                 border: none;
                 width: 175px;
                 height: 70px;
-                font-size: 15px;
+                font-size: 25px;
                 position: fixed;
                 bottom: 130px;
                 right: 30px;
+                color: black;
                 border-radius: 40px;
                 box-shadow: 1px 3px 3px 1px slategray;
                 background: rgb(205, 235, 223);
@@ -650,8 +651,8 @@
             <br/>
         <!--<a href="http://pf.kakao.com/_dfhkK"><img src="img/id_type.png"></a>
         <br/></div>-->
-        <div id="icon_call">
-        <a href="tel:031-219-6052">문의(상담)</a><br/>
+        <div onclick="callon()" id="icon_call">
+        📞문의(상담)
         </div>
         <div class="kakao">
         <div id="kakao-talk-channel-add-button"
@@ -713,6 +714,15 @@
           </div>
         </div>
       </div>
+      <script>
+        function callon() {
+          if(window.confirm("☏ 상담가능시간: 평일 08:30~17:00  📞전화 연결 하시겠어요?")) {
+            document.location.href ="tel:031-219-6052"
+          } else {
+            console.log(" cancel")
+          }
+        }
+      </script>
       <script>
         const modal = document.querySelector("#modal");
         const link = document.querySelector(".quzi");
