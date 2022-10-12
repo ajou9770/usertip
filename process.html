@@ -381,8 +381,8 @@
     <div class="cubank">    
       <a>신협 모바일뱅킹 "온뱅크" 설치(열기) <i class="fas fa-download"></i></a> 
     </div><br/>
-    <div class="mov"> 
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYOjT7lh-0tBlFN0I2hKTekayoHqKhOPXjpbAeJoVJbEgwaQ/viewform?usp=sf_link">🖱출자금 급여공제 (변경)신청(가입 완료후)<i class="fas fa-chevron-right fa-lg"></i></a></div>
+    <div onclick="googleform()"  class="mov"> 
+      🖱출자금 급여공제 (변경)신청(가입 완료후)<i class="fas fa-chevron-right fa-lg"></i></div>
       </div><br/>
     <!--<a href="https://play.google.com/store/apps/details?id=kr.co.cu.onbank"><img src="img/googleplayimg.JPG"></a>
     (안드로이드 계열_구글플레이)<br/><br/>
@@ -450,6 +450,15 @@
          modal.addEventListener("click", handleModalClick)
              link.addEventListener("click", handleLinkClick);
        </script>-->
+       <script> 
+        function googleform() {
+        if (window.confirm("가입(출자금통장개설) 완료 되셨나요?  진행 하시겠습니까?")) {
+          document.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfYOjT7lh-0tBlFN0I2hKTekayoHqKhOPXjpbAeJoVJbEgwaQ/viewform?usp=sf_link"
+        } else {
+          console.log("canceled")
+        }
+       }
+       </script>
        <script>
         const modal = document.querySelector("#modal");
         const link = document.querySelector(".cubank");
