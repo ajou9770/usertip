@@ -407,6 +407,7 @@ a[href^="mailto"]::before {
 }
 #subtitle_css {
     color: whitesmoke;
+    font-family: Arial;
     width: 50%;
     font-size: 30px;
     background: #5fab7d;
