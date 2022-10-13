@@ -104,6 +104,29 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
+        .backButton {
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:4px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:25px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:3px 1px 0px #528ecc;
+}
+.backButton:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.backButton:active {
+	position:relative;
+	top:1px;
+}
     </style>
 </head>
 <body>
@@ -148,9 +171,8 @@ data-shape="mobile"
 data-support-multiple-densities="true"
 ></div><br/>
     <div><br/>
-    <div class="back">
-    <a href="https://ajou9770.github.io/usertip/"><i class="fas fa-chevron-left fa-lg"></i>  이전화면으로 돌아가기</a>
-    </div><br/>
+    <a href="https://ajou9770.github.io/usertip/" class="backButton"><i class="fas fa-chevron-left fa-lg"></i>  이전화면으로 돌아가기</a>
+    <br/>
     </div>
     <br />
     <br/>
