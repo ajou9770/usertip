@@ -20,7 +20,7 @@
            ※ 월납입한도(20구좌) 10만원 / 최대 납입한도 1,500만원<br/>
             ==> 현금 또는 계좌이체로 입금 가능<br/>
         ▶ 출자 배당금: 매년2월 지급(2%~3%내외/비과세)<br/><br/>
-        ☞ 가입 및 상담 (신협):<a href="tel:031-219-6052">219-6052, 6971</a><br/></p></div>
+        ☞ 가입 및 상담 (신협):<span onclick="callon()">📞 219-6052, 6971</span><br/></p></div>
         <br/>
         <button class="draw"><a href="http://ajou9770.github.io/usertip/draw.html">💰 신협 비과세 예적금 개설 안내<i class="fas fa-chevron-right fa-lg"></i> </a></button>    
     <br/>
@@ -57,7 +57,7 @@
     <br/>
     <div class="footer"> 
     <footer>아주대학교의료원 신용협동조합 <br/>⏰업무시간: 평일 8시30분 ~ 17시 (⛳병원본관 B2)<address>
-      <a href="tel:031-219-6052">031-219-6052</a>
+      <span onclick="callon()">📞 031-219-6052</span>
       <a href="mailto:ajou9770@ajoucu.page">ajou9770@ajoucu.page</a>
       </address></footer>
     </div>
@@ -71,6 +71,15 @@
           </div>
         </div>
        </aside>
+       <script>  
+        function callon() {
+          if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞연결 할까요?")) {
+            document.location.href = "tel:031-219-6052"
+        } else {
+          console.log("canceled")
+        }
+       }                
+      </script>
        <script> 
         function googleform() {
         if (window.confirm("가입(출자금통장개설) 완료 되셨나요?  진행 하시겠습니까?")) {
