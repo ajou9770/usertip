@@ -202,7 +202,7 @@ div {
     height:auto;
     widows: 100px;
     text-align: left;
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     margin-bottom: 5px;
@@ -390,7 +390,7 @@ a[href^="mailto"]::before {
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:25px;
+	font-size:30px;
 	font-weight:bold;
 	padding:12px 44px;
 	text-decoration:none;
