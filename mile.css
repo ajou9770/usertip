@@ -6,6 +6,7 @@ body {
     justify-content: center;
     background-color: ivory;
     vertical-align: middle;
+    text-align: center;
     text-align: justify;
     margin-left: 20px;
     margin-right: 20px;
@@ -100,10 +101,10 @@ transform: scale(0.98);
 .footer {
     background-color:navy;
     height: auto;
-    width: 680px;
+    width: 95%;
     widows: 100px;
     border-color: teal;
-    text-align: left;
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
     padding:10px;
@@ -215,7 +216,7 @@ width: 150px;
 height: 50px;
 font-size: 15px;
 position: fixed;
-bottom: 50px;
+bottom: 170px;
 right: 40px;
 border-radius: 10px;
 background: none;
@@ -246,4 +247,8 @@ font-weight: bold;
 .backButton:active {
 	position:relative;
 	top:1px;
+}
+.back_box {
+    display: flex;
+    text-align: center;
 }
