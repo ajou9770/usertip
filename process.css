@@ -42,7 +42,7 @@ button {
   border: none;
   width: auto;
   height: auto;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 button :hover {
   transform: scale(0.98);
