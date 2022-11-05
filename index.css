@@ -470,8 +470,8 @@ footer a {
   color: black;
   background-color: whitesmoke;
   font-weight: 600;
-  display: flex;
-  align-items: stretch;
+  display: inline-flexbox;
+  align-items: baseline;
   flex-wrap: wrap-reverse;
 }
 a[href^="mailto"]::before {
