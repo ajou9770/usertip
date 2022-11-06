@@ -245,7 +245,7 @@ transform: scale(0.98);
 #box {
   text-align: left;
   border-radius: 10px;
-  opacity: 0.95;
+  opacity: 1;
   position: absolute;
   border: gray;
   border-style: solid;
