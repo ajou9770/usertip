@@ -27,13 +27,94 @@
     <span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
                     {codebox.style.display=``; barcode.innerText = `수신금리표 닫기▲`} else {codebox.style.display = `none`; 
                       barcode.innerText = `💸수신금리표 보기▼`}">💸수신 금리표 보기 ▼</span>
-                    <div id="codebox" style="display: none"><iframe src="img/draw_img.jpg" width="700" height="750px"></iframe></div>
+                    <div id="codebox" style="display: none"><table>
+                      <th> 구분 
+                        <td>
+                        상품명
+                        </td>
+                        <td>
+                          기간
+                        </td>
+                        <td>
+                          금리(우대)
+                        </td>
+                        <td>
+                          비고(우대조건)
+                        </td>
+                      <tr>  
+                      </th>
+                      <th> 요구불 
+                        <td>
+                        자립예탁금
+                        </td>
+                        <td>
+                          없음
+                        </td>
+                        <td>
+                          0.05%
+                        </td>
+                        <td>
+                        </td>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th> 거치식
+                        <br/>(인터넷) 
+                        <td>
+                        정기예탁금<br/>
+                        (인터넷예탁)
+                        </td>
+                        <td>
+                         3개월<br/>
+                         6개월<br/>
+                         12개월<br/>
+                         24개월이상
+                        </td>
+                        <td>
+                          3.40%<br/>
+                          3.70%<br/>
+                          4.10%<br/>
+                          4.20%
+                        </td>
+                        <td>
+                        </td>
+                      </th>
+                      </tr>
+                      <tr>
+                        <th>거치식<br/>
+                          (창구) 
+                          <td>
+                          파워정기예탁
+                          </td>
+                          <td>
+                           3개월<br/>
+                           6개월<br/>
+                           12개월<br/>
+                           24개월이상
+                          </td>
+                          <td>
+                            3.40%(3.70%)<br/>
+                            3.70%(4.0%)<br/>
+                            4.10%(4.4%)<br/>
+                            4.20%(4.5%)
+                          </td>
+                          <td>
+                            <br/>
+                            *조합원우대 0.1%<br/>
+                            *급여이체우대 0.1%<br/>
+                            *1억원이상 예치 0.1%
+                          </td>
+                        </th>
+                        </tr>
+                      </table></div>
                     <br/>
                     <span id="loancode" style="CURSOR: hand" onclick = "if(loanbox.style.display==`none`)
                     {loanbox.style.display=``; loancode.innerText = `대출금리표 닫기▲`} else {loanbox.style.display = `none`; 
                       loancode.innerText = `💰대출금리표 보기▼`}">💰대출 금리표 보기 ▼</span>
                     <div id="loanbox" style="display: none"><iframe src="img/loan_img.jpg" width="700" height="520px"></iframe></div>
                     <br/>
+                    <!--<iframe src="img/draw_img.jpg" width="700" height="750px"></iframe>-->
+                    
         <div class="app">
     ✔신협 모바일 앱 "온뱅크"설치하시면 조합원 가입 및 예적금 개설을 비대면으로 진행하실 수 있습니다. <br/>
     </div><br/>
