@@ -432,6 +432,23 @@ a[href^="mailto"]::before {
     color: whitesmoke;
     text-align: center;
     }
+    #loancode {
+        width:auto;
+        height: 65px; 
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 3px solid darkblue white; 
+        margin:5px; 
+        border-radius:5px;
+        background-color: rgb(10, 54, 117);
+        color: whitesmoke;
+        text-align: center;
+        }
+        #loanbox {
+        width: 95%;
+        border: 3px solid whitesmoke;
+        }
     table {
         font-size: 20px;
         width: 100%;
