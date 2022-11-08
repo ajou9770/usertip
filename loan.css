@@ -425,8 +425,8 @@ a[href^="mailto"]::before {
     padding: 10px;
     border: 3px solid darkblue white; 
     margin:5px;
-    font-size: 25px; 
-    border-radius:5px;
+    font-size: 20px; 
+    border-radius:10px;
     background-color: rgb(10, 54, 117);
     color: whitesmoke;
     text-align: center;
