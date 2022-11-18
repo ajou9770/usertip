@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신협 바이오인증 서비스 이용 안내</title>
     <link rel="stylesheet" href="https://unpkg.com/mvp.css"/>
+    <link rel="stylesheet", href="index.css">
 </head>
 <style>
     body {
@@ -93,6 +94,40 @@
         border-color: black;
         padding: 5px;
     }
+    a {
+            color:whitesmoke;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 35px;
+        }
+a:active {
+  transform: scale(0.98);
+  color: whitesmoke;
+}
+.backButton:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.backButton {
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:4px;
+    height: auto;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:25px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:3px 1px 0px #528ecc;
+}
+.backButton:active {
+	position:relative;
+	top:1px;
+} 
 </style>
 <body>
   <h1> [ 바이오인증 서비스 이용 안내 ] </h1>
@@ -101,6 +136,8 @@
     <h2>🎉 이용가능 금융 기관 (2022.11월 현재)<br/><br/>
       # 신협, KB국민, 우리, 신한, KEB하나, NH농협, MG새마을금고, 대구은행 등 시중 10개 금융기관<br/>
         (이용가능 금융기관은 계속 확대 되는 중입니다. )<br/><br/>
+        📢 바이오인증 등록 : 신협 내방 (신분증, 본인명의 핸드폰 지참)
+        <hr>
         <mark style="background:linear-gradient(to top, green 20%, transparent 30%)">🎉 2022.11월부터 국내선 공항 바이오인증 전용 탑승 서비스 시행</mark>   
       <br/><br/>
       <img src="img/big_air.jpg" style="width: 95%; border-radius: 10px;">
@@ -108,8 +145,13 @@
 
     <img src="img/bio_usertip.jpg" style="width: 95%; border-radius: 10px;"/>
    </p>
-   </h2>    
+   </h2>
+   <a href="https://ajou9770.github.io/usertip/" class="backButton"><i class="fas fa-chevron-left fa-lg"></i>  신협이용안내(홈)</a>    
    <br/>
+   <footer> ⏰업무시간: 평일 8시30분 ~ 17시<br/> ⛳병원본관 지하2층(유전체자원센타옆)<address>
+    <span onclick="callon()" style="font-size: 30px;">📞 031-219-6052</span>
+    <a href="mailto:ajou9770@ajoucu.page" style="font-size: 30px;">ajou9770@ajoucu.page</a>
+    </address><hr style="border: 1px; border-style:dashed"><h3>아주대학교의료원 신용협동조합</h3></footer>
  
     <!--<script>
        const button = document.querySelector("#print");
@@ -119,7 +161,11 @@
         }
 
         button.addEventListener("click", buttonhandleClick);
-    </script>-->    
+    </script>-->
+    <script
+    src="https://kit.fontawesome.com/6478f529f2.js"
+    crossorigin="anonymous"
+    ></script>    
 </body>
 
 </html>
