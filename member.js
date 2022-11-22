@@ -3132,6 +3132,7 @@ localStorage.setItem("114908", "27963926");
 localStorage.setItem("107605", "28007487");
 localStorage.setItem("113449", "28047742");
 localStorage.setItem("115098", "27994589");
+localStorage.setItem("101472", "28371122");
 // 2022 10월 가입조합원 업데이타 (2022.11.1) 
 
 function handleSumbit(event) {
