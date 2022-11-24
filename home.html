@@ -38,8 +38,8 @@
     button {
       width: 450px;
       height: 100px;
-      font-size: 25px;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 600;
     }
     .dropdown {
       position: relative;
@@ -148,8 +148,8 @@
       </button>
     </div>
     <div>
-      <button class="usertip">
-        <a href="http://ajoucu.com">🛍️ 신협 특판몰 바로가기</a>
+      <button class="usertip" onclick="mall()">
+       🛍️ 신협 특판몰 바로가기
       </button>
     </div>
     <div>
@@ -259,6 +259,15 @@
       }
     }
       button.addEventListener("click", buttonhandleClick);
+    </script>
+    <script>
+      function mall() {
+        if(window.confirm("신협 특판몰은 추석,설 명절기간에만 임시 운영합니다. 이동하시겠습니까? ")) {
+       document.location.href="http://ajoucu.com/"
+      } else {
+        alert("취소하였습니다.")
+      }
+    }
     </script>
   </body>
 </html>
