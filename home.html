@@ -127,10 +127,7 @@
     <br />
     <div>
       <button id="print">
-        <a href="http://gw.aumc.ac.kr/"
-          >🖨️원천징수영수증출력<br />(그룹웨어로그인)</a
-        >
-      </button>
+        🖨️원천징수영수증출력<br />(그룹웨어로그인) </button>
     </div>
     <div>
       <button class="sign">
@@ -255,11 +252,12 @@
       const button = document.querySelector("#print");
 
       function buttonhandleClick() {
-        alert(
-          "원천징수영수증 출력시 첫페이지만 지정하여 출력해 주시기 바랍니다"
-        );
+        if(window.confirm("의료원 교직원 그룹웨어로 이동합니다. 📰원천영수증 출력시 첫페이지만 출력 바랍니다~ ")) {
+       document.location.href="http://gw.aumc.ac.kr/"
+      } else {
+        alert("📰원천영수증 출력을 취소하였습니다.")
       }
-
+    }
       button.addEventListener("click", buttonhandleClick);
     </script>
   </body>
