@@ -169,8 +169,9 @@
         <div id="box">
           <h2> <i class="fas fa-mobile-alt"></i> 모바일기기 운영체제를 선택하세요~~👌 </h2>
           <div id="box_btn">
-            <div><i class="fab fa-google-play"></i>안드로이드</div>
-            <div><i class="fab fa-apple"></i>아이폰(IOS)</div>
+            <div id="fab_fa-google-play">안드로이드<i class="fab fa-google-play"></i></div>
+            <div id="fab_fa-apple">아이폰<i class="fab fa-apple"></i></div><br/>
+            <div id="fab_cancel">🔙<i class="fa-solid fa-delete-left"></i></div>
           </div>
         </div>
        </aside>
@@ -200,11 +201,11 @@
         }
         function handleModalClick(event){
           const target = event.target;
-  if(target === modal.querySelector("#box_btn div:last-child")){
+  if(target === modal.querySelector("#fab_fa-apple")){
     window.location.href = "https://apps.apple.com/kr/app/id1484456647";
-  } else if(target === modal.querySelector("#box_btn div:first-child")) {
+  } else if(target === modal.querySelector("#fab_fa-google-play")) {
     window.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
-  } else if(target === modal){
+  } else if(target === modal.querySelector("#fab_cancel")){
     modal.classList.add("none");
   }
         }

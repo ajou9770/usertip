@@ -269,19 +269,31 @@ transform: scale(0.98);
   flex-direction: row;
   justify-content: space-evenly;
 }
-#box_btn div:first-child {
+#fab_cancel {
+  margin: 10px;
  width: 200px;
  height: 100px;
  color: whitesmoke;
- background-color: darkcyan;
- font-size: 30px;
+ background-color: whitesmoke;
+ font-size: 40px;
 }
-#box_btn div:last-child {
+#fab_fa-google-play {
+  text-align: center;
+  margin: 10px;
   width: 200px;
   height: 100px;
   color: whitesmoke;
   background-color: dodgerblue;
-  font-size: 30px;
+  font-size: 25px;
+}
+#fab_fa-apple {
+  text-align: center;
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  color: whitesmoke;
+  background-color: rgb(255, 30, 90);
+  font-size: 25px;
 }
 .none {
   display: none;
