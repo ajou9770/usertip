@@ -196,13 +196,14 @@ div {
   background-color: ivory;
   justify-content: center;
   align-items: center;
+  color: rgb(63, 58, 58);
   opacity: 0.8;
   border-radius: 10px;
   padding-left: 10px;
   height: auto;
   widows: 100px;
   text-align: left;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   margin-bottom: 5px;
@@ -404,7 +405,7 @@ a[href^="tel"]::before {
   text-decoration: none;
   text-shadow: 3px 1px 0px #528ecc;
 }
-.backButton:a {
+.backButton a {
   color: whitesmoke;
 }
 .backButton:hover {
