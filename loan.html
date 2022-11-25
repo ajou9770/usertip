@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet", href="loan.css">
+    <link rel="stylesheet", href="process.css">
     </head>
 <body>
     <div>
@@ -71,9 +72,12 @@
               (일반-> 도움이, 도움이->믿음이, 믿음이->으뜸이)이 된 경우, <mark style="background:linear-gradient(to top, yellow 20%, transparent 30%)">0.2% ~ 0.6% 우대</mark> 금리 적용
                 <br/>▷ 신청방법: 아래, 신협 모바일온뱅크<img src="img/googleplayimg.JPG" width="50px" style="border-radius: 10px;"><img src="img/appstoreimg.JPG" width="50px" style="border-radius: 10px;">(<font color="blue">대출계좌>계좌관리>금리인하요구신청</font>) 또는 신협창구<br/>
                   <hr>
+                  
+
                   <div id="box_btn">
-                    <div class="cubank" onclick="google()"><i class="fab fa-google-play"></i>안드로이드</div>
-                    <div class="cubank" onclick="apple()"><i class="fab fa-apple"></i>아이폰(IOS)</div>
+                  <img src="img/onbank_logo.jpg" style="border-radius: 10px; border: double gray 2px;" onclick="modal_click()"/>
+                   <!-- <div class="cubank" onclick="google()"><i class="fab fa-google-play"></i>안드로이드</div>
+                    <div class="cubank" onclick="apple()"><i class="fab fa-apple"></i>아이폰(IOS)</div>-->
                   </div>
              <hr>
             </div>
@@ -101,16 +105,32 @@
 </div>
 </div>
 <br/><br/><br/><br/><br/>
-<h4>☞ 현재, 본인의 대출 현황(금리 등)조회 또는 대출금 중도 (일부 또는 전부) 상환은 아래 신협모바일 온뱅크를 이용바랍니다.</h4><!-- <div class="cubank">    
-    <a>신협 모바일뱅킹 "온뱅크" 열기 또는 설치 <i class="fas fa-download"></i></a> 
+<h4>☞ 현재, 본인의 대출 현황(금리 등)조회 또는 대출금 중도 (일부 또는 전부) 상환은 아래 신협모바일 온뱅크를 이용바랍니다.</h4>
+<div id="box_btn">
+  <img src="img/onbank_logo.jpg" style="border-radius: 10px; border: double gray 2px;" onclick="modal_click()"/>
+   <!-- <div class="cubank" onclick="google()"><i class="fab fa-google-play"></i>안드로이드</div>
+    <div class="cubank" onclick="apple()"><i class="fab fa-apple"></i>아이폰(IOS)</div>-->
+  </div><br/>
+<!-- <div class="cubank">        
+  <a>신협 모바일뱅킹 "온뱅크" 열기 또는 설치 <i class="fas fa-download"></i></a> 
     </div><br/>-->
-    <div id="box">
+    <!--<div id="box">
         <h2> <i class="fas fa-mobile-alt"></i> 신협 모바일 온뱅크 열기(설치) <i class="fas fa-download"></i></h2>
         <div id="box_btn">
           <div class="cubank" onclick="google()"><i class="fab fa-google-play"></i>안드로이드</div>
           <div class="cubank" onclick="apple()"><i class="fab fa-apple"></i>아이폰(IOS)</div>
         </div>
-      </div><br/>
+      </div><br/>-->
+      <aside class="none" id="modal">
+        <div id="box">
+          <h2> <i class="fas fa-mobile-alt"></i> 모바일기기 운영체제를 선택하세요~~👌 </h2>
+          <div id="box_btn">
+            <div id="fab_fa-google-play" onclick="Google()">안드로이드<i class="fab fa-google-play"></i></div>
+            <div id="fab_fa-apple" onclick="Ipon()">아이폰<i class="fab fa-apple"></i></div><br/>
+            <div id="fab_cancel" onclick="Cancel()">닫기<br/>🔙<i class="fa-solid fa-delete-left"></i></div>
+          </div>
+        </div>
+       </aside>
         
         <!--<div class="loanbox">
             <h2><mark style="background:linear-gradient(to top, darkgoldenrod 20%, transparent 30%)">[대출 계산기(한도, 금리 등)]</mark></h2>
@@ -136,7 +156,7 @@
       data-shape="mobile"
       data-support-multiple-densities="true"
     ></div></div>
-              <a href="https://ajou9770.github.io/usertip/" class="backButton"><i class="fas fa-chevron-left fa-lg"></i>  이전(홈)화면으로 돌아가기</a>
+              <a href="https://ajou9770.github.io/usertip/" class="backButton" style="color: whitesmoke;"><i class="fas fa-chevron-left fa-lg"></i>  이전(홈)화면으로 돌아가기</a>
     <br/>
     <div class="end"> 
     <footer>아주대학교의료원 신용협동조합 <br/>⏰업무시간: 평일 8시30분 ~ 17시 (⛳병원본관 B2)<address>
@@ -173,6 +193,39 @@ modal.classList.add("none");
     modal.addEventListener("click", handleModalClick)
         link.addEventListener("click", handleLinkClick);
   </script>-->
+  <script>
+    function modal_click() {
+      console.log("Modal 창 클릭~~~")
+      modal.classList.remove("none");
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    function Ipon() {
+    if (window.confirm("아이폰계열 모바일 앱 설치화면으로 이동합니다")) {
+    document.location.href ="https://apps.apple.com/kr/app/id1484456647"; 
+    } else {
+        alert("취소하였습니다");
+    }
+    }
+    function Google() {
+    if (window.confirm("안드로이드(구글)계열 모바일 앱 설치화면으로 이동합니다")) {
+    document.location.href ="https://play.google.com/store/apps/details?id=kr.co.cu.onbank"; 
+    } else {
+        alert("취소하였습니다");
+    }
+   }
+   function Cancel() {
+    modal.classList.add("none"); 
+   }
+   /*-- window.conform 문구-- 
+     function Cancel() {
+    if (window.confirm("✔️모바일 앱 설치(열기)를 취소할까요?")) {
+     modal.classList.add("none"); 
+    } else {
+        modal.classList.remove("none");  
+    }
+   }*/
+  </script>
   <script>  
     function callon() {
       if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞연결 할까요?")) {
