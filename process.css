@@ -158,6 +158,9 @@ transform: scale(0.98);
 .cubank:active {
 transform: scale(0.98);
 }
+.cubank a {
+  color: snow;
+}
 .sinhyup {
     display: flex;
     background-color:wheat;
@@ -251,7 +254,7 @@ transform: scale(0.98);
   border-style: solid;
   border-width: 0.5px 7px 7px 0.5px;
   font-size: 26px;
-  bottom: -10vh;
+  top: 1vh;
   left: 6vh;
   width: 500px;
   height: 300px;
