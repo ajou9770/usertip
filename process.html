@@ -214,12 +214,17 @@
         }
        }
        function Cancel() {
-        if (window.confirm("✔️모바일 앱 설치(열기)화면으로 이동을 취소 할려면 '확인'을 눌러주세요")) {
+        alert ("✔️모바일 앱 설치(열기)를 취소 합니다")
+        modal.classList.add("none"); 
+       }
+       /*-- window.conform 문구-- 
+         function Cancel() {
+        if (window.confirm("✔️모바일 앱 설치(열기)를 취소할까요?")) {
          modal.classList.add("none"); 
         } else {
             modal.classList.remove("none");  
         }
-       }
+       }*/
       </script>
     </div>
     <script
