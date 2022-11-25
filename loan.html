@@ -103,8 +103,8 @@
     <div id="box">
         <h2> <i class="fas fa-mobile-alt"></i> 신협 모바일 온뱅크 열기(설치) <i class="fas fa-download"></i></h2>
         <div id="box_btn">
-          <div class="cubank"><a href="https://play.google.com/store/apps/details?id=kr.co.cu.onbank"><i class="fab fa-google-play"></i>안드로이드</a></div>
-          <div class="cubank"><a href="https://apps.apple.com/kr/app/id1484456647"><i class="fab fa-apple"></i>아이폰(IOS)</a></div>
+          <div class="cubank" onclick="google()"><i class="fab fa-google-play"></i>안드로이드</div>
+          <div class="cubank" onclick="apple()"><i class="fab fa-apple"></i>아이폰(IOS)</div>
         </div>
       </div><br/>
         
@@ -176,7 +176,21 @@ modal.classList.add("none");
     } else {
       alert("취소되었습니다~~")
     }
-   }                
+   } 
+   function google() {
+      if (window.confirm("모바일앱을 열기위해 구글앱스토어로 이동할까요?")) {
+        document.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank"
+    } else {
+      alert("취소되었습니다~~")
+    }
+   }
+   function apple() {
+      if (window.confirm("모바일앱을 열기위해 '애플스토어'로 이동할까요?")) {
+        document.location.href = "https://apps.apple.com/kr/app/id1484456647"
+    } else {
+      alert("취소되었습니다~~")
+    }
+   }                 
   </script>
     <script
     src="https://kit.fontawesome.com/6478f529f2.js"
