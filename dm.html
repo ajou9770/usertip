@@ -47,7 +47,7 @@
                  <h4>📢 "<mark>조합원번호</mark>"확인 후 아래 소노호텔앤리조트 조합원 전용 예약사이트(💻)로 접속, 로그인하신 후 이용 가능합니다 .<br/><br/>
                  <button class="btnCopy">조합원번호 복사하기</button>-->
                   <div class="sono">
-                 <a href="https://iris.daemyung.com/iris/common/dispatcher/dmparse.do?menuCd=IRSMMain">💻 조합원전용 실시간예약 사이트 GO <i class="fas fa-chevron-right fa-lg"></i></a>
+                 <a href="https://iris.daemyung.com/iris/common/dispatcher/dmparse.do?menuCd=IRSMMain" onclick="sonolink()">💻 조합원전용 실시간예약 사이트 GO <i class="fas fa-chevron-right fa-lg"></i></a>
                  </div>
                  <h5>※현재, PC버전만 운영되고 있습니다.</h5>
                   <span id="sonovideo" style="CURSOR: hand" onclick = "if(videobox.style.display==`none`)
@@ -105,6 +105,11 @@
     <div class="footer"> 
     <footer><h2>&copy ajou9770@ajoucu.page 아주대학교의료원 신협 <span onclick="callon()" > 조합가입 또는 금융상담: 📞 219-6052,6971</span></h2></footer>
     </div>
+    <script>
+      function sonolink() {
+        alert("📢 이 사이트는 💻pc 버전으로 모바일로 접속시 화면을 확대하여 사용하시기 바랍니다.")
+      }
+    </script>
     <script>  
       function callon() {
         if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞연결 할까요?")) {
