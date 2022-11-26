@@ -390,3 +390,9 @@ td {
   border-bottom: 1px solid #444444;
   padding: 10px;
 }
+#imgbtn:active {
+  transform: scale(0.98);
+}
+#imgbtn:hover {
+  transform: scale(0.95);
+}

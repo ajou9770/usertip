@@ -518,6 +518,9 @@ td {
 .none {
   display: none;
 }
-.img:active {
+#imgbtn:active {
   transform: scale(0.98);
+}
+#imgbtn:hover {
+  transform: scale(0.95);
 }
