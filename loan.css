@@ -518,3 +518,6 @@ td {
 .none {
   display: none;
 }
+.img:active {
+  transform: 0.98;
+}
