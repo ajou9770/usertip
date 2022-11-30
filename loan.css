@@ -467,12 +467,12 @@ td {
   text-align: left;
   border-radius: 10px;
   opacity: 1;
-  position: absolute;
+  position: fixed;
   border: gray;
   border-style: solid;
   border-width: 0.5px 7px 7px 0.5px;
   font-size: 26px;
-  top: -50vh;
+  top: 300px;
   left: 6vh;
   width: 500px;
   height: 300px;
