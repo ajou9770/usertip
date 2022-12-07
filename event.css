@@ -375,3 +375,6 @@ font-weight: bold;
 	position:relative;
 	top:1px;
 }
+* img {
+    border-radius: 10px;
+}
