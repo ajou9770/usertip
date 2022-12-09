@@ -4,7 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>의료원신협 가입방법</title>
-    <link rel="stylesheet", href="process.css">  
+    <link rel="stylesheet", href="process.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#item").click(function() {
+                $("#codebox").show("slow");
+                $("#item_Close").show(2000);
+                $("#item").hide("slow");  // 펼치기 클릭시 paner & 접기 버튼보이고
+                // 펼치기 버튼은 숨기기
+            });
+            $("#item_Close").click(function() {
+                $("#codebox").hide("slow");
+                $("#item").show("slow");
+                $("#item_Close").hide("slow"); // 접기 클릭시 panel & 접기 버튼 숨기고, 
+                 // 펼치기 버튼은 보여주기. 
+            });
+            $("#item2").click(function() {
+                $("#loanbox").show("slow");
+                $("#item2_Close").show(2000);
+                $("#item2").hide("slow");  // 펼치기 클릭시 paner & 접기 버튼보이고
+                // 펼치기 버튼은 숨기기
+            });
+            $("#item2_Close").click(function() {
+                $("#loanbox").hide("slow");
+                $("#item2").show("slow");
+                $("#item2_Close").hide("slow"); // 접기 클릭시 panel & 접기 버튼 숨기고, 
+                 // 펼치기 버튼은 보여주기. 
+            });
+        });
+    </script>  
 </head>
 <body>
     <div>
@@ -30,10 +62,13 @@
       </div><br/>
         <button class="draw"><a href="http://ajou9770.github.io/usertip/draw.html">💰 신협 비과세 예적금 개설 안내<i class="fas fa-chevron-right fa-lg"></i> </a></button>    
     <br/>
-    <span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
+    <!--<span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
                     {codebox.style.display=``; barcode.innerText = `수신금리표 닫기▲`} else {codebox.style.display = `none`; 
-                      barcode.innerText = `💸수신금리표 보기▼`}">💸수신 금리표 보기 ▼</span>
-                    <div id="codebox" style="display: none">
+                      barcode.innerText = `💸수신금리표 보기▼`}">💸수신 금리표 보기 ▼</span>-->
+                        <div class="w3-container" style="box-shadow: none;">
+                        <div id="item" class="w3-button w3-block w3-teal">수신금리표 보기</div>
+                        <div id="item_Close" class="w3-button w3-block w3-red">수신금리표 닫기</div>
+                        <div id="codebox" style="display: none">
                       <h3> [ 시행일자: 2022.11.9 ~ ]</h3>
                       <table>
                       <tr style="border-bottom: double;">  
@@ -100,10 +135,12 @@
                       </table>
                      </div>
                     <br/>
-                    <span id="loancode" style="CURSOR: hand" onclick = "if(loanbox.style.display==`none`)
+                    <!--<span id="loancode" style="CURSOR: hand" onclick = "if(loanbox.style.display==`none`)
                     {loanbox.style.display=``; loancode.innerText = `대출금리표 닫기▲`} else {loanbox.style.display = `none`; 
-                      loancode.innerText = `📉대출금리표 보기▼`}">📉대출 금리표 보기 ▼</span>
-                    <div id="loanbox" style="display: none">
+                      loancode.innerText = `📉대출금리표 보기▼`}">📉대출 금리표 보기 ▼</span>-->
+                      <div id="item2" class="w3-button w3-block w3-black">📰대출금리표 보기</div>
+                      <div id="item2_Close" class="w3-button w3-block w3-red"> 대출금리표  닫기</div>
+                      <div id="loanbox" style="display: none">
                       <h3> [ 시행일자: 2022.11.9 ~ ]</h3>
                        <table>
                         <tr style="border-bottom: double;"> 
@@ -140,6 +177,8 @@
                          </table>
                          <h5>🎉<mark>신입교직원</mark>은 최초 대출시 상기 금리에서 <mark>-0.5 우대이율</mark>이 적용됩니다<br/> 
                           # 가산금리: 신용등급, 급여이체, 참조합원 등급에 따른 +0.2% ~ +1.0% 가산됨</h5>
+                    </div>
+                    </div>
                     </div>
                     <br/>
                                        
