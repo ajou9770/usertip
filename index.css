@@ -560,3 +560,29 @@ video {
 button {
   box-shadow: 0px 6px 12px grey;
 }
+video {
+  max-width: 100%; display: block; margin: 10px auto;
+  border-radius: 10px;
+  }
+  #sonovideo {
+  width:auto;
+  font-size: x-large;
+  font-weight: ;
+  height: 65px; 
+  padding : 10px;
+  border: 1px solid darkblue white; 
+  box-shadow: 0px 6px 12px 0px grey;
+  margin:5px; 
+  border-radius:5px;
+  background-color: teal;
+  color: whitesmoke;
+  text-align: center;
+  }
+  #sonovideo:active {
+    transform: scale(0.98);
+  }
+  #videobox {
+  width: 100%;
+  border: 1px solid teal;
+  box-shadow: 0px 6px 12px 0px grey;
+  }

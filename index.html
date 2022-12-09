@@ -23,15 +23,22 @@
     </style>
   </head>
   <body>
-    <img src="img/usertip_top_202205.jpg"><br/>
-        <!--<video controls>
-      <source src="img/usertip_info.mp4">
+    <!--<img src="img/usertip_top_202205.jpg"><br/>-->
+      <video controls autoplay>
+      <source src="img/sh_happyway_newyear_30s.mp4">
       </video>
       <br/>
-      # 명절 특판 배너 광고. 
+      <!--# 명절 특판 배너 광고. 
       <div>
       <a href="http://ajoucu.com"><img src="img/chuseok_ban.jpg"></a> 
       </div>-->
+      <span id="sonovideo" style="CURSOR: hand" onclick = "if(videobox.style.display==`none`)
+                    {videobox.style.display=``; sonovideo.innerText = `🎞️영상 닫기 ▲`} else {videobox.style.display = `none`; 
+                    sonovideo.innerText = `신협소개 🎞️영상보기 ▼`}">신협소개 🎞️동영상보기 ▼</span>
+                    <div id="videobox" style="display: none"><video controls>
+                      <source src="img/sh_video_3m.mp4">
+                      </video></div><br>
+                      <hr>
       <div>
         <div class="smalltitle">
           <h3 style="font-weight: 600; font-style: normal;">| 비과세 출자금&예적금 이용고배당 |</h3>
