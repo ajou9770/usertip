@@ -566,8 +566,8 @@ video {
   }
   #sonovideo {
   width:auto;
-  font-size: x-large;
-  font-weight: ;
+  font-size: xx-large;
+  font-weight: 600;
   height: 65px; 
   padding : 10px;
   border: 1px solid darkblue white; 
