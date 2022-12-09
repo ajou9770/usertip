@@ -441,6 +441,7 @@ a[href^="tel"]::before {
   background-color: rgb(10, 54, 117);
   color: whitesmoke;
   text-align: center;
+  box-shadow: 0px 6px 12px 0px grey;
 }
 #loanbox {
   width: 95%;
@@ -523,4 +524,7 @@ td {
 }
 #imgbtn:hover {
   transform: scale(0.95);
+}
+#imgbtn {
+  box-shadow: 0px 6px 12px 0px grey;
 }
