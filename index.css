@@ -96,6 +96,7 @@ div {
   border: none;
   transition: all 0.3s ease;
   overflow: hidden;
+  box-shadow: 0px 6px 12px grey;
 }
 .btn-9:after {
   position: absolute;
@@ -179,6 +180,7 @@ div {
   line-height: 42px;
   padding: 0;
   border: none;
+  box-shadow: 0px 6px 12px grey;
 }
 .btn-3 span {
   position: relative;
@@ -339,6 +341,7 @@ footer a {
   padding: 0;
   border: none;
   background: rgb(255, 27, 0);
+  box-shadow: 0px 6px 12px grey;
   background: linear-gradient(
     0deg,
     rgba(255, 27, 0, 1) 0%,
@@ -550,4 +553,7 @@ video {
 }
 #infoinput {
   font-size: 20px;
+}
+button {
+  box-shadow: 0px 6px 12px grey;
 }
