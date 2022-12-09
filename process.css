@@ -43,6 +43,7 @@ button {
   width: auto;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0px 6px 12px 0px grey;
 }
 button :hover {
   transform: scale(0.98);
@@ -399,8 +400,16 @@ td {
 #item_Close {
   display: none;
   width: 40%;
+  box-shadow: 0px 6px 12px 0px grey;
 }
 #item2_Close {
   display: none;
   width: 40%;
+  box-shadow: 0px 6px 12px 0px grey;
+}
+#item {
+  box-shadow: 0px 6px 12px 0px grey;
+}
+#item2 {
+  box-shadow: 0px 6px 12px 0px grey;
 }
