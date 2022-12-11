@@ -583,6 +583,7 @@ video {
   }
   #videobox {
   width: 100%;
-  border: 1px solid teal;
+  height: auto;
+  border: 0px solid teal;
   box-shadow: 0px 6px 12px 0px grey;
   }
