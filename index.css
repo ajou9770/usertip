@@ -65,9 +65,9 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
-  background: #005AA7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3080c6, #FFFDE4);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3080c6, #FFFDE4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #6896bf;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4e8bc1, #FFFDE4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5695cc, #FFFDE4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 div {
   display: flex;
