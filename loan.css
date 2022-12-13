@@ -3,7 +3,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ivory;
   vertical-align: middle;
   font-family: "Noto Sans KR", sans-serif;
   align-items: center;
@@ -11,6 +10,9 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
+  background: #abbaab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 a {
   color: blue;
@@ -193,7 +195,9 @@ div {
   padding-left: 10px;
 }
 .content {
-  background-color: ivory;
+  background: #abbaab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   justify-content: center;
   align-items: center;
   color: rgb(63, 58, 58);

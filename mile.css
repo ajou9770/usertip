@@ -4,13 +4,15 @@ body {
     height: auto;
     flex-direction: column;
     justify-content: center;
-    background-color: ivory;
     vertical-align: middle;
     text-align: center;
     text-align: justify;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 20px;  
+    margin-bottom: 20px;
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 div {
     display: inline-block;
@@ -130,7 +132,6 @@ transform: scale(0.98);
 }
 .content {
     display: flex;
-    background-color:ivory;
     padding: 10px;
     border-radius: 10px;
     border-width: 4px 1px;
@@ -144,6 +145,9 @@ transform: scale(0.98);
     font-weight: 800;
     padding-top: 10px;
     padding-bottom: 10px;
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 #toc-content {
    display: flex;
