@@ -12,6 +12,14 @@
       rel="stylesheet"    />-->
     <title>신협이용 꿀팁</title>
     <!--Stylesheets-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn_color").click(function(){
+    $("body,div,video,html").toggleClass("night");
+  });
+});
+</script>
     <style media="screen">
       *,
       *:before,
@@ -19,7 +27,22 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-      }      
+      }
+      .night {
+        background-color: rgb(79, 72, 72);
+        color: whitesmoke;
+      }
+      #btn_color {
+        background-color: rgb(86, 41, 41);
+        padding: 10px;
+        color: whitesmoke;
+        font-size: 25px;
+        font-weight: 600;
+        border-radius: 10px;
+        box-shadow: opx 5px 10px 0px grey;
+        border: none;
+      }     
+
     </style>
   </head>
   <body>
@@ -47,7 +70,7 @@
       <div class="smalltitle">
         <h3 style="font-weight: 600; font-style: normal;">| 조합가입 및 예적금 통장 개설 |</h3>
       비과세출자금 통장을 개설하시면 조합원 가입 완료<br/>
-      신협 비과세 예적금으로 절세 혜택도 챙기세요~~ 
+      신협 비과:세 예적금으로 절세 혜택도 챙기세요~~ 
       </div>
       <br/>
       <button class="proce btn-5">
@@ -133,6 +156,8 @@
   data-shape="mobile"
   data-support-multiple-densities="true"
   ></div></div><br/>
+  <button id="btn_color">DarkMode/cancel</button>
+  <br>
     <footer> ⏰업무시간: 평일 8시30분 ~ 17시<br/> ⛳병원본관 지하2층(유전체자원센타옆)<address>
     <span onclick="callon()" style="font-size: 30px;">📞 031-219-6052</span>
     <a href="mailto:ajou9770@ajoucu.page" style="font-size: 30px;">ajou9770@ajoucu.page</a>

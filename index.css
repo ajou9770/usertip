@@ -66,8 +66,8 @@ body {
   margin-right: 20px;
   margin-bottom: 20px;
   background: #DAE2F8;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to right, #f1c3c3, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #efc1c1, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 div {
