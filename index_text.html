@@ -6,5 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test</title>
   </head>
-  <body></body>
+  <body onload="add()">
+   <p>
+    test site 
+   </p>
+   <script>
+    function add() {
+      if(window.confirm("특판몰로 이동할까요?  아니시면 '취소'를 선택하여 주세요")) {
+        document.location.href ="http://ajoucu.com";
+      } else {
+        alert("canceled!!")
+      }
+        }
+   </script>
+  </body>
 </html>
