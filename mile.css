@@ -194,7 +194,7 @@ width: 95%;
 border: 3px solid teal;
 }
 #barcode {
-width:80%;
+width:90%;
 height: 70px;
 border: none; 
 padding-top: 10px;
@@ -202,7 +202,7 @@ padding-left: 10px;
 padding-right: 10px;
 border: 3px solid darkblue white; 
 margin:5px; 
-font-size: xx-large;
+font-size: x-large;
 border-radius:10px;
 background-color: teal;
 color: whitesmoke;
@@ -263,3 +263,30 @@ box-shadow: 0px 6px 12px 0px grey;
     display: flex;
     text-align: center;
 }
+#box_form {
+    width:auto;
+    height: 65px; 
+    padding : 10px;
+    font-size: 25px;
+    font-weight: 600;
+    border: none; 
+    margin:5px; 
+    border-radius:5px;
+    background-color: teal;
+    color: whitesmoke;
+    text-align: center;
+    }
+    #showbox {
+    width: 100%;
+    padding-top: 15px;
+    border: 3px solid teal;
+    box-shadow: 0px 4px 8px grey;
+    }
+    .mileli {
+        font-size: 25px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    img {
+        width: 100%;
+    }
