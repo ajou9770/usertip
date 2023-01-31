@@ -267,19 +267,6 @@ mark.mint {
   background-color: mediumspringgreen;
   background: linear-gradient(to top, mediumspringgreen 20%, transparent 30%);
 }
-.loanbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  text-align: left;
-  border-style: solid;
-  border-width: 2px 6px 6px 2px;
-  border-color: darkcyan;
-  height: auto;
-  widows: 100px;
-  padding: 10px;
-  background-color: whitesmoke;
-}
 .dropbtn {
   background-color: #04aa6d;
   color: white;
@@ -449,7 +436,17 @@ a[href^="tel"]::before {
 }
 #loanbox {
   width: 95%;
-  border: 3px solid whitesmoke;
+  display: flex;
+  font-weight: 500;
+  opacity: 0.8;
+  border: none;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  height: auto;
+  widows: 100px;
+  padding: 10px;
+  background-color: rgb(10, 54, 117);
 }
 table {
   font-size: 20px;
