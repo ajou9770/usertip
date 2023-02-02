@@ -3193,7 +3193,45 @@ localStorage.setItem("115166", "28586084");
 localStorage.setItem("115025", "28180693");
 localStorage.setItem("115167", "28497788");
 localStorage.setItem("114996", "28606835");
-// 2022 12월 가입조합원 업데이타 (2023.1.2) 
+localStorage.setItem("115143", "28651346");
+localStorage.setItem("115068", "28647327");
+localStorage.setItem("115001", "28734579");
+localStorage.setItem("115189", "28728648");
+localStorage.setItem("112904", "28721958");
+localStorage.setItem("115219", "28798435");
+localStorage.setItem("110739", "21617410");
+localStorage.setItem("115190", "28702300");
+localStorage.setItem("114288", "28699242");
+localStorage.setItem("115147", "28646646");
+localStorage.setItem("115192", "28647682");
+localStorage.setItem("115174", "28640777");
+localStorage.setItem("114721", "28688722");
+localStorage.setItem("109017", "28637891");
+localStorage.setItem("113666", "28763698");
+localStorage.setItem("115194", "28728627");
+localStorage.setItem("113832", "28721975");
+localStorage.setItem("114461", "28647295");
+localStorage.setItem("115007", "28678535");
+localStorage.setItem("115153", "28646638");
+localStorage.setItem("114928", "28639821");
+localStorage.setItem("114708", "28763213");
+localStorage.setItem("114599", "28754681");
+localStorage.setItem("112402", "28769197");
+localStorage.setItem("115235", "28766060");
+localStorage.setItem("114944", "28742629");
+localStorage.setItem("115198", "28646739");
+localStorage.setItem("113962", "28719639");
+localStorage.setItem("115082", "28700989");
+localStorage.setItem("114690", "28705394");
+localStorage.setItem("114106", "28786754");
+localStorage.setItem("115204", "28800740");
+localStorage.setItem("115205", "28647015");
+localStorage.setItem("113568", "28643794");
+localStorage.setItem("115206", "28646917");
+localStorage.setItem("114464", "28771064");
+localStorage.setItem("114483", "28689270");
+localStorage.setItem("115086", "28792963");
+// 2023 1월 가입조합원 업데이타 (2023.2.1) 
 
 function handleSumbit(event) {
   event.preventDefault();
@@ -3204,7 +3242,7 @@ function handleSumbit(event) {
     alert("사번 입력 후 조회 바랍니다 😃");
     h3.innerText = "";
   } else if (show === null) {
-    h3.innerText = `["${value}"는 찾을수가 없네요😢. 2023년 12월 31일까지 가입된 조합원에 한해 조회 가능합니다. 조회가 안될 경우 신협으로 문의 바랍니다.👌]`;
+    h3.innerText = `["${value}"는 찾을수가 없네요😢. 2023년 1월 31일까지 가입된 조합원에 한해 조회 가능합니다. 조회가 안될 경우 신협으로 문의 바랍니다.👌]`;
   } else {
     h3.innerText = `[조합원번호(ID)는 ${show} 입니다]`;
   }
