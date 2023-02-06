@@ -1,0 +1,86 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#bs").click(function(){
+    console.log("done");
+    $("#img_bs").toggle("slow");
+  });
+  $("#pl").click(function(){
+    console.log("done");
+    $("#img_pl").toggle("slow");
+  });
+  $("#div").click(function(){
+    console.log("done");
+    $("#img_div").toggle("slow");
+  });
+  $("#plan2023").click(function(){
+    console.log("done");
+    $("#").toggle("slow");
+  });
+});
+</script>
+<style>
+    #img_bs, #img_pl, #img_div, #img_plan2023 {
+        display: none;
+    }
+    html {
+        margin: 10px;
+        width: 100%;
+        text-align: left;
+    }
+    ul {
+        text-shadow: 2px 2px 3px grey;
+    }
+    li {
+        font-size: large;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px grey;
+    }
+    button {
+        font-size: large;
+        box-shadow: 0px 4px 8px grey;
+    }
+    button:active {
+        transform: scale(0.98);
+    }
+    img {
+        width: auto;
+        box-shadow: 0px 4px 8px grey;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h2> 제29차 정기총회 상정안 결산 재무제표 및 잉여금 처분(안)</h2>
+<ul><h3> | 상정의안 |</h3>
+    <li>제1호의 안: 2022년 감사보고 및 승인의 건</li>
+    <li>제2호의 안: 2022년 결산(안) 승인의 건</li>
+    <li>제3호의 안: 2022년 잉여금 처분(안) 승인의 건</li>
+    <li>제4호의 안: 2023년도 사업계획 및 예산(안) 승인의 건</li>
+</ul>
+<button id="bs"># 2022년 요약재무상태표 보기/닫기</button>
+<br>
+<img src="img/bs_2022.jpg" id="img_bs"/>
+<br>
+<button id="pl" style="background-color: teal;"># 2022년 요약손익계산서 보기/닫기</button>
+<br>
+<img src="img/pl_2022.jpg" id="img_pl"/>
+<br>
+<button id="div" style="background-color: rgb(216, 93, 48);"># 2022년 잉여금 처분(안) 보기/닫기</button>
+<br>
+<img src="img/share_2022.jpg" id="img_div"/>
+<br>
+<button id="plan" style="background-color: rgb(27, 27, 125);"># 2023년 사업계획 및 예산(안)  보기/닫기</button>
+<br>
+<img src="#" id="img_plan2023"/>
+<hr>
+<h2 style="color:blue">🗓️ 출자 및 이용고배당 현금 지급일: 2023.2.15(수) </h2>
+<br>
+<div style="text-align: center;"><h2>아주대학교의료원 신용협동조합</h2>
+</div>
+</body>
+</html>
