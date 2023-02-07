@@ -54,9 +54,21 @@ $(document).ready(function(){
         animation: vibration 0.1S infinite;
     }
     img {
-        width: 100%;
+        width: 80%;
         box-shadow: 0px 4px 8px grey;
         border-radius: 10px;
+    }
+    span {
+      font-size: large;
+      font-weight: 600;
+      border-radius: 5px;
+      background-color: rgb(237, 231, 218);
+      padding: 10px;
+      box-shadow: 0px 4px 8px grey;
+      border: 0 0 2px 0 solid; 
+    }
+    span:active {
+        transform: scale(0.98);
     }
 </style>
 </head>
@@ -71,21 +83,24 @@ $(document).ready(function(){
     <li>제3호의 안: 2022년 잉여금 처분(안) 승인의 건</li>
     <li>제4호의 안: 2023년도 사업계획 및 예산(안) 승인의 건</li>
 </ul>
-<button id="bs" style="background-color: rgb(18, 50, 123); color: whitesmoke;" onclick="navigator.vibrate(100)"># 2022년 요약재무상태표 보기/닫기</button>
+<hr>
+<br>
+<span id="bs" onclick="navigator.vibrate(100)">#1. 2022년 요약재무상태표 </span>
 <br>
 <img src="img/bs_2022.jpg" id="img_bs"/>
 <br><br>
-<button id="pl" style="background-color: teal; color: whitesmoke;" onclick="navigator.vibrate(100)"># 2022년 요약손익계산서 보기/닫기</button>
+<span id="pl" onclick="navigator.vibrate(100)">#2. 2022년 요약손익계산서 </span>
 <br>
 <img src="img/pl_2022.jpg" id="img_pl"/>
 <br><br>
-<button id="div" style="background-color: rgb(216, 93, 48); color: whitesmoke;" onclick="navigator.vibrate(100)"># 2022년 잉여금 처분(안) 보기/닫기</button>
+<span id="div" onclick="navigator.vibrate(100)">#3. 2022년 잉여금 처분(안) </span>
 <br>
 <img src="img/share_2022.jpg" id="img_div"/>
 <br><br>
-<button id="plan" style="background-color: rgb(27, 27, 125); color: whitesmoke;" onclick="navigator.vibrate(100)"># 2023년 사업계획 및 예산(안)  보기/닫기</button>
+<span id="plan" onclick="navigator.vibrate(100)">#4. 2023년 사업계획 및 예산(안) </span>
 <br>
 <img src="img/goal_2023.jpg" id="img_plan2023"/>
+<br>
 <hr><br>
 <h3 style="color:blue">🗓️ 출자 및 이용고배당 현금 지급일: 2023.2.15(수) </h3>
 <br>
