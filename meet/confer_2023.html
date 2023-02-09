@@ -26,6 +26,24 @@ $(document).ready(function(){
     console.log("done");
     $("#contentB").show("slow");
     $("#contentA").hide("slow");
+    $("#videoOntwo").hide("slow");
+    $("#videoOn").hide("slow");
+  });
+  $("#videoOn").click(function(){
+    console.log("done");
+    $("#videobox").hide("slow");
+    $("#videoboxone").show("slow");
+    $("#contentA").hide("slow");
+    $("#videoOntwo").hide("slow");
+    $("#videoOn").hide("slow");
+  });
+  $("#videoOntwo").click(function(){
+    console.log("done");
+    $("#videobox").show("slow");
+    $("#videoboxone").hide("slow");
+    $("#contentA").hide("slow");
+    $("#videoOntwo").hide("slow");
+    $("#videoOn").hide("slow");
   });
 });
 </script>
@@ -127,6 +145,15 @@ $(document).ready(function(){
 </head>
 <body>
   <img blink id="contentA" src="img/topimg_confer2023.jpg" style="width:90%; height: 100%;" onclick="showHide()">
+  <br>
+  <button id="videoOn" style="width:auto;">📽️</button>
+  <button id="videoOntwo" style="width:auto;">🎞️</button>
+  <div id="videobox" style="display: none"><video controls>
+    <source src="img/sh_video_3m.mp4">
+    </video></div>
+    <div id="videoboxone" style="display: none"><video controls>
+      <source src="img/sh_happyway_newyear_30s.mp4">
+      </video></div>
   <div id="contentB">
   <div style="text-align: center;">
   <br><br><br>
