@@ -22,6 +22,11 @@ $(document).ready(function(){
     console.log("done");
     $("#img_plan2023").toggle("slow");
   });
+  $("#contentA").click(function(){
+    console.log("done");
+    $("#contentB").show("slow");
+    $("#contentA").hide("slow");
+  });
 });
 </script>
 <style>
@@ -36,7 +41,7 @@ $(document).ready(function(){
         text-shadow: 2px 2px 3px grey;
     }
     li {
-        font-size: medium;
+        font-size: large;
         font-weight: 600;
         text-shadow: 1px 1px 2px grey;
     }
@@ -70,14 +75,65 @@ $(document).ready(function(){
     span:active {
         transform: scale(0.98);
     }
+    #contentB {
+      display: none;
+      text-align: left;
+    }
+    body {
+      text-align: center;
+    }
+    #contentA {
+      -webkit-animation: blink 5s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation: blink 3s;
+      -moz-animation-iteration-count: infinite;
+      -o-animation: blink 5s;
+      -o-animation-iteration-count: infinite;
+    }
+    @-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 </style>
 </head>
 <body>
+  <img blink id="contentA" src="img/topimg_confer2023.jpg" style="width:90%; height: 100%;" onclick="showHide()">
+  <div id="contentB">
   <div style="text-align: center;">
-<h2> | 신협 제29차 정기총회 |</h2></div>
-<h3> 🗓️ 일시: 2023. 2. 14(화) 17시 10분</h3>
-<h3> ⛳ 장소: 별관 대강당</h3>
-<ul><h3> | 상정의안 |</h3>
+  <br><br><br>
+<h1> | 신협 제29차 정기총회 |</h1></div>
+<h2> 🗓️ 일시: 2023. 2. 14(화) 17시 10분</h2>
+<h2> ⛳ 장소: 별관 대강당</h2>
+<ul><h2> | 상정의안 |</h2>
     <li>제1호의 안: 2022년 감사보고 및 승인의 건</li>
     <li>제2호의 안: 2022년 결산(안) 승인의 건</li>
     <li>제3호의 안: 2022년 잉여금 처분(안) 승인의 건</li>
@@ -102,9 +158,13 @@ $(document).ready(function(){
 <img src="img/goal_2023.jpg" id="img_plan2023"/>
 <br>
 <hr><br>
+<h3 style="color: blue">🎉2022년 우수조합원: 박명화 조합원, 이강일 조합원, 장은희 조합원, 정미정 조합원 (이상 4명)
+<br> 🎇 우수 조합원 수상을 축하 드립니다 ~~ 
+</h3>
 <h3 style="color:blue">🗓️ 출자 및 이용고배당 현금 지급일: 2023.2.15(수) </h3>
 <br>
 <div style="text-align: center;"><h2>아주대학교의료원 신용협동조합</h2>
+</div>
 </div>
 </body>
 </html>
