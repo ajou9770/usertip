@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> 
+    <title>Document</title>
+    <style>
+        button {
+            font-size: larger;
+            font-weight: 600;
+        }
+        #icon {
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  position: fixed;
+  bottom: 150px;
+  right: 35px;
+  border-radius: 10px;
+  background: none;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+    <img src="img/congrat_2023.jpg"/>
+    <br>   
+    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSev3Nt3vxjjIJa1qMYRk_iYc_V-3yK03BAsuewZgtkBwkAK8g/viewform?usp=sf_link"> -->
+   <button onclick="alert('3월 1일부터 신청하실 수 있습니다')">📑 경조금 신청하기🖱️</button>
+    </div>
+        <h4>🗓️신청기한: 경조사 발생일로부터 1년 이내</h4>
+    <h4>✔️지급방법: 신청시 지정하신 계좌로 입금</h4>
+    <h4>🚀 시행일자: 2023년 3월 1일부(경조금 발생일기준)~ </h4>
+    <div id="icon">
+    <div
+id="kakao-talk-channel-chat-button"
+data-channel-public-id="_dfhkK"
+data-title="consult"
+data-size="small"
+data-color="yellow"
+data-shape="mobile"
+data-support-multiple-densities="true"
+></div></div>
+<script>
+    window.kakaoAsyncInit = function() {
+      Kakao.Channel.createChatButton({
+        container: '#kakao-talk-channel-chat-button',
+      });    
+    };
+   
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'kakao-js-sdk');
+  </script>
+</body>
+</html>
