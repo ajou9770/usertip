@@ -50,7 +50,7 @@ $(document).ready(function(){
       }
      dialog {
           position: absolute;
-          width: 90%;
+          width: 95%;
           top: 400px;
           left: 15px;
           text-align: center;
@@ -62,6 +62,8 @@ $(document).ready(function(){
       button {
           padding: 5px 10px;
           border-radius: 5px;
+          margin-right: 30px;
+          margin-left: 30px;
           font-size: medium;
           background-color: rgb(89, 48, 71);
           color: whitesmoke;
@@ -83,6 +85,24 @@ $(document).ready(function(){
   </head>
   <body onload="popup()">
     <!-- popup -->
+    <dialog>
+      <p> 우리신협은 의료원교직원이 100% 출자하여 설립.운영되고 있습니다.
+          교직원의 신협 이용편의 제공을 위해, 이용방법 및 혜택을 정리하였습니다. 
+          잠깐 둘러 보시면 신협 이용에 많은 도움이 되실 것입니다. 아울러, 신입교직원은 🎁월컴쿠폰(심플퀴즈응모)도 신청하세요. </p>
+      <form method="dialog">
+        <br>
+        <hr>
+        <br>
+        <div style="display: inline;"><button value="close">확인</button><button id="dayNonsee" onclick="notSee()" >✔하루동안 안보기</button>
+          </div>
+          <!-- <button id="linkbtn" onclick="if(window.confirm('특판몰 이동?')){
+          document.location.href='http://ajoucu.com'  
+          }else {
+              alert('canceled!!')
+              console.log('cancel')
+          }">특판몰이동</button> -->
+      </form>
+  </dialog>
     <!--<img src="img/usertip_top_202205.jpg"><br/>-->
       <video controls autoplay muted>
       <source src="img/sh_happyway_newyear_30s.mp4">
@@ -207,25 +227,7 @@ $(document).ready(function(){
   <br>
   <button id="btn_color" title="♣이버튼클릭 => Dark모드변환(환원)">◑ DarkMode/cancel</button>
   <br>
-  <dialog>
-    <p> 우리신협은 의료원교직원이 100% 출자하여 설립.운영되고 있습니다.
-        교직원의 신협 이용편의 제공을 위해, 이용방법 및 혜택을 정리하였습니다. 
-        잠깐 둘러 보시면 신협 이용에 많은 도움이 되실 것입니다. 아울러, 신입교직원은 🎁월컴쿠폰(심플퀴즈응모)도 신청하세요. </p>
-    <form method="dialog">
-      <br>
-      <hr>
-      <br>
-        <button value="close">확인</button>
-        <button id="dayNonsee" onclick="notSee()" >✔하루동안 안보기</button>
-        <!-- <button id="linkbtn" onclick="if(window.confirm('특판몰 이동?')){
-        document.location.href='http://ajoucu.com'  
-        }else {
-            alert('canceled!!')
-            console.log('cancel')
-        }">특판몰이동</button> -->
-    </form>
-</dialog>
-    <footer> ⏰업무시간: 평일 8시30분 ~ 17시<br/> ⛳병원본관 지하2층(유전체자원센타옆)<address>
+      <footer> ⏰업무시간: 평일 8시30분 ~ 17시<br/> ⛳병원본관 지하2층(유전체자원센타옆)<address>
     <span onclick="callon()" style="font-size: 30px;">📞 031-219-6052</span>
     <a href="mailto:ajou9770@ajoucu.page" style="font-size: 30px;">ajou9770@ajoucu.page</a>
     </address><hr style="border: 1px; border-style:dashed"><h3>아주대학교의료원 신용협동조합</h3></footer>
