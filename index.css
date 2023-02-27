@@ -497,7 +497,6 @@ a[href^="tel"]::before {
   font-family: "Noto Sans KR", sans-serif;
   width: 100%;
   color: #2c3d51;
-  width: max-content;
   height: max-content;
   text-align: left;
   font-size: 28px;
