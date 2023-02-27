@@ -21,6 +21,11 @@ div {
     align-items:center;
     color: seashell;
 }
+small {
+    color: #1564ad;
+    font-size: 20px;
+    font-weight: 600;
+}
 .quzi {
     background-color:seagreen;
     border-radius: 30px;
