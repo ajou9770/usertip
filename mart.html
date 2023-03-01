@@ -21,11 +21,22 @@
     </style>
 </head>
 <body>
-    <h2> 🛒병동입원용품 구매는 아래 이미지를 클릭 하세요
-  <br>  ↓ ↓ ↓ ↓ ↓ ↓</h2>
+    <h2> [ 병동생활용품 구매 안내 ]</h2>
+    <h3># 결제방법: 무통입금 또는 카드결제<br>
+    # 당일주문 => 익일 오전중 병동으로 일괄 배송
 
+    </h3>
+    <h3> 🛒병동입원용품 구매는 아래 이미지를 클릭 하세요
+  <br>  ↓ ↓ ↓ ↓ ↓ ↓</h3>
   <img src="img/seven_logo.png" onclick="document.location.href='http://ajoucu.com'"/>
      <br>
-     <h2># 결제방법: 무통입금 또는 카드결제</h2>
+     <hr> 
+ 
+    <h3 onclick="if(window.confirm('세븐일레븐 매장으로 전화연결 할까요?')) 
+        {document.location.href='tel:031-219-4200'
+        }else {
+            alert('취소되었습니다');
+            console.log('canceled');
+        }">📞 문의: 219-4200 (세븐일레븐 아주대병원점)</h3>
 </body>
 </html>
