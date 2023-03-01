@@ -18,26 +18,35 @@
         body {
             text-align: center;
         }
+        pre, bt {
+            text-align: left;
+            font-size: large;
+            font-weight: 600;
+            color:rgb(24, 91, 133);
+        }
     </style>
 </head>
 <body>
     <h2> [ 병동생활용품 구매 안내 ]</h2>
-    <h3># 결제방법: 무통입금 또는 카드결제<br>
+    <pre>
+    # 결제방법: 💸무통입금 또는 💳카드결제
     # 당일주문 => 익일 오전 병동으로 일괄 배송
-
-    </h3>
+    ✔ 배달장소(병동)입력 : 주소창에 "월드컵로164" => 검색 
+    => 아주대병원 선택 =>  기타주소창: <mark>"병동명"</mark> 입력
+    </pre>
     <h3> 🛒병동입원용품 구매는 아래 이미지를 클릭 하세요
   <br>  ↓ ↓ ↓ ↓ ↓ ↓</h3>
   <img src="img/seven_logo.png" onclick="document.location.href='http://ajoucu.com'"/>
-     <br>
-     <hr> 
- 
-    <h3 onclick="if(window.confirm('세븐일레븐 매장으로 전화연결 할까요?')) 
+     <br><br>
+     <hr><br> 
+
+    
+    <bt onclick="if(window.confirm('세븐일레븐 매장으로 전화연결 할까요?')) 
         {document.location.href='tel:031-219-4200'
         }else {
             alert('취소되었습니다');
             console.log('canceled');
         }">📞 문의: 219-4200 
-        <br>(세븐일레븐 아주대병원점)</h3>
+        <br>(세븐일레븐 아주대병원점)</bt>
 </body>
 </html>
