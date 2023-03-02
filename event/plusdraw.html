@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css"/>
+    <title>플러스정기적금(신한카드연계)</title>
+    <script src="https://kit.fontawesome.com/6478f529f2.js"
+   crossorigin="anonymous">
+</script>
+    <style>
+    img {
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px grey;
+    }
+        #modal {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  z-index: 2;
+}
+#box {
+  text-align: left;
+  border-radius: 10px;
+  opacity: 1;
+  position: fixed;
+  border: gray;
+  border-style: solid;
+  border-width: 0.5px 7px 7px 0.5px;
+  font-size: 26px;
+  top: 400px;
+  left: 6vh;
+  width: 500px;
+  height: 300px;
+  color: whitesmoke;
+  background-color: rgb(14, 14, 66);
+  padding: 20px;
+}
+#box_btn {
+  cursor: pointer;
+  width: 100%;
+  padding-left: 10px;
+  align-items: center;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#fab_cancel {
+    border-radius: 10px;
+  margin: 10px;
+  padding-top: 20px;
+  width: 200px;
+  height: 100px;
+  background-color: cadetblue;
+  font-size: 30px;
+}
+#fab_fa-google-play {
+    border-radius: 10px;
+  text-align: center;
+  padding-top: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  color: whitesmoke;
+  background-color: dodgerblue;
+  font-size: 25px;
+}
+#fab_fa-apple {
+    border-radius: 10px;
+  text-align: center;
+  padding-top: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  color: whitesmoke;
+  background-color: rgb(255, 30, 90);
+  font-size: 25px;
+}
+.none {
+  display: none;
+}
+html {
+    padding: 10px;
+}
+pre {
+    font-size: 18px;
+    font-weight: 600;
+}
+#icon {
+  border-radius: 40px;
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  position: fixed;
+  bottom: 210px;
+  right: 40px;
+  background: none;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+#icon_call {
+  border: none;
+  padding-top: 10px;
+  width: 175px;
+  height: 50px;
+  font-size: 25px;
+  position: fixed;
+  bottom: 290px;
+  right: 15px;
+  color: black;
+  border-radius: 35px;
+  box-shadow: 1px 3px 3px 1px slategray;
+  background: rgb(205, 235, 223);
+  text-align: center;
+  font-weight: bold;
+}
+#icon_call a {
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+    </style>
+</head>
+<img src="img/plusdraw_sh-001.jpg"/>
+<h2> | 신한제휴카드 연계 플러스 정기적금 | </h2>
+<pre>
+# 상품명: 플러스 정기적금
+# 기간 및 불입한도: 6개월(60만원/월), 12개월(30만원/월)
+# 적용금리: 최고 10%(기본이율 4.5% + 우대이율 5.5%)
+# 적용대상: 신협제휴 신한카드 신규발급 또는 재발급 회원
+  ==> 대상자 여부는 반드시 확인 후 가입하시기 바랍니다. 
+</pre>
+<h2> [ 가입 절차 ] </h2>
+<h3>✔️ 플러스적금 대상자 여부 확인(ARS/상담원연결)  =>  카드신청  => 플러스 정기적금 가입(온뱅크 또는 신협창구)
+</h3>
+    <button onclick="if(window.confirm('대상자 확인을 위해 신한카드 고객센타[상담원연결]로 연결 할까요?')) {
+        document.location.href='tel:1544-7000'}
+            else {
+                alert('취소 하였습니다.')
+            }"
+    }"> 1.대상자여부 확인 </button> => <button onclick="if(window.confirm('제휴카드 신청을 위해 이동합니다. 본인의 라이프스타일에 맞는 카드를 신청하세요')) {
+        document.location.href='https://www.shinhancard.com/pconts/html/landing/cu_card.html?cuRecommN=0323912000003'}
+            else {
+                alert('카드 신청을 취소 하였습니다.')
+            }"> 2.카드신청 </button> => 
+<button onclick="modal_click()">3. 플러스적금가입 신청(온뱅크열기)</button>
+<br>
+<bt>
+    ✔️신협창구에서도 플러스 적금 개설 가능</bt>
+    <h3>⚠️궁금하신 사항은 유선 또는 상담톡을 통해 신협으로 문의 바랍니다.  </h3>
+<aside class="none" id="modal">
+    <div id="box">
+      <h2> <i class="fas fa-mobile-alt"></i> 모바일기기 운영체제를 선택하세요~~👌 </h2>
+      <div id="box_btn">
+        <div id="fab_fa-google-play" onclick="Google()">안드로이드<i class="fab fa-google-play"></i></div>
+        <div id="fab_fa-apple" onclick="Ipon()">아이폰<br><i class="fab fa-apple"></i></div><br/>
+        <div id="fab_cancel" onclick="Cancel()">🔙 닫기</div>
+      </div>
+    </div>
+   </aside>
+   <div onclick="callon()" id="icon_call">
+    📞상담(문의)
+    </div>
+   <div id="icon">
+    <div
+id="kakao-talk-channel-chat-button"
+data-channel-public-id="_dfhkK"
+data-title="consult"
+data-size="large"
+data-color="yellow"
+data-shape="mobile"
+data-support-multiple-densities="true"
+></div></div> 
+   <script>
+    function modal_click() {
+      console.log("Modal 창 클릭~~~")
+      modal.classList.remove("none");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function Ipon() {
+    if (window.confirm("아이폰계열 모바일 앱 설치화면으로 이동합니다")) {
+    document.location.href ="https://apps.apple.com/kr/app/id1484456647"; 
+    } else {
+        alert("취소하였습니다");
+    }
+    }
+    function Google() {
+    if (window.confirm("안드로이드(구글)계열 모바일 앱 설치화면으로 이동합니다")) {
+    document.location.href ="https://play.google.com/store/apps/details?id=kr.co.cu.onbank"; 
+    } else {
+        alert("취소하였습니다");
+    }
+   }
+   function Cancel() {
+    modal.classList.add("none"); 
+   }
+  </script>  
+  <script>
+    window.kakaoAsyncInit = function() {
+      Kakao.Channel.createChatButton({
+        container: '#kakao-talk-channel-chat-button',
+      });    
+    };
+   
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'kakao-js-sdk');
+  </script>
+
+<script>  
+  function callon() {
+    if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞전화앱으로 연결할까요?")) {
+      document.location.href = "tel:031-219-6052"
+  } else {
+    alert("취소 되었습니다!!")
+  }
+ }                
+</script> 
+</body>
+</html>
