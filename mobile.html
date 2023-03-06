@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> 
     <title>신협 알뜰폰 가입 안내</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#imgbtn").click(function(){
+    console.log("done");
+    $("#dropdown-content").toggle("slow");
+  });
+});
+</script>
     <style>
         body {
             display:inline-block;
@@ -183,6 +192,39 @@
           width: 100%;
           border-radius: 10px;
         }
+        .dropbtn {
+  background-color: #04aa6d;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+#dropdown-content {
+  display: none;
+  padding: 2px;
+  color: #2c3d51;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+span {
+  font-weight: 600;
+}
     </style>
 </head>
 <body>
@@ -194,12 +236,20 @@
            준비되셨나요? 엄청 쉬운 셀프개통을 진행해 볼까요? 
            <br>🤷‍♂️셀프개통 후 유심칩을 교체하세요. <br/>
          </h3>
-    <br/>
         <button onclick="location.href='http://bit.ly/3kg4K81'">    
         셀프(온라인)개통하기 <i class="fas fa-chevron-right fa-lg"></i></button>
         <br/>
-        <small><a href="#" style="color:black">⚠알뜰폰 개통이 잘 안돼요 방법을 더 볼게요</a></small>
-        <br/>   
+        <div class="dropdown">
+          <button class="dropbtn" id="imgbtn" onclick="alert('아래 추천직원을 선택하시면 ID가 복사됩니다')">🚀추천직원 ID복사하기 </button>
+          <div id="dropdown-content">
+            <span onclick="copyBtn_seol()">김설호 상무</span>
+            <span onclick="copyBtn_lee()">이연주 부장</span>
+            <span onclick="copyBtn_han()">한진희 차장</span>
+            <span onclick="copyBtn_jm()">이정민 과장</span>
+            <span onclick="copyBtn_kim()">김기헌 과장</span>
+        </div>
+        </div>
+        <br><br><br><br><br><br>   
     <h3 onclick="if(window.confirm('📞통화가능 시간은 평일 9시~17시까지 입니다. 연결할까요?')){
       location.href='tel:031-219-6971'
     } else{
@@ -209,6 +259,28 @@
 <!--     <div class="footer"> 
     <footer><h2>&copy ajou9770@ajoucu.page 신협 031)219-6438 조합가입 또는 금융상담:219-6052,6971</h2></footer>
     </div> -->
+    <script>
+      function copyBtn_seol() {
+        window.navigator.clipboard.writeText("032392000003")
+        alert("추천인아이디 [032392000003] 가 복사되었습니다. 붙여녛기 하세요")
+      }
+      function copyBtn_lee() {
+        window.navigator.clipboard.writeText("032391998001")
+        alert("추천인아이디 [032391998001] 가 복사되었습니다. 붙여녛기 하세요")
+      }
+      function copyBtn_han() {
+        window.navigator.clipboard.writeText("032392003001")
+        alert("추천인아이디 [032392003001] 가 복사되었습니다. 붙여녛기 하세요")
+      }
+      function copyBtn_jm() {
+        window.navigator.clipboard.writeText("032392007001")
+        alert("추천인아이디 [032392007001] 가 복사되었습니다. 붙여녛기 하세요")
+      }
+      function copyBtn_kim() {
+        window.navigator.clipboard.writeText("032392008001")
+        alert("추천인아이디 [032392008001] 가 복사되었습니다. 붙여녛기 하세요")
+      }
+      </script> 
     <script
     src="https://kit.fontawesome.com/6478f529f2.js"
     crossorigin="anonymous"
@@ -216,6 +288,10 @@
     <!-- <script>
         alert('특판몰로 이동합니다~');
 location.href = 'http://ajoucu.com';
-    </script> -->   
+    </script> --> 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+      </style>  
 </body>
 </html>
+
