@@ -3231,7 +3231,34 @@ localStorage.setItem("115206", "28646917");
 localStorage.setItem("114464", "28771064");
 localStorage.setItem("114483", "28689270");
 localStorage.setItem("115086", "28792963");
-// 2023 1월 가입조합원 업데이타 (2023.2.1) 
+localStorage.setItem("114797","28935034");
+localStorage.setItem("114228","28945222");
+localStorage.setItem("114165","28808484");
+localStorage.setItem("115103","28880774");
+localStorage.setItem("115278","28825600");
+localStorage.setItem("111225","28889629");
+localStorage.setItem("114474","28818046");
+localStorage.setItem("500514","28869384");
+localStorage.setItem("114515","26943283");
+localStorage.setItem("702965","18561752");
+localStorage.setItem("115234","28825927");
+localStorage.setItem("113667","28826364");
+localStorage.setItem("115182","28698984");
+localStorage.setItem("113801","28903522");
+localStorage.setItem("115265","28879161");
+localStorage.setItem("115275","28944795");
+localStorage.setItem("115266","28924984");
+localStorage.setItem("115267","28958294");
+localStorage.setItem("115024","28913405");
+localStorage.setItem("114960","28848386");
+localStorage.setItem("115119","28862151");
+localStorage.setItem("115029","28862106");
+localStorage.setItem("114328","28972293");
+localStorage.setItem("115277","28898760");
+localStorage.setItem("115237","28854758");
+localStorage.setItem("106882","28818003");
+
+// 2023 2월 가입조합원 업데이타 (2023.3.6) 
 
 function handleSumbit(event) {
   event.preventDefault();
