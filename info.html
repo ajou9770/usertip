@@ -6,99 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신협 혜택 안내</title>
     <link rel="stylesheet" href="https://unpkg.com/mvp.css"/>
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#congBtn").click(function(){
+    console.log("done");
+    $("#congrat").toggle("slow");
+  });
+});
+</script>
 <style>
-    body {
-        text-align: center;
-        align-items: center;
-    }
-    a {
-        text-decoration: none;
-        color: whitesmoke;
-    }
-    div {
-        display: inline-block;
-        margin-top: 15px;
-        width: 600px;
-        text-align: center;
-        justify-content: center;
-        height: 120px;
-        font-size: 30px;
-        font-weight: 550;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    button {
-        width: 450px;
-        height: 100px;
-        font-size: 25px;
-        font-weight: 500;
-    }
-    .dropdown {
-  position: relative;
-  display: flex;
-  margin-left: 20px;
+  body {
+      text-align: center;
+      align-items: center;
+  }
+  a {
+      text-decoration: none;
+      color: whitesmoke;
+  }
+  div {
+      display: inline-block;
+      margin-top: 15px;
+      width: 600px;
+      text-align: center;
+      justify-content: center;
+      height: 120px;
+      font-size: 30px;
+      font-weight: 550;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  button {
+      width: 450px;
+      height: 100px;
+      font-size: 25px;
+      font-weight: 500;
+  }
+  .dropdown {
+position: relative;
+display: flex;
+margin-left: 20px;
 }
 .dropdown-content {
-  display: none;
-  text-align: left;
-  position: relative;
-  height: 250px;
-  width: 350px;
-  background-color: #f1f1f1;
-  min-width: 300px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+display: none;
+text-align: left;
+position: relative;
+height: 250px;
+width: 350px;
+background-color: #f1f1f1;
+min-width: 300px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
 }
 .dropdown-content a {
-  color: black;
-  padding: 10px 12px;
-  height: auto;
-  text-decoration: none;
-  display: block;
-  font-size: medium;
+color: black;
+padding: 10px 12px;
+height: auto;
+text-decoration: none;
+display: block;
+font-size: medium;
 }
 .dropdown-content a:hover {
-  color: black;
-  padding: 10px 12px;
-  height: auto;
-  text-decoration: none;
-  display: block;
-  font-size: 18px;
+color: black;
+padding: 10px 12px;
+height: auto;
+text-decoration: none;
+display: block;
+font-size: 18px;
 }
 .dropbtn {
-  background-color: #04AA6D;
-  margin-left: 50px;
-  color: white;
-  width: 300px;
-  height: auto;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  border: none;
+background-color: #04AA6D;
+margin-left: 50px;
+color: white;
+width: 300px;
+height: auto;
+padding: 10px;
+border-radius: 10px;
+font-size: 20px;
+font-weight: 600;
+border: none;
 }
 .dropbtn:hover {
-  font-size: 17px;
+font-size: 17px;
 } 
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-    height: auto;
-    }
-    .box {
-        display: inline-block;
-        height: auto;
-        width: auto;
-        border-color: black;
-        padding: 5px;
-    }
-    img {
-      width: 200px;
-      height: 200px;
-      border-radius: 10px;
-    }
+  background-color: #3e8e41;
+  height: auto;
+  }
+  .box {
+      display: inline-block;
+      height: auto;
+      width: auto;
+      border-color: black;
+      padding: 5px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  #congrat {
+    display: none;
+  }
+  table {
+    box-shadow: 0px 4px 8px grey;
+  }
 </style>
+</head>
 <body>
   <h1> [ 신입교직원에게 드리는 혜택 ] </h1>
   <p>
@@ -114,8 +129,17 @@
       <br>    
       <mark style="background:linear-gradient(to top, green 20%, transparent 30%)">🎉 신입교직원에게만 드리는 우대 혜택</mark>   
     </h2>
-      <hr> <h2>
+      <hr> <h2 id="congBtn" title="경조금지급기준표">
     🎉  2023년 3월 1일부 경조금 신설 </h2><br/>
+    <table id="congrat">
+      <th>경조금</th><th>증빙 및 요건</th>
+      <tr><td style="background-color: skyblue;">본인결혼 10만원</td><td rowspan="4" style="background-color: skyblue;">경조사소식공지 <br>또는 기타증빙</td></tr>
+      <tr><td style="background-color: skyblue;">자녀결혼 10만원</td></tr>
+      <tr><td style="background-color: skyblue;">본인사망 20만원</td></tr>
+      <tr><td style="background-color: skyblue;">본인(배우자)부모상 10만원</td></tr>
+      <tr style="border: double;"><td>퇴직축하(공로)금 50만원</td><td>퇴직전월 출자금<br> 1,000만원이상</td></tr>
+      <tr><td>퇴직 기념품 5만원 기념품</td><td>조합원 가입기간<br> 10년 이상</td></tr>
+  </table>
         <h2># 본인(자녀)결혼, 부모(배우자부모 포함)상, 퇴직축하금 등 10만원 ~ 50만원 지급</mark><br/><br/>
          # <mark> 단, 계속 가입기간 1년 이상인 조합원
     </h2> 
