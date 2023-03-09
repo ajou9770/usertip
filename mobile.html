@@ -76,7 +76,7 @@ $(document).ready(function(){
             margin-bottom: 5px;
         }
         button, button a {
-          width: 80%;
+          width: 85%;
           font-size: large;
           color: whitesmoke;
           box-shadow: 0px 4px 8px grey;
@@ -139,26 +139,26 @@ mark:active {
 }
 input {
   font-weight: 600;
+  box-shadow: 0px 3px 6px grey;
 }
     </style>
 </head>
 <body>
     <img src="img/mobile_img.png"><br/>
-    
+    <button id="payimgBtn">📲추천 요금제 보기/닫기</button>
+        <img src="img/tplus_pay.jpg" id="payimg"/>
     <h3>| 셀프개통 준비 사항 |<br/><br>
            📼 USIM칩을 신협에서 수령해 주세요<br/><br>
            🤵 신분증(주민등록증 또는 운전면허증)과  💳신용카드를 준비해 주세요(❌체크카드 안돼요)<br/>
            <br>
            👌준비되셨나요? 엄청 쉬운 셀프개통을 진행해 볼까요? 
-           <br>🤷‍♂️셀프개통 후 유심칩을 교체하세요. <br/>
-        <button id="payimgBtn">📲추천 요금제 보기/닫기</button>
-        <img src="img/tplus_pay.jpg" id="payimg"/>   
+           <br>🤷‍♂️셀프개통 후 유심칩을 교체하세요. <br/>   
          </h3>
         <button onclick="location.href='http://bit.ly/3kg4K81'">    
         셀프(온라인)개통하기 <i class="fas fa-chevron-right fa-lg"></i></button>
         <br/>
         <div class="dropdown">
-          <button class="dropbtn" id="imgbtn" onclick="copyid()">🚀추천직원 ID복사하기 </button>
+          <button class="dropbtn" id="imgbtn" onclick="copyid()">🚀추천직원 ID복사하기/닫기 </button>
           <div id="dropdown-content">
             <span onclick="copyBtn_seol()">김설호 | <mark>✔복사하기</mark> <textarea id="seol">032392000003</textarea></span>
             <span onclick="copyBtn_lee()">이연주 | <mark>✔복사하기</mark><textarea id="lee">032391998001</textarea></span>
