@@ -9,7 +9,15 @@
 <script>
 $(document).ready(function(){
   $("#imgbtn").click(function(){
-    $("#dropdown-content").toggle("slow");
+    $("#dropdown-content").show("slow");
+    $("#closeBtn").show("slow");
+    $("#imgbtn").hide("slow");
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+  $("#closeBtn").click(function(){
+    $("#dropdown-content").hide("slow");
+    $("#closeBtn").hide("slow");
+    $("#imgbtn").show("slow");
     window.scrollTo(0, document.body.scrollHeight);
   });
   $("#payimgBtn").click(function(){
@@ -95,6 +103,19 @@ $(document).ready(function(){
   font-weight: 600;
   border: none;
 }
+.closebtn {
+  background-color: #284b3f;
+  color: white;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+}
+#closeBtn {
+  display: none;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -159,7 +180,8 @@ input {
         셀프(온라인)개통하기 <i class="fas fa-chevron-right fa-lg"></i></button>
         <br/>
         <div class="dropdown">
-          <button class="dropbtn" id="imgbtn" onclick="copyid()">🚀추천직원 ID복사하기/닫기 </button>
+          <button class="dropbtn" id="imgbtn" onclick="copyid()">🚀추천직원 ID복사하기 </button>
+          <button class="closebtn" id="closeBtn"> ↩닫기 </button>
           <div id="dropdown-content">
             <span onclick="copyBtn_kim()">김기헌 | <mark>✔복사하기</mark><textarea id="kim">032392008001</textarea></span>
             <span onclick="copyBtn_jm()">이정민 | <mark>✔복사하기</mark><textarea id="jm">032392007003</textarea></span>
