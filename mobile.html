@@ -8,16 +8,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("#imgbtn").click(function(){
-    $("#dropdown-content").show("slow");
-    $("#closeBtn").show("slow");
-    $("#imgbtn").hide("slow");
-    window.scrollTo(0, document.body.scrollHeight);
-  });
   $("#closeBtn").click(function(){
     $("#dropdown-content").hide("slow");
     $("#closeBtn").hide("slow");
     $("#imgbtn").show("slow");
+    $("#idImg").hide("slow");
     window.scrollTo(0, document.body.scrollHeight);
   });
   $("#payimgBtn").click(function(){
@@ -155,7 +150,7 @@ mark {
 mark:active {
   transform: scale(0.97);
 }
-#payimg {
+#payimg, #idImg {
   display: none;
 }
 input {
@@ -178,6 +173,10 @@ input {
          </h3>
         <button onclick="openLink()">    
         셀프(온라인)개통하기 <i class="fas fa-chevron-right fa-lg"></i></button>
+        <div id="idImg" style="text-align: left;">
+        <h3 style="color:black;"># 아래, 개통과정에서 추천인 ID입력창 이미지 참조 </h3>
+        <img src="img/stepid_img.jpg" style="box-shadow: 0px 4px 8px teal; width: 60%;" onclick="alert('🤷‍♂️ 이미지입니다 ==> 셀프(온라인)개통 과정중 [입력창]에 붙여넣기 해 주세요')"/>
+        </div>
         <br/>
         <div class="dropdown">
           <button class="dropbtn" id="imgbtn" onclick="copyid()">🚀추천직원 ID복사하기 </button>
@@ -219,9 +218,19 @@ input {
    </script>
    <script>
     function copyid() {
-      console.log(scrollY);
-      window.scrollTo(0, document.body.scrollHeight);
-      alert('📢추천직원 선택 > 복사하기 후 붙여넣어세요');
+      if(window.confirm("📢직원 ID복사 후 추천인 아이디에 붙여 넣으세요")){
+        document.getElementById("idImg").style.display="block";
+        document.getElementById("dropdown-content").style.display="block";
+        document.getElementById("imgbtn").style.display="none";
+        document.getElementById("closeBtn").style.display="block";
+      } else {
+        console.log("done");
+        alert("취소 되었습니다")
+        document.getElementById("dropdown-content").style.display="none";
+        document.getElementById("closeBtn").style.display="none";
+        document.getElementById("imgbtn").style.display="block";
+        document.getElementById("idImg").style.display="none"; 
+      }     
     }    
   </script> 
    <script>
