@@ -8,15 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("#closeBtn").click(function(){
-    $("#dropdown-content").hide("slow");
-    $("#closeBtn").hide("slow");
-    $("#imgbtn").show("slow");
-    $("#idImg").hide("slow");
-    window.scrollTo(0, document.body.scrollHeight);
-  });
-  $("#payimgBtn").click(function(){
-    $("#payimg").toggle("slow");
+  $("#range").click(function(){
+    $("#rangeans").toggle("slow");
   });
 });
 </script>
@@ -89,7 +82,7 @@ $(document).ready(function(){
           border-radius: 10px;
         }
         .dropbtn {
-  background-color: #04aa6d;
+  background-color: ✔04aa6d;
   color: white;
   width: 300px;
   padding: 10px;
@@ -99,7 +92,7 @@ $(document).ready(function(){
   border: none;
 }
 .closebtn {
-  background-color: #284b3f;
+  background-color: ✔284b3f;
   color: white;
   width: 300px;
   padding: 10px;
@@ -108,7 +101,7 @@ $(document).ready(function(){
   font-weight: 600;
   border: none;
 }
-#closeBtn {
+#rangeans {
   display: none;
 }
 .dropdown {
@@ -118,9 +111,9 @@ $(document).ready(function(){
 #dropdown-content {
   display: none;
   padding: 5px;
-  color: #2c3d51;
+  color: ✔2c3d51;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: ✔f1f1f1;
   min-width: 300px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -157,49 +150,22 @@ input {
   font-weight: 600;
   box-shadow: 0px 3px 6px grey;
 }
+body {
+    text-align: left;
+}
   </style>
 </head>
 <body>
     <h2>step1. 아주대학교의료원 또는 아주대학교 교직원이 맞으신가요?</h2>
-    <small>※근로 계약 형태(정규직 또는 계약직 등 임시직)에 상관 없음</small>
-    <hr>
+    <small id="range">※근로 계약 형태(정규직 또는 계약직 등 임시직)에 상관 없음 [공동유대(조합원 자격)보기/닫기]</small>
+    <h4 id="rangeans"> ✔ 아주대학교(의료원)교직원<br>
+        ✔ 학교법인 대우학원 임직원<br>
+        ✔ 조합원의 주민등록상 동거가족<br>
+        ✔ 아주대의료원신협 직원<br>
+    </h4>
+    <br><br>
     <button id="yes" onclick="location.href='https://ajou9770.github.io/usertip/join02.html'">✔네. 맞습니다. </button>
     <button id="no" onclick="ansNo()">❌아니요 교직원이 아닙니다</button>
-       <!--  <img src="img/tplus_pay.jpg" id="payimg"/>
-    <h3>| 셀프개통 준비 사항 |<br/><br>
-           📼 USIM칩을 신협에서 수령해 주세요<br/><br>
-           🤵 신분증(주민등록증 또는 운전면허증)과  💳신용카드를 준비해 주세요(❌체크카드 안돼요)<br/>
-           <br>
-           👌준비되셨나요? 엄청 쉬운 셀프개통을 진행해 볼까요? <br>
-           🤷‍♂️셀프개통이 어려우신경우 직원이 도와 드립니다. ▶ 유심칩을 받으신 후 직원의 도움을 받으세요
-           <br>📢셀프개통 후 유심칩을 교체하세요. <br/>   
-         </h3>
-        <button onclick="openLink()">    
-        셀프(온라인)개통하기 <i class="fas fa-chevron-right fa-lg"></i></button>
-        <div id="idImg" style="text-align: left;">
-        <h3 style="color:black;"># 아래는 개통과정에서 추천인 ID입력창 이미지입니다. 참조 하세요~ </h3>
-        <img src="img/stepid_img.jpg" style="box-shadow: 0px 4px 8px teal; width: 80%;" onclick="alert('🤷‍♂️ 이미지입니다 ==> 셀프(온라인)개통 과정중 [입력창]에 붙여넣기 해 주세요')"/>
-        </div>
-        <br/>
-        <div class="dropdown">
-          <button class="dropbtn" id="imgbtn" onclick="copyid()">🚀추천직원 ID복사하기 </button>
-          <button class="closebtn" id="closeBtn"> ↩닫기 </button>
-          <div id="dropdown-content">
-            <span onclick="copyBtn_kim()">김기헌 | <mark>✔복사하기</mark><textarea id="kim">032392008001</textarea></span>
-            <span onclick="copyBtn_jm()">이정민 | <mark>✔복사하기</mark><textarea id="jm">032392007003</textarea></span>
-            <span onclick="copyBtn_han()">한진희 | <mark>✔복사하기</mark><textarea id="han">032392003001</textarea></span>
-            <span onclick="copyBtn_lee()">이연주 | <mark>✔복사하기</mark><textarea id="lee">032391998001</textarea></span>
-            <span onclick="copyBtn_seol()">김설호 | <mark>✔복사하기</mark> <textarea id="seol">032392000003</textarea></span>
-        </div>
-        </div>
-        <br><br><br><br><br><br><br> <br><br>
-    
-    <br/>
-    <input type="button" value="☕사은품신청하기▷" onclick="if(window.confirm('🤷‍♀️알뜰폰 개통이 완료되었나요?  사은품을 신청하시겠습니까?')) {
-      location.href='https://docs.google.com/forms/d/e/1FAIpQLSfBDhajZiYxNptPFJIIoQxeBKpK-faAXNq61rwejUZ1WQsd5Q/viewform?usp=sf_link' 
-    }else {
-      alert('최소되었습니다')
-    }"> -->
     <br><br>
         <div
 id="kakao-talk-channel-chat-button"
