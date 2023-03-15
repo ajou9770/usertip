@@ -11,6 +11,14 @@ $(document).ready(function(){
   $("#joinqus").click(function(){
     $("#joinans").toggle("slow");
   });
+  $("#joinmenu").click(function(){
+    $("#joinmenuimg").toggle("slow");
+    $("#menuclose").show("slow");
+  });
+  $("#menuclose").click(function(){
+    $("#joinmenuimg").hide("slow");
+    $("#menuclose").hide("slow");
+  });
 });
 </script>
     <style>
@@ -20,7 +28,7 @@ $(document).ready(function(){
             justify-content: center;
             background-color: ivory;
             vertical-align: middle;
-            text-align: justify;
+            text-align: left;
             margin-left: 20px;
             margin-right: 20px;
             margin-bottom: 20px;  
@@ -101,7 +109,7 @@ $(document).ready(function(){
   font-weight: 600;
   border: none;
 }
-#joinans {
+#joinans, #joinmenuimg, #menuclose {
   display: none;
 }
 .dropdown {
@@ -151,6 +159,9 @@ h4 {
     border-radius: 10px;
     padding: 5px 10px;
 }
+h3 {
+    color: black;
+}
   </style>
 </head>
 <body>
@@ -169,8 +180,35 @@ h4 {
     <br>
     <button id="yes" onclick="location.href='https://play.google.com/store/apps/details?id=kr.co.cu.onbank'"><i class="fab fa-google-play"></i> (구글)안드로이드 </button>
     <button id="no" onclick="location.href='https://apps.apple.com/kr/app/id1484456647'"><i class="fab fa-apple"></i> (애플)아이폰</button>
+    <br>
+    
+    <small id="joinmenu">📢온뱅크 가입방법을 잘 모르겠어요?? [메뉴얼 보기/닫기]</small>
+    <div id="joinmenuimg">
+        <h3>| 온뱅크 회원 가입 메뉴얼 |</h3>
+        <br>
+        <img src="img/joinimg001.jpg"/>
+        <img src="img/joinimg002.jpg"/>
+        <img src="img/joinimg003.jpg"/>
+        <h3>| 온뱅크 입출금통장개설 메뉴얼 |</h3>
+        <br>
+        <img src="img/drawimg001.jpg"/>
+        <img src="img/drawimg002.jpg"/>
+        <img src="img/drawimg003.jpg"/>
+        <img src="img/drawimg004.jpg"/>
+        <h3>| 온뱅크 출자금통장개설 메뉴얼 |</h3>
+        <br>
+        <img src="img/chulimg001.jpg"/>
+        <img src="img/chulimg002.jpg"/>
+        <img src="img/chulimg003.jpg"/>
+        <img src="img/chulimg004.jpg"/>
+        <img src="img/chulimg005.jpg"/>
+        <img src="img/chulimg006.jpg"/>
+        <img src="img/chulimg007.jpg"/>
+    </div>
+    <button id="menuclose">닫기</button>
     <button onclick="chul()" style="background-color: #284b3f; border: none;">🖱출자금 급여공제 (변경)신청 하기 ▶️</button>
-       <!--  <img src="img/tplus_pay.jpg" id="payimg"/>
+    
+    <!--  <img src="img/tplus_pay.jpg" id="payimg"/>
     <h3>| 셀프개통 준비 사항 |<br/><br>
            📼 USIM칩을 신협에서 수령해 주세요<br/><br>
            🤵 신분증(주민등록증 또는 운전면허증)과  💳신용카드를 준비해 주세요(❌체크카드 안돼요)<br/>
