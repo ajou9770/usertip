@@ -557,6 +557,22 @@ video {
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+#join {
+  border: none;
+  width: 175px;
+  height: 70px;
+  font-size: 25px;
+  position: fixed;
+  bottom: 380px;
+  right: 25px;
+  color: whitesmoke;
+  border-radius: 35px;
+  box-shadow: 1px 3px 3px 1px slategray;
+  background: rgb(24, 14, 92);
+  line-height: 5px;
+  text-align: center;
+  font-weight: bold;
+}
 #infoinput {
   font-size: 20px;
 }

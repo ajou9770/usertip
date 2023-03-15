@@ -145,6 +145,7 @@ $(document).ready(function(){
                     <div id="videobox" style="display: none"><video controls>
                       <source src="img/sh_video_3m.mp4">
                       </video></div><br>
+                      <div id="join" onclick="join()">✔온라인가입</div>
       <div onclick="callon()" id="icon_call">
       📞상담(문의)
       </div>
@@ -201,6 +202,13 @@ $(document).ready(function(){
         </div>
       </div>
     </div>
+    <script>
+      function join(){
+        alert("비대면온라인 개설(가입)페이지로 이동합니다");
+        location.href="https://ajou9770.github.io/usertip/join01.html";
+        navigator.vibrate(200);
+      }
+      </script>
     <script>  
       function callon() {
         if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞전화앱으로 연결할까요?")) {
