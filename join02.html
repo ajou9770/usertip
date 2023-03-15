@@ -12,12 +12,14 @@ $(document).ready(function(){
     $("#joinans").toggle("slow");
   });
   $("#joinmenu").click(function(){
-    $("#joinmenuimg").toggle("slow");
+    $("#joinmenuimg").show("slow");
     $("#menuclose").show("slow");
+    $("#joinmenu").hide("slow");
   });
   $("#menuclose").click(function(){
     $("#joinmenuimg").hide("slow");
     $("#menuclose").hide("slow");
+    $("#joinmenu").show("slow");
   });
 });
 </script>
@@ -169,7 +171,34 @@ h3 {
     <small>※아래, 모바일 운영체제에 따른 버튼 선택으로 이동바랍니다. </small>
     <h3>|<mark style="background:linear-gradient(to top, rgb(197, 137, 26) 10%, transparent 30%)"> 개설(조합원 가입)절차</mark> | <br>
         # 모바일앱설치 => 신협(직장>아주대의료원신협)선택 => 입출금통장개설 =>출자금통장개설[1좌(5,000원)이상 납입, 조합원가입] => 승인(신협) => 개설(가입)완료 </h3>
-    <small id="joinqus">🤷‍♀️조합원 가입은 꼭 해야 하나요? 가입시 어떤 혜택이 있나요?(보기/닫기) </small>
+           
+        <small id="joinmenu">🔎더 자세히 보시겠습니까? [메뉴얼 보기]</small>
+        <button id="menuclose">↩메뉴얼 닫기</button>
+        <div id="joinmenuimg">
+            <h3>| 온뱅크 회원 가입 메뉴얼 |</h3>
+            <br>
+            <img src="img/joinimg001.jpg"/>
+            <img src="img/joinimg002.jpg"/>
+            <img src="img/joinimg003.jpg"/>
+            <h3>| 온뱅크 입출금통장개설 메뉴얼 |</h3>
+            <br>
+            <img src="img/drawimg001.jpg"/>
+            <img src="img/drawimg002.jpg"/>
+            <img src="img/drawimg003.jpg"/>
+            <img src="img/drawimg004.jpg"/>
+            <h3>| 온뱅크 출자금통장개설 메뉴얼 |</h3>
+            <br>
+            <img src="img/chulimg001.jpg"/>
+            <img src="img/chulimg002.jpg"/>
+            <img src="img/chulimg003.jpg"/>
+            <img src="img/chulimg004.jpg"/>
+            <img src="img/chulimg005.jpg"/>
+            <img src="img/chulimg006.jpg"/>
+            <img src="img/chulimg007.jpg"/>
+        </div>
+        <button id="menuclose">닫기</button>
+        <br><br>
+        <small id="joinqus">🤷‍♀️조합원 가입은 꼭 해야 하나요? 가입시 어떤 혜택이 있나요?(보기/닫기) </small>
     <div id="joinans">
         <h4> 조합원 가입은 공동유대에 따라 아주대의료원(대학교)교직원 및 학교법인 대우학원 임직원과 그 동거가족에 한하여 가능합니다. 또는 조합 가입은 출자금 통장[1좌(5,000원)이상 납입]개설만
             하시면 자동으로 가입이 완료 됩니다. <br>
@@ -180,32 +209,7 @@ h3 {
     <br>
     <button id="yes" onclick="location.href='https://play.google.com/store/apps/details?id=kr.co.cu.onbank'"><i class="fab fa-google-play"></i> (구글)안드로이드 </button>
     <button id="no" onclick="location.href='https://apps.apple.com/kr/app/id1484456647'"><i class="fab fa-apple"></i> (애플)아이폰</button>
-    <br>
     
-    <small id="joinmenu">📢온뱅크 가입방법을 잘 모르겠어요?? [메뉴얼 보기/닫기]</small>
-    <div id="joinmenuimg">
-        <h3>| 온뱅크 회원 가입 메뉴얼 |</h3>
-        <br>
-        <img src="img/joinimg001.jpg"/>
-        <img src="img/joinimg002.jpg"/>
-        <img src="img/joinimg003.jpg"/>
-        <h3>| 온뱅크 입출금통장개설 메뉴얼 |</h3>
-        <br>
-        <img src="img/drawimg001.jpg"/>
-        <img src="img/drawimg002.jpg"/>
-        <img src="img/drawimg003.jpg"/>
-        <img src="img/drawimg004.jpg"/>
-        <h3>| 온뱅크 출자금통장개설 메뉴얼 |</h3>
-        <br>
-        <img src="img/chulimg001.jpg"/>
-        <img src="img/chulimg002.jpg"/>
-        <img src="img/chulimg003.jpg"/>
-        <img src="img/chulimg004.jpg"/>
-        <img src="img/chulimg005.jpg"/>
-        <img src="img/chulimg006.jpg"/>
-        <img src="img/chulimg007.jpg"/>
-    </div>
-    <button id="menuclose">닫기</button>
     <button onclick="chul()" style="background-color: #284b3f; border: none;">🖱출자금 급여공제 (변경)신청 하기 ▶️</button>
     
     <!--  <img src="img/tplus_pay.jpg" id="payimg"/>
