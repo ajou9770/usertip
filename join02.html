@@ -8,15 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("#closeBtn").click(function(){
-    $("#dropdown-content").hide("slow");
-    $("#closeBtn").hide("slow");
-    $("#imgbtn").show("slow");
-    $("#idImg").hide("slow");
-    window.scrollTo(0, document.body.scrollHeight);
-  });
-  $("#payimgBtn").click(function(){
-    $("#payimg").toggle("slow");
+  $("#joinqus").click(function(){
+    $("#joinans").toggle("slow");
   });
 });
 </script>
@@ -108,7 +101,7 @@ $(document).ready(function(){
   font-weight: 600;
   border: none;
 }
-#closeBtn {
+#joinans {
   display: none;
 }
 .dropdown {
@@ -151,6 +144,13 @@ input {
   font-weight: 600;
   box-shadow: 0px 3px 6px grey;
 }
+h4 {
+    color: black;
+    text-align: left;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
   </style>
 </head>
 <body>
@@ -158,7 +158,16 @@ input {
     <small>※아래, 모바일 운영체제에 따른 버튼 선택으로 이동바랍니다. </small>
     <h3>|<mark style="background:linear-gradient(to top, rgb(197, 137, 26) 10%, transparent 30%)"> 개설(조합원 가입)절차</mark> | <br>
         # 모바일앱설치 => 신협(직장>아주대의료원신협)선택 => 입출금통장개설 =>출자금통장개설[1좌(5,000원)이상 납입, 조합원가입] => 승인(신협) => 개설(가입)완료 </h3>
-    <hr>
+    <small id="joinqus">🤷‍♀️조합원 가입은 꼭 해야 하나요? 가입시 어떤 혜택이 있나요?(보기/닫기) </small>
+    <div id="joinans">
+        <h4> 조합원 가입은 공동유대가 정해져 있어, 아주대의료원(대학교)교직원만 가능합니다. 또는 조합원 가입은 출자금 통장[1좌(5,000원)이상 납입]개설만
+            하시면 자동으로 조합원이 됩니다. <br>
+            조합원은 출자금 1,000만원, 예적금 3,000만원까지 비과세 혜택을 받으실 수 있으며, 
+            신협의 배당금(출자,이용고) 및 경조금 , 매년 총회 기념품 등을 수령하시거나, 소노호텔앤리조트 회원가 이용 등 복지혜택을 받으실 수 있습니다.   
+             </h4>
+    </div>
+
+        <hr>
     <button id="yes" onclick="location.href='https://play.google.com/store/apps/details?id=kr.co.cu.onbank'"><i class="fab fa-google-play"></i> (구글)안드로이드 </button>
     <button id="no" onclick="location.href='https://apps.apple.com/kr/app/id1484456647'"><i class="fab fa-apple"></i> (애플)아이폰</button>
     <button onclick="chul()" style="background-color: #284b3f; border: none;">🖱출자금 급여공제 (변경)신청 하기 ▶️</button>
