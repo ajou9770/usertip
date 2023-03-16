@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> 
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> --> 
     <title>신협 알뜰폰 가입 안내</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
@@ -80,9 +80,18 @@ $(document).ready(function(){
         }
         button, button a {
           width: 90%;
-          font-size: large;
+          font-size: x-large;
+          font-weight: 600;
+          font-size: larger;
+          border: none;
+          border-radius: 5px;
+          background-color: cornflowerblue;
+          height: 80px;
           color: whitesmoke;
           box-shadow: 0px 4px 8px grey;
+        }
+        button:active {
+          transform: scale(0.98);
         }
         img {
           width: 100%;
@@ -177,7 +186,7 @@ input {
         <h3 style="color:black;"># 아래는 개통과정에서 추천인 ID입력창 이미지입니다. 참조 하세요~ </h3>
         <img src="img/stepid_img.jpg" style="box-shadow: 0px 4px 8px teal; width: 80%;" onclick="alert('🤷‍♂️ 이미지입니다 ==> 셀프(온라인)개통 과정중 [입력창]에 붙여넣기 해 주세요')"/>
         </div>
-        <br/>
+        <br/><br>
         <div class="dropdown">
           <button class="dropbtn" id="imgbtn" onclick="copyid()">🚀추천직원 ID복사하기 </button>
           <button class="closebtn" id="closeBtn"> ↩닫기 </button>
