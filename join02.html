@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> 
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">  -->
     <title>신협 가입 안내</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
@@ -83,9 +83,18 @@ $(document).ready(function(){
         }
         button, button a {
           width: 90%;
-          font-size: large;
+          font-size: x-large;
+          font-weight: 600;
+          font-size: larger;
+          border: none;
+          border-radius: 5px;
+          background-color: cornflowerblue;
+          height: 80px;
           color: whitesmoke;
           box-shadow: 0px 4px 8px grey;
+        }
+        button:active {
+          transform: scale(0.98);
         }
         img {
           width: 100%;
@@ -208,8 +217,9 @@ h3 {
     </div>
     <br>
     <button id="yes" onclick="location.href='https://play.google.com/store/apps/details?id=kr.co.cu.onbank'"><i class="fab fa-google-play"></i> (구글)안드로이드 </button>
+    <br><br>
     <button id="no" onclick="location.href='https://apps.apple.com/kr/app/id1484456647'"><i class="fab fa-apple"></i> (애플)아이폰</button>
-    
+    <br><br>
     <button onclick="chul()" style="background-color: #284b3f; border: none;">🖱출자금 급여공제 (변경)신청 하기 ▶️</button>
     
     <!--  <img src="img/tplus_pay.jpg" id="payimg"/>
