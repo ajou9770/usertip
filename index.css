@@ -159,7 +159,7 @@ div {
 .mile {
   width: 580px;
   height: 80px;
-  font-size: large;
+  font-size: x-large;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
@@ -325,7 +325,7 @@ footer a {
 .proce {
   width: 580px;
   height: 80px;
-  font-size: large;
+  font-size: x-large;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
@@ -585,7 +585,7 @@ video {
   }
   #sonovideo {
   width:auto;
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: 600;
   height: 65px; 
   padding : 10px;
