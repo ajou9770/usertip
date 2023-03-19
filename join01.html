@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin"/>
     <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">  -->
     <title>신협 가입 안내</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -161,6 +162,10 @@ input {
 }
 body {
     text-align: left;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+   animation-duration: 5s;
 }
   </style>
 </head>
