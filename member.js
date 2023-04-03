@@ -3257,8 +3257,37 @@ localStorage.setItem("114328","28972293");
 localStorage.setItem("115277","28898760");
 localStorage.setItem("115237","28854758");
 localStorage.setItem("106882","28818003");
+localStorage.setItem("112415", "29006612");
+localStorage.setItem("115282", "28981765");
+localStorage.setItem("115395", "29110929");
+localStorage.setItem("115253", "29022484");
+localStorage.setItem("115338", "29063350");
+localStorage.setItem("115257", "29063177");
+localStorage.setItem("115193", "29100452");
+localStorage.setItem("114472", "29077297");
+localStorage.setItem("115141", "29048276");
+localStorage.setItem("114419", "29019519");
+localStorage.setItem("115399", "29112599");
+localStorage.setItem("114941", "29120639");
+localStorage.setItem("114942", "29020073");
+localStorage.setItem("705213", "29088799");
+localStorage.setItem("115405", "29108680");
+localStorage.setItem("115452", "29137859");
+localStorage.setItem("115260", "29002001");
+localStorage.setItem("115248", "29017075");
+localStorage.setItem("115115", "29072112");
+localStorage.setItem("110575", "29053597");
+localStorage.setItem("114906", "28989363");
+localStorage.setItem("112361", "29138180");
+localStorage.setItem("114951", "29020328");
+localStorage.setItem("115373", "29088142");
+localStorage.setItem("115268", "29020088");
+localStorage.setItem("115270", "29001966");
+localStorage.setItem("501287", "29007668");
+localStorage.setItem("115272", "29063167");
+localStorage.setItem("115417", "29108126");
 
-// 2023 2월 가입조합원 업데이타 (2023.3.6) 
+// 2023 3월 가입조합원 업데이타 (2023.4.3) 
 
 function handleSumbit(event) {
   event.preventDefault();
@@ -3269,7 +3298,7 @@ function handleSumbit(event) {
     alert("사번 입력 후 조회 바랍니다 😃");
     h3.innerText = "";
   } else if (show === null) {
-    h3.innerText = `["${value}"는 찾을수가 없네요😢. 2023년 2월 28일까지 가입된 조합원에 한해 조회 가능합니다. 조회가 안될 경우 신협으로 문의 바랍니다.👌]`;
+    h3.innerText = `["${value}"는 찾을수가 없네요😢. 2023년 3월 31일까지 가입된 조합원에 한해 조회 가능합니다. 조회가 안될 경우 신협으로 문의 바랍니다.👌]`;
   } else {
     h3.innerText = `[조합원번호(ID)는 ${show} 입니다]`;
   }
