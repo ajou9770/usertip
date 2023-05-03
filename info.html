@@ -18,6 +18,9 @@ $(document).ready(function(){
   $("#loanbtn").click(function(){
     $("#loancontent").toggle("slow");
   });
+  $("#qrcodebtn").click(function(){
+    $("#qrcode").toggle("slow");
+  });
 });
 </script>
 <style>
@@ -30,12 +33,11 @@ $(document).ready(function(){
       color: whitesmoke;
   }
   div {
-      display: inline-block;
+      position: relative;
       margin-top: 15px;
       width: 600px;
       text-align: center;
-      justify-content: center;
-      height: 120px;
+      height: auto;
       font-size: 30px;
       font-weight: 550;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -155,9 +157,9 @@ font-size: 17px;
   </p>
 
   <hr>
-    <h1 onclick="document.getElementById('qrcode').style.display='block'">🎁 신입교직원 웰컴쿠폰 신청하기</h1>
+    <h1 id="qrcodebtn">🎁 신입교직원 웰컴쿠폰 신청하기</h1>
     <br/>
-    <div id="qrcode" >
+    <h2 id="qrcode">
        <a href="http://ajou9770.github.io/usertip"><img src="img/qrcode_usertip.png" 
         style="
         height: 500px; 
@@ -169,7 +171,7 @@ font-size: 17px;
         <br/>
         <img src="img/hollys_coupon.jpg">
         <!--<img src="img/seven_coupon.jpg"> -->
-    </div>
+    </h2>
     <br>
     <script>
        const button = document.querySelector("#print");
