@@ -21,12 +21,14 @@ $(document).ready(function(){
     window.scrollTo(0, document.body.scrollHeight);
   });
   $("#congratOpen").click(function(){
+    navigator.vibrate(200);
     $("#congratClose").show();
     $("#ifram").show();
     $("#congratOpen").hide();
     window.scrollBy(0, 200);
   });
   $("#congratClose").click(function(){
+    navigator.vibrate(100,100);
     $("#congratClose").hide("slow");
     $("#ifram").hide("slow");
     $("#congratOpen").show("slow");
