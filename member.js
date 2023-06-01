@@ -3295,8 +3295,24 @@ localStorage.setItem("115474", "29159813");
 localStorage.setItem("115410", "29245058");
 localStorage.setItem("705160", "29211404");
 localStorage.setItem("500523", "29223785");
+localStorage.setItem("115462", "29302662");
+localStorage.setItem("114783", "29280858");
+localStorage.setItem("115236", "29270141");
+localStorage.setItem("115519", "29308760");
+localStorage.setItem("114925", "29350785");
+localStorage.setItem("112383", "29325834");
+localStorage.setItem("115400", "29328111");
+localStorage.setItem("115563", "29366034");
+localStorage.setItem("113992", "29301692");
+localStorage.setItem("115262", "29300339");
+localStorage.setItem("115489", "29304087");
+localStorage.setItem("115528", "29363311");
+localStorage.setItem("115487", "29277999");
+localStorage.setItem("115328", "29261626");
+localStorage.setItem("112823", "29366129");
+localStorage.setItem("115203", "29372249");
 
-// 2023 4월 가입조합원 업데이타 (2023.4.3) 
+// 2023 5월 가입조합원 업데이타 (2023.5.31까지) 
 
 function handleSumbit(event) {
   event.preventDefault();
@@ -3307,7 +3323,7 @@ function handleSumbit(event) {
     alert("사번 입력 후 조회 바랍니다 😃");
     h3.innerText = "";
   } else if (show === null) {
-    h3.innerText = `["${value}"는 찾을수가 없네요😢. 2023년 4월 30일까지 가입된 조합원에 한해 조회 가능합니다. 조회가 안될 경우 신협으로 문의 바랍니다.👌]`;
+    h3.innerText = `["${value}"는 찾을수가 없네요😢. 2023년 5월 31일까지 가입된 조합원에 한해 조회 가능합니다. 조회가 안될 경우 신협으로 문의 바랍니다.👌]`;
   } else {
     h3.innerText = `[조합원번호(ID)는 ${show} 입니다]`;
   }
