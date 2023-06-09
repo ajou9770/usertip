@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <title>신협 경조금 지급 안내</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
@@ -85,12 +85,64 @@ $(document).ready(function(){
         p {
           font-size: 17px;
         }
+        td { vertical-align: middle; 
+        }
+        td.centered {
+      text-align: center;
+      vertical-align: middle;
+    }
+    th.centered {
+      text-align: center;
+      vertical-align: middle;
+    }
+    iframe {
+      box-shadow: 0px 3px 6px grey;
+    }
 </style>
 </head>
 <body>
- <div style="text-align: center; color:black;"><h2> | 신협 경조금 지급 기준 |</h2></div>
- <img src="img/congrat_img.jpg"/>
-
+ <div style="text-align: center; color:black;"><h4> | 신협 경조금 지급 기준 |</h4></div>
+ <!-- <img src="img/congrat_img.jpg"/> -->
+<br>
+ <div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="centered" colspan="2">구분</th>
+        <th>경조금</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="centered" rowspan="2">결혼</td>
+        <td>본인</td>
+        <td>10만원</td>
+      </tr>
+      <tr>
+        <td>자녀</td>
+        <td>10만원</td>
+      </tr>
+      <tr>
+        <td class="centered" rowspan="2">사망</td>
+        <td>본인(배우자)부모</td>
+        <td>10만원</td>
+      </tr>
+      <tr>
+        <td>본인</td>
+        <td>20만원</td>
+      </tr>
+      <tr>
+        <td class="centered" rowspan="2">퇴직</td>
+        <td>공로금</td>
+        <td>50만원</td>
+      </tr>
+      <tr>
+        <td>기념품</td>
+        <td>5만원상품권</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <p># 공통 신청자격: 조합 가입일 1년 이상 조합원에 한함(계속 가입기간)<br>
   # 퇴직공로금: 퇴직 전월 출자금잔액 1,000만원 이상<br>
   # 퇴직기념품: 조합원 계속 가입기간 10년 이상<br><br>
@@ -105,14 +157,16 @@ $(document).ready(function(){
         }">📑 경조금 신청하기🖱️</button><br><br> -->
    <!-- <button id="congratOpen">📑경조금 신청하기🔽</button>
    <button id="congratClose">❌신청서 닫기🔼</button> -->
-   <iframe id="ifram" src="https://script.google.com/macros/s/AKfycbxU1thGydEK3LMfYR9l0dKk1RaY01upTG526cx13mA2s5j1DYGx2BNnJrTNCLHS7yKq/exec" width="95%" height="1000" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>     
+   <iframe id="ifram" src="https://script.google.com/macros/s/AKfycbxU1thGydEK3LMfYR9l0dKk1RaY01upTG526cx13mA2s5j1DYGx2BNnJrTNCLHS7yKq/exec" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>     
 <!--<button onclick="window.history.back()" style="background-color: rgb(11, 122, 166);">⬅️이전화면</button> -->
-    <h3 onclick="if(window.confirm('📞통화가능 시간은 평일 9시~17시까지 입니다. 연결할까요?')){
+    <h5 onclick="if(window.confirm('📞통화가능 시간은 평일 9시~17시까지 입니다. 연결할까요?')){
       location.href='tel:031-219-6052'
     } else{
       alert('취소되었습니다.')
-    }">📞 문의: 신협 ☎ 031)219-6052</h3>
-
+    }">📞 문의: 신협 ☎ 031)219-6052</h5>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
 
