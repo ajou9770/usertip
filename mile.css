@@ -1,6 +1,5 @@
 body {
     display:flex;
-    widows: 100px;
     width: 100%;
     height: auto;
     flex-direction: column;
@@ -17,7 +16,7 @@ body {
 }
 div {
     display: inline-block;
-    widows: 100px;
+    width: 100%;
     height: auto;
     flex-direction: column;
     text-align: left;
@@ -42,7 +41,7 @@ div {
 }
 .mile {
     display: flex;
-    width: 70%;
+    width: 80%;
     background-color:seagreen;
     border-radius: 10px;
     border-style: solid;
@@ -64,7 +63,7 @@ transform: scale(0.98);
 a {
     text-decoration-color: none;
     color:whitesmoke;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     text-decoration: none;
 }
