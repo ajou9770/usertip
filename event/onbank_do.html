@@ -6,6 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="cubank://onbank.co.kr">✔신협온뱅크열기</a>
+    <button onclick="openApp()">모바일 앱 실행</button>
+
+    <script>
+      function openApp() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+        // iOS인 경우
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = 'cubank://onbank.co.kr';
+        }
+        // Android인 경우
+        else if (/android/i.test(userAgent)) {
+          var iframe = document.createElement('iframe');
+          iframe.style.display = 'none';
+          iframe.src = 'cubank://onbank.co.kr';
+          document.body.appendChild(iframe);
+        }
+        // 기타 플랫폼의 경우
+        else {
+          window.open('cubank://onbank.co.kr');
+        }
+      }
+    </script>
+    
 </body>
 </html>
