@@ -11,7 +11,7 @@
     <script>
       function openApp() {
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    
+        alert("done");
         // iOS인 경우
         if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
           window.location.href = 'cubank://onbank.co.kr';

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>🏠소노호텔앤리조트 2023하계성수기 예약신청</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h4>✨2023하계성수기 예약신청하기</h4>
+      <br>
+      <form id="reservation-form">
+        <div class="form-group">
+          <label for="name">🤵조합원 성명</label>
+          <input type="text" class="form-control" id="name" >
+        </div>
+        <div class="form-group">
+            <label for="idnum">🔢사번 또는 조합원번호</label>
+            <input type="idnum" class="form-control" id="idnum" >
+          </div>
+        <div class="form-group">
+          <label for="tel">📞연락처</label>
+          <input type="tel" class="form-control" id="tel" pattern="010-[0-9]{4}-[0-9]{4}\s*">
+        </div>
+        <br>
+        <h5>🤷‍♀️아래 전체지역 리조트 중 한곳만 신청하실 수 있습니다.(최종 선택 리조트로 신청됨)</h5>
+        <div class="form-group">
+            <label for="resort1">🤿동해안권</label>
+            <select class="form-control resort" id="resort1" name="resort">
+              <option value="">선택하세요</option>
+              <option>델피노/07.22~23/1박/스위트/25만</option>
+              <option>델피노/07.25~27/2박/스위트/50만</option>
+              <option>델피노/07.28~30/2박/스위트/50만</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resort2">🤿서해안권</label>
+            <select class="form-control resort" id="resort2" name="resort">
+              <option value="">선택하세요</option>
+              <option>리조트A/07.22~23/1박/스위트/20만</option>
+              <option>리조트A/07.25~27/2박/스위트/40만</option>
+              <option>리조트A/07.28~30/2박/스위트/40만</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resort3">🤿남해안권</label>
+            <select class="form-control resort" id="resort3" name="resort">
+              <option value="">선택하세요</option>
+              <option>델피노/07.22~23/1박/스위트/25만</option>
+              <option>델피노/07.25~27/2박/스위트/50만</option>
+              <option>델피노/07.28~30/2박/스위트/50만</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resort4">🤿제주도</label>
+            <select class="form-control resort" id="resort4" name="resort">
+              <option value="">선택하세요</option>
+              <option>리조트A/07.22~23/1박/스위트/20만</option>
+              <option>리조트A/07.25~27/2박/스위트/40만</option>
+              <option>리조트A/07.28~30/2박/스위트/40만</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resort5">🤿내륙(워터파크)</label>
+            <select class="form-control resort" id="resort5" name="resort">
+              <option value="">선택하세요</option>
+              <option>여수/07.22~23/1박/스위트/25만</option>
+              <option>거제도/07.25~27/2박/스위트/50만</option>
+              <option>거제도/07.28~30/2박/스위트/50만</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resort6">🤿기타지역</label>
+            <select class="form-control resort" id="resort6" name="resort">
+              <option value="">선택하세요</option>
+              <option>리조트A/07.22~23/1박/스위트/20만</option>
+              <option>리조트A/07.25~27/2박/스위트/40만</option>
+              <option>리조트A/07.28~30/2박/스위트/40만</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">✔신청하기</button>
+      </form>
+    </div>
+    <script>
+        $('#reservation-form').submit(function(e) {
+          e.preventDefault(); // Prevent the form from submitting normally
+          var name = $('#name').val();
+    var idnum = $('#idnum').val();
+    var tel = $('#tel').val();
+    var resort;
+    $('.resort').each(function() {
+      var selectedOption = $(this).find('option:selected').val();
+      if (selectedOption && selectedOption !== "선택하세요") {
+        resort = selectedOption;
+      }
+    });
+
+           
+          // Perform basic validation
+          if (!name) {
+            alert("이름을 입력해주세요.");
+            return;
+          }
+      
+          if (!idnum) {
+            alert("사번 또는 조합원 번호를 입력해주세요.");
+            return;
+          }
+      
+          if (!tel) {
+            alert("연락처를 입력해주세요.");
+            return;
+          } 
+          /* var formData = {
+          'name': name,
+          'idnum': idnum,
+          'tel': tel,
+          'resort': resort
+          };
+          // All checks passed, form can be submitted
+          google.script.run.processForm(formData);
+          form.reset(); */
+          alert(`${name}님이 신청하신 하계성수기 리조트는 ${resort}입니다.`);
+        });
+      </script>
+    <script>
+        $('.resort').change(function() {
+          $('.resort').not(this).prop('selectedIndex', 0);
+        });
+      </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
