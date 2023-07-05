@@ -1,189 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신협 혜택 안내</title>
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("#congBtn").click(function(){
-    $("#congrat").toggle("slow");
-  });
-  $("#drawbtn").click(function(){
-    $("#drawcontent").toggle("slow");
-  });
-  $("#loanbtn").click(function(){
-    $("#loancontent").toggle("slow");
-  });
-  $("#qrcodebtn").click(function(){
-    $("#qrcode").toggle("slow");
-  });
-});
-</script>
-<style>
-  body {
-      text-align: center;
-      align-items: center;
-  }
-  a {
-      text-decoration: none;
-      color: whitesmoke;
-  }
-  div {
-      position: relative;
-      margin-top: 15px;
-      width: 600px;
-      text-align: center;
-      height: auto;
-      font-size: 30px;
-      font-weight: 550;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  button {
-      width: 450px;
-      height: 100px;
-      font-size: 25px;
-      font-weight: 500;
-  }
-  .dropdown {
-position: relative;
-display: flex;
-margin-left: 20px;
-}
-.dropdown-content {
-display: none;
-text-align: left;
-position: relative;
-height: 250px;
-width: 350px;
-background-color: #f1f1f1;
-min-width: 300px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-}
-.dropdown-content a {
-color: black;
-padding: 10px 12px;
-height: auto;
-text-decoration: none;
-display: block;
-font-size: medium;
-}
-.dropdown-content a:hover {
-color: black;
-padding: 10px 12px;
-height: auto;
-text-decoration: none;
-display: block;
-font-size: 18px;
-}
-.dropbtn {
-background-color: #04AA6D;
-margin-left: 50px;
-color: white;
-width: 300px;
-height: auto;
-padding: 10px;
-border-radius: 10px;
-font-size: 20px;
-font-weight: 600;
-border: none;
-}
-.dropbtn:hover {
-font-size: 17px;
-} 
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-  height: auto;
-  }
-  .box {
-      display: inline-block;
-      height: auto;
-      width: auto;
-      border-color: black;
-      padding: 5px;
-  }
-  img {
-    width: 250px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px grey;
-  }
-  #congrat {
-    display: none;
-  }
-  table {
-    box-shadow: 0px 4px 8px grey;
-  }
-  #drawcontent, #loancontent, #qrcode {
-    display: none;
-  }
-</style>
-</head>
-<body>
-  <h1> [ 신입교직원에게 드리는 혜택 ] </h1>
-  <h2><mark style="background:linear-gradient(to top, green 20%, transparent 30%)">🎉 신입교직원에게만 드리는 우대 혜택</mark></h2>
-  <br>
-  <p>
-    <h2> 🎉 정기적금 우대금리 <span id="drawbtn">🔎</span><br/><br/></h2>
-    <h2 id="drawcontent"># 1.0% 우대 금리 쿠폰(<mark>최대 6.50% 금리 효과 ~),한도 월불입 100만원까지 </mark><br/>
-        (기준금리: 3.95% +  우대금리1.0% + 비과세효과 0.75% + 이용고배당 0.8%)<br/></h2>
-      <hr>
-    <h2>🎉  대출우대금리 <span id="loanbtn">🔎</span><br/><br/></h2>
-    <h2 id="loancontent"># 0.5% 우대 (<mark>최저 4.25% 금리효과 ~</mark> ) <= 이용고배당으로 약 0.25% 환급 감안<br/>
-         # <mark>대출한도: 9,000만원</mark>(신용40백만원, 보증대출50백만원)
-      <br>    
-         
-    </h2>
-      <hr> <h2 id="congBtn" title="경조금지급기준표">
-    🎉  2023년 3월 1일부 경조금 신설🔎 </h2><br/>
-    <h2 id="congrat">
-    <table>
-      <th>경조금</th><th>증빙 및 요건</th>
-      <tr><td style="background-color: skyblue;">본인결혼 10만원</td><td rowspan="4" style="background-color: skyblue;">경조사소식공지 <br>또는 기타증빙</td></tr>
-      <tr><td style="background-color: skyblue;">자녀결혼 10만원</td></tr>
-      <tr><td style="background-color: skyblue;">본인사망 20만원</td></tr>
-      <tr><td style="background-color: skyblue;">본인(배우자)부모상 10만원</td></tr>
-      <tr style="border: double;"><td>퇴직축하(공로)금 50만원</td><td>퇴직전월 출자금<br> 1,000만원이상</td></tr>
-      <tr><td>퇴직 기념품 5만원 기념품</td><td>조합원 가입기간<br> 10년 이상</td></tr>
-  </table>
-  <br>
-  <br/>
-      # <mark> 단, 계속 가입기간 1년 이상인 조합원
-    </h2> 
-  </p>
-
-  <hr>
-    <h1 id="qrcodebtn">🎁 신입교직원 웰컴쿠폰 신청하기</h1>
-    <br/>
-    <h2 id="qrcode">
-       <a href="http://ajou9770.github.io/usertip"><img src="img/qrcode_usertip.png" 
-        style="
-        height: 500px; 
-        width:500px; 
-        border: solid; 
-        border-width:2px 7px 7px 2px; 
-        border-radius: 10px;" title="✨usertip으로 링크이동"></a>
-        <br/>
-        <br/>
-        <img src="img/hollys_coupon.jpg">
-        <!--<img src="img/seven_coupon.jpg"> -->
-    </h2>
-    <br>
     <script>
-       const button = document.querySelector("#print");
+        $(document).ready(function () {
+            $("#congBtn").click(function () {
+                $("#congrat").toggle("slow");
+            });
+            $("#drawbtn").click(function () {
+                $("#drawcontent").toggle("slow");
+            });
+            $("#loanbtn").click(function () {
+                $("#loancontent").toggle("slow");
+            });
+            $("#qrcodebtn").click(function () {
+                $("#qrcode").toggle("slow");
+            });
+        });
+    </script>
+    <style>
+        body {
+            text-align: center;
+            align-items: center;
+        }
 
-       function buttonhandleClick () {
-          alert("원천징수영수증 출력시 첫페이지만 지정하여 출력해 주시기 바랍니다")
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        div {
+            position: relative;
+            margin-top: 15px;
+            width: 600px;
+            text-align: center;
+            height: auto;
+            font-size: 30px;
+            font-weight: 550;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        button {
+            width: 450px;
+            height: 100px;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .dropdown {
+            position: relative;
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .dropdown-content {
+            display: none;
+            text-align: left;
+            position: relative;
+            height: 250px;
+            width: 350px;
+            background-color: #f1f1f1;
+            min-width: 300px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 12px;
+            height: auto;
+            text-decoration: none;
+            display: block;
+            font-size: medium;
+        }
+
+        .dropdown-content a:hover {
+            color: black;
+            padding: 10px 12px;
+            height: auto;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+        }
+
+        .dropbtn {
+            background-color: #04AA6D;
+            margin-left: 50px;
+            color: white;
+            width: 300px;
+            height: auto;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+        }
+
+        .dropbtn:hover {
+            font-size: 17px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+            height: auto;
+        }
+
+        .box {
+           display: inline-block;
+            height: auto;
+            width: auto;
+            border-color: black;
+            padding: 5px;
+        }
+
+        img {
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px grey;
+        }
+
+        #congrat {
+            display: none;
+        }
+
+        table {
+            box-shadow: 0px 4px 8px grey;
+        }
+
+        #drawcontent,
+        #loancontent,
+        #qrcode {
+            display: none;
+        }
+        .center {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+        .card-body {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1> [ 신입교직원에게 드리는 혜택 ] </h1>
+        <br>
+        <h2><mark style="background:linear-gradient(to top, teal 5%, transparent 30%)">신입교직원에게만 드리는 우대
+                혜택</mark></h2>
+        <br>
+        <div class="center">
+            <div class="card-body">
+                <h2 id="drawbtn">✨정기적금 우대금리 🔎</h2>
+                <h2 id="drawcontent"># 1.0% 우대 금리 쿠폰(<mark>최대 6.50% 금리 효과 ~),한도 월불입 100만원까지 </mark><br />
+                    (기준금리: 3.95% + 우대금리1.0% + 비과세효과 0.75% + 이용고배당 0.8%)<br /></h2>
+                <br>
+               <hr>
+                <h2 id="loanbtn">🎉 대출우대금리🔎</h2>
+                <h2 id="loancontent"># 0.5% 우대 (<mark>최저 4.25% 금리효과 ~</mark> ) <= 이용고배당으로 약 0.25% 환급 감안<br />
+                    # <mark>대출한도: 9,000만원</mark>(신용40백만원, 보증대출50백만원)
+                <br>
+                </h2>
+                <br>
+                <hr>
+                <h2 id="congBtn" title="경조금지급기준표">
+                    🎉 2023년 3월 1일부 경조금 신설🔎 </h2><br />
+                <h2 id="congrat">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">경조금</th>
+                                <th scope="col">증빙 및 요건</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="background-color: skyblue;">본인결혼 10만원</td>
+                                <td rowspan="4" style="background-color: skyblue;">경조사소식공지 <br>또는 기타증빙</td>
+                            </tr                            <tr>
+                                <td style="background-color: skyblue;">자녀결혼 10만원</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: skyblue;">본인사망 20만원</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: skyblue;">본인(배우자)부모상 10만원</td>
+                            </tr>
+                            <tr style="border: double;">
+                                <td>퇴직축하(공로)금 50만원</td>
+                                <td>퇴직전월 출자금<br> 1,000만원이상</td>
+                            </tr>
+                            <tr>
+                                <td>퇴직 기념품 5만원 기념품</td>
+                                <td>조합원 가입기간<br> 10년 이상</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <br />
+                    # <mark> 단, 계속 가입기간 1년 이상인 조합원
+                </h2>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="center">
+            <div class="card-body">
+                <h1 id="qrcodebtn">🎁 신입교직원 웰컴쿠폰 신청하기</h1>
+                <br />
+                <h2 id="qrcode">
+                    <a href="http://ajou9770.github.io/usertip"><img src="img/qrcode_usertip.png"
+                            style="height: 500px; width:500px; border: solid; border-width:2px 7px 7px 2px; border-radius: 10px;"
+                            title="✨usertip으로 링크이동"></a>
+                    <br />
+                    <br />
+                    <img src="img/seven_coupon.jpg">
+                    <!--<img src="img/seven_coupon.jpg"> -->
+                </h2>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const button = document.querySelector("#print");
+
+        function buttonhandleClick() {
+            alert("원천징수영수증 출력시 첫페이지만 지정하여 출력해 주시기 바랍니다")
         }
 
         button.addEventListener("click", buttonhandleClick);
-    </script>    
+    </script>
 </body>
 
 </html>
