@@ -130,6 +130,7 @@ $(document).ready(function(){
 </style>
 </head>
 <body>
+  <div id="top" style="width: 1px; height: 1px;"></div>
  <div style="text-align: center; color:black;"><h4> | 신협 경조금 지급 기준 |</h4></div>
  <!-- <img src="img/congrat_img.jpg"/> -->
 <br>
@@ -200,6 +201,12 @@ $(document).ready(function(){
       <small>✨평생어부바 신협</small>
       </div>
     </div>
+    <script>
+      window.onload = function() {
+        var topElement = document.getElementById("top");
+        topElement.scrollIntoView();
+      };
+    </script>
     <script>
     // 페이지 로딩이 완료되면 로딩 스피너를 숨깁니다.
     window.addEventListener('load', function() {
