@@ -384,3 +384,6 @@ font-weight: bold;
     border-radius: 10px;
     width: 100%;
 }
+video {
+    width: 100%;
+}
