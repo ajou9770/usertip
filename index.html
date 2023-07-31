@@ -153,6 +153,7 @@ $(document).ready(function(){
                       <source src="img/sh_video_3m.mp4">
                       </video></div><br>
                       <div id="join" onclick="join()">✔온라인가입</div>
+                      <div id="draw_link" onclick="drawLink()">✔간편예금개설</div>
                       <div onclick="callon()" id="icon_call">
       📞상담(문의)
       </div>
@@ -213,6 +214,11 @@ $(document).ready(function(){
       function join(){
         alert("비대면온라인 개설(가입)페이지로 이동합니다");
         location.href="https://ajou9770.github.io/usertip/join01.html";
+        navigator.vibrate(200);
+      }
+      function drawLink(){
+        alert("비과세 예적금 개설 페이지로 이동합니다");
+        location.href="https://ajou9770.github.io/usertip/draw_link.html";
         navigator.vibrate(200);
       }
       </script>
