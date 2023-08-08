@@ -65,10 +65,8 @@ $(document).ready(function(){
           font-size: larger;
           border: none;
           border-radius: 5px;
-          background-color: cornflowerblue;
           height: 50px;
           color: whitesmoke;
-          box-shadow: 0px 4px 8px grey;
         }
         button:active {
           transform: scale(0.98);
@@ -127,6 +125,9 @@ $(document).ready(function(){
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
+        .center {
+          text-align: center;
+        }
 </style>
 </head>
 <body>
@@ -180,15 +181,17 @@ $(document).ready(function(){
   🗓️신청기한: 경조사 발생일로부터 1년 이내<br>
 ✔️지급방법: 신청시 지정하신 계좌로 입금<br>
 🚀 시행일자: 2023년 3월 1일이후 경조사 발생부터~ </p>
+
+<button class="btn btn-info" onclick="alert('🤷‍♂️ 신청서 APP 접속시 개인정보정책에 동의[ACCEPT] 바랍니다. ')"><a href="https://www.appsheet.com/start/ec179f1c-bd41-43ee-8f0a-5d53319e9592">🎀경조금신청하기▶</a></button>
 <!-- <button onclick="if(window.confirm('🤷‍♂️경조사가 2023.3.1이후에 발생 되었나요?(이전 발생분은 해당되지 않습니다 )  경조금을 신청 하시겠습니까?')) {
         document.location.href='https://docs.google.com/forms/d/e/1FAIpQLSev3Nt3vxjjIJa1qMYRk_iYc_V-3yK03BAsuewZgtkBwkAK8g/viewform?usp=sf_link'}
         else {
             alert('취소되었습니다')
         }">📑 경조금 신청하기🖱️</button><br><br> -->
    <!-- <button id="congratOpen">📑경조금 신청하기🔽</button>
-   <button id="congratClose">❌신청서 닫기🔼</button> -->
+   <button id="congratClose">❌신청서 닫기🔼</button> 
    <iframe id="ifram" src="https://script.google.com/macros/s/AKfycbxU1thGydEK3LMfYR9l0dKk1RaY01upTG526cx13mA2s5j1DYGx2BNnJrTNCLHS7yKq/exec" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>     
-<!--<button onclick="window.history.back()" style="background-color: rgb(11, 122, 166);">⬅️이전화면</button> -->
+   <button onclick="window.history.back()" style="background-color: rgb(11, 122, 166);">⬅️이전화면</button> -->
     <br><br>
     <h5 onclick="if(window.confirm('📞통화가능 시간은 평일 9시~17시까지 입니다. 연결할까요?')){
       location.href='tel:031-219-6052'
@@ -200,6 +203,9 @@ $(document).ready(function(){
       <div id="loading-message"><span style="padding-left: 15px;">로딩중입니다...</span>
       <small>✨평생어부바 신협</small>
       </div>
+    </div>
+    <div class="center">
+    <a href="http://pf.kakao.com/_dfhkK/chat"><img src="img/kakao_chatlogo.jpg" style="width: 90px; height: 70px;"></a> 
     </div>
     <script>
       window.onload = function() {
