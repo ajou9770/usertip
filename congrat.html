@@ -20,7 +20,7 @@ $(document).ready(function(){
     $("#imgbtn").show("slow");
     window.scrollTo(0, document.body.scrollHeight);
   });
-  $("#congratOpen").click(function(){
+ /*  $("#congratOpen").click(function(){
     navigator.vibrate(200);
     $("#congratClose").show();
     $("#ifram").show();
@@ -32,7 +32,7 @@ $(document).ready(function(){
     $("#congratClose").hide("slow");
     $("#ifram").hide("slow");
     $("#congratOpen").show("slow");
-   });
+   }); */
   $("#payimgBtn").click(function(){
     $("#payimg").toggle("slow");
   });
@@ -213,10 +213,14 @@ $(document).ready(function(){
     </div>
     <script>
       function openCongrat() {
-        document.getElementById("congratOpen").style.display="block";
+        document.getElementById("ifram").style.display="block";
+        document.getElementById("congratClose").style.display="block";
+        document.getElementById("congratOpen").style.display="none";
       }
       function closeCongrat() {
+        document.getElementById("ifram").style.display="none";
         document.getElementById("congratClose").style.display="none";
+        document.getElementById("congratOpen").style.display="block";
       }
       </script>
     <script>
