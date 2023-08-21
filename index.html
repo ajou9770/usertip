@@ -234,6 +234,7 @@ $(document).ready(function(){
       function confirmAction() {
           const response = window.confirm('🤷‍♂️신입 교직원이신가요? 웰컴쿠폰을 신청 하시겠습니까?');
           if (response) {
+              alert("🚀쿠폰 신청 구글폼으로 이동합니다.잠시만 기다려 주세요");
               window.location="https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsGT8JqYmZBVchaF5vKDJaedqUmaOleYeRNmw/viewform?usp=sf_link";
               // 원하는 다른 동작을 여기에 추가하세요. 예: 페이지 리디렉션, 요청 보내기 등
           } else {
