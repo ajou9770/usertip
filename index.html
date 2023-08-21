@@ -142,7 +142,7 @@ $(document).ready(function(){
               웰컴쿠폰 신청하세요.(간단퀴즈 응모 후 전송) 
             </div>
             <br/>
-          <button class="quzi btn-9" style="box-shadow: 0px 6px 12px grey;">
+          <button class="quzi btn-9" style="box-shadow: 0px 6px 12px grey;" onclick="confirmAction()">
             <a>🎁웰컴쿠폰 (심플퀴즈응모)<i class="fas fa-chevron-right fa-lg"></i></a>
           </button>
           <br/>
@@ -231,6 +231,17 @@ $(document).ready(function(){
      }                
     </script>
     <script>
+      function confirmAction() {
+          const response = window.confirm('🤷‍♂️신입 교직원이신가요? 웰컴쿠폰을 신청 하시겠습니까?');
+          if (response) {
+              window.location="https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsGT8JqYmZBVchaF5vKDJaedqUmaOleYeRNmw/viewform?usp=sf_link";
+              // 원하는 다른 동작을 여기에 추가하세요. 예: 페이지 리디렉션, 요청 보내기 등
+          } else {
+              alert("취소 되었습니다.");
+          }
+      }
+  </script>
+    <!-- <script>
       const modal = document.querySelector("#modal");
       const link = document.querySelector(".quzi");
       function handleLinkClick(){
@@ -248,7 +259,7 @@ window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsG
       }
       modal.addEventListener("click", handleModalClick)
           link.addEventListener("click", handleLinkClick);
-    </script>
+    </script> -->
     <script
     src="https://kit.fontawesome.com/6478f529f2.js"
     crossorigin="anonymous"
