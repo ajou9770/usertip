@@ -14,6 +14,36 @@
       margin-bottom: 10px;
       box-shadow: 0px 5px 5px 1px grey;
     }
+/* 버튼의 기본 스타일링 */
+.button-link {
+    display: block;  /* 이 부분이 inline-block에서 block으로 변경되었습니다. */
+    padding: 5px 15px;
+    margin: 5px 0;   /* 좌우 마진을 0으로 설정하고, 상하 마진을 조절합니다. */
+    border: none;
+    font-size: large;
+    border-radius: 5px;
+    background-color: #1dd0d6; /* 색상 변경 가능 */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #3a8fe9; /* 버튼 호버 색상 변경 가능 */
+}
+
+/* 우측 하단에 버튼 위치 고정 */
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    z-index: 1000; /* 다른 요소 위에 보이도록 설정 */
+}
+.katokimg {
+  width: 25px;
+  height: 28px;
+  border-radius: 5px;
+}
 </style>
 </head>
 <body>
@@ -53,6 +83,11 @@
         </div>
       </div>
       </div>
+      <div class="fixed-bottom-right">
+        <a href="tel:+0312196052" class="button-link">📞</a>  <!-- 전화 링크 (번호 변경 가능) -->
+        <a href="http://pf.kakao.com/_dfhkK/chat" class="button-link"><img src="img/katoklogo_sm.jpg" class="katokimg"></a>  <!-- 전화 링크 (번호 변경 가능) -->
+        <a href="https://ajou9770.github.io/usertip/index.html" class="button-link">🏠</a> <!-- 홈페이지 링크 (URL 변경 가능) -->
+    </div>
       <script>
         function notice() {
             alert("🤷‍♂️입출금 또는 비과세 예적금 통장 개설을 위해 신협 리온브런치로 이동합니다. \n 📢핸드폰 본인확인을 거쳐, 금융인증서로 개설진행 됩니다.   ")
