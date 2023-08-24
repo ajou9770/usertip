@@ -226,35 +226,44 @@ input {
 <!--     <div class="footer"> 
     <footer><h2>&copy ajou9770@ajoucu.page 신협 031)219-6438 조합가입 또는 금융상담:219-6052,6971</h2></footer>
     </div> -->
-   <script>
-    function openLink(){
-      if(window.confirm("🔎보다 자세한 신협 알뜰요금제를 보시겠습니까? \n 🤷‍♂️개통시에는 사은품 수령을 위해 조합직원 아이디(아래에서 복사)는 꼭 입력해 주세요~~")) {
-        location.href="https://tplusmobile.com/shinhyup";
-        navigator.vibrate(100); 
-        } else {
-          alert('취소되었습니다');
-          navigator.vibrate(200);
-        }
+    <script>
+      var copyIdExecuted = false;
+  
+      function copyid() {
+          copyIdExecuted = true;
+          if(window.confirm("📢직원 ID복사 후 추천인 아이디에 붙여 넣으세요")) {
+              document.getElementById("idImg").style.display = "block";
+              document.getElementById("dropdown-content").style.display = "block";
+              document.getElementById("imgbtn").style.display = "none";
+              document.getElementById("closeBtn").style.display = "block";
+              window.scrollTo({ top: 2000, behavior: "smooth" });
+          } else {
+              console.log("done");
+              alert("취소 되었습니다");
+              document.getElementById("dropdown-content").style.display = "none";
+              document.getElementById("closeBtn").style.display = "none";
+              document.getElementById("imgbtn").style.display = "block";
+              document.getElementById("idImg").style.display = "none"; 
+          }     
+      } 
+  
+      function openLink() {
+          if(!copyIdExecuted) {
+              if(!confirm("📢추천인(직원) ID를 알고 계신가요?  \n🎁사은품 수령을 위해 추천인(직원)아이디를 입력하여야 합니다.(취소 후 복사를 먼저 진행해 주세요) ")) {
+                  copyid(); // '취소'를 선택하면 copyid() 함수를 바로 실행
+                  return;
+              }
+          }
+          if(window.confirm("🔎보다 자세한 신협 알뜰요금제를 보시고 개통을 진행하시겠습니까?\n")) {
+              location.href = "https://tplusmobile.com/shinhyup";
+              navigator.vibrate(100); 
+          } else {
+              alert('취소되었습니다');
+              navigator.vibrate(200);
+          }
       }
-   </script>
-   <script>
-    function copyid() {
-      if(window.confirm("📢직원 ID복사 후 추천인 아이디에 붙여 넣으세요")){
-        document.getElementById("idImg").style.display="block";
-        document.getElementById("dropdown-content").style.display="block";
-        document.getElementById("imgbtn").style.display="none";
-        document.getElementById("closeBtn").style.display="block";
-        window.scrollTo({ top: 2000, behavior: "smooth" })
-      } else {
-        console.log("done");
-        alert("취소 되었습니다")
-        document.getElementById("dropdown-content").style.display="none";
-        document.getElementById("closeBtn").style.display="none";
-        document.getElementById("imgbtn").style.display="block";
-        document.getElementById("idImg").style.display="none"; 
-      }     
-    }    
-  </script> 
+  </script>
+ 
    <script>
       function copyBtn_seol() {
       var obj = document.getElementById("seol");
