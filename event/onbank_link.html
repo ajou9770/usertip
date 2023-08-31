@@ -41,9 +41,9 @@
         text-decoration: none;
         cursor: pointer;
     }
-    a {
-        color: #fefefe;
-    }
+/*     a {
+        color: #fefefe; 
+    }*/
     button {
         border-radius: 5px;
         margin: 10px;
@@ -84,7 +84,7 @@
     </style>
 </head>
 <body>
-    <div id="myModal" class="modal">
+    <!-- <div id="myModal" class="modal">
         <div class="modal-content">
              <div id="box" style="text-align: center;">
               <h5> <i class="fas fa-mobile-alt"></i> 디바이스 운영체제? </h5>
@@ -101,8 +101,9 @@
           <div id="loading-message"><span style="padding-left: 15px;">🤖온뱅크연결중입니다..</span>
           <small>✨평생어부바 신협</small>
         </div>
-      </div>
-      <script>
+      </div> -->
+      <a id="myLink" href="https://default.example.com">온뱅크바로가기-></a>
+      <!-- <script>
          window.onload = function() {
           document.getElementById("myModal").style.display = "block";
          };
@@ -137,7 +138,7 @@
        function Cancel() {
         modal.classList.add("none"); 
        }
-              </script>
+              </script> -->
               <script
               src="https://kit.fontawesome.com/6478f529f2.js"
               crossorigin="anonymous"
@@ -157,5 +158,18 @@
                   loadingOverlay.style.display = 'none';
                 });
                 </script>
+                <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var linkElement = document.getElementById("myLink");
+                  
+                    if (/Android/i.test(navigator.userAgent)) {
+                      linkElement.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+                    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                      linkElement.href = "https://apps.apple.com/kr/app/id1484456647";
+                    } else {
+                      linkElement.href = "http://ajou9770.github.io/usertip/draw";
+                    }
+                  });
+                 </script>           
 </body>
 </html>
