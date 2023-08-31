@@ -77,12 +77,12 @@
               <div style="display: inline-block; font-size: 30px; font-weight: 600;">📢 금리조건변경신청 안내<br/><hr>
                 ▷ <mark style="background:linear-gradient(to top, yellow 20%, transparent 30%)">대출기간중 참조합원 등급 상승</mark>
               (일반-> 도움이, 도움이->믿음이, 믿음이->으뜸이)이 된 경우, <mark style="background:linear-gradient(to top, yellow 20%, transparent 30%)">0.2% ~ 0.6% 우대</mark> 금리 적용
-                <br/>▷ 신청방법: 아래, 신협 모바일온뱅크<img src="img/onbank_logo.jpg" width="216px" height="53px" style="border-radius: 10px; justify-items: center;" onclick="modal_click()" id="imgbtn"/><mark style="background:linear-gradient(to top, yellow 20%, transparent 30%)"> 대출계좌>계좌관리>금리인하요구신청) 또는 신협창구</mark><br/>
+                <br/>▷ 신청방법: 아래, 신협 모바일 온뱅크(아래로고 클릭!) > 대출계좌>계좌관리>금리인하요구신청) 또는 신협창구</mark><br/>
                   <hr>
                   
 
                   <div id="box_btn">
-                  <img src="img/onbank_logo.jpg" style="border-radius: 10px; border: double gray 2px;" onclick="modal_click()" id="imgbtn"/>
+                  <a id="onbank_Link" href="https://ajou9770.github.io/usertip/loan"><img src="img/onbank_logo.jpg" style="border-radius: 10px; border: double gray 2px;"></a>
                    <!-- <div class="cubank" onclick="google()"><i class="fab fa-google-play"></i>안드로이드</div>
                     <div class="cubank" onclick="apple()"><i class="fab fa-apple"></i>아이폰(IOS)</div>-->
                   </div>
@@ -114,7 +114,7 @@
 <br/><br/><br/><br/><br/>
 <h4>☞ 현재, 본인의 대출 현황(금리 등)조회 또는 대출금 중도 (일부 또는 전부) 상환은 아래 신협모바일 온뱅크를 이용바랍니다.</h4>
 <div id="box_btn">
-  <img src="img/onbankgo.JPG" style="border-radius: 10px; border: double gray 2px;" onclick="modal_click()" id="imgbtn"/>
+  <a id="onbank_Link" href="https://ajou9770.github.io/usertip/loan"><img src="img/onbankgo.JPG" style="border-radius: 10px; border: double gray 2px;"></a>
    <!-- <div class="cubank" onclick="google()"><i class="fab fa-google-play"></i>안드로이드</div>
     <div class="cubank" onclick="apple()"><i class="fab fa-apple"></i>아이폰(IOS)</div>-->
   </div><br/>
@@ -200,6 +200,23 @@ modal.classList.add("none");
     modal.addEventListener("click", handleModalClick)
         link.addEventListener("click", handleLinkClick);
   </script>-->
+
+  <!--온뱅크 디바이스 식별 연결-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var linkElement = document.getElementById("onbank_Link");
+  
+    if (/Android/i.test(navigator.userAgent)) {
+      linkElement.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      linkElement.href = "https://apps.apple.com/kr/app/id1484456647";
+    } else if (/Windows/i.test(navigator.userAgent)) {
+      linkElement.href = "http://cu.co.kr";
+    } else {
+      linkElement.href = "http://ajou9770.github.io/usertip/draw";
+    }
+  });
+  </script>
   <script>
     function modal_click() {
       console.log("Modal 창 클릭~~~")
