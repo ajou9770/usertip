@@ -158,18 +158,22 @@
                   loadingOverlay.style.display = 'none';
                 });
                 </script>
+
                 <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    var linkElement = document.getElementById("myLink");
-                  
-                    if (/Android/i.test(navigator.userAgent)) {
-                      linkElement.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
-                    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                      linkElement.href = "https://apps.apple.com/kr/app/id1484456647";
-                    } else {
-                      linkElement.href = "http://ajou9770.github.io/usertip/draw";
-                    }
-                  });
-                 </script>           
+                    document.addEventListener("DOMContentLoaded", function() {
+  var linkElement = document.getElementById("myLink");
+
+  if (/Android/i.test(navigator.userAgent)) {
+    linkElement.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+  } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    linkElement.href = "https://apps.apple.com/kr/app/id1484456647";
+  } else if (/Windows/i.test(navigator.userAgent)) {
+    linkElement.href = "http://cu.co.kr";
+  } else {
+    alert("🤖PC에서는 신협 인터넷뱅킹을 이용하실 수 있습니다.")
+    linkElement.href = "http://ajou9770.github.io/usertip/draw";
+  }
+});
+</script>           
 </body>
 </html>
