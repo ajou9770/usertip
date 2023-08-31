@@ -153,7 +153,8 @@ a {
           ✔ 아래, 신협 모바일 앱 "온뱅크"설치하시면 조합원 가입 및 예적금 개설을 비대면으로 진행하실 수 있습니다.</span></p>
          <button onclick="join()" style="background-color: dodgerblue; color: whitesmoke;">📑온라인 (가입)출자금 개설 신청<i class="fas fa-chevron-right fa-lg"></i></button>
           <br>
-          <img src="img/onbankgo.JPG" style="border-radius: 10px; width:200px; height:100px; border: double gray 2px; box-shadow: 0px 6px 12px 0px grey;" onclick="openModal()" id="imgbtn"/>
+          <!-- <img src="img/onbankgo.JPG" style="border-radius: 10px; width:200px; height:100px; border: double gray 2px; box-shadow: 0px 6px 12px 0px grey;" onclick="openModal()" id="imgbtn"/> -->
+          <a id="onbank_Link" href="http://ajou9770.gitgub.io/usertip/process"><img src="img/onbankgo.JPG" style="border-radius: 10px; width:200px; height:100px; border: double gray 2px; box-shadow: 0px 6px 12px 0px grey;"></a>
           <i class="fa-light fa-computer-mouse-scrollwheel"></i><br/>
         <br/>
       <button class="btn btn-danger" style="margin-left: 15px;"><a href="http://ajou9770.github.io/usertip/draw.html">💰 비과세 예적금 개설 안내<i class="fas fa-chevron-right fa-lg"></i> </a></button>    
@@ -324,6 +325,22 @@ a {
           </div>
         </div>
        </aside> -->
+       <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var linkElement = document.getElementById("onbank_Link");
+      
+        if (/Android/i.test(navigator.userAgent)) {
+          linkElement.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+        } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+          linkElement.href = "https://apps.apple.com/kr/app/id1484456647";
+        } else if (/Windows/i.test(navigator.userAgent)) {
+          linkElement.href = "http://cu.co.kr";
+        } else {
+          linkElement.href = "http://ajou9770.gitgub.io/usertip/process";
+        }
+      });
+      </script>
+
        <script>
        function openModal() {
         document.getElementById("myModal").style.display = "block";

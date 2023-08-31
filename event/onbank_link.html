@@ -84,21 +84,19 @@
     </style>
 </head>
 <body>
-    <a id="myLink" href="https://default.example.com" style="display: none;">온뱅크바로가기-></a>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var linkElement = document.getElementById("myLink");
+  <a id="myLink" href="https://default.example.com">온뱅크바로가기-></a>
+    <script defer>
+        var linkElement = document.getElementById("myLink");
 
-            if (/Android/i.test(navigator.userAgent)) {
-                linkElement.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
-            } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                linkElement.href = "https://apps.apple.com/kr/app/id1484456647";
-            } else if (/Windows/i.test(navigator.userAgent)) {
-                linkElement.href = "http://cu.co.kr";
-            } else {
-                linkElement.href = "http://ajou9770.github.io/usertip/draw";
-            }
-        });
+        if (/Android/i.test(navigator.userAgent)) {
+            linkElement.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+        } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            linkElement.href = "https://apps.apple.com/kr/app/id1484456647";
+        } else if (/Windows/i.test(navigator.userAgent)) {
+            linkElement.href = "http://cu.co.kr";
+        } else {
+            linkElement.href = "http://ajou9770.github.io/usertip/draw";
+        }
     </script>
 </body>
 </html>
