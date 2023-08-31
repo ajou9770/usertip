@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>신협  온뱅크 연결..</title>
+    <style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .close {
+        color: #2e393f;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    a {
+        color: #fefefe;
+    }
+    button {
+        border-radius: 5px;
+        margin: 10px;
+        color: #fefefe;
+        border: none;
+        box-shadow: 0px 3px 6px 0px gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #loading-overlay {
+            position: fixed;
+            top: 0;
+           left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 배경 색상과 투명도를 조정하세요 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+          }
+         #loading-message {
+          font-size: 24px;
+          color: white;
+          }
+        #loading-spinner {
+          border: 16px solid #f3f3f3;
+          border-top: 16px solid #3498db;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+             <div id="box" style="text-align: center;">
+              <h5> <i class="fas fa-mobile-alt"></i> 디바이스 운영체제? </h5>
+              <div id="box_btn">
+                <button id="fab_fa-google-play" onclick="Google()" style="background-color: rgb(86, 86, 209); margin-right: 15px; width: 140px;"><i class="fab fa-google-play"></i>안드로이드</button>
+                <button id="fab_fa-apple" onclick="Ipon()" style="background-color: rgb(111, 186, 101); width: 140px;"><i class="fab fa-apple"></i>IOS(아이폰)</button><br>
+                <button onclick="closeModal()" style="background-color: rgb(25, 56, 84);">🏠Home</button>
+            </div>
+        </div>
+      </div>
+      
+      <div id="loading-overlay">
+        <div id="loading-spinner"></div>
+          <div id="loading-message"><span style="padding-left: 15px;">🤖온뱅크연결중입니다..</span>
+          <small>✨평생어부바 신협</small>
+        </div>
+      </div>
+      <script>
+         window.onload = function() {
+            alert("🤖신협 온뱅크 열기 또는 설치로 이동합니다.");
+          document.getElementById("myModal").style.display = "block";
+         };
+
+          
+          function closeModal() {
+              /* document.getElementById("myModal").style.display = "none"; */
+              window.location="http://ajou9770.github.io/usertip/draw";
+          }
+          
+          // 모달창 바깥쪽 클릭 시 닫기
+          window.onclick = function(event) {
+              var modal = document.getElementById("myModal");
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+          function Ipon() {
+        if (window.confirm("아이폰계열 모바일 앱 설치화면으로 이동합니다")) {
+        document.location.href ="https://apps.apple.com/kr/app/id1484456647"; 
+        } else {
+            alert("취소하였습니다");
+        }
+        }
+        function Google() {
+        if (window.confirm("안드로이드(구글)계열 모바일 앱 설치화면으로 이동합니다")) {
+        document.location.href ="https://play.google.com/store/apps/details?id=kr.co.cu.onbank"; 
+        } else {
+            alert("취소하였습니다");
+        }
+       }
+       function Cancel() {
+        modal.classList.add("none"); 
+       }
+              </script>
+              <script
+              src="https://kit.fontawesome.com/6478f529f2.js"
+              crossorigin="anonymous"
+              >
+            </script>
+            <!-- 페이지로딩 -->
+            <script>
+                // 페이지 로딩이 완료되면 로딩 스피너를 숨깁니다.
+                window.addEventListener('load', function() {
+                  var spinner = document.getElementById('loading-spinner');
+                  spinner.style.display = 'none';
+                });
+                </script>
+                <script>
+                window.addEventListener('load', function() {
+                  var loadingOverlay = document.getElementById('loading-overlay');
+                  loadingOverlay.style.display = 'none';
+                });
+                </script>
+</body>
+</html>
