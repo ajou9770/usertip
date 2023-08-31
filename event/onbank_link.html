@@ -6,15 +6,18 @@
     <script defer>
         window.onload = function() {
             if (/Android/i.test(navigator.userAgent)) {
+                alert("✔안드로이드 운영체제로 구글 플레이스토어로 이동합니다.");
                 window.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
             } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                alert("✔IOS운영체제로 애플 앱스토어로 이동합니다.");
                 window.location.href = "https://apps.apple.com/kr/app/id1484456647";
             } else if (/Windows/i.test(navigator.userAgent)) {
+               alert("✔PC window 운영체제로 신협 인터넷뱅킹으로 이동합니다.");
                 window.location.href = "http://cu.co.kr";
             } else {
                 window.location.href = "http://ajou9770.github.io/usertip/draw";
             }
-        };
+        }; 
     </script>
 </head>
 <body>
