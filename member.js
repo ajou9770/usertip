@@ -3346,8 +3346,16 @@ localStorage.setItem("115469", "29521037");
 localStorage.setItem("115490", "29545836");
 localStorage.setItem("115256", "29547053");
 localStorage.setItem("115577", "29488829");
+localStorage.setItem("501348", "29519947");
+localStorage.setItem("1115657", "29533690");
+localStorage.setItem("115138", "29488834");
+localStorage.setItem("705340", "29476814");
+localStorage.setItem("113401", "29487123");
+localStorage.setItem("115616", "29478860");
+localStorage.setItem("115482", "29497139");
+localStorage.setItem("114967", "29521037");
 
-// 2023 8월 가입조합원 업데이타 (2023.8.31까지) 
+// 2023 9월 가입조합원 업데이타 (2023.9.30까지) 
 
 function handleSumbit(event) {
   event.preventDefault();
@@ -3358,7 +3366,7 @@ function handleSumbit(event) {
     alert("사번 입력 후 조회 바랍니다 😃");
     h3.innerText = "";
   } else if (show === null) {
-    h3.innerText = `["${value}"는 찾을수가 없네요😢. 2023년 8월 30일까지 가입된 조합원에 한해 조회 가능합니다. 조회가 안될 경우 신협으로 문의 바랍니다.👌]`;
+    h3.innerText = `["${value}"는 찾을수가 없네요😢. 2023년 9월 30일까지 가입된 조합원에 한해 조회 가능합니다. 조회가 안될 경우 신협으로 문의 바랍니다.👌]`;
   } else {
     h3.innerText = `[조합원번호(ID)는 ${show} 입니다]`;
   }
@@ -3373,7 +3381,7 @@ const Input_value = form - input - one.value;
 
 function handleClick() {
   alert(
-    `${Input_value}로 입력하셨습니다. 2022년 9월 30일기준 가입 조합원 기준으로 조회 가능합니다. 조회가 되지 않을 경우 신협(☏4939)로 문의 주세요`
+    `${Input_value}로 입력하셨습니다. 2023년 9월 30일기준 가입 조합원 기준으로 조회 가능합니다. 조회가 되지 않을 경우 신협(☏4939)로 문의 주세요`
   );
 }
 
