@@ -317,3 +317,6 @@ font-weight: bold;
 .tooltip:hover .tooltext {
     visibility: visible;
 }
+iframe {
+    border-radius: 10px;
+}
