@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>☕스타벅스 앱설치(열기)</title>
+    <script defer>
+        window.onload = function() {
+            if (/Android/i.test(navigator.userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.starbucks.co";
+            } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.starbucks.co";
+            } else if (/Windows/i.test(navigator.userAgent)) {
+               alert("✔PC window 운영체제로 스타벅스 홈으로 이동합니다.");
+                window.location.href = "https://www.starbucks.co.kr/index.do";
+            } else {
+                window.location.href = "https://www.starbucks.co.kr/index.do";
+            }
+        }; 
+    </script>
+</head>
+<body>
+    <!-- 본문 내용 -->
+    <script
+    src="https://kit.fontawesome.com/6478f529f2.js"
+    crossorigin="anonymous"
+    ></script>
+</body>
+</html>
