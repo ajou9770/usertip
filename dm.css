@@ -317,3 +317,12 @@ font-weight: bold;
 iframe {
     border-radius: 10px;
 }
+#welcomeModal .modal-dialog {
+    max-width: 80%;
+    height: 60vh;
+    margin: auto;
+}
+.modal-title {
+  color:tomato ;
+  font-size: medium;
+}
