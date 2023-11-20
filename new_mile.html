@@ -2,15 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <title>신협 이용고 배당 안내</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신협 (출자,이용고)배당 안내</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet", href="mile.css">
 </head>
 <body>
-    <br/>
-    <div>       
-    <span style="text-align: center; font-size: 40px; font-family: 800;"><b>🤷‍♀️이용고 배당이란(?)</b></span>
-    <h2 class="content">
+  <h5>⭐신협에서는 조합원에게 출자배당  및 이용고(신용사업 + 특판몰) 배당을 매년(2월경) 드립니다.  </h5>
+    <span style="text-align: center; font-size: 25px; font-family: 800;"><b>🤷‍♀️출자금 배당이란(?)</b></span>
+    <p>
+        출자금 평잔에 따른 현금배당입니다. 출자배당율은 연중 정기예탁(1년)평균금리의 150%이상을 목표로 운영하고 있습니다. 
+        <br><br>
+        
+        | 납입한도 및 배당율 |<br/><br/>
+        ▶ 월납입한도 : 10만원(급여공제 또는 자동이체)<br/>
+        ▶ 총불입한도 : 1,500만원(비과세1,000만원 + 과세통장 500만원)<br/>
+        ▶ 출자배당금(3개년): 2022년 545백만원 / 2021년 414백만원 / 2020년 303백만원<br/>
+        ▶ 출자배당 지급 시기: 매년 2월중(총회종료 후) <br/>   
+        </p>
+        <a href="https://ajou9770.github.io/meet/googleapp/form_cul" style="color:teal; font-size:20px;" onclick="alert('🤷‍♂️출자금 급여공제 변경신청서 폼으로 이동합니다.')">📝출자금 급여공제 변경신청하기 →</a>  
+      <hr>
+        <span style="text-align: center; font-size: 25px; font-family: 800;"><b>🤷‍♀️신용사업 이용고 배당이란(?)</b></span>
+        <p>
             아주대의료원 신협 이용 실적에 따른 실적 배당을 말하며, 대출금, 요구불(입출금)예금, 적금, 체크카드사용, 자동납부(이체)실적, 보험료 납입 실적 등이
             실적에 반영되어, 사업수익에 따른 배당율에 따라 지급됨.<br/><br/>
             ✔거래실적(항목)별 이용고 배당 산출 (2021년 지급기준 예)<br/><br/>
@@ -20,8 +33,25 @@
             ▶ 체크카드 : 연 사용액 * 약 0.92%<br/>
             ▶ 자동납부(이체) : 월평균 건수 * 약 8,800원 <br/><br/>
             ✔ 이용고배당 지급시기: 매년 2월경 (정기총회 배당율 결정 후)<br/>
-            </h2>
+            </p>
+            <!-- <h2 class="content"><a href="https://ajou9770.github.io/usertip/mile2019.html">☞ 최근4개년 이용고 배당 지급 현황 (자세히 보기)<i class="fas fa-chevron-right fa-lg"></i></a>
+            </h2> -->
+            <span id="box_form" style="CURSOR: hand" onclick = "if(showbox.style.display==`none`)
+            {showbox.style.display=``; box_form.innerText = ` 🧾최근 4개년 이용고 지급 내역 닫기 ▲`} else {showbox.style.display = `none`; 
+            box_form.innerText = `🧾최근 4개년 이용고 지급 내역 보기 ▼`}">🧾최근 4개년 이용고 지급 내역 보기 ▼</span>
+            <div id="showbox" style="display: none">
+            <li class="mileli" style="color:tomato;">2022년: 약 365백만원 <br>(주거래 조합원 평균 27만원, 최다수령 349만원)</li>  
+            <li class="mileli">2021년: 약 414백만원<br> (주거래 조합원 평균 32만원, 최다수령 245만원)</li>
+            <li class="mileli">2020년: 약 290백만원<br> (주거래 조합원 평균 22만원, 최다수령 145만원)</li>        
+            <li class="mileli">2019년: 약 412백만원<br> (주거래 조합원 평균 33만원, 최다수령 218만원)</li><br/>
             
+            <img src="img/div_list_2022.jpg"/><br>
+            <img src="img/mile2021.JPG"><br/>
+            <img src="img/mile2020.JPG"><br/>
+            <img src="img/milego(1).JPG"><br/>
+            </div>
+            <br/>
+
    <!-- ☞<span id="toc-toggle" onclick="openCloseToc()">자세히보기</span>
 <ol id="toc-content">
   <li>거래 항목별 이용고 배당 산출 예시 <br/>
@@ -30,21 +60,28 @@
    , 체크카드사용, 자동납부(이체)실적 등을 포함. <br/>
    ☞ 위의 거래실적에 따라, 매년 2월 정기총회에서 배당율에 따라 이용고 배당 지급</li>
 </ol>-->
-    <div class="mile"> 
-        <button style="border-radius: 10px; color:whitesmoke; padding: 10px; border-color: whitesmoke;">
-            <a href="https://ajou9770.github.io/usertip/mile2019.html" style="color: teal;">☞ 최근3개년 이용고 배당 지급 현황 (자세히 보기)<i class="fas fa-chevron-right fa-lg"></i></a>
-            </button><br/>
-            <button style="border-radius: 10px; color:whitesmoke; padding: 10px; border-color: whitesmoke;">               
-    <a href="https://ajou9770.github.io/notice/milecal.html" style="color: teal;"> 💰셀프 (예상)이용고 배당 조회(계산) <i class="fas fa-chevron-right fa-lg"></i> <i class="fas fa-chevron-right fa-lg"></i> </a>    
-    </button>
-</div><br/>
-
-<div id="icon">
-<div
+    
+<a href="https://ajou9770.github.io/notice/milecal.html" style="color:darkcyan;"> 💰셀프 (예상)이용고 배당 조회(계산) <i class="fas fa-chevron-right fa-lg"></i>  </a>
+<br/>
+<span style="text-align: center; font-size: 25px; font-family: 800;"><b>🤷🎁특판몰 이용고 배당이란(?)</b></span>
+        <p>
+            조합에서 운영하는 명절(설날,추석) 특판몰을 이용시 구매금액의 약 3%를 이용고 배당으로 드립니다. <br/><br/>
+            ✔ 2023년 추석명절 특판(2023년 9월)이용분부터 적용~<br/><br/>
+            ▶ 지급대상: 교직원조합원 한함<br/>
+            ▶ 배당금액: 년간 구매누계액 * 3%<br/>
+            ▶ 지급시기: 출자(이용고)배당 지급시 <br/>
+            ▶ 과세여부: 비과세<br/>
+            </p>
+    <div class="back_box">
+      <div class="backButton">    
+  <a href="https://ajou9770.github.io/usertip/"><i class="fas fa-chevron-left fa-lg"></i>  이전(홈)화면으로 돌아가기</a>
+  </div>
+    <div id="icon">
+    <div
 id="kakao-talk-channel-chat-button"
 data-channel-public-id="_dfhkK"
 data-title="consult"
-data-size="large"
+data-size="small"
 data-color="yellow"
 data-shape="mobile"
 data-support-multiple-densities="true"
@@ -54,10 +91,6 @@ data-support-multiple-densities="true"
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsGT8JqYmZBVchaF5vKDJaedqUmaOleYeRNmw/viewform?usp=sf_link"
                 >간단한 퀴즈 풀고 응모 하기  <i class="fas fa-chevron-right fa-lg"></i></a>
             </div><br/>-->
-            <div class="back_box">
-        <div class="backButton">    
-    <a href="https://ajou9770.github.io/usertip/"><i class="fas fa-chevron-left fa-lg"></i>  이전(홈)화면으로 돌아가기</a>
-    </div>
     
     <br/>
     <!--<div style="text-align: center;">
@@ -66,11 +99,11 @@ data-support-multiple-densities="true"
         </button>
         </div>-->
     <br/>
-    <div class="footer"> 
+    <!-- <div class="footer"> 
     <footer>아주대학교의료원 신용협동조합 <br/>⏰업무시간: 평일 8시30분 ~ 17시 (⛳병원본관 B2)<address>
         <span onclick="callon()">📞 031-219-6052</span>
         <a href="mailto:ajou9770@ajoucu.page">ajou9770@ajoucu.page</a>
-        </address></footer>
+        </address></footer> -->
     </div>
   </div>
   <script>  
@@ -78,7 +111,7 @@ data-support-multiple-densities="true"
       if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞연결 할까요?")) {
         document.location.href = "tel:031-219-6052"
     } else {
-      console.log("canceled")
+      alert("취소되었습니다~")
     }
    }                
   </script>
@@ -111,6 +144,6 @@ data-support-multiple-densities="true"
             document.getElementById('toc-toggle').textContent = '닫기';
           }
         }
-      </script>    
+      </script>   
 </body>
 </html>
