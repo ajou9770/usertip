@@ -1,353 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.5">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-<link rel="stylesheet", href="index.css">
-    <!--Google Fonts-->
-    <!--<link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"    />-->
-    <title>신협이용 꿀팁</title>
-    <!--Stylesheets-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("#btn_color").click(function(){
-    $("body,div,video,html").toggleClass("night");
-  });
-});
-</script>
-    <style media="screen">
-      *,
-      *:before,
-      *:after {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      .night {
-        background-color: rgb(79, 72, 72);
-        color: whitesmoke;
-      }
-      #btn_color {
-        background-color: rgb(86, 41, 41);
-        padding: 10px;
-        color: whitesmoke;
-        font-size: 25px;
-        font-weight: 600;
-        border-radius: 10px;
-        box-shadow: opx 5px 10px 0px grey;
-        border: none;
-      }     
-     #btn_color:active {
-      transform: scale(0.97);
-     }
-     .none {
-            display: none;
-      }
-     dialog {
-          position: absolute;
-          width: 95%;
-          top: 400px;
-          left: 15px;
-          text-align: center;
-          border-radius: 10px;
-          padding: 10px;
-          border: none;
-          box-shadow: 0px 4px 8px grey;
-      }
-      button {
-          padding: 5px 10px;
-          border-radius: 5px;
-          margin-right: 30px;
-          margin-left: 30px;
-          font-size: x-large;
-          background-color: rgb(89, 48, 71);
-          color: whitesmoke;
-          box-shadow: 0px 3px 6px grey;
-          border: none;
-        }
-        #linkbtn {
-          padding: 5px 10px;
-          border-radius: 5px;
-          font-size: xx-large;
-          background-color: rgb(16, 67, 67);
-          color: whitesmoke;
-          border: none; 
-        }
-        button:active {
-            transform: scale(0.98);
-        }
-        p {
-          font-size: 25px;
-          font-weight: 600;
-        }
-    </style>
-  </head>
-  <body onload="popup()">
-    <!-- popup -->
-    <dialog>
-      <p> 우리신협은 의료원교직원이 100% 출자하여 설립.운영되고 있습니다.
-          교직원의 신협 이용편의 제공을 위해, 이용방법 및 혜택을 정리하였습니다. 
-          잠깐 둘러 보시면 신협 이용에 많은 도움이 되실 것입니다. 아울러, 신입교직원은 🎁월컴쿠폰(심플퀴즈응모)도 신청하세요. </p>
-      <form method="dialog">
-        <br>
-        <hr>
-        <br>
-        <div style="display: inline;"><button value="close">확인</button><button id="dayNonsee" onclick="notSee()" >✔하루동안 안보기</button>
-          </div>
-          <!-- <button id="linkbtn" onclick="if(window.confirm('특판몰 이동?')){
-          document.location.href='http://ajoucu.com'  
-          }else {
-              alert('canceled!!')
-              console.log('cancel')
-          }">특판몰이동</button> -->
-      </form>
-  </dialog>
-    <!--<img src="img/usertip_top_202205.jpg"><br/>-->
-      <video controls autoplay muted>
-      <source src="img/sh_happyway_newyear_30s.mp4">
-      </video>
-      <br/>
-      <!--# 명절 특판 배너 광고. 
-      <div>
-      <a href="http://ajoucu.com"><img src="img/chuseok_ban.jpg"></a> 
-      </div>-->
-      
-      <hr>
-      <div>
-        <div class="smalltitle">
-          <h3 style="font-weight: 600; font-style: normal;">| 비과세 출자금&예적금 이용고배당 |</h3>
-          신협은 출자금의 배당 및 예적금의 이자소득세가 면제됩니다<br/>
-          우리신협은 이용실적에 따른 이용고 배당을 드립니다. 
-        </div>
-        <br/>
-      <button class="mile btn-3">    
-      <a href="https://ajou9770.github.io/usertip/mile.html">💰More Read <i class="fas fa-chevron-right fa-lg"></i></a>
-      </button><br/>
-      <div class="smalltitle">
-        <h3 style="font-weight: 600; font-style: normal;">| 조합가입 및 예적금 통장 개설 |</h3>
-      비과세출자금 통장을 개설하시면 조합원 가입 완료<br/>
-      신협 비과:세 예적금으로 절세 혜택도 챙기세요~~ 
-      </div>
-      <br/>
-      <button class="proce btn-5">
-          <a href="https://ajou9770.github.io/usertip/process.html"> 📝 More Read <i class="fas fa-chevron-right fa-lg"></i></a>
-      </button>
-          <br/>
-          <div class="smalltitle">
-            <h3 style="font-weight: 600; font-style: normal;">| 교직원 저리 신용 대출 |</h3>
-            교직원은 최대 2억원까지 저금리 대출을 받으실 수 있습니다<br/>
-            신협 대출은 중도상환이 자유롭고, 인지세가 면제 됩니다. 
-          </div>
-          <br/>
-          <button class="mile btn-3">
-              <a href="https://ajou9770.github.io/usertip/loan.html"> 💵 More Read  <i class="fas fa-chevron-right fa-lg"></i></a>
-          </button>
-              <br/>
-              <div class="smalltitle">
-                <h3 style="font-weight: 600; font-style: normal;">| 조합원 경조금 지급 안내 |</h3>
-              조합원에게 경조사 발생시 경조금을 드립니다. <br/>
-              애경사 발생 또는 퇴직시 신청하시기 바랍니다.  
-              </div>
-              <br/>
-              <button class="proce btn-5">
-                  <a href="https://ajou9770.github.io/usertip/congrat.html" onclick="alert('경조금은 2023년 3월1일부 시행 예정입니다')"> 📝 경조금 안내 및 신청 <i class="fas fa-chevron-right fa-lg"></i></a>
-              </button>
-                  <br/>
-              <div class="smalltitle">
-                <h3 style="font-weight: 600; font-style: normal;">| 조합원 전용 소노호텔&리조트 이용 |</h3>
-                전국 소노호텔앤리조트(구, 대명리조트)성수기 예약신청,<br/>
-                조합원 실시간 예약 가능. <br/>
-                조합원번호로 간편 로그인하시고 회원가로 이용 하세요🙂 
-              </div>
-              <br/>
-      <button class="proce btn-5">
-          <a href="https://ajou9770.github.io/usertip/dm.html"> ⛺ More Read <i class="fas fa-chevron-right fa-lg"></i></a>
-      </button>
-          <br/>
-          <div class="smalltitle">
-            <h3 style="font-weight: 600; font-style: normal;">| 주거래 참조합원 우대 |</h3>
-            신협을 주거래로 이용하시면 참조합원이 됩니다.<br/>
-            생일쿠폰, 소노호텔앤리조트 우대 혜택 등이 있어요 
-          </div>
-          <br/>
-          <button class="mile btn-3">    
-            <a href="https://ajou9770.github.io/usertip/cham.html"> 🏅 More Read  <i class="fas fa-chevron-right fa-lg"></i></a>
-          </button><br/>
-              <div class="smalltitle">
-                <h3 style="font-weight: 600; font-style: normal;">| 🎉진행중 이벤트 |</h3>
-                신입 교직원 적금우대금리 이벤트.. 세븐일레븐 할인(교환)쿠폰<br/>
-                조합에서 현재 진행중인 이벤트를 보실 수 있습니다.<br/>
-                자세한 사항은 아래 이벤트 보기🙂
-              </div><br/>
-              <button class="proce btn-5">
-              <a href="https://ajou9770.github.io/usertip/event.html" style="font-size: x-large;"> 🎉 Event  <i class="fas fa-chevron-right fa-lg"></i></a>
-              </button>
-              <br/>
-              <div class="smalltitle">
-                <h3 style="font-weight: 600; font-style: normal;">| 🎁웰컴 쿠폰 |</h3>
-              신입 교직원에게 드리는 특별한 🎁선물<br/>
-              웰컴쿠폰 신청하세요.(간단퀴즈 응모 후 전송) 
-            </div>
-            <br/>
-          <button class="quzi btn-9" style="box-shadow: 0px 6px 12px grey;">
-            <a>🎁웰컴쿠폰 (심플퀴즈응모)<i class="fas fa-chevron-right fa-lg"></i></a>
-          </button>
-          <br/>
-          <span id="sonovideo" style="CURSOR: hand" onclick = "if(videobox.style.display==`none`)
-                    {videobox.style.display=``; sonovideo.innerText = `🎞️영상 닫기 ▲`} else {videobox.style.display = `none`; 
-                    sonovideo.innerText = `신협 소개 🎞️영상보기 ▼`}"><img src="img/sh_titleimg.jpg" style="border-radius: 5px;"/> 소개 🎞️영상보기 ▼</span>
-                    <div id="videobox" style="display: none"><video controls>
-                      <source src="img/sh_video_3m.mp4">
-                      </video></div><br>
-      <div onclick="callon()" id="icon_call">
-      📞상담(문의)
-      </div>
-      <div class="smalltitle">
-        아주대의료원 신협 카카오톡 채널을 추가하세요. <br/>
-        할인 쿠폰 및 다양한 혜택을 받아 보실 수 있습니다.  
-      </div><br/>
-      <div class="kakao">
-      <div id="kakao-talk-channel-add-button"
-  data-channel-public-id="_dfhkK"
-  data-size="large"
-  data-support-multiple-densities="true"
-  ></div></div><br/>
-   <div id="icon">
-          <div
-  id="kakao-talk-channel-chat-button"
-  data-channel-public-id="_dfhkK"
-  data-title="consult"
-  data-size="large"
-  data-color="yellow"
-  data-shape="mobile"
-  data-support-multiple-densities="true"
-  ></div></div><br/>
-  <span style="font-size: x-large; color: rgb(61, 52, 52); font-weight: 600;">[※ 아래, 버튼으로 다크모드 화면전환(취소)가능]</span>
-  <br>
-  <button id="btn_color" title="♣이버튼클릭 => Dark모드변환(환원)">◑ DarkMode/cancel</button>
-  <br>
-      <footer> ⏰업무시간: 평일 8시30분 ~ 17시<br/> ⛳병원본관 지하2층(유전체자원센타옆)<address>
-    <span onclick="callon()" style="font-size: 30px;">📞 031-219-6052</span>
-    <a href="mailto:ajou9770@ajoucu.page" style="font-size: 30px;">ajou9770@ajoucu.page</a>
-    </address><hr style="border: 1px; border-style:dashed"><h3>아주대학교의료원 신용협동조합</h3></footer>
-      <aside class="none" id="modal">
-       <div id="box">
-         <h2>신입 교직원이세요?<br/>(신입 교직원만 신청 가능) </h2>
-         <div id="box_btn">
-           <div>👌네</div>
-           <div>😥아니오</div>
-         </div>
-       </div>
-      </aside>
-        </div>
-      </div>
-    </div>
-    <script>  
-      function callon() {
-        if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞전화앱으로 연결할까요?")) {
-          document.location.href = "tel:031-219-6052"
-      } else {
-        alert("취소 되었습니다!!")
-      }
-     }                
-    </script>
-    <script>
-      const modal = document.querySelector("#modal");
-      const link = document.querySelector(".quzi");
-      function handleLinkClick(){
-        modal.classList.remove("none");
-      }
-      function handleModalClick(event){
-        const target = event.target;
-if(target === modal || target === modal.querySelector("#box_btn div:last-child")){
-  modal.classList.add("none");
-} else if(target === modal.querySelector("#box_btn div:first-child")) {
-window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfxgfI_MATNKBsGT8JqYmZBVchaF5vKDJaedqUmaOleYeRNmw/viewform?usp=sf_link";
-} else {
-  console.log("다른거 클릭해주시요")
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 카드형 홈페이지</title>
+    <!-- 부트스트랩 CSS 추가 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    #videobox {
+  width: 100%;
+  height: auto;
+  border: 0px solid teal;
+  box-shadow: 0px 6px 12px 0px grey;
+  }
+  .card-color-1 {
+    background-color: #c8efe1; /* 연한 민트 */
 }
-      }
-      modal.addEventListener("click", handleModalClick)
-          link.addEventListener("click", handleLinkClick);
-    </script>
-    <script
-    src="https://kit.fontawesome.com/6478f529f2.js"
-    crossorigin="anonymous"
-    ></script>
-    <script>
-    const Button = document.querySelector(".cham button"); 
-    
-    function handleBtnClick () {
-      alert("신협 조합원 가입(출자금통장 개설) 후 신청하실 수 있습니다.")
-    }
 
-    Button.addEventListener("click", handleBtnClick);
-    </script>
-    <script>
-        window.kakaoAsyncInit = function() {
-          Kakao.Channel.createAddChannelButton({
-            container: '#kakao-talk-channel-add-button',
-          });
-          Kakao.Channel.createChatButton({
-            container: '#kakao-talk-channel-chat-button',
-          });    
-        };
-       
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        })(document, 'script', 'kakao-js-sdk');
-      </script>
-      <!-- 팝업창 뛰우기 script-->
-      <script>
-        const dialog = document.querySelector("dialog");
-        function popup() {
-            console.log("done");
-            dialog.showModal();
-        }
-    </script> 
-    <script>
-        const nonSee = document.getElementById("dayNonsee");
-        const localItem = parseInt(localStorage.getItem("alertTime"));
-        const newDate = Date.now();
-        const calculate = newDate - localItem;
-    
-        function notSee() {
-        dialog.classList.add("none");
-        localStorage.setItem("alertTime", JSON.stringify(newDate));
-        }
-        if (calculate < 1000 * 60 * 60 * 24 * 1) {
-        console.log(`localstorage에 저장된시간: ${localItem}`);
-        console.log(`현재시간: ${newDate}`);
-        console.log(`경과된 시간(현재시간-경과되시간): ${calculate}`);
-        dialog.classList.add("none");
-        } else {
-          console.log("good");
-        }
-    </script> 
+.card-color-2 {
+  background-color: #83d7b8; /* 부드러운 코랄 */
+}
+.card-img-top {
+  width: 100%;
+  height: 150px;
+} 
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+      <video id="videobox" controls autoplay muted>
+        <source src="img/happynav_song_baby_15s.mp4">
+        </video>
+        <div class="row">
+            <!-- 8개의 카드를 생성 -->
+            <!-- 각 카드는 col-md-6 클래스를 사용하여 2열로 표시 -->
+            <!-- 이 부분을 반복하여 8개의 카드를 만듭니다 -->
+            <div class="col-md-6 mb-4">
+              <div class="card card-color-1">
+                    <img src="img/logo/culogo (1).jpg" class="card-img-top">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">신협 출자 및 이용고 배당 안내</h5> -->
+                        <p class="card-text">신협 사업실적 및 이용실적에 따른 배당을 드립니다.</p>
+                        <a href="page1.html" class="btn btn-primary">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card card-color-1">
+                  <img src="img/logo/culogo (2).jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <!-- <h5 class="card-title">카드 제목 1</h5> -->
+                      <p class="card-text">신협은 출자금 1,000만원 
+                        예적금 3,000만원까지 비과세 입니다. 
+                      </p>
+                      <a href="page1.html" class="btn btn-primary">자세히 보기</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card card-color-1">
+                <img src="img/logo/culogo (3).jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">카드 제목 1</h5> -->
+                    <p class="card-text">교직원 조합원은 낮은 금리로 신용대출을 받으실 수 있습니다. </p>
+                    <a href="page1.html" class="btn btn-primary">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card card-color-1">
+              <img src="img/logo/culogo (4).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                 <!--  <h5 class="card-title">카드 제목 1</h5> -->
+                  <p class="card-text">조합원 애경사에 경조금을 드립니다.</p>
+                  <a href="page1.html" class="btn btn-primary">자세히 보기</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card card-color-1">
+            <img src="img/logo/culogo (4).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+               <!--  <h5 class="card-title">카드 제목 1</h5> -->
+                <p class="card-text">조합원 애경사에 경조금을 드립니다.</p>
+                <a href="page1.html" class="btn btn-primary">자세히 보기</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card card-color-1">
+          <img src="img/logo/culogo (5).jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+             <!--  <h5 class="card-title">카드 제목 1</h5> -->
+              <p class="card-text">전국의 소노호텔앤리조트를 회원가로 실시간 예약하실 수 있습니다.</p>
+              <a href="page1.html" class="btn btn-primary">자세히 보기</a>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div class="card card-color-1">
+        <img src="img/logo/culogo (6).jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+           <!--  <h5 class="card-title">카드 제목 1</h5> -->
+            <p class="card-text">신협을 주거래 은행으로 이용하시면 참조합원의 혜택을 받으실 수 있습니다.</p>
+            <a href="page1.html" class="btn btn-primary">자세히 보기</a>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 mb-4">
+  <div class="card card-color-1">
+      <img src="img/logo/culogo (7).jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+         <!--  <h5 class="card-title">카드 제목 1</h5> -->
+          <p class="card-text">⭐쿠폰증정 행사 등.. 진행중 이벤트를 확인하세요</p>
+          <a href="page1.html" class="btn btn-primary">자세히 보기</a>
+      </div>
+  </div>
+</div>
+<div class="col-md-6 mb-4">
+  <div class="card card-color-1">
+      <img src="img/logo/culogo (8).jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+         <!--  <h5 class="card-title">카드 제목 1</h5> -->
+          <p class="card-text">🎉의료원 입사를 축하 드립니다!! 
+            <br>신입교직원은 웰컴 쿠폰을 신청하세요~~</p>
+          <a href="page1.html" class="btn btn-primary">자세히 보기</a>
+      </div>
+  </div>
+</div>
+            <!-- 여기에 나머지 카드들을 추가하세요 -->
+        </div>
+    </div>
 
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
-        </style>
-    <!--Script-->
-    <!-- <script type="text/javascript">
-      window.addEventListener("load", function () {
-        setTimeout(function open(event) {
-          document.querySelector("#popup").style.display = "block";
-        }, 2000);
-      });
-
-      document.querySelector("#close").addEventListener("click", function () {
-        document.querySelector("#popup").style.display = "none";
-      });
-    </script> -->
-  </body>
+    <!-- 부트스트랩 JS 추가 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
