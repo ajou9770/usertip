@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>⭐신협이용꿀팁!!</title>
-    <!-- 부트스트랩 CSS 추가 -->
+    <!-- 부트스트랩 CSS, fontasomelink 추가 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
     <style>
     #videobox {
   width: 100%;
@@ -37,6 +39,27 @@
         }
         .footer a {
             color: #007bff; /* 링크 색상 */
+        }
+        .floating-menu {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .floating-menu a {
+            display: block;
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            color: #007bff;
+            padding: 10px;
+            border-radius: 5%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .floating-menu a i {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -135,6 +158,13 @@
             <!-- 여기에 나머지 카드들을 추가하세요 -->
         </div>
     </div>
+    <!-- 우측4개 버튼 -->
+    <div class="floating-menu">
+      <a href="#"><i class="fas fa-home"></i>온라인가입</a>
+      <a href="#"><i class="fas fa-search"></i>간편예금개설</a>
+      <a href="#"><i class="fas fa-phone"></i>유선상담</a>
+      <a href="#"><i class="fas fa-envelope"></i>카톡상담</a>
+  </div>
     <hr>
     <div class="footer">
       <p>아주대학교의료원신용협동조합</p>
