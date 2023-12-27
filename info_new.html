@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨신입교직원 신협이용 안내</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .header { background-color: #f8f9fa; padding: 20px; text-align: center; }
+        .footer { background-color: #f8f9fa; padding: 10px; text-align: center; }
+        /* 섹션 숨김 스타일 */
+        .content-section {
+            display: none;
+        }
+         /* 네비게이션 바 스타일 변경 */
+         .navbar-custom {
+            background-color: #1f5e9e; /* 어두운 회색 계열의 색상 */
+            color: white;
+            margin: 10px;
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+            font-size: large;
+            font-family: sans-serif;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: white;
+        }
+
+        /* 네비게이션 바 중앙 정렬 */
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            max-width: 680px;
+        }
+        video {
+            border-radius: 10px;
+            max-width: 100%;
+            max-height: 400px;
+            box-shadow: 0px 5px 5px 0px black;
+        }
+        /* 말풍선 스타일 */
+    .tooltip {
+        display: none;
+        position: fixed;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        z-index: 1000;
+    }
+    /* 화면이 작아졌을 때 말풍선 표시 */
+    @media (max-width: 300px) {
+        .tooltip {
+            display: block;
+        }
+    }
+    .bar {
+        display: none;
+        margin-left: 10px;
+    }
+    @media (max-width: 992px) {
+        .bar {
+            display: block;
+        }
+        .nav-item {
+            color: black;
+        }
+        .container-fluid {
+            background-color: #1f5e9e;
+            border-radius: 5px;
+        }
+        .container-fluid a {
+          color:#114477;
+       }
+    }
+    table {
+    box-shadow: 0px 4px 8px grey;
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">홈</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">🏠</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#executives">🚀비과세출자금 및 예적금</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#loan">✨교직원 저리대출</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#exploration-plan">🎉배당금지급안내</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#world-tour">🎀조합원경조금</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#carfull">🎁신입 웰컴쿠폰</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#play">🎞추억록</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <span class="bar">🤷‍♂️상단의 ▤바를 선택하시면 메뉴가 보입니다.</span>
+
+    <div class="container mt-4">
+        <section id="home"class="content-section">
+<!--             <h2>홈</h2>
+            <p>우리 동아리의 훌륭한 임원진을 만나보세요.</p>
+            <img src="img/2024_plan (1).JPG">-->
+            <h4>우리신협은 교직원의 후생복리증진을 위해 자발적으로 설립된 직장을 공동유대로 하는 신협입니다.</h4>
+            <h5>우리신협은 여러분의 선배님들이 100% 출자하여 설립.운영하고 있는 자조.자립의 협동조합입니다. </h5>
+            <img src="img/happy_nav_img.JPG"/>
+        </section>
+        <section id="executives"class="content-section">
+         <h3>
+            신협은 출자금 2,000만원, 예적금 3,000만원까지 이자소득세가 비과세(면제) 됩니다.
+            <br>
+            (일반과세 대비 세후금리  0.5% 내외 +플러스 효과)
+         <br><br>🎁 신입교직원 정기적금 우대금리<br/><br/></h3>
+         <h3 id="drawcontent"># 1.0% 우대 금리 쿠폰(<mark>최대 6.50% 금리 효과 ~),한도 월불입 100만원까지 </mark><br/>
+             (기준금리: 3.95% +  우대금리1.0% + 비과세효과 0.75% + 이용고배당 0.8%)<br/><br></h3>
+             <h3>🔎 신협 비과세(저율) 예적금 VS 은행 이자 비교</h3>
+            <img src="img/new_tax_img02.jpg" style="width: 100%; border-radius: 5px;"> 
+        </section>
+        <section id="loan"class="content-section">
+            <h3>🎁  신입 교직원 대출우대금리 <br/><br/></h3>
+            <h3 id="loancontent"># 0.5% 우대 (<mark>최저 4.75% 금리효과 ~</mark> ) <= 이용고배당으로 약 0.25% 환급 감안<br/><br>
+                 # <mark>최초 대출한도: 9,000만원</mark>(신용40백만원, 보증대출50백만원) / 대출기간 최장 5년                
+               <br><br>
+                 🚀 전(월)세 보증금, 자동차 구입자금, 학자금, 생활긴급자금 등<br><br>
+                 <img src="img/loan_img202312.jpg"/><br>
+           </section>
+        <section id="exploration-plan" class="content-section" class="mt-5">
+        <h3>
+            ✔출자금배당: 출자금에 비례한 배당금 지급 (평균예적금 금리 * 1.5배 목표)<br>
+            ✔이용고배당: 예적금,체크카드,자동이체,보험 등 이용실적에 따른 배당 (특판목이용고 배당 포함)
+        </3>
+        <li class="mileli" style="color:tomato;">2022년: 약 365백만원 <br>(주거래 조합원 평균 27만원, 최다수령 349만원)</li> 
+        <img src="img/div_list_2022.jpg"/><br>
+         
+        </section>
+
+        <section id="world-tour" class="content-section" class="mt-5">
+            <img src="img/congrat_table.JPG"/><br>
+            <!-- <table>
+                <th>경조금</th><th>증빙 및 요건</th>
+                <tr><td style="background-color: skyblue;">본인결혼 10만원</td><td rowspan="4" style="background-color: skyblue;">경조사소식공지 <br>또는 기타증빙</td></tr>
+                <tr><td style="background-color: skyblue;">자녀결혼 10만원</td></tr>
+                <tr><td style="background-color: skyblue;">본인사망 20만원</td></tr>
+                <tr><td style="background-color: skyblue;">본인(배우자)부모상 10만원</td></tr>
+                <tr style="border: double;"><td>퇴직축하(공로)금 50만원</td><td>퇴직전월 출자금<br> 1,000만원이상</td></tr>
+                <tr><td>퇴직 기념품 5만원 기념품</td><td>조합원 가입기간<br> 10년 이상</td></tr>
+            </table> -->   
+        </section>
+        <section id="carfull" class="content-section" class="mt-5">
+
+            <h2 id="qrcode">
+                🎁신협 교직원께서는 신협 웰컴쿠폰을 신청하세요. 세븐일레븐 모바일 상품권을 드립니다. <br>
+            <a href="http://ajou9770.github.io/usertip" target="_blank"><img src="img/qrcode_usertip.png" 
+             style="
+             height: 500px; 
+             width:500px; 
+             border: solid; 
+             border-width:2px 7px 7px 2px; 
+             border-radius: 10px;" title="✨usertip으로 링크이동"></a>
+             <br/>
+             <br/>
+             <!-- <img src="img/hollys_coupon.jpg">-->
+             <img src="img/seven_coupon.jpg">
+         </h2>
+        </section>
+        <!-- <section id="play" class="content-section" class="mt-5">
+            <div class="video-container" style="text-align: center;">
+                <video width="1000" height="700" controls>
+                    <source src="img/video_trip.mp4" type="video/mp4">
+                    죄송합니다, 귀하의 브라우저는 비디오 태그를 지원하지 않습니다.
+                </video>
+            </div>
+        </section> -->     
+        <div class="tooltip">메뉴를 클릭하세요!</div>
+    </div>
+<!--     <div class="footer">
+        <p>&copy; 2024 문화 탐방 동아리. 모든 권리 보유.</p>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 첫 번째 섹션을 찾아서 보이게 설정
+            var firstSection = document.querySelector('.content-section');
+            if (firstSection) {
+                firstSection.style.display = 'block';
+            }
+        });
+    </script>
+<!--     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var navbarToggler = document.querySelector('.navbar-toggler');
+            var tooltip = document.querySelector('.tooltip');
+    
+            navbarToggler.addEventListener('click', function() {
+                tooltip.style.display = 'none';
+            });
+        });
+    </script> -->
+    
+   
+    <script>
+        // 비디오 버튼 클릭 이벤트 처리
+        document.getElementById('videoButton').addEventListener('click', function() {
+            window.location.href = 'https://youtu.be/zi50MiFOqf0'; // YouTube 동영상 URL로 변경
+        });
+    </script>
+    <script>
+        // 네비게이션 메뉴 항목 클릭 이벤트 처리
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href').substring(1);
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.getElementById(sectionId).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
