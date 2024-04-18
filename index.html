@@ -63,9 +63,13 @@
 </head>
 <body>
     <div class="container mt-4">
-      <video id="videobox" controls autoplay muted>
-        <source src="img/happynav_song_baby_15s.mp4">
-        </video>
+      <!-- <video id="videobox" controls autoplay muted>
+        <source src="img/mom_15s.mp4">
+        <source src="img/father_15s.mp4">
+        </video> -->
+        <video id="videobox" controls autoplay muted width="640" height="480">
+          <source src="img/mom_15s.mp4" type="video/mp4">
+      </video>
         <div class="row">
             <!-- 8개의 카드를 생성 -->
             <!-- 각 카드는 col-md-6 클래스를 사용하여 2열로 표시 -->
@@ -197,6 +201,28 @@
 </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+
+  <script>
+    const videoBox = document.getElementById('videobox');
+    const videoSources = ["img/mom_15s.mp4", "img/father_15s.mp4"]; // 비디오 소스 배열
+    let currentVideo = 0; // 현재 비디오 인덱스
+
+    videoBox.src = videoSources[currentVideo]; // 초기 비디오 소스 설정
+
+    // 비디오 전환 함수
+    function switchVideo() {
+        currentVideo = (currentVideo + 1) % videoSources.length; // 다음 비디오로 순환
+        videoBox.src = videoSources[currentVideo]; // 새 소스로 비디오 변경
+        videoBox.play(); // 비디오 재생
+    }
+
+    // 비디오 로드 및 재생 완료 시 다음 비디오로 자동 전환
+    videoBox.addEventListener('ended', switchVideo);
+
+    // 20초마다 비디오를 전환하도록 설정
+    setInterval(switchVideo, 50000); // 20000 밀리초는 20초를 의미
+</script> 
+
   <script>
     function setCookie(name, value, days) {
         var expires = "";
