@@ -151,7 +151,7 @@ background: linear-gradient(to right, #ffffff, #abbaab);  */
     widows: 100px;
     font-size:35px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:darkorange;
+    /* color:darkorange; */
     font-weight: 800;
     padding-top: 10px;
     padding-bottom: 10px;
