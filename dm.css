@@ -324,6 +324,17 @@ iframe {
 }
 .modal-title {
   color:tomato ;
-  font-size: medium;
+  font-size: large;
   text-align: left;
+}
+.modal-content {
+      text-align: center;
+}
+.modal-footer {
+    justify-content: center;
+}
+.modal-body, form-check, form-check-label {
+    color: black;
+    justify-content: center;
+    text-align: left;
 }

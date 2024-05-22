@@ -104,7 +104,39 @@
               </div>
               <br/>
               <br/>
-              <!-- 모달창 -->
+              <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h3 class="modal-title" id="myModalLabel">[공지사항]</h3>
+                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+                      <!-- <span aria-hidden="true">&times;</span> 
+                  </button>-->
+              </div>
+              <div class="modal-body">
+                  <p>⭐소노호텔앤리조트 예약 결제방법 변경안내
+                   <br><br>
+                   1. 결제방법변경: 현장결제 ==> 예약시 선결제
+                   <br>
+                   🤷🏽‍♀️예약 완료시 결제방법 URL로 전송됨. 
+                   <br>
+                   2. 시행일자: 2024년 6월 12일부~ (7월 1일이후 투숙일부터 적용)
+                   <br>
+                   3. 취소 패널티 부과: 투숙일전 8일전까지 미부과(이후, 취소일에 따른 패널티 부과)
+                  </p>
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dontShow">
+                      <label class="form-check-label" for="dontShow" style="color: black;">하루동안 안보기</label>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+              </div>
+          </div>
+      </div>
+  </div>
+              <!-- 모달창 
                 <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -127,6 +159,48 @@
               </div>
               <!-- Bootstrap JS -->
              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+             <script>
+              $(document).ready(function() {
+                  // Check if the modal should be shown
+                  if (!localStorage.getItem('hideModal')) {
+                      $('#myModal').modal('show');
+                  }
+      
+                  // Set localStorage when checkbox is clicked
+                  $('#dontShow').click(function() {
+                      if ($(this).is(':checked')) {
+                          // Hide modal for 1 day
+                          const hideUntil = new Date();
+                          hideUntil.setDate(hideUntil.getDate() + 1);
+                          localStorage.setItem('hideModal', hideUntil.getTime());
+                      } else {
+                          localStorage.removeItem('hideModal');
+                      }
+                  });
+      
+                  // Close the modal and apply the setting
+                  $('.close, .btn-secondary').click(function() {
+                      if ($('#dontShow').is(':checked')) {
+                          const hideUntil = new Date();
+                          hideUntil.setDate(hideUntil.getDate() + 1);
+                          localStorage.setItem('hideModal', hideUntil.getTime());
+                      }
+                      $('#myModal').modal('hide');
+                  });
+              });
+      
+              // Check and clear the hideModal flag if expired
+              const hideUntil = localStorage.getItem('hideModal');
+              if (hideUntil) {
+                  const now = new Date().getTime();
+                  if (now > hideUntil) {
+                      localStorage.removeItem('hideModal');
+                  }
+              }
+          </script>
              <!-- <script>
                $(document).ready(function() {
                 // 쿠키 확인
