@@ -109,7 +109,12 @@
     0 10px 15px rgba(0, 0, 0, 0.2), 
     0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+.protected-content {
+            display: none;
+        }
+        .password-container {
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
@@ -202,8 +207,7 @@
             </table> -->   
         </section>
         <section id="carfull" class="content-section" class="mt-5">
-
-           
+          
             <h2 id="qrcode">
                 📈 연말정산 세액공제 연금저축상품 <br>
                 월 50만원불입시 최대 99만원 세액 환급
@@ -238,8 +242,15 @@
         </section>
         <section id="quzi" class="content-section" class="mt-5">
             <img class="box-modern" src="img/hollys_10000.jpg"/><br>
-            <a href="https://ajou9770.github.io/event/quiz_trip"><img src="img/qrcode_quiz_oneday.png"/></a>
-                        <!-- <table>
+            <div class="password-container">
+             <!--    <label for="password"></label> -->
+                <input type="password" placeholder="Password" id="password">
+                <button onclick="checkPassword()" class="btn btn-dark btn-sm">✔️Submit</button>
+            </div>
+            <div id="protected-content" class="protected-content">
+            <a href="https://ajou9770.github.io/event/quiz_trip" target="_blank"><img src="img/qrcode_quiz_oneday.png"/></a>
+            </div>
+                                    <!-- <table>
                 <th>경조금</th><th>증빙 및 요건</th>
                 <tr><td style="background-color: skyblue;">본인결혼 10만원</td><td rowspan="4" style="background-color: skyblue;">경조사소식공지 <br>또는 기타증빙</td></tr>
                 <tr><td style="background-color: skyblue;">자녀결혼 10만원</td></tr>
@@ -286,7 +297,18 @@
         });
     </script> -->
     
-   
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = '2130'; // 비밀번호 설정
+            if (password === correctPassword) {
+                document.getElementById('protected-content').style.display = 'block';
+                document.querySelector('.password-container').style.display = 'none';
+            } else {
+                alert('⚠️ 비밀번호를 확인해 주세요');
+            }
+        }
+    </script>
     <script>
         // 비디오 버튼 클릭 이벤트 처리
         document.getElementById('videoButton').addEventListener('click', function() {
