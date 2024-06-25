@@ -90,6 +90,26 @@
     table {
     box-shadow: 0px 4px 8px grey;
   }
+  /* 현대식 트렌드에 맞춘 box-shadow 스타일 예시 */
+.box-modern {
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px; /* 모서리를 둥글게 */
+  box-shadow: 
+    /* 다층 그림자 */
+    0 4px 6px rgba(0, 0, 0, 0.1), 
+    0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out; /* 호버 효과를 위한 부드러운 트랜지션 */
+}
+
+.box-modern:hover {
+  /* 호버 시 그림자 강화 */
+  box-shadow: 
+    0 10px 15px rgba(0, 0, 0, 0.2), 
+    0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
     </style>
 </head>
 <body>
@@ -108,6 +128,7 @@
                     <li class="nav-item"><a class="nav-link" href="#exploration-plan">🎉배당금지급안내</a></li>
                     <li class="nav-item"><a class="nav-link" href="#world-tour">🎀조합원경조금</a></li>
                     <li class="nav-item"><a class="nav-link" href="#carfull">🎁추천금융상품</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quzi">🍵디저트획득퀴즈</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="#play">🎞추억록</a></li> -->
                 </ul>
             </div>
@@ -214,6 +235,19 @@
              <!-- <img src="img/hollys_coupon.jpg">-->
              <img src="img/seven_coupon.jpg">
          </h2>
+        </section>
+        <section id="quzi" class="content-section" class="mt-5">
+            <img class="box-modern" src="img/hollys_10000.jpg"/><br>
+            <a href="https://ajou9770.github.io/event/quiz_trip"><img src="img/qrcode_quiz_oneday.png"/></a>
+                        <!-- <table>
+                <th>경조금</th><th>증빙 및 요건</th>
+                <tr><td style="background-color: skyblue;">본인결혼 10만원</td><td rowspan="4" style="background-color: skyblue;">경조사소식공지 <br>또는 기타증빙</td></tr>
+                <tr><td style="background-color: skyblue;">자녀결혼 10만원</td></tr>
+                <tr><td style="background-color: skyblue;">본인사망 20만원</td></tr>
+                <tr><td style="background-color: skyblue;">본인(배우자)부모상 10만원</td></tr>
+                <tr style="border: double;"><td>퇴직축하(공로)금 50만원</td><td>퇴직전월 출자금<br> 1,000만원이상</td></tr>
+                <tr><td>퇴직 기념품 5만원 기념품</td><td>조합원 가입기간<br> 10년 이상</td></tr>
+            </table> -->   
         </section>
         <!-- <section id="play" class="content-section" class="mt-5">
             <div class="video-container" style="text-align: center;">
