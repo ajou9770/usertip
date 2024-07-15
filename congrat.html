@@ -24,7 +24,7 @@
         $("#payimg").toggle("slow");
     });
      // ios(아이폰계열)의 경우 우측 스크롤 상하 버튼생성(안내포함)
-    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+    /* if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
         var scrollButtons = `
             <div id="scroll-buttons">
                 <button onclick="window.scrollBy(0, -window.innerHeight / 2)">▲</button>
@@ -34,7 +34,33 @@
         $("body").append(scrollButtons);
         alert('🤷🏽‍♀️아이폰 등 iOS계열은 우측의 🔼🔽로 상.하 스크롤 이동이 가능합니다');
     }
+}); */
+
+$(document).ready(function() {
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+        var windowHeight = window.innerHeight;
+        if (windowHeight >= 800) {
+            var scrollButtons = `
+                <div id="scroll-buttons">
+                    <button onclick="window.scrollBy(0, -window.innerHeight / 2)">▲</button>
+                    <button onclick="window.scrollBy(0, window.innerHeight / 2)">▼</button>
+                </div>
+            `;
+            $("body").append(scrollButtons);
+            alert('🤷🏽‍♀️아이폰 등 iOS계열은 우측의 🔼🔽로 상.하 스크롤 이동이 가능합니다');
+        } else {
+            var scrollButtons = `
+                <div id="scroll-buttons">
+                    <button onclick="window.scrollBy(0, -window.innerHeight / 2)">▲</button>
+                    <button onclick="window.scrollBy(0, window.innerHeight / 2)">▼</button>
+                </div>
+            `;
+            $("body").append(scrollButtons);
+            alert('아이폰 등 iOS계열은 우측의 상.하 스크롤 버튼으로 이동이 가능합니다');
+        }
+    }
 });
+
 
 function openCongrat() {
     document.getElementById("ifram").style.display="block";
