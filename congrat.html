@@ -6,38 +6,62 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <title>신협 경조금 지급 안내</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("#imgbtn").click(function(){
-    $("#dropdown-content").show("slow");
-    $("#closeBtn").show("slow");
-    $("#imgbtn").hide("slow");
-    window.scrollTo(0, document.body.scrollHeight);
-  });
-  $("#closeBtn").click(function(){
-    $("#dropdown-content").hide("slow");
-    $("#closeBtn").hide("slow");
-    $("#imgbtn").show("slow");
-    window.scrollTo(0, document.body.scrollHeight);
-  });
- /*  $("#congratOpen").click(function(){
-    navigator.vibrate(200);
-    $("#congratClose").show();
-    $("#ifram").show();
-    $("#congratOpen").hide();
-    window.scrollBy(0, 300);
-  });
-  $("#congratClose").click(function(){
-    navigator.vibrate(100,100);
-    $("#congratClose").hide("slow");
-    $("#ifram").hide("slow");
-    $("#congratOpen").show("slow");
-   }); */
-  $("#payimgBtn").click(function(){
-    $("#payimg").toggle("slow");
-  });
-});
-</script>
+    <script>
+    $(document).ready(function(){
+        $("#imgbtn").click(function(){
+            $("#dropdown-content").show("slow");
+            $("#closeBtn").show("slow");
+            $("#imgbtn").hide("slow");
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+        $("#closeBtn").click(function(){
+            $("#dropdown-content").hide("slow");
+            $("#closeBtn").hide("slow");
+            $("#imgbtn").show("slow");
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+        $("#payimgBtn").click(function(){
+            $("#payimg").toggle("slow");
+        });
+    });
+
+    function openCongrat() {
+        document.getElementById("ifram").style.display="block";
+        document.getElementById("congratClose").style.display="block";
+        document.getElementById("congratOpen").style.display="none";
+        adjustIframeHeight();
+    }
+
+    function closeCongrat() {
+        document.getElementById("ifram").style.display="none";
+        document.getElementById("congratClose").style.display="none";
+        document.getElementById("congratOpen").style.display="block";
+    }
+
+    function adjustIframeHeight() {
+        var iframe = document.getElementById("ifram");
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    }
+
+    window.addEventListener('message', function(event) {
+        if (event.data === 'adjustIframeHeight') {
+            adjustIframeHeight();
+        }
+    });
+
+    // iOS 디바이스 감지 및 스크롤 버튼 추가
+    window.onload = function() {
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+            var scrollButtons = document.createElement('div');
+            scrollButtons.id = 'scroll-buttons';
+            scrollButtons.innerHTML = `
+                <button onclick="window.scrollBy(0, -window.innerHeight / 2)">▲</button>
+                <button onclick="window.scrollBy(0, window.innerHeight / 2)">▼</button>
+            `;
+            document.body.appendChild(scrollButtons);
+        }
+    };
+    </script>
     <style>
         body {
             display:inline-block;
@@ -59,48 +83,49 @@ $(document).ready(function(){
             color: seashell;
         }
         button, button a {
-          width: 100%;
-          font-size: x-large;
-          font-weight: 600;
-          font-size: larger;
-          border: none;
-          border-radius: 5px;
-          height: 50px;
-          color: whitesmoke;
+            width: 100%;
+            font-size: x-large;
+            font-weight: 600;
+            font-size: larger;
+            border: none;
+            border-radius: 5px;
+            height: 50px;
+            color: whitesmoke;
         }
         button:active {
-          transform: scale(0.98);
+            transform: scale(0.98);
         }
         img {
-          width: 100%;
-          border-radius: 10px;
-          box-shadow: 0px 4px 8px grey;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px grey;
         }
         #congratClose{
-          display: none;
+            display: none;
         }  
         p {
-          font-size: 17px;
+            font-size: 17px;
         }
         td { vertical-align: middle; 
         }
         td.centered {
-      text-align: center;
-      vertical-align: middle;
-    }
-    th.centered {
-      text-align: center;
-      vertical-align: middle;
-    }
-    iframe {
-      border: none;
-      border-radius: 5px;
-      box-shadow: 0px 2px 4px lightslategrey;
-    }
-    #loading-overlay {
+            text-align: center;
+            vertical-align: middle;
+        }
+        th.centered {
+            text-align: center;
+            vertical-align: middle;
+        }
+        iframe {
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px lightslategrey;
+            width: 100%;
+        }
+        #loading-overlay {
             position: fixed;
             top: 0;
-           left: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5); /* 배경 색상과 투명도를 조정하세요 */
@@ -108,141 +133,137 @@ $(document).ready(function(){
             justify-content: center;
             align-items: center;
             z-index: 9999;
-          }
-         #loading-message {
-          font-size: 24px;
-          color: white;
-          }
+        }
+        #loading-message {
+            font-size: 24px;
+            color: white;
+        }
         #loading-spinner {
-          border: 16px solid #f3f3f3;
-          border-top: 16px solid #3498db;
-          border-radius: 50%;
-          width: 50px;
-          height: 50px;
-          animation: spin 2s linear infinite;
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
         }
         @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         .center {
-          text-align: center;
+            text-align: center;
         }
         iframe {
-          display: none;
+            display: none;
         }
-</style>
+        #scroll-buttons {
+            position: fixed;
+            right: 10px;
+            bottom: 50%;
+            z-index: 1000;
+        }
+        #scroll-buttons button {
+            display: block;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <div id="top" style="width: 1px; height: 1px;"></div>
- <div style="text-align: center; color:black;"><h4> | 신협 경조금 지급 기준 |</h4></div>
- <!-- <img src="img/congrat_img.jpg"/> -->
-<br>
- <div class="container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th class="centered" colspan="2">구분</th>
-        <th>경조금</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="centered" rowspan="2">결혼</td>
-        <td>본인</td>
-        <td>10만원</td>
-      </tr>
-      <tr>
-        <td>자녀</td>
-        <td>10만원</td>
-      </tr>
-      <tr>
-        <td class="centered" rowspan="2">사망</td>
-        <td>본인(배우자)부모</td>
-        <td>10만원</td>
-      </tr>
-      <tr>
-        <td>본인</td>
-        <td>20만원</td>
-      </tr>
-      <tr>
-        <td class="centered" rowspan="2">퇴직</td>
-        <td>공로금</td>
-        <td>50만원</td>
-      </tr>
-      <tr>
-        <td>기념품</td>
-        <td>10만원상품권</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<p># 공통 신청자격: 조합 가입일 1년 이상 조합원에 한함(계속 가입기간)<br>
-  # 퇴직공로금: 퇴직 전월 출자금잔액 1,000만원 이상<br>
-  # 퇴직기념품: 조합원 계속 가입기간 20년 이상<br><br>
-  
-  🗓️신청기한: 경조사 발생일로부터 1년 이내<br>
-✔️지급방법: 신청시 지정하신 계좌로 입금<br>
-🚀 시행일자: 2023년 3월 1일이후 경조사 발생부터~ </p>
+    <div id="top" style="width: 1px; height: 1px;"></div>
+    <div style="text-align: center; color:black;"><h4> | 신협 경조금 지급 기준 |</h4></div>
+    <br>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="centered" colspan="2">구분</th>
+                    <th>경조금</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="centered" rowspan="2">결혼</td>
+                    <td>본인</td>
+                    <td>10만원</td>
+                </tr>
+                <tr>
+                    <td>자녀</td>
+                    <td>10만원</td>
+                </tr>
+                <tr>
+                    <td class="centered" rowspan="2">사망</td>
+                    <td>본인(배우자)부모</td>
+                    <td>10만원</td>
+                </tr>
+                <tr>
+                    <td>본인</td>
+                    <td>20만원</td>
+                </tr>
+                <tr>
+                    <td class="centered" rowspan="2">퇴직</td>
+                    <td>공로금</td>
+                    <td>50만원</td>
+                </tr>
+                <tr>
+                    <td>기념품</td>
+                    <td>10만원상품권</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p># 공통 신청자격: 조합 가입일 1년 이상 조합원에 한함(계속 가입기간)<br>
+    # 퇴직공로금: 퇴직 전월 출자금잔액 1,000만원 이상<br>
+    # 퇴직기념품: 조합원 계속 가입기간 20년 이상<br><br>
 
-<button class="btn btn-info" onclick="alert('🤷‍♂️ 신청서 APP 접속시 개인정보정책에 동의[ACCEPT] 바랍니다. \n app접속인 원할하지 않은 경우 아래 Web으로 신청하실 수 있습니다.')"><a href="https://www.appsheet.com/start/ec179f1c-bd41-43ee-8f0a-5d53319e9592">🎀경조금신청하기▶</a></button>
-<!-- <button onclick="if(window.confirm('🤷‍♂️경조사가 2023.3.1이후에 발생 되었나요?(이전 발생분은 해당되지 않습니다 )  경조금을 신청 하시겠습니까?')) {
-        document.location.href='https://docs.google.com/forms/d/e/1FAIpQLSev3Nt3vxjjIJa1qMYRk_iYc_V-3yK03BAsuewZgtkBwkAK8g/viewform?usp=sf_link'}
-        else {
-            alert('취소되었습니다')
-        }">📑 경조금 신청하기🖱️</button><br><br> -->
-   <button id="congratOpen" style="color: #3498db; font-size: 15px;" onclick="openCongrat()">📑Web으로 신청하기🔽</button>
-   
-   <button id="congratClose" style="color: #3498db; font-size: 15px;" onclick="closeCongrat()">❌신청서 닫기🔼</button> 
-   <iframe id="ifram" src="https://script.google.com/macros/s/AKfycbxRnNS98Ohcxg-f5zN9f341jnJhPgxyvNHeeIEdfT7048UbwQcLgD-4RVI7shOagyfJ/exec" width="97%" height="900" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>  
-   <!--<button onclick="window.history.back()" style="background-color: rgb(11, 122, 166);">⬅️이전화면</button> -->
-    <br><br>
+    🗓️신청기한: 경조사 발생일로부터 1년 이내<br>
+    ✔️지급방법: 신청시 지정하신 계좌로 입금<br>
+    🚀 시행일자: 2023년 3월 1일이후 경조사 발생부터~ </p>
+
+    <button class="btn btn-info" onclick="alert('🤷‍♂️ 신청서 APP 접속시 개인정보정책에 동의[ACCEPT] 바랍니다. \n app접속인 원할하지 않은 경우 아래 Web으로 신청하실 수 있습니다.')"><a href="https://www.appsheet.com/start/ec179f1c-bd41-43ee-8f0a-5d53319e9592">🎀경조금신청하기▶</a></button>
+    <button id="congratOpen" style="color: #3498db; font-size: 15px;" onclick="openCongrat()">📑Web으로 신청하기🔽</button>
+    <button id="congratClose" style="color: #3498db; font-size: 15px;" onclick="closeCongrat()">❌신청서 닫기🔼</button> 
+    <iframe id="ifram" src="https://script.google.com/macros/s/AKfycbxRnNS98Ohcxg-f5zN9f341jnJhPgxyvNHeeIEdfT7048UbwQcLgD-4RVI7shOagyfJ/exec" width="97%" height="900" frameborder="0" marginheight="0" marginwidth="0" onload="adjustIframeHeight()">로드 중…</iframe>  
+
     <h5 onclick="if(window.confirm('📞통화가능 시간은 평일 9시~17시까지 입니다. 연결할까요?')){
       location.href='tel:031-219-6052'
     } else{
       alert('취소되었습니다.')
     }">📞 문의: 신협 031)219-6052</h5><br>
+
     <div id="loading-overlay">
-      <div id="loading-spinner"></div>
-      <div id="loading-message"><span style="padding-left: 15px;">로딩중입니다...</span>
-      <small>✨평생어부바 신협</small>
-      </div>
+        <div id="loading-spinner"></div>
+        <div id="loading-message"><span style="padding-left: 15px;">로딩중입니다...</span>
+        <small>✨평생어부바 신협</small>
+        </div>
     </div>
     <div class="center">
-    <a href="http://pf.kakao.com/_dfhkK/chat"><img src="img/kakao_chatlogo.jpg" style="width: 90px; height: 70px;"></a> 
+        <a href="http://pf.kakao.com/_dfhkK/chat"><img src="img/kakao_chatlogo.jpg" style="width: 90px; height: 70px;"></a> 
     </div>
     <script>
-      function openCongrat() {
-        document.getElementById("ifram").style.display="block";
-        document.getElementById("congratClose").style.display="block";
-        document.getElementById("congratOpen").style.display="none";
-      }
-      function closeCongrat() {
-        document.getElementById("ifram").style.display="none";
-        document.getElementById("congratClose").style.display="none";
-        document.getElementById("congratOpen").style.display="block";
-      }
-      </script>
-    <script>
-      window.onload = function() {
-        var topElement = document.getElementById("top");
-        topElement.scrollIntoView();
-        console.log("moved top");
-      };
-    </script>
-    <script>
-    // 페이지 로딩이 완료되면 로딩 스피너를 숨깁니다.
-    window.addEventListener('load', function() {
-      var spinner = document.getElementById('loading-spinner');
-      spinner.style.display = 'none';
-    });
-    </script>
-    <script>
-    window.addEventListener('load', function() {
-      var loadingOverlay = document.getElementById('loading-overlay');
-      loadingOverlay.style.display = 'none';
-    });
+        window.onload = function() {
+            var topElement = document.getElementById("top");
+            topElement.scrollIntoView();
+            console.log("moved top");
+        };
+
+        // 페이지 로딩이 완료되면 로딩 스피너를 숨깁니다.
+        window.addEventListener('load', function() {
+            var spinner = document.getElementById('loading-spinner');
+            spinner.style.display = 'none';
+        });
+
+        window.addEventListener('load', function() {
+            var loadingOverlay = document.getElementById('loading-overlay');
+            loadingOverlay.style.display = 'none';
+        });
     </script>
 </body>
 </html>
+
 
