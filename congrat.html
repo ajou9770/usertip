@@ -8,60 +8,58 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
-        $("#imgbtn").click(function(){
-            $("#dropdown-content").show("slow");
-            $("#closeBtn").show("slow");
-            $("#imgbtn").hide("slow");
-            window.scrollTo(0, document.body.scrollHeight);
-        });
-        $("#closeBtn").click(function(){
-            $("#dropdown-content").hide("slow");
-            $("#closeBtn").hide("slow");
-            $("#imgbtn").show("slow");
-            window.scrollTo(0, document.body.scrollHeight);
-        });
-        $("#payimgBtn").click(function(){
-            $("#payimg").toggle("slow");
-        });
+    $("#imgbtn").click(function(){
+        $("#dropdown-content").show("slow");
+        $("#closeBtn").show("slow");
+        $("#imgbtn").hide("slow");
+        window.scrollTo(0, document.body.scrollHeight);
     });
-
-    function openCongrat() {
-        document.getElementById("ifram").style.display="block";
-        document.getElementById("congratClose").style.display="block";
-        document.getElementById("congratOpen").style.display="none";
-        adjustIframeHeight();
-    }
-
-    function closeCongrat() {
-        document.getElementById("ifram").style.display="none";
-        document.getElementById("congratClose").style.display="none";
-        document.getElementById("congratOpen").style.display="block";
-    }
-
-    function adjustIframeHeight() {
-        var iframe = document.getElementById("ifram");
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-    }
-
-    window.addEventListener('message', function(event) {
-        if (event.data === 'adjustIframeHeight') {
-            adjustIframeHeight();
-        }
+    $("#closeBtn").click(function(){
+        $("#dropdown-content").hide("slow");
+        $("#closeBtn").hide("slow");
+        $("#imgbtn").show("slow");
+        window.scrollTo(0, document.body.scrollHeight);
+    });
+    $("#payimgBtn").click(function(){
+        $("#payimg").toggle("slow");
     });
 
     // iOS 디바이스 감지 및 스크롤 버튼 추가
-    window.onload = function() {
-        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-            var scrollButtons = document.createElement('div');
-            scrollButtons.id = 'scroll-buttons';
-            scrollButtons.innerHTML = `
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+        var scrollButtons = `
+            <div id="scroll-buttons">
                 <button onclick="window.scrollBy(0, -window.innerHeight / 2)">▲</button>
                 <button onclick="window.scrollBy(0, window.innerHeight / 2)">▼</button>
-            `;
-            document.body.appendChild(scrollButtons);
-        }
-    };
-    </script>
+            </div>
+        `;
+        $("body").append(scrollButtons);
+    }
+});
+
+function openCongrat() {
+    document.getElementById("ifram").style.display="block";
+    document.getElementById("congratClose").style.display="block";
+    document.getElementById("congratOpen").style.display="none";
+    adjustIframeHeight();
+}
+
+function closeCongrat() {
+    document.getElementById("ifram").style.display="none";
+    document.getElementById("congratClose").style.display="none";
+    document.getElementById("congratOpen").style.display="block";
+}
+
+function adjustIframeHeight() {
+    var iframe = document.getElementById("ifram");
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+}
+
+window.addEventListener('message', function(event) {
+    if (event.data === 'adjustIframeHeight') {
+        adjustIframeHeight();
+    }
+});
+</script>
     <style>
         body {
             display:inline-block;
@@ -157,21 +155,21 @@
             display: none;
         }
         #scroll-buttons {
-            position: fixed;
-            right: 10px;
-            bottom: 50%;
-            z-index: 1000;
-        }
-        #scroll-buttons button {
-            display: block;
-            margin: 5px 0;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    position: fixed;
+    right: 10px;
+    bottom: 50%;
+    z-index: 1000;
+}
+#scroll-buttons button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
