@@ -24,7 +24,6 @@
         $("#payimg").toggle("slow");
     });
 
-    // iOS 디바이스 감지 및 스크롤 버튼 추가
     if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
         var scrollButtons = `
             <div id="scroll-buttons">
@@ -33,6 +32,7 @@
             </div>
         `;
         $("body").append(scrollButtons);
+        alert('아이폰 등 iOS계열은 우측의 🔼🔽로 스크롤 이동 가능합니다');
     }
 });
 
