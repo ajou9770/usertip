@@ -23,7 +23,7 @@
     $("#payimgBtn").click(function(){
         $("#payimg").toggle("slow");
     });
-
+     // ios(아이폰계열)의 경우 우측 스크롤 상하 버튼생성(안내포함)
     if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
         var scrollButtons = `
             <div id="scroll-buttons">
@@ -159,8 +159,8 @@ window.addEventListener('message', function(event) {
     right: 10px;
     bottom: 50%;
     z-index: 1000;
-}
-#scroll-buttons button {
+    }
+    #scroll-buttons button {
     display: block;
     margin: 5px 0;
     padding: 10px;
@@ -168,8 +168,8 @@ window.addEventListener('message', function(event) {
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-}
+    cursor: pointer; 
+    }
     </style>
 </head>
 <body>
