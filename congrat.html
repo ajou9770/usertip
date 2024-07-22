@@ -1,179 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <title>신협 경조금 지급 안내</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-    $("#imgbtn").click(function(){
-        $("#dropdown-content").show("slow");
-        $("#closeBtn").show("slow");
-        $("#imgbtn").hide("slow");
-        window.scrollTo(0, document.body.scrollHeight);
-    });
-    $("#closeBtn").click(function(){
-        $("#dropdown-content").hide("slow");
-        $("#closeBtn").hide("slow");
-        $("#imgbtn").show("slow");
-        window.scrollTo(0, document.body.scrollHeight);
-    });
-    $("#payimgBtn").click(function(){
-        $("#payimg").toggle("slow");
-    });
-     // ios(아이폰계열)의 경우 우측 스크롤 상하 버튼생성(안내포함)
-     if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-    var scrollButtons = `
-        <div id="scroll-buttons" style="display:none;">
-            <button onclick="window.scrollBy(0, -window.innerHeight / 2)">▲</button>
-            <button onclick="window.scrollBy(0, window.innerHeight / 2)">▼</button>
-        </div>
-    `;
-    $("body").append(scrollButtons);
-    alert('🤷🏽‍♀️아이폰 등 iOS계열은 우측의 🔼🔽로 상.하 스크롤 이동이 가능합니다');
-}
-});
-
-
-function openCongrat() {
-    document.getElementById("ifram").style.display="block";
-    document.getElementById("congratClose").style.display="block";
-    document.getElementById("congratOpen").style.display="none";
-    document.getElementById("scroll-buttons").style.display = "block";
-    adjustIframeHeight();
-}
-
-function closeCongrat() {
-    document.getElementById("ifram").style.display="none";
-    document.getElementById("congratClose").style.display="none";
-    document.getElementById("congratOpen").style.display="block";
-    document.getElementById("scroll-buttons").style.display = "none";
-}
-
-function adjustIframeHeight() {
-    var iframe = document.getElementById("ifram");
-    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-}
-
-window.addEventListener('message', function(event) {
-    if (event.data === 'adjustIframeHeight') {
-        adjustIframeHeight();
-    }
-});
-</script>
+    <title>조합원 경조금 신청서</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
-        body {
-            display:inline-block;
-            flex-direction: column;
-            justify-content: center;
-            vertical-align: middle;
-            text-align: justify;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        div {
-            display: flex;
-            flex-direction: column;
-            text-align: end;
-            border-color: black;            
-            border-radius: 10px;
-            justify-content: center;
-            align-items:center;
-            color: seashell;
-        }
-        button, button a {
-            width: 100%;
-            font-size: x-large;
-            font-weight: 600;
-            font-size: larger;
-            border: none;
-            border-radius: 5px;
-            height: 50px;
-            color: whitesmoke;
-        }
-        button:active {
-            transform: scale(0.98);
-        }
-        img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px grey;
-        }
-        #congratClose{
-            display: none;
-        }  
-        p {
-            font-size: 17px;
-        }
-        td { vertical-align: middle; 
-        }
-        td.centered {
-            text-align: center;
-            vertical-align: middle;
-        }
-        th.centered {
-            text-align: center;
-            vertical-align: middle;
-        }
-        iframe {
-            border: none;
-            border-radius: 5px;
-            box-shadow: 0px 2px 4px lightslategrey;
-            width: 100%;
-        }
-        #loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* 배경 색상과 투명도를 조정하세요 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-        #loading-message {
-            font-size: 24px;
-            color: white;
-        }
-        #loading-spinner {
-            border: 16px solid #f3f3f3;
-            border-top: 16px solid #3498db;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 2s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .center {
-            text-align: center;
-        }
-        iframe {
+        #inputForm, #attach {
             display: none;
         }
-        #scroll-buttons {
-    position: fixed;
-    right: 10px;
-    bottom: 50%;
-    z-index: 1000;
-    display: none;
-    }
-    #scroll-buttons button {
-    display: none;
-    margin: 5px 0;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; 
-    }
     </style>
 </head>
 <body>
@@ -218,7 +52,7 @@ window.addEventListener('message', function(event) {
                 </tr>
             </tbody>
         </table>
-    </div>
+   
     <p># 공통 신청자격: 조합 가입일 1년 이상 조합원에 한함(계속 가입기간)<br>
     # 퇴직공로금: 퇴직 전월 출자금잔액 1,000만원 이상<br>
     # 퇴직기념품: 조합원 계속 가입기간 20년 이상<br><br>
@@ -227,46 +61,226 @@ window.addEventListener('message', function(event) {
     ✔️지급방법: 신청시 지정하신 계좌로 입금<br>
     🚀시행일자: 2023년 3월 1일이후 경조사 발생부터
     <br>(단, 경조사 발생일로부터 1년이내 신청 가능)</p>
-
-    <!-- <button class="btn btn-info" onclick="alert('🤷‍♂️ 신청서 APP 접속시 개인정보정책에 동의[ACCEPT] 바랍니다. \n app접속인 원할하지 않은 경우 아래 Web으로 신청하실 수 있습니다.')"><a href="https://www.appsheet.com/start/ec179f1c-bd41-43ee-8f0a-5d53319e9592">🎀경조금신청하기▶</a></button> -->
-    <button id="congratOpen" style="color: #3498db; font-size: 20px;" onclick="openCongrat()">📝경조금 신청하기🔽</button>
-    <button id="congratClose" style="color: #3498db; font-size: 15px;" onclick="closeCongrat()">❌신청서 닫기🔼</button> 
-    <iframe id="ifram" src="https://script.google.com/macros/s/AKfycbxRnNS98Ohcxg-f5zN9f341jnJhPgxyvNHeeIEdfT7048UbwQcLgD-4RVI7shOagyfJ/exec" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" onload="adjustIframeHeight()">로드 중…</iframe>  
+    <hr>
+    <h4>📝경조금 신청하기</h4>
+</div>
     <br>
-    <h5 onclick="if(window.confirm('📞통화가능 시간은 평일 9시~17시까지 입니다. 연결할까요?')){
-      location.href='tel:031-219-6052'
-    } else{
-      alert('취소되었습니다.')
-    }">📞 문의: 신협 031)219-6052</h5><br>
-
-    <div id="loading-overlay">
-        <div id="loading-spinner"></div>
-        <div id="loading-message"><span style="padding-left: 15px;">로딩중입니다...</span>
-        <small>✨평생어부바 신협</small>
-        </div>
-    </div>
-    <div class="center">
-        <a href="http://pf.kakao.com/_dfhkK/chat"><img src="img/kakao_chatlogo.jpg" style="width: 90px; height: 70px;"></a> 
+    <div id="tableForm" class="container">
+        <form id="submitForm">
+            <div class="form-group">
+                <label for="eventDate">📅아래에 먼저 경조사 발생일을 입력(선택)해 주세요</label>
+                <input type="date" class="form-control" id="eventDate" name="eventDate" required style="background-color: aquamarine;">
+            </div>
+            <div id="inputForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="성명을 입력하세요" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="연락처(숫자만)입력" id="contact" name="contact" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="📨이메일 입력" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="사번 또는 조합원번호" id="memberId" name="memberId" required>
+                </div>
+                <div class="form-group">
+                    <label>⭐경조 항목을 선택하세요</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="eventType" id="wedding" value="본인결혼" required>
+                        <label class="form-check-label" for="wedding">본인결혼</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="eventType" id="wedding" value="자녀결혼" required>
+                        <label class="form-check-label" for="wedding">자녀결혼</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="eventType" id="funeral" value="부(모)상" required>
+                        <label class="form-check-label" for="funeral">부(모)상</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="eventType" id="funeral" value="배우자 부(모)상" required>
+                        <label class="form-check-label" for="funeral">배우자 부(모)상</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="eventType" id="funeral" value="본인사망" required>
+                        <label class="form-check-label" for="funeral">본인사망</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="eventType" id="funeral" value="퇴직공로금" required>
+                        <label class="form-check-label" for="funeral">퇴직공로금</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>📝증빙 방법을 선택하세요</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="proofMethod" id="scan" value="그룹웨어(경조사)공지" required>
+                        <label class="form-check-label" for="scan">의료원그룹웨어(경조사)공지</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="proofMethod" id="photo" value="기타증빙첨부" required>
+                        <label class="form-check-label" for="photo">📤기타증빙첨부</label>
+                    </div>
+                </div>
+                <div id="attach">
+                    <div class="form-group">
+                        <label for="attachment1">#첨부파일 1(필수)</label>
+                        <input type="file" class="form-control-file" id="attachment1" name="attachment1">
+                    </div>
+                    <div class="form-group">
+                        <label for="attachment2">#첨부파일 2</label>
+                        <input type="file" class="form-control-file" id="attachment2" name="attachment2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="comments">💬남기실 말씀(선택)</label>
+                    <textarea class="form-control" id="comments" name="comments" rows="1"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" id="submitButton">📤제출하기</button>
+            </div>
+        </form>
+        <br>
+        <span><mark>
+            ⭐ 경조금은 아주대의료원 신협 주거래 입출금계좌(개설일 빠른순)로 입금될 예정입니다. 
+        </mark></span>
     </div>
     <script>
-        window.onload = function() {
-            var topElement = document.getElementById("top");
-            topElement.scrollIntoView();
-            console.log("moved top");
-        };
+        document.getElementById('eventDate').addEventListener('change', function() {
+            const eventDate = new Date(this.value);
+            const currentDate = new Date();
+            const oneYearAgo = new Date();
+            const twoMonthsFromNow = new Date();
 
-        // 페이지 로딩이 완료되면 로딩 스피너를 숨깁니다.
-        window.addEventListener('load', function() {
-            var spinner = document.getElementById('loading-spinner');
-            spinner.style.display = 'none';
+            oneYearAgo.setFullYear(currentDate.getFullYear() - 1);
+            twoMonthsFromNow.setMonth(currentDate.getMonth() + 1);
+
+            if (eventDate >= oneYearAgo && eventDate <= twoMonthsFromNow) {
+                document.getElementById('inputForm').style.display = 'block';
+            } else {
+                document.getElementById('inputForm').style.display = 'none';
+                if (eventDate < oneYearAgo) {
+                    alert('🤷🏽‍♀️죄송합니다. 신청일로부터 1년 이내 경조사만 신청 하실 수 있습니다.');
+                } else if (eventDate > twoMonthsFromNow) {
+                    alert('🤷🏽‍♀️죄송합니다. 현재일자로부터 1개월 이내 도래하는 경조사를 신청해 주세요. \n 단, 1년이내 경과한 경조사는 신청하실 수 있습니다. ');
+                }
+            }
         });
 
-        window.addEventListener('load', function() {
-            var loadingOverlay = document.getElementById('loading-overlay');
-            loadingOverlay.style.display = 'none';
+        document.querySelectorAll('input[name="proofMethod"]').forEach((elem) => {
+            elem.addEventListener('change', function() {
+                if (this.value === '기타증빙첨부') {
+                    document.getElementById('attach').style.display = 'block';
+                    document.getElementById('attachment1').required = true;
+                } else {
+                    document.getElementById('attach').style.display = 'none';
+                    document.getElementById('attachment1').required = false;
+                }
+            });
         });
+
+        document.getElementById('submitForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            if (!validateForm()) {
+                alert('🤷🏽‍♀️모든 필수 입력 항목을 채워 주세요.');
+                return;
+            }
+
+            if (!confirmSubmission()) {
+                alert('⚠️제출이 취소되었습니다.');
+                return;
+            }
+            
+            alert('🤷🏽‍♀️경조금 신청서가 제출중입니다. 잠시만 기다려 주세요');
+            const submitButton = document.getElementById('submitButton');
+            submitButton.textContent = '📤제출중...';
+            submitButton.disabled = true;
+
+            const formData = new FormData(e.target);
+
+            const attachment1 = document.getElementById('attachment1').files[0];
+            const attachment2 = document.getElementById('attachment2').files[0];
+
+            if (attachment1) {
+                const attachment1Base64 = await toBase64(attachment1);
+                formData.append('attachment1', JSON.stringify({
+                    fileName: attachment1.name,
+                    mimeType: attachment1.type,
+                    bytes: attachment1Base64
+                }));
+            }
+
+            if (attachment2) {
+                const attachment2Base64 = await toBase64(attachment2);
+                formData.append('attachment2', JSON.stringify({
+                    fileName: attachment2.name,
+                    mimeType: attachment2.type,
+                    bytes: attachment2Base64
+                }));
+            }
+
+            const response = await fetch('https://script.google.com/macros/s/AKfycbzxwo1gQLucJ7acLEaHqneDtOpMUSvloqH2ezyS_oEIrHjLie_zs79WNyKOcYPh9V-P/exec', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert('🚀경조금 신청서가 잘 제출되었습니다. \n 신청내용은 이메일로 안내 드립니다.');
+                e.target.reset();
+                document.getElementById('inputForm').style.display = 'none';
+                document.getElementById('attach').style.display = 'none';
+            } else {
+                alert('🚨제출 중 오류가 발생했습니다. 다시 시도해 주세요.');
+            }
+
+            submitButton.textContent = '📤제출하기';
+            submitButton.disabled = false;
+        });
+
+        function validateForm() {
+            const requiredFields = document.querySelectorAll('#inputForm input[required], #inputForm textarea[required]');
+            for (let field of requiredFields) {
+                if (!field.value.trim()) {
+                    return false;
+                }
+            }
+            const proofMethod = document.querySelector('input[name="proofMethod"]:checked').value;
+            if (proofMethod === '기타증빙첨부' && !document.getElementById('attachment1').files.length) {
+                return false;
+            }
+            return true;
+        }
+
+        function confirmSubmission() {
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact').value;
+            const email = document.getElementById('email').value;
+            const memberId = document.getElementById('memberId').value;
+            const eventType = document.querySelector('input[name="eventType"]:checked').nextElementSibling.textContent;
+            const proofMethod = document.querySelector('input[name="proofMethod"]:checked').nextElementSibling.textContent;
+
+            return confirm(
+                `🤷🏽‍♀️입력하신 내용을 확인해 주세요:\n\n` +
+                `성명: ${name}\n` +
+                `연락처: ${contact}\n` +
+                `이메일: ${email}\n` +
+                `사번 또는 조합원번호: ${memberId}\n` +
+                `경조 항목: ${eventType}\n` +
+                `증빙 방법: ${proofMethod}\n\n` +
+                `이대로 신청하시겠습니까?\n`
+            );
+        }
+
+        function toBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => resolve(reader.result.split(',')[1]);
+                reader.onerror = error => reject(error);
+            });
+        }
     </script>
 </body>
 </html>
-
-
