@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전자명함 QR 코드 생성기</title>
+    <!-- QRious 라이브러리 로드 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script>
+        function generateQRCode() {
+            // 입력된 이름, 전화번호, 이메일 가져오기
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+
+            // 입력값이 비어있는지 확인
+            if (!name || !phone) {
+                alert("이름과 전화번호는 필수 입력 항목입니다.");
+                return;
+            }
+
+            // 전화번호 형식 수정 (공백 및 특수 문자 제거)
+            const sanitizedPhone = phone.replace(/[^0-9+]/g, "");
+
+            // vCard 형식으로 QR 코드 생성
+            let vCard = "BEGIN:VCARD\nVERSION:4.0\n"; // vCard의 시작 부분 및 버전 설정
+            vCard += `FN:${name}\n`; // 전체 이름 추가 (Full Name)
+            vCard += `TEL;TYPE=CELL:${sanitizedPhone}\n`; // 전화번호 추가 (휴대전화 유형 지정)
+            if (email) { // 이메일이 입력된 경우만 추가
+                vCard += `EMAIL;TYPE=Email:${email}\n`; // 이메일 유형 지정 (개인)
+            }
+            vCard += "END:VCARD"; // vCard의 끝 부분
+
+            // QR 코드 생성
+            const qr = new QRious({
+                element: document.getElementById('qrCode'), // QR 코드를 표시할 캔버스 요소
+                size: 200, // QR 코드의 크기 설정 (200x200 픽셀)
+                value: vCard // QR 코드에 저장될 데이터 (vCard 정보)
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>전자명함 QR 코드 생성기</h2>
+    <div>
+        <!-- 이름 입력 필드 -->
+        <label for="name">이름: </label>
+        <input type="text" id="name" placeholder="홍길동"><br><br>
+
+        <!-- 전화번호 입력 필드 -->
+        <label for="phone">전화번호: </label>
+        <input type="text" id="phone" placeholder="010-1234-5678"><br><br>
+
+        <!-- 이메일 입력 필드 (선택 사항) -->
+        <label for="email">이메일 (선택): </label>
+        <input type="text" id="email" placeholder="example@example.com"><br><br>
+
+        <!-- QR 코드 생성 버튼 -->
+        <button onclick="generateQRCode()">QR 코드 생성</button>
+    </div>
+
+    <!-- QR 코드가 표시될 영역 -->
+    <div id="qrCodeContainer" style="margin-top: 20px;">
+        <canvas id="qrCode"></canvas>
+    </div>
+</body>
+</html>
