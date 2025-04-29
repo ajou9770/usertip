@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>조합원 경조금 신청서</title>
         <link
             rel="stylesheet"
@@ -63,18 +64,28 @@
                 # 퇴직공로금: 퇴직 전월 출자금잔액 1,000만원 이상<br>
                 # 퇴직기념품: 조합원 계속 가입기간 20년 이상<br><br>
 
-                🗓️신청기한: 경조사 발생일로부터 1년 이내<br>
                 ✔️지급방법: 신청시 지정하신 계좌로 입금<br>
-                🚀시행일자: 2023년 3월 1일이후 경조사 발생부터
-                <br>(단, 경조사 발생일로부터 1년이내 신청 가능)</p>
+                🚀신청기한: 경조사발생일로부터 1년 이내 및 1개월 이전
+            </p>
             <hr>
             <h4>📝경조금 신청하기</h4>
         </div>
         <br>
         <div id="tableForm" class="container">
             <form id="submitForm">
+<!--                 <div class="form-group">
+                    <label for="joinDate">📅 신협 가입년월일을 입력(선택)해 주세요</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="joinDate"
+                      name="joinDate"
+                      required="required"
+                      style="background-color: aquamarine;">
+                  </div> -->
+                  
                 <div class="form-group">
-                    <label for="eventDate">📅아래에 먼저 경조사 발생일을 입력(선택)해 주세요</label>
+                    <label for="eventDate">📅 먼저 경조사 발생일을 입력(선택)해 주세요</label>
                     <input
                         type="date"
                         class="form-control"
@@ -84,40 +95,60 @@
                         style="background-color: aquamarine;">
                 </div>
                 <div id="inputForm">
-                    <div class="form-group">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="nameLabel" style="width: 110px; text-align: center;">성 명</span>
+                        </div>
                         <input
                             type="text"
                             class="form-control"
                             placeholder="성명을 입력하세요"
                             id="name"
                             name="name"
+                            aria-label="Name"
+                            aria-describedby="nameLabel"
                             required="required">
                     </div>
-                    <div class="form-group">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="contactLabel" style="width: 110px;">📞연락처</span>
+                        </div>
                         <input
                             type="number"
                             class="form-control"
-                            placeholder="연락처(숫자만)입력"
+                            placeholder="숫자만 입력하세요"
                             id="contact"
                             name="contact"
+                            aria-label="Contact"
+                            aria-describedby="contactLabel"
                             required="required">
                     </div>
-                    <div class="form-group">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="emailLabel" style="width: 110px;">📨 이메일</span>
+                        </div>
                         <input
                             type="email"
                             class="form-control"
-                            placeholder="📨이메일  입력 =>형식:ex]example@korea.com(or.kr)"
+                            placeholder="📨이메일  형식으로"
                             id="email"
                             name="email"
+                            aria-label="Email"
+                            aria-describedby="emailLabel"
                             required="required">
                     </div>
-                    <div class="form-group">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="memberIdLabel">사번 또는 조합원번호</span>
+                        </div>
                         <input
                             type="number"
                             class="form-control"
-                            placeholder="사번 또는 조합원번호"
+                            placeholder="숫자만 입력하세요"
                             id="memberId"
                             name="memberId"
+                            aria-label="Member ID"
+                            aria-describedby="memberIdLabel"
                             required="required">
                     </div>
                     <div class="form-group">
