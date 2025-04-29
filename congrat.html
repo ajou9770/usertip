@@ -60,7 +60,7 @@
                 </tbody>
             </table>
 
-            <p># 공통 신청자격: 조합 가입일 1년 이상 조합원에 한함(계속 가입기간)<br>
+            <p># 공통신청자격: 경조사발생일 기준 현재, 조합 가입 1년 이상 조합원<br>
                 # 퇴직공로금: 퇴직 전월 출자금잔액 1,000만원 이상<br>
                 # 퇴직기념품: 조합원 계속 가입기간 20년 이상<br><br>
 
@@ -73,8 +73,8 @@
         <br>
         <div id="tableForm" class="container">
             <form id="submitForm">
-<!--                 <div class="form-group">
-                    <label for="joinDate">📅 신협 가입년월일을 입력(선택)해 주세요</label>
+                <div class="form-group">
+                    <label for="joinDate">📅 아주대신협 가입일(출자금통장 개설일)을 선택해 주세요</label>
                     <input
                       type="date"
                       class="form-control"
@@ -82,10 +82,10 @@
                       name="joinDate"
                       required="required"
                       style="background-color: aquamarine;">
-                  </div> -->
+                  </div>
                   
                 <div class="form-group">
-                    <label for="eventDate">📅 먼저 경조사 발생일을 입력(선택)해 주세요</label>
+                    <label for="eventDate">🎀경조사 발생(예정)일을 선택해 주세요</label>
                     <input
                         type="date"
                         class="form-control"
@@ -270,37 +270,55 @@
             </span>
         </div>
         <script>
-            document
-                .getElementById('eventDate')
-                .addEventListener('change', function () {
-                    const eventDate = new Date(this.value);
-                    const currentDate = new Date();
-                    const oneYearAgo = new Date();
-                    const twoMonthsFromNow = new Date();
+            document.getElementById('eventDate')
+  .addEventListener('change', function () {
+    const eventDate = new Date(this.value);
+    const joinDateValue = document.getElementById('joinDate').value;
+    const joinDate = joinDateValue ? new Date(joinDateValue) : null;
+    const currentDate = new Date();
 
-                    oneYearAgo.setFullYear(currentDate.getFullYear() - 1);
-                    twoMonthsFromNow.setMonth(currentDate.getMonth() + 1);
+    if (!joinDate) {
+      alert("📅 먼저 '조합 가입년월일'을 입력해 주세요.");
+      this.value = ''; // 입력 초기화
+      return;
+    }
 
-                    if (eventDate >= oneYearAgo && eventDate <= twoMonthsFromNow) {
-                        document
-                            .getElementById('inputForm')
-                            .style
-                            .display = 'block';
-                    } else {
-                        document
-                            .getElementById('inputForm')
-                            .style
-                            .display = 'none';
-                        if (eventDate < oneYearAgo) {
-                            alert('🤷🏽‍♀️죄송합니다. 신청일로부터 1년 이내 경조사만 신청 하실 수 있습니다.');
-                        } else if (eventDate > twoMonthsFromNow) {
-                            alert(
-                                '🤷🏽‍♀️죄송합니다. 현재일자로부터 1개월 이내 도래하는 경조사를 신청해 주세요. \n 단, 1년이내 경과한 경조사는 신청하실 수 있습니' +
-                                '다. '
-                            );
-                        }
-                    }
-                });
+    const oneYearAfterJoin = new Date(joinDate);
+    oneYearAfterJoin.setFullYear(oneYearAfterJoin.getFullYear() + 1);
+
+    const oneYearAgoFromToday = new Date(currentDate);
+    oneYearAgoFromToday.setFullYear(currentDate.getFullYear() - 1);
+
+    const oneMonthLaterFromToday = new Date(currentDate);
+    oneMonthLaterFromToday.setMonth(currentDate.getMonth() + 1);
+
+    // 1) 가입 후 1년이 안 되었으면 ❌
+    if (eventDate < oneYearAfterJoin) {
+      alert('🤷🏽‍♀️죄송합니다. 경조사 발생일은 신협 가입일로부터 1년이 경과해야 신청하실 수 있습니다.');
+      this.value = '';
+      document.getElementById('inputForm').style.display = 'none';
+      return;
+    }
+
+    // 2) 경조사 발생일이 1년 초과 과거면 ❌
+    if (eventDate < oneYearAgoFromToday) {
+      alert('🤷🏽‍♀️죄송합니다. 신청일로부터 1년 이내 경조사만 신청 하실 수 있습니다.');
+      this.value = '';
+      document.getElementById('inputForm').style.display = 'none';
+      return;
+    }
+
+    // 3) 경조사 발생일이 현재 기준 1개월 이후 미래면 ❌
+    if (eventDate > oneMonthLaterFromToday) {
+      alert('🤷🏽‍♀️죄송합니다. 현재일자로부터 1개월 이내 도래하는 경조사만 신청해 주세요.');
+      this.value = '';
+      document.getElementById('inputForm').style.display = 'none';
+      return;
+    }
+
+    // 모든 조건을 만족하면 ✅
+    document.getElementById('inputForm').style.display = 'block';
+  });
 
             document
                 .querySelectorAll('input[name="proofMethod"]')
