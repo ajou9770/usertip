@@ -320,7 +320,7 @@ iframe {
 #welcomeModal .modal-dialog {
     max-width: 80%;
     height: 60vh;
-    margin: auto;
+    margin: 10% auto 0 auto; /* 상단에서 조금 떨어지게 */
 }
 .modal-title {
   color:tomato ;
