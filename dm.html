@@ -174,9 +174,10 @@
                           🏝️이용리조트: 통영/제주/화순/설악/아산스파포레 <br>
                           🤿 스파 : 아산 스파비스<br>
                           📅 이용기간: 2025.5월 ~ 12월 <br><br>
-                            <a class="btn btn-outline-info btn-link" href="https://m.kumhoresort.co.kr/groupcp/company/cu.asp" target="_blank">📱객실 예약 하기</a><br>
-                            <a class="btn btn-outline-info btn-link" href="http://m.spavis.co.kr/spacompany/cpindex.asp?cpCode=413180" target="_blank">📱할인 입장권 구매</a>
-                        </div>
+                          <!-- 가상 버튼: 클릭 시 디바이스 체크 후 적절한 URL로 이동 -->
+                          <a class="btn btn-outline-info btn-link" href="#" id="roomLink">📱 객실 예약 하기</a><br>
+                          <a class="btn btn-outline-info btn-link" href="#" id="ticketLink">📱 할인 입장권 구매</a>
+                          </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary btn-sm" id="dontShowAgain">⏱하루 동안 안볼래요</button>
                             <button type="button" class="btn btn-warning btn-sm" data-bs-dismiss="modal">닫기</button>
@@ -189,6 +190,33 @@
              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+             <script>
+  // 모바일인지 확인
+  function isMobile() {
+    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+
+  // 객실 예약 버튼 클릭 시
+  document.getElementById("roomLink").addEventListener("click", function(e) {
+    e.preventDefault();
+    const url = isMobile()
+      ? "https://m.kumhoresort.co.kr/groupcp/company/cu.asp" // 모바일용
+      : "https://www.kumhoresort.co.kr/reservation/tcompany/company/cu.html"; // PC용
+    window.open(url, "_blank");
+  });
+
+  // 입장권 구매 버튼 클릭 시
+  document.getElementById("ticketLink").addEventListener("click", function(e) {
+    e.preventDefault();
+    const url = isMobile()
+      ? "http://m.spavis.co.kr/spacompany/cpindex.asp?cpCode=413180"
+      : "https://www.spavis.co.kr/spacp/index.asp?cpCode=413180";
+    window.open(url, "_blank");
+  });
+</script>
+
+
              <script>
               $(document).ready(function() {
                   // Check if the modal should be shown
