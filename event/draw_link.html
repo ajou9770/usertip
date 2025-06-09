@@ -44,6 +44,9 @@
   height: 20px;
   border-radius: 5px;
 }
+img {
+  max-height: 150px;
+}
 </style>
 </head>
 <body>
@@ -55,6 +58,9 @@
         <div class="row">
             <div class="col-md-4" style="margin: 10px;">
             <a href=" https://m.cu.co.kr/otu/ol4ubD0C" onclick="link_jarip()" target="_blank"><img src="img/jarip.jpg"></a>
+          </div>
+          <div class="col-md-4" style="margin: 10px;">
+            <a href=" https://m.cu.co.kr/otu/MwwFcD0C" onclick="link_moa()" target="_blank"><img src="https://thumb.mt.co.kr/21/2025/05/2025052208495755240_1.jpg/dims/resize/1200/crop/1200x630!/optimize/"></a>
           </div>
           <div class="col-md-4" style="margin: 10px;">
             <a href="http://m.cu.co.kr/otu/543ubD0C" onclick="notice()" target="_blank"><img src="img/yegum.jpg"></a>
@@ -71,6 +77,7 @@
           <div class="col-md-4" style="margin: 10px;">
             <select class="form-control" onchange="handleSelectChange(this)">
               <option value="">✔체크카드 선택</option>
+              <option value="https://m.cu.co.kr/otu/23wFcD0C">ㄱㅇㅇ체크카드</option>
               <option value="https://m.cu.co.kr/otu/Zm4ubD0C">CU big Simple하이브리드(교통)카드</option>
               <option value="https://m.cu.co.kr/otu/zl4ubD0C">CU Big Simple 체크카드</option>
               <option value="https://m.cu.co.kr/otu/gm4ubD0C">CU Big 청춘 체크카드(어부바ver)</option>
@@ -100,7 +107,7 @@
     </div>
     <script>
          function handleSelectChange(selectElement) {
-    alert("🤷‍♂️조합(신협)은 '아주대'로 검색하세요 \n 체크카드는 연간사용액의 약 0.8%가 이용고 배당으로 지급됩니다."); // 알림 표시
+    alert("🤷‍♂️체크카드는 연간사용액의 약 0.7%가 이용고 배당으로 지급 됩니다."); // 알림 표시
     var selectedValue = selectElement.value;
     if (selectedValue) {
         window.open(selectedValue, '_blank'); // 새 창에서 열기
@@ -114,11 +121,14 @@
         function link_jarip() {
             alert("🤷‍♂️조합(신협)검색시 '아주대'로 검색하세요.\n 📢핸드폰 본인확인을 거쳐, 인증서로 개설진행 됩니다.   ")
         }
+        function link_moa() {
+            alert("📢신협 첫계좌 개설시 최초 1년간 1.0%우대 금리가 적용됩니다. => 50만원이하 구간 4.5%적용")
+        }
         function link_jukgum() {
             alert("🤷‍♂️핸드폰 본인확인을 거쳐, 인증서로 개설진행 됩니다. \n 적금평잔의 약0.8%의 이용고배당이 지급됩니다.")
         }
         function link_card() {
-            alert("🤷‍♂️ 핸드폰 본인확인을 거쳐, 금융인증서로 발급 됩니다.(배송수령) \n 체크칻 사용액의 약 0.7%가 이용고배당으로 지급됩니다. ")
+            alert("🤷‍♂️ 핸드폰 본인확인을 거쳐, 금융인증서로 발급 됩니다.(배송수령) \n 체크카드 사용액의 약 0.7%가 이용고배당으로 지급됩니다. ")
         }
       </script>
 </body>
