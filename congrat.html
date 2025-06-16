@@ -12,263 +12,168 @@
             #inputForm {
                 display: none;
             }
+            body {
+      background-color: #f8f9fa;
+      font-family: "Pretendard", sans-serif;
+    }
+    .card-header {
+      background-color: #0d6efd;
+      color: white;
+      font-weight: bold;
+    }
+    .required::after {
+      content: " *";
+      color: red;
+    }
+    .form-check-label {
+      margin-left: 0.25rem;
+    }
+    .section-title {
+      border-left: 5px solid #0d6efd;
+      padding-left: 10px;
+      margin-top: 2rem;
+      font-size: 1.25rem;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+    .highlight {
+      background-color: #e7f1ff;
+      border-left: 4px solid #0d6efd;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
         </style>
     </head>
     <body>
-        <div id="top" style="width: 1px; height: 1px;"></div>
-        <div style="text-align: center; color:black;">
-            <h4>
-                | 신협 경조금 지급 기준 |</h4>
-        </div>
-        <br>
-        <div class="container">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class="centered" colspan="2">구분</th>
-                        <th>경조금</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="centered" rowspan="2">결혼</td>
-                        <td>본인</td>
-                        <td>10만원</td>
-                    </tr>
-                    <tr>
-                        <td>자녀</td>
-                        <td>10만원</td>
-                    </tr>
-                    <tr>
-                        <td class="centered" rowspan="2">사망</td>
-                        <td>본인(배우자)부모</td>
-                        <td>10만원</td>
-                    </tr>
-                    <tr>
-                        <td>본인</td>
-                        <td>20만원</td>
-                    </tr>
-                    <tr>
-                        <td class="centered" rowspan="2">퇴직</td>
-                        <td>공로금</td>
-                        <td>50만원</td>
-                    </tr>
-                    <tr>
-                        <td>기념품</td>
-                        <td>10만원상품권</td>
-                    </tr>
-                </tbody>
-            </table>
+     <div class="container py-4">
+    <div class="text-center mb-4">
+      <h3 class="fw-bold"><i class="bi bi-card-checklist"></i> 신협 경조금 신청서</h3>
+      <p class="text-muted">조합원님을 위한 경조금 신청 안내 및 신청서입니다.</p>
+    </div>
 
-            <p># 공통신청자격: 경조사발생일 기준 현재, 조합 가입 1년 이상 조합원<br>
-                # 퇴직공로금: 퇴직 전월 출자금잔액 1,000만원 이상<br>
-                # 퇴직기념품: 조합원 계속 가입기간 20년 이상<br><br>
+    <div class="card shadow-sm mb-4">
+      <div class="card-header" style="background-color: rgb(66, 90, 82);">📋 경조금 지급 기준</div>
+      <div class="card-body">
+        <table class="table table-bordered table-sm align-middle text-center">
+          <thead class="table-light">
+            <tr>
+              <th>구분</th>
+              <th>세부</th>
+              <th>금액</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td rowspan="2">결혼</td><td>본인</td><td>10만원</td></tr>
+            <tr><td>자녀</td><td>10만원</td></tr>
+            <tr><td rowspan="2">사망</td><td>본인(배우자) 부모</td><td>10만원</td></tr>
+            <tr><td>본인</td><td>20만원</td></tr>
+            <tr><td rowspan="2">퇴직</td><td>공로금</td><td>50만원</td></tr>
+            <tr><td>기념품</td><td>10만원 상품권</td></tr>
+          </tbody>
+        </table>
+        <ul class="note mt-3">
+          <li>📌 가입일 기준 1년 이상인 조합원만 신청 가능</li>
+          <li>💼 퇴직 공로금은 출자금 1천만 원 이상일 때 지급</li>
+          <li>🎁 퇴직 기념품은 조합 가입 20년 이상 시 제공</li>
+          <li>🕐 신청기한: 경조사 발생일 기준 1년 이내, 1개월 초과 미래 신청 불가</li>
+        </ul>
+      </div>
+    </div>
 
-                ✔️지급방법: 신청시 지정하신 계좌로 입금<br>
-                🚀신청기한: 경조사발생일로부터 1년 이내 및 1개월 이전
-            </p>
-            <hr>
-            <h4>📝경조금 신청하기</h4>
+    <div class="card shadow-sm">
+      <div class="card-header">📝 신청서 작성</div>
+      <div class="card-body">
+        <form id="submitForm">
+          <div class="mb-3">
+            <label for="joinDate" class="form-label required">📅 조합 가입일</label>
+            <input type="date" class="form-control" id="joinDate" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="eventDate" class="form-label required">🎀 경조사 발생(예정)일</label>
+            <input type="date" class="form-control" id="eventDate" required />
+          </div>
+
+          <div id="inputForm" style="display: none;">
+            <div class="mb-3">
+              <label for="name" class="form-label required">성명</label>
+              <input type="text" class="form-control" id="name" placeholder="이름 입력" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="contact" class="form-label required">📞 연락처</label>
+              <input type="number" class="form-control" id="contact" placeholder="숫자만 입력" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label required">📨 이메일</label>
+              <input type="email" class="form-control" id="email" placeholder="example@email.com" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="memberId" class="form-label required">사번 또는 조합원번호</label>
+              <input type="number" class="form-control" id="memberId" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label required">⭐ 경조 항목 선택</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="eventType" value="본인결혼" required />
+                <label class="form-check-label">본인 결혼</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="eventType" value="자녀결혼" />
+                <label class="form-check-label">자녀 결혼</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="eventType" value="부(모)상" />
+                <label class="form-check-label">부(모) 상</label>
+              </div>
+              <!-- 추가 항목은 필요에 따라 반복 -->
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label required">📌 증빙 방법 선택</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="proofMethod" value="그룹웨어(경조사)공지" required />
+                <label class="form-check-label">그룹웨어 공지</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="proofMethod" value="기타증빙첨부" />
+                <label class="form-check-label">기타 증빙 첨부</label>
+              </div>
+            </div>
+
+            <div id="attach" style="display: none;">
+              <div class="mb-3">
+                <label class="form-label required">첨부파일 1</label>
+                <input type="file" class="form-control" id="attachment1" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">첨부파일 2 (선택)</label>
+                <input type="file" class="form-control" id="attachment2" />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="comments" class="form-label">💬 추가 요청사항</label>
+              <textarea class="form-control" id="comments" rows="2" placeholder="선택 사항입니다."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100" id="submitButton">
+              📤 신청서 제출
+            </button>
+          </div>
+        </form>
+
+        <div class="highlight mt-4">
+          <strong>💡 참고:</strong> 경조금은 <mark>신협 주거래 입출금 계좌</mark>로 입금됩니다.
         </div>
-        <br>
-        <div id="tableForm" class="container">
-            <form id="submitForm">
-                <div class="form-group">
-                    <label for="joinDate">📅 아주대신협 가입일(출자금통장 개설일)을 선택해 주세요</label>
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="joinDate"
-                      name="joinDate"
-                      required="required"
-                      style="background-color: aquamarine;">
-                  </div>
-                  
-                <div class="form-group">
-                    <label for="eventDate">🎀경조사 발생(예정)일을 선택해 주세요</label>
-                    <input
-                        type="date"
-                        class="form-control"
-                        id="eventDate"
-                        name="eventDate"
-                        required="required"
-                        style="background-color: aquamarine;">
-                </div>
-                <div id="inputForm">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="nameLabel" style="width: 110px; text-align: center;">성 명</span>
-                        </div>
-                        <input
-                            type="text"
-                            class="form-control"
-                            placeholder="성명을 입력하세요"
-                            id="name"
-                            name="name"
-                            aria-label="Name"
-                            aria-describedby="nameLabel"
-                            required="required">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="contactLabel" style="width: 110px;">📞연락처</span>
-                        </div>
-                        <input
-                            type="number"
-                            class="form-control"
-                            placeholder="숫자만 입력하세요"
-                            id="contact"
-                            name="contact"
-                            aria-label="Contact"
-                            aria-describedby="contactLabel"
-                            required="required">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="emailLabel" style="width: 110px;">📨 이메일</span>
-                        </div>
-                        <input
-                            type="email"
-                            class="form-control"
-                            placeholder="📨이메일  형식으로"
-                            id="email"
-                            name="email"
-                            aria-label="Email"
-                            aria-describedby="emailLabel"
-                            required="required">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="memberIdLabel">사번 또는 조합원번호</span>
-                        </div>
-                        <input
-                            type="number"
-                            class="form-control"
-                            placeholder="숫자만 입력하세요"
-                            id="memberId"
-                            name="memberId"
-                            aria-label="Member ID"
-                            aria-describedby="memberIdLabel"
-                            required="required">
-                    </div>
-                    <div class="form-group">
-                        <label>⭐경조 항목을 선택하세요</label><br>
-                        <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="eventType"
-                                id="wedding"
-                                value="본인결혼"
-                                required="required">
-                            <label class="form-check-label" for="wedding">본인결혼</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="eventType"
-                                id="wedding"
-                                value="자녀결혼"
-                                required="required">
-                            <label class="form-check-label" for="wedding">자녀결혼</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="eventType"
-                                id="funeral"
-                                value="부(모)상"
-                                required="required">
-                            <label class="form-check-label" for="funeral">부(모)상</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="eventType"
-                                id="funeral"
-                                value="배우자 부(모)상"
-                                required="required">
-                            <label class="form-check-label" for="funeral">배우자 부(모)상</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="eventType"
-                                id="funeral"
-                                value="본인사망"
-                                required="required">
-                            <label class="form-check-label" for="funeral">본인사망</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="eventType"
-                                id="funeral"
-                                value="퇴직공로금"
-                                required="required">
-                            <label class="form-check-label" for="funeral">퇴직공로금</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>📝증빙 방법을 선택하세요</label><br>
-                        <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="proofMethod"
-                                id="scan"
-                                value="그룹웨어(경조사)공지"
-                                required="required">
-                            <label class="form-check-label" for="scan">의료원그룹웨어(경조사)공지</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="proofMethod"
-                                id="photo"
-                                value="기타증빙첨부"
-                                required="required">
-                            <label class="form-check-label" for="photo">📤기타증빙첨부</label>
-                        </div>
-                    </div>
-                    <div id="attach">
-                        <div class="form-group">
-                            <label for="attachment1">#첨부파일 1(필수)</label>
-                            <input
-                                type="file"
-                                class="form-control-file"
-                                id="attachment1"
-                                name="attachment1">
-                        </div>
-                        <div class="form-group">
-                            <label for="attachment2">#첨부파일 2</label>
-                            <input
-                                type="file"
-                                class="form-control-file"
-                                id="attachment2"
-                                name="attachment2">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="comments">💬남기실 말씀(선택)</label>
-                        <textarea class="form-control" id="comments" name="comments" rows="1"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block" id="submitButton">📤제출하기</button>
-                </div>
-            </form>
-            <br>
-            <span>
-                <mark>
-                    ⭐ 경조금은 아주대의료원 신협 주거래 입출금계좌(개설일 빠른순)로 입금될 예정입니다.
-                </mark>
-            </span>
-        </div>
+      </div>
+    </div>
+  </div>
         <script>
             document.getElementById('eventDate')
   .addEventListener('change', function () {
