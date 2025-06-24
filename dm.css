@@ -253,7 +253,7 @@ text-align: center;
 width: 100%;
 border: 3px solid teal;
 }
-#icon { 
+/* #icon { 
 border: none;
 width: 150px;
 height: 50px;
@@ -267,7 +267,38 @@ line-height: 40px;
 text-align: center;
 color: white;
 font-weight: bold;    
-}
+} */
+     .fixed-btn {
+      position: fixed;
+      right: 20px;
+      width: 150px;
+      height: 50px;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background-color: #23acd6;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* 아래에서부터 위로 순차 배치 */
+       #icon {
+      position: fixed;
+      bottom: 45px;
+      right: 20px;
+      z-index: 9999;
+    }
+    #link2 {
+      bottom: 120px; /* icon 위 60px */
+    }
+
+    #link1 {
+      bottom: 180px; /* link2 위 60px */
+    }
 .backButton {
 	box-shadow: 3px 4px 0px 0px #1564ad;
 	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
