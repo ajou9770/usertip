@@ -27,6 +27,13 @@
     justify-content: center;
     text-align: left;
 }
+.form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    .date-row { margin-bottom: 10px; }
     </style>
 </head>
 <body onload="alert('🤷‍♀️1년이상 로그인 기록이 없는 경우 계정잠김(아이디를 찾을수 없다고 나옴)상태가 되오니, \n 아래 상담톡으로 초기화 요청하시기 바랍니다. \n 비밀번호 분실시도 마찬가지 상담톡으로 요청하세요(이메일인증 안됨)')">
@@ -94,8 +101,39 @@
                                 <span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
                               {codebox.style.display=``; barcode.innerText = `닫기▲`} else {codebox.style.display = `none`; 
                                 barcode.innerText = `💳무기명회원 바코드 신청 하기▼`}">💳무기명회원 바코드 신청 하기 ▼</span>
-                              <div id="codebox" style="display: none"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEzg6LrPX98VBL_Dz8o76eSY1kWEKefrrmVZM8GruxBB9_Yw/viewform?usp=sf_link" width="100%" height="750px">무기명회원바코드신청</iframe></div>
+                              <div id="codebox" style="display: none">
+                               <div class="container my-5" style="max-width: 800px;">
+    <div class="form-container">
+      <h5 class="text-center mb-4" style="color: black;">🏌 무기명회원 바코드 신청</h5>
+      <form id="golfForm">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="이름을 입력하세요" id="name" required>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="사번 또는 조합원번호" id="employeeId" required>
+        </div>
+        <div class="mb-3">
+                    <input type="tel" class="form-control" placeholder="핸드폰번호(숫자만)" id="contact" required>
+        </div>
+
+        <label class="form-label" style="color: black;">⛳ 골프장이용 날짜 및 인원</label>
+        <div id="dateContainer"></div>
+        <button type="button" class="btn btn-outline-success btn-sm my-2" onclick="addDateRow()">➕ 추가</button>
+
+        <div class="mb-3">
+          <label for="comment" class="form-label" style="color: black;">📝기타 문의사항</label>
+          <textarea class="form-control" id="comment" rows="2"></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn btn-primary w-100">📨 신청하기</button>
+        <div id="alertBox" class="alert mt-3 d-none" role="alert"></div>
+      </form>
+    </div>
+  </div>
+
+                              </div>
                               <br/>
+                              <!--<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEzg6LrPX98VBL_Dz8o76eSY1kWEKefrrmVZM8GruxBB9_Yw/viewform?usp=sf_link" width="100%" height="750px">무기명회원바코드신청</iframe>-->
                               <div class="btn btn-info">
                                 <a href="https://www.sonofelicecc.com/rsv.choice.dp/dmparse.dm"> ⛳소노펠리체 골프클럽 홈페이지 <i class="fas fa-chevron-right fa-lg"></i></a>
                                 </div><br/>
@@ -199,6 +237,84 @@
              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+            
+<script>
+    function addDateRow() {
+      const container = document.getElementById("dateContainer");
+      const row = document.createElement("div");
+      row.className = "row date-row";
+      row.innerHTML = `
+        <div class="col-md-6">
+          <input type="date" class="form-control" name="date" required>
+        </div>
+        <div class="col-md-4">
+          <input type="number" class="form-control" name="attendees" min="1" placeholder="참석인원" required>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-danger btn-sm" onclick="this.closest('.date-row').remove()">❌</button>
+        </div>
+      `;
+      container.appendChild(row);
+    }
+
+    document.getElementById("golfForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const employeeId = document.getElementById("employeeId").value.trim();
+      const contact = document.getElementById("contact").value.trim();
+      const comment = document.getElementById("comment").value.trim();
+      const dates = [...document.getElementsByName("date")].map(el => el.value);
+      const attendees = [...document.getElementsByName("attendees")].map(el => el.value);
+
+      if (!confirm("⛳ 입력하신 내용을 다시한번 확인해 주세요.  \n 이대로 신청하시겠습니까?")) return;
+
+      const payload = {
+        name,
+        employeeId,
+        contact,
+        comment,
+        dates,
+        attendees
+      };
+
+      const alertBox = document.getElementById("alertBox");
+      const submitBtn = document.getElementById("submitBtn");
+      alertBox.classList.add("d-none");
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "⛳ 신청중...";
+
+      try {
+        const res = await fetch("https://script.google.com/macros/s/AKfycbzrVFvixD4M5eybdEIrYwsOFJAC10-hAOY03rmbNySGOBm-iOaJWp4LYO-ZBaiMssVTTA/exec", {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        alertBox.classList.remove("d-none");
+        alertBox.classList.add("alert-success");
+        alertBox.textContent = "✅ 신청이 성공적으로 접수되었습니다!";
+        document.getElementById("golfForm").reset();
+        document.getElementById("dateContainer").innerHTML = '';
+        addDateRow();
+      } catch (error) {
+        alertBox.classList.remove("d-none");
+        alertBox.classList.add("alert-danger");
+        alertBox.textContent = "❌ 신청 중 오류가 발생했습니다. 다시 시도해 주세요.";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "📨 신청하기";
+      }
+    });
+
+    window.onload = function () {
+      document.getElementById("dateContainer").innerHTML = '';
+      addDateRow();
+    }
+  </script>
+
 
              <script>
   // 모바일인지 확인
