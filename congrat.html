@@ -7,6 +7,7 @@
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     
         <style>
             #attach,
             #inputForm {
@@ -56,8 +57,11 @@
         <br>
         <div id="tableForm" class="container">
             <form id="submitForm">
-                <div class="form-group">
+            <div class="form-group">
                     <label for="joinDate">📅 아주대신협 가입일(출자금통장 개설일)을 선택해 주세요</label>
+                    <small class="form-text text-muted d-block mt-1">
+      📌 📅달력을 열고 <strong>연도 부분을 터치</strong>하면 연도를 쉽게 선택할 수 있어요.
+    </small>
                     <input
                       type="date"
                       class="form-control"
@@ -66,7 +70,7 @@
                       required="required"
                       style="background-color: rgb(144, 192, 214);">
                   </div>
-                  
+
                 <div class="form-group">
                     <label for="eventDate">🎀경조사 발생(예정)일을 선택해 주세요</label>
                     <input
@@ -252,6 +256,7 @@
                 </mark>
             </span>
         </div>
+
         <script>
             document.getElementById('eventDate')
   .addEventListener('change', function () {
