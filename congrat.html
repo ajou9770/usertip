@@ -60,7 +60,7 @@
             <div class="form-group">
                     <label for="joinDate">📅 아주대신협 가입일(출자금통장 개설일)을 선택해 주세요</label>
                     <small class="form-text text-muted d-block mt-1">
-      📌 📅달력을 열고 <strong>연도 부분을 터치</strong>하면 연도를 쉽게 선택할 수 있어요.
+      📌 가입일은 모르지만  1년이상 경과된 경우<strong>2023년 5월 1일로 입력</strong>바랍니다. 
     </small>
                     <input
                       type="date"
@@ -70,6 +70,15 @@
                       required="required"
                       style="background-color: rgb(144, 192, 214);">
                   </div>
+                    <!-- 📷 이미지 설명 추가 -->
+
+  <div id="date_img" class="mt-2">
+    <small class="form-text text-muted">
+      📌 * 아래 이미지처럼 <strong>상단의 연도 부분</strong>을 누르면 연도를 쉽게 바꿀 수 있어요.
+    </small>
+    <img src="img/date_img.jpg" alt="연도 선택 방법 안내 이미지" class="img-fluid rounded mt-2" style="max-width: 200px; border: 1px solid #ddd;">
+  </div>
+
 
                 <div class="form-group">
                     <label for="eventDate">🎀경조사 발생(예정)일을 선택해 주세요</label>
@@ -306,6 +315,7 @@
 
     // 모든 조건을 만족하면 ✅
     document.getElementById('inputForm').style.display = 'block';
+    document.getElementById('date_img').style.display = 'none';
   });
 
             document
