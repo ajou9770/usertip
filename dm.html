@@ -1,450 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>신협 조합원 소노호텔앤리조트(구, 대명) 이용 안내</title>
-     <!-- Bootstrap CSS -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    <!-- jQuery (Bootstrap의 JavaScript 플러그인에 필요) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="dm.css">
-    <style>
-      .modal-title {
-  color:tomato ;
-  font-size: large;
-  text-align: left;
-}
-      .modal-content {
-      text-align: center;
-}
-.modal-footer {
-    justify-content: center;
-}
-.modal-body, form-check, form-check-label {
-    color: black;
-    justify-content: center;
-    text-align: left;
-}
-.form-container {
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>신협 조합원 소노호텔앤리조트 이용 안내</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f8f9fa;
     }
-    .date-row { margin-bottom: 10px; }
-    </style>
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h4, h5 {
+      margin-top: 1.5rem;
+    }
+    .fixed-bottom-buttons {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffffee;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      border-top: 1px solid #dee2e6;
+      z-index: 999;
+    }
+    .video-toggle, .barcode-toggle {
+      cursor: pointer;
+      color: #0d6efd;
+      font-weight: 500;
+    }
+    iframe {
+      border: none;
+    }
+  </style>
 </head>
-<body onload="alert('🤷‍♀️1년이상 로그인 기록이 없는 경우 계정잠김(아이디를 찾을수 없다고 나옴)상태가 되오니, \n 아래 상담톡으로 초기화 요청하시기 바랍니다. \n 비밀번호 분실시도 마찬가지 상담톡으로 요청하세요(이메일인증 안됨)')">
-    <div class="container mt-4">
-        <video muted autoplay loop>
-            <script src="videos.js"></script>
-            </video>
-            <div style="width: 100;">
-              <!--<img src="img/sono_imgnew.jpg"><br/>
-              <a href="http://ajoucu.com"><img src="img/sono_summer_b.jpg"/></a><br/>
-              </div>-->
-              <div class="dmyung">
-                  <b>소노호텔앤리조트(구,대명) 조합원 전용(사이트) 실시간 예약 안내</b><br/>
-                         ○ 회원자격: 조합원에 한함<br/>
-                         ○ 회원아이디: 조합원번호(기등록되어 있음)<br/>
-                            <mark>※ 신규입사자는 매월 등록후 안내(카카오톡 알림톡)</mark> <br/>
-                         ○ 로그인 및 이용절차<br/><br/>
-                           <p style="text-align: left;">Step1. 아래 "조합원전용 실시간 예약사이트"로 접속</p> 
-                           Step2. 법인사코드 및 아이디(조합원번호) 비밀번호(최초,조합원번호)입력 후 로그인<br/>
-                                  🔎 "조합원번호"는 "의료원사번"으로 조회 가능(아래 참조)<br/><br/>
-                           Step3. 전국 소노호텔앤리조트 실시간 예약 (주말,공휴일은 승인 필요)<br/><br/>      
-                          
-                           <span>☞ 법인사코드:<mark>AJOUMCCU</mark><br/>
-                           ☞ 아이디: <mark>조합원번호</mark><br/> 
-                           ☞ 최초비밀번호:<mark>조합원번호(최초 로그인 후 변경필요)</mark><br/>
-                           📢 주말(공휴일)은 년간사용가능일수 소진시 예약이 제한될 수 있습니다.
-                           <br/><br/>
-                           </span>
-                           <!-- <span><mark style="background: linear-gradient(to top, mediumspringgreen 20%, transparent 30%);">✔본인의 의료원 "사원번호"로 조합원 번호를 조회하세요</mark></span><br/>
-                           <form>
-                           <input class="form-input-one" type="number" placeholder=" 사번 입력" required/>
-                           <input class="form-input-two" type="submit" value="조회하기"/>
-                           </form>
-                           <u><h3 style="color: blue;"></h3></u>
-                           <sapn> ☞ 조회된 <mark>조합원번호 (↑ ↑)</mark>를 길게 누르면 <mark>복사</mark>하실 수 있습니다.  </sapn><br/>
-                           <br/>
-                           상기 조합원번호 조회 결과(H3)를 아래 INPUT에 넣고, 복사하기
-                           <input id="memnum" value="{value}" readonly><button onclick="copy_to_clipboard()"> 조합원번호 복사하기</button>-->
-                           <iframe src="https://script.google.com/macros/s/AKfycbwNB75QcBD0m5RlJOZOXRgUC2WAfxRkvir7HPZUqq5BcJWLYHaJaSCAb06Bjo0bWjZl/exec" width="100%" height="340px"></iframe>
-                           <p>📢 "<mark>조합원번호</mark>"확인 후 아래 소노호텔앤리조트 조합원 전용 예약사이트(💻)로 접속, 로그인하신 후 이용 가능합니다 .<br/><br/>
-                           <!-- <button class="btnCopy">조합원번호 복사하기</button> -->
-                           <div class="btn btn-primary">
-                           <a href="https://iris.daemyung.com/iris/common/dispatcher/dmparse.do?menuCd=IRSMMain" onclick="sonolink()">💻 조합원전용 실시간예약 사이트 GO <i class="fas fa-chevron-right fa-lg"></i></a>
-                           </div>
-                           <p>※현재, PC버전만 운영되고 있습니다.</p>
-                            <span id="sonovideo" style="CURSOR: hand" onclick = "if(videobox.style.display==`none`)
-                              {videobox.style.display=``; sonovideo.innerText = `🎞️동영상 닫기 ▲`} else {videobox.style.display = `none`; 
-                              sonovideo.innerText = `로그인 방법 🎞️영상보기 ▼`}">로그인 방법 🎞️동영상보기 ▼</span>
-                              <div id="videobox" style="display: none"><video controls>
-                                <source src="img/SONO_video.mp4">
-                                </video></div>
-                                  <br/>
-                            <!--<img src="img/sono_login.JPG" width="600px" height="750px"/>-->
-                          
-                           ○ 조합원 년간 이용가능일: 주말(공휴일)2박, 주중5일<br/>
-                           ○ 예약방법: 전용사이트에서 실시간 예약 (단, 주말.공휴일은 관리자 승인 후 확정)<br/><br/>
-                           
-                            ✔그 외 비밀번호 초기화 등은 상담톡으로 직원에게 요청해 주세요<br/>
-                            <p>✔1년 이상 로그인이 되지 않는 경우,<mark style="color: red;">"등록되지 않은 사용자(계정휴면상태)"</mark>로 나옵니다. <br/>
-                              이런 경우는 "상담톡"으로 휴면 해제를 요청해 주세요~~~👌</p>
-                              📢 소노호텔앤리조트 계열 <mark style="background:linear-gradient(to top, gold 20%, transparent 30%)">⛳골프장 이용시 그린피 할인 (약 30%) 안내</mark><br/>
-                              ○ 할인적용 골프장: 비발디웨스트CC(9GC포함), 델피노CC (속초) 골프장 <br/>
-                              ○ 이용방법: 무기명 회원카드 일회용 바코드를 발급받아(아래 버튼) 그린피 계산시 제출.(라운딩 당일사용)<br/>
-                              ※ 무기명회원 일회용 바코드는 가급적 라운딩 전일까지 신청해 주시기 바랍니다. (공휴일 등은 바코드 발급이 어려움)<br/><br/>
-                                <span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
-                              {codebox.style.display=``; barcode.innerText = `닫기▲`} else {codebox.style.display = `none`; 
-                                barcode.innerText = `💳무기명회원 바코드 신청 하기▼`}">💳무기명회원 바코드 신청 하기 ▼</span>
-                              <div id="codebox" style="display: none">
-                              <!--  <div class="container my-5" style="max-width: 800px;">
-    <div class="form-container">
-      <h5 class="text-center mb-4" style="color: black;">🏌 무기명회원 바코드 신청</h5>
-      <form id="golfForm">
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="이름을 입력하세요" id="name" required>
-        </div>
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="사번 또는 조합원번호" id="employeeId" required>
-        </div>
-        <div class="mb-3">
-                    <input type="tel" class="form-control" placeholder="핸드폰번호(숫자만)" id="contact" required>
-        </div>
+<body>
+  <div class="container">
+    <h4>🏨 소노호텔앤리조트(구. 대명) 조합원 이용 안내</h4>
+    <p>✔️ <strong>회원자격:</strong> 조합원에 한함<br/>
+       ✔️ <strong>아이디:</strong> 조합원번호 (신규 입사자는 매월 등록)<br/>
+       ✔️ <strong>법인사코드:</strong> <mark>AJOUMCCU</mark> / <strong>초기 비밀번호:</strong> 조합원번호</p>
 
-        <label class="form-label" style="color: black;">⛳ 골프장이용 날짜 및 인원</label>
-        <div id="dateContainer"></div>
-        <button type="button" class="btn btn-outline-success btn-sm my-2" onclick="addDateRow()">➕ 추가</button>
+    <h5>📌 이용 절차</h5>
+    <ol>
+      <li>아래 예약사이트 접속</li>
+      <li>법인사코드/아이디(조합원번호)/비밀번호 입력 후 로그인</li>
+      <li>전국 리조트 실시간 예약 (주말/공휴일은 승인 필요)</li>
+    </ol>
 
-        <div class="mb-3">
-          <label for="comment" class="form-label" style="color: black;">📝기타 문의사항</label>
-          <textarea class="form-control" id="comment" rows="2"></textarea>
-        </div>
+    <p>🔍 <strong>조합원번호(의료원 사번 기반)</strong> 조회</p>
+    <iframe src="https://script.google.com/macros/s/AKfycbwNB75QcBD0m5RlJOZOXRgUC2WAfxRkvir7HPZUqq5BcJWLYHaJaSCAb06Bjo0bWjZl/exec" width="100%" height="300"></iframe>
 
-        <button type="submit" id="submitBtn" class="btn btn-primary w-100">📨 신청하기</button>
-        <div id="alertBox" class="alert mt-3 d-none" role="alert"></div>
-      </form>
+    <div class="mt-4">
+      <a href="https://iris.daemyung.com/iris/common/dispatcher/dmparse.do?menuCd=IRSMMain" class="btn btn-primary w-100" onclick="alert('📢 PC화면에 최적화되어 있습니다. 모바일은 확대하여 보세요.')">
+        💻 조합원전용 실시간예약 사이트 GO
+      </a>
+      <p class="text-muted mt-2">※ 현재는 PC 웹에서만 정식 지원됩니다.</p>
     </div>
-  </div> -->
-  <iframe src="https://script.google.com/macros/s/AKfycbzrVFvixD4M5eybdEIrYwsOFJAC10-hAOY03rmbNySGOBm-iOaJWp4LYO-ZBaiMssVTTA/exec" width="100%" height="750px">무기명회원바코드신청</iframe>
 
-                              </div>
-                              <br/>
-                              <!-- <iframe src="https://script.google.com/macros/s/AKfycbzrVFvixD4M5eybdEIrYwsOFJAC10-hAOY03rmbNySGOBm-iOaJWp4LYO-ZBaiMssVTTA/exec" width="100%" height="750px">무기명회원바코드신청</iframe> -->
-                              <div class="btn btn-info">
-                                <a href="https://www.sonofelicecc.com/rsv.choice.dp/dmparse.dm"> ⛳소노펠리체 골프클럽 홈페이지 <i class="fas fa-chevron-right fa-lg"></i></a>
-                                </div><br/>
-                              <a href ="https://www.samaksancablecar.com/home/">📢 <mark style="background:linear-gradient(to top, gold 20%, transparent 30%)">춘천 삼악산 호수케이블카상시 할인(20%) 안내 </a></mark><br/>
-                              ○ 삼악산 케이블카 이용계획이 있는 조합원께서는 신협에서 무기명 회원카드를 대여받아(인원수대로) 방문 바랍니다.<br/>
-                                단, 홍천 비발디, 양평, 속초 델피노 투숙객은 예약문자 또는 객실영수증으로 할인 가능. <br/><br/> 
-                                <div class="btn btn-info">
-                                  <a href="https://www.samaksancablecar.com/home/"> ⛺삼악산 호수케이블카 홈페이지 <i class="fas fa-chevron-right fa-lg"></i></a>
-                                  </div><br/>
-                                  <div class="call">
-                                <span onclick="callon()" style="color: black; font-family: Arial, Helvetica, sans-serif;">📞 문의(전화걸기) ☎ 219-4939,6438</span><br/>
-                              </div>
-                              </div>
-                    <!--링크 버튼2개-->
-                      <!-- 상단 링크 버튼 1 -->
-  <a id="link1" class="fixed-btn" href="#">🔗제휴금호리조트</a>
+    <div class="video-toggle mt-3" onclick="toggleBox('videoBox', this)">
+      🎞️ 로그인 방법 영상 보기 ▼
+    </div>
+    <div id="videoBox" style="display:none;" class="mt-2">
+      <video controls class="w-100 rounded">
+        <source src="img/SONO_video.mp4" type="video/mp4">
+        동영상을 지원하지 않는 브라우저입니다.
+      </video>
+    </div>
 
-  <!-- 상단 링크 버튼 2 -->
-  <a id="link2" class="fixed-btn" href="https://cuhs.cu.co.kr/index.do" target="_blank">🏝신협제주연수원</a>
+    <h5 class="mt-4">⛳ 골프장 그린피 할인 안내</h5>
+    <p>✔️ 비발디웨스트CC, 델피노CC 사용 가능<br/>
+       ✔️ 무기명회원 바코드 발급 필요 (당일 라운딩용)</p>
 
-                    <div id="icon">
-                      <div
-            id="kakao-talk-channel-chat-button"
-            data-channel-public-id="_dfhkK"
-            data-title="consult"
-            data-size="small"
-            data-color="yellow"
-            data-shape="mobile"
-            data-support-multiple-densities="true"
-          ></div></div>
-                <a href="https://ajou9770.github.io/usertip/" class="btn btn-secondary"><i class="fas fa-chevron-left fa-lg"></i>  이전(홈)화면으로 돌아가기</a>
-              </div>
-              <br/>
-              <br/>
-              <!-- Modal 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h4 class="modal-title" id="myModalLabel" style="font-size: larger; font-weight: 600;">🎉제주 신협 연수원 여름성수기 추점신청 안내!</h4>
-                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
-                      <!-- <span aria-hidden="true">&times;</span> 
-                  </button>
-              </div>
-              <div class="modal-body" style="color: black; text-align: left;">
-                  <p> 
-                    다가오는 여름 성수기(7~8월) 제주여행을 계획하시는 분들은 지난달에 오픈한 신협 제주연수원을 이용해 보세요
-                    여름성수기는 추첨을 통해 이용하실 수 있습니다. <br><br>
-                    🚩이용기간: 2025.7.5(토)~8.31(일) / 58일간<br>
-                    📅신청기간: 2025.4.28(월) 09:00~5.9(금) 24:00 <br>
-                    📝신청가능일수(객실): 2박3일(2실) 또는 4박5일(1실)<br>
-                    📌당첨발표: 2025.5.14(수) 11:00 (예약확정 안내 개별 발송)<br>
-                    <a href="https://cuhs.cu.co.kr/index.do" target="_blank"><button class="btn btn-outline-info btn-sm">🏘️제주연수원 둘러보기</button> </a>
-                    <hr>
-                      <a href="https://form.naver.com/response/NiPP0vr7ciyPkhsrr170BA">
-                      <button class="btn-outline-primary box-shadow" onclick="alert('💁🏻‍♀️아주대의료원신협 인가번호는 03-239입니다. \n조합원번호는 이페이지에서 조회하실 수 있습니다.')">
-                      ✔️성수기 이용신청</button>
-                      </a>
-                  </p>
-                  
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="dontShow">
-                <label class="form-check-label" for="dontShow" style="color: black;">하루동안 안보기</label>
-            </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-              </div>
-          </div>
-      </div>
-  </div>-->
-              <!--모달창-->
-                <!-- <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-                            
-                        <!-- </div>
-                        <div class="modal-body" style="text-align: center;">
-                          <span class="modal-title" id="welcomeModalLabel">🚩신협-금호리조트 업무 제휴 할인 안내!</span><br>
-                          2025년 객실 및 시설 제휴 할인에 따른 전국 금호리조트 객실 및 스파비스 등 시설을 이용하실 때 할인 받으실 수 있습니다.<br>
-                          아래 사이트에서 객실예약 및 아산 스파비스 할인 입장권(18,000원)을 구매하실 수 있습니다.  <br><br>
-                          🏝️이용리조트: 통영/제주/화순/설악/아산스파포레 <br>
-                          🤿 스파 : 아산 스파비스<br>
-                          📅 이용기간: 2025.5월 ~ 12월 <br><br>
-                          
-                          <a class="btn btn-outline-info btn-link" href="#" id="roomLink">📱 객실 예약 하기</a><br>
-                          <a class="btn btn-outline-info btn-link" href="#" id="ticketLink">📱 할인 입장권 구매</a>
-                          </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary btn-sm" id="dontShowAgain">⏱하루 동안 안볼래요</button>
-                            <button type="button" class="btn btn-warning btn-sm" data-bs-dismiss="modal">닫기</button>
-                        </div>
-                    </div>
-                </div>
-              </div> -->
-            </body>
-              <!-- Bootstrap JS -->
-             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="barcode-toggle" onclick="toggleBox('barcodeBox', this)">
+      💳 무기명회원 바코드 신청하기 ▼
+    </div>
+    <div id="barcodeBox" style="display:none;" class="mt-2">
+      <iframe src="https://script.google.com/macros/s/AKfycbzrVFvixD4M5eybdEIrYwsOFJAC10-hAOY03rmbNySGOBm-iOaJWp4LYO-ZBaiMssVTTA/exec" width="100%" height="750px"></iframe>
+    </div>
 
-            
-<script>
-    function addDateRow() {
-      const container = document.getElementById("dateContainer");
-      const row = document.createElement("div");
-      row.className = "row date-row";
-      row.innerHTML = `
-        <div class="col-md-6">
-          <input type="date" class="form-control" name="date" required>
-        </div>
-        <div class="col-md-4">
-          <input type="number" class="form-control" name="attendees" min="1" placeholder="참석인원" required>
-        </div>
-        <div class="col-md-2">
-          <button type="button" class="btn btn-danger btn-sm" onclick="this.closest('.date-row').remove()">❌</button>
-        </div>
-      `;
-      container.appendChild(row);
+    <h5 class="mt-4">🚠 삼악산 호수케이블카 상시 할인</h5>
+    <p>✔️ 신협 무기명 회원카드 제시 시 20% 할인<br/>
+       ✔️ 홍천/양평/속초 투숙자는 예약 문자 또는 영수증으로 대체 가능</p>
+    <a href="https://www.samaksancablecar.com/home/" class="btn btn-outline-success w-100 mt-2" target="_blank">
+      ⛺ 삼악산 호수케이블카 홈페이지
+    </a>
+
+    <div class="mt-4 text-center">
+      <span class="d-block mb-2">📞 문의: <a href="tel:031-219-4939">031-219-4939</a>, <a href="tel:031-219-6438">6438</a></span>
+      <div id="kakao-talk-channel-chat-button"
+           data-channel-public-id="_dfhkK"
+           data-title="consult"
+           data-size="small"
+           data-color="yellow"
+           data-shape="mobile"
+           data-support-multiple-densities="true"></div>
+    </div>
+  </div>
+
+  <!-- 하단 고정 버튼 -->
+  <div class="fixed-bottom-buttons">
+    <a id="link1" class="btn btn-outline-primary">
+      🏨 금호리조트 제휴
+    </a>
+    <a id="link2" class="btn btn-outline-dark" href="https://cuhs.cu.co.kr/index.do" target="_blank">
+      🏝 신협 제주연수원
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function toggleBox(id, el) {
+      const box = document.getElementById(id);
+      if (box.style.display === 'none') {
+        box.style.display = 'block';
+        el.innerText = el.innerText.replace('▼', '▲');
+      } else {
+        box.style.display = 'none';
+        el.innerText = el.innerText.replace('▲', '▼');
+      }
     }
 
-    document.getElementById("golfForm").addEventListener("submit", async function (e) {
+    function isMobile() {
+      return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    document.getElementById("link1").addEventListener("click", function(e) {
       e.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const employeeId = document.getElementById("employeeId").value.trim();
-      const contact = document.getElementById("contact").value.trim();
-      const comment = document.getElementById("comment").value.trim();
-      const dates = [...document.getElementsByName("date")].map(el => el.value);
-      const attendees = [...document.getElementsByName("attendees")].map(el => el.value);
-
-      if (!confirm("⛳ 입력하신 내용을 다시한번 확인해 주세요.  \n 이대로 신청하시겠습니까?")) return;
-
-      const payload = {
-        name,
-        employeeId,
-        contact,
-        comment,
-        dates,
-        attendees
-      };
-
-      const alertBox = document.getElementById("alertBox");
-      const submitBtn = document.getElementById("submitBtn");
-      alertBox.classList.add("d-none");
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = "⛳ 신청중...";
-
-      try {
-        const res = await fetch("https://script.google.com/macros/s/AKfycbzrVFvixD4M5eybdEIrYwsOFJAC10-hAOY03rmbNySGOBm-iOaJWp4LYO-ZBaiMssVTTA/exec", {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-
-        alertBox.classList.remove("d-none");
-        alertBox.classList.add("alert-success");
-        alertBox.textContent = "✅ 신청이 성공적으로 접수되었습니다!";
-        document.getElementById("golfForm").reset();
-        document.getElementById("dateContainer").innerHTML = '';
-        addDateRow();
-      } catch (error) {
-        alertBox.classList.remove("d-none");
-        alertBox.classList.add("alert-danger");
-        alertBox.textContent = "❌ 신청 중 오류가 발생했습니다. 다시 시도해 주세요.";
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = "📨 신청하기";
-      }
+      const url = isMobile()
+        ? "https://m.kumhoresort.co.kr/groupcp/company/cu.asp"
+        : "https://www.kumhoresort.co.kr/reservation/tcompany/company/cu.html";
+      window.open(url, "_blank");
     });
 
-    window.onload = function () {
-      document.getElementById("dateContainer").innerHTML = '';
-      addDateRow();
-    }
+    window.kakaoAsyncInit = function () {
+      Kakao.Channel.createChatButton({
+        container: "#kakao-talk-channel-chat-button",
+      });
+    };
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://developers.kakao.com/sdk/js/kakao.channel.min.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "kakao-js-sdk");
   </script>
-
-
-             <script>
-  // 모바일인지 확인
-  function isMobile() {
-    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  }
-
-  // 객실 예약 버튼 클릭 시
-  document.getElementById("link1").addEventListener("click", function(e) {
-    e.preventDefault();
-    const url = isMobile()
-      ? "https://m.kumhoresort.co.kr/groupcp/company/cu.asp" // 모바일용
-      : "https://www.kumhoresort.co.kr/reservation/tcompany/company/cu.html"; // PC용
-    window.open(url, "_blank");
-  });
-
-  // 입장권 구매 버튼 클릭 시
-  document.getElementById("ticketLink").addEventListener("click", function(e) {
-    e.preventDefault();
-    const url = isMobile()
-      ? "http://m.spavis.co.kr/spacompany/cpindex.asp?cpCode=413180"
-      : "https://www.spavis.co.kr/spacp/index.asp?cpCode=413180";
-    window.open(url, "_blank");
-  });
-</script>
-
-
-             <script>
-              $(document).ready(function() {
-                  // Check if the modal should be shown
-                  if (!localStorage.getItem('hideModal')) {
-                      $('#myModal').modal('show');
-                  }
-      
-                  // Set localStorage when checkbox is clicked
-                  $('#dontShow').click(function() {
-                      if ($(this).is(':checked')) {
-                          // Hide modal for 1 day
-                          const hideUntil = new Date();
-                          hideUntil.setDate(hideUntil.getDate() + 1);
-                          localStorage.setItem('hideModal', hideUntil.getTime());
-                      } else {
-                          localStorage.removeItem('hideModal');
-                      }
-                  });
-      
-                  // Close the modal and apply the setting
-                  $('.close, .btn-secondary').click(function() {
-                      if ($('#dontShow').is(':checked')) {
-                          const hideUntil = new Date();
-                          hideUntil.setDate(hideUntil.getDate() + 1);
-                          localStorage.setItem('hideModal', hideUntil.getTime());
-                      }
-                      $('#myModal').modal('hide');
-                  });
-              });
-      
-              // Check and clear the hideModal flag if expired
-              const hideUntil = localStorage.getItem('hideModal');
-              if (hideUntil) {
-                  const now = new Date().getTime();
-                  if (now > hideUntil) {
-                      localStorage.removeItem('hideModal');
-                  }
-              }
-          </script>
-              <script>
-               $(document).ready(function() {
-                // 쿠키 확인
-                if (!document.cookie.includes("modalShown=true")) {
-                    $('#welcomeModal').modal('show');
-                }
-                $('#dontShowAgain').click(function() {
-                    // 쿠키 설정 (하루 동안 유지)
-                    document.cookie = "modalShown=true; max-age=86400";
-                    $('#welcomeModal').modal('hide');
-                });
-              }); 
-                </script> 
-              <script>
-                function sonolink() {
-                  alert("📢 이 사이트는 💻pc 버전으로 모바일로 접속시 화면을 확대하여 보세요, \n 🤷‍♂️1년이상 로그인 하지 않은 경우 휴먼 전환됩니다. 휴먼해제는 신협으로 요청 바랍니다")
-                }
-                function linkinfo() {
-                  alert("📢 로그인 방법 등을 자세히 읽어 보신 후 아래, '💻조합원 전용 예약 사이트'로 접속하시기 바랍니다. .")
-                }
-              </script>
-              <script>  
-                function callon() {
-                  if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞연결 할까요?")) {
-                    document.location.href = "tel:031-219-6052"
-                } else {
-                  console.log("canceled")
-                }
-               }                
-              </script>
-              <script src="https://kit.fontawesome.com/a66ded67ea.js" crossorigin="anonymous"></script>
-              <script>
-                  window.kakaoAsyncInit = function() {
-                    Kakao.Channel.createChatButton({
-                      container: '#kakao-talk-channel-chat-button',
-                    });    
-                  };
-                 
-                  (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
-                    fjs.parentNode.insertBefore(js, fjs);
-                  })(document, 'script', 'kakao-js-sdk');
-                </script>
-                                <script>
-                    const memnum = document.querySelector("h3");
-          
-                    function copy_to_clipboard() {
-          
-                    var copyText = document.getElementById("memnum");
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999);
-                    document.execCommand("copy");
-                    alert("복사되었습니다. 예약사이트로 이동하여 로그인 폼에 붙여넣어세요");
-                  }
-                </script>
-    </div>
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
