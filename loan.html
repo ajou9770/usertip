@@ -1,236 +1,111 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <title>의료원 신협 대출 안내</title>   
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet", href="loan.css">
-    <style>
-      #loanbox {
-        background-color: rgb(10, 54, 117);
-        color: whitesmoke;
-        box-shadow: 0px 4px 8px grey;
-        border-radius: 10px;
-      }
-      img {
-        box-shadow: 0px 3px 6px gray;
-      }
-    </style>
-    </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📋 의료원신협 대출안내</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      padding-bottom: 80px;
+    }
+    .content-box {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .btn-custom {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .fixed-bottom {
+      z-index: 1030;
+    }
+    #loanbox {
+      display: none;
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
 <body>
-    <div>
-    <div id="subtitle_css">    
-    의료원신협 대출안내
-    </div><br/>
-    <!--<div style="background: wheat; padding: 10px;">
-    <h2 style="color:#114657"> 🎉 대출특판행사 (~ 5.31까지, 20억원 한도) </h2>
-    <img src="img/loanevent_loan_html.jpg"/>
-    </div>-->
-    <div class="content"> 
-    <p># 대출자격: 아주대학교(의료원)정규직 조합원 <br/>
-    <br/># 대출금리 (변경일자, 2025.5.7일부~ ) <br/>
-              ▶ 최저금리 : 4.6% ~ (신입교직원 최초 4.1% ~)<br/> 
-              ▶ 기준금리: 4.6% ~<br/>
-              ▶ 마이너스통장 : 5.1%~ (신입교직원 최초 4.6%~) <br/>
-              ※ 적용 기준 기본 조건(선적용): 급여이체 및 참조합원 으뜸이 기준<br/><br/>
-              <span id="loancode" style="CURSOR: hand" onclick = "if(loanbox.style.display==`none`)
-                    {loanbox.style.display=``; loancode.innerText = `대출금리표 닫기▲`} else {loanbox.style.display = `none`; 
-                      loancode.innerText = `📉대출금리표 보기▼`}">📉대출 금리표 보기 ▼</span>
-                    <div id="loanbox" style="display: none">
-                      <h3> [ 시행일자: 2025.5.7 ~ ]</h3>
-                      <table>
-                        <tr style="border-bottom: double;"> 
-                        <th> 구분 
-                          <td>상품명</td><td>이자변동주기</td><td>금리(우대)</td><td>비고(우대조건)</td>
-                        <tr></th>
-                        <tr><th> 일반대출<td>일시상환</td><td>3개월<br/>6개월<br/>
-                           12개월<br/>고정금리</td><td>
-                            최저 4.6% ~<br/>
-                            최저 4.7% ~<br/>
-                            최저 4.8% ~<br/>
-                            최저 4.9% ~</td>
-                        </th><td>#우대금리 조건</td>
-                        </tr>
-                        <tr>
-                          <th>일반대출<td>분할상환</td><td>3개월<br/>6개월<br/>
-                            12개월<br/>고정금리</td><td>
-                             최저 4.6% ~<br/>
-                             최저 4.7% ~<br/>
-                             최저 4.8% ~<br/>
-                             최저 4.9% ~</td>
-                           <td># 우대금리 조건</td>
-                         </th>
-                         </tr>
-                         <th>수시 
-                          <td>자립대월<br/>(마이너스통장)</td><td>3개월<br/>
-                            6개월<br/>
-                            12개월<br/> 
-                          </td><td>최저 5.1% ~<br/>
-                               최저 5.2%~<br/>
-                               최저 5.3%~</td>
-                               <td># 우대금리 조건</td>
-                        </th></tr>
-                         </table>
-                         <h5><b>🎉<mark>신입교직원</mark>은 최초 대출시 상기 금리에서 <mark>-0.5 우대이율</mark>이 적용됩니다</b><br/> 
-                          # 가산금리: 신용등급, 급여이체, 참조합원 등급에 따른 +0.2% ~ +1.0% 가산됨</h5>
-                    </div>
-              <div style="display: inline-block; font-size: 30px; font-weight: 600;">📢 금리조건변경신청 안내<br/><hr>
-                ▷ <mark style="background:linear-gradient(to top, yellow 20%, transparent 30%)">대출기간중 참조합원 등급 상승</mark>
-              (일반-> 도움이, 도움이->믿음이, 믿음이->으뜸이)이 된 경우, <mark style="background:linear-gradient(to top, yellow 20%, transparent 30%)">0.2% ~ 0.6% 우대</mark> 금리 적용
-                <br/>▷ 신청방법: 아래, 신협 모바일 <a href="https://ajou9770.github.io/usertip/event/onbank_link.html">온뱅크(클릭!)</a> > 대출계좌>계좌관리>금리인하요구신청) 또는 신협창구</mark><br/>
-                  <hr>
-                  
-
-                  <div id="box_btn">
-                      <a id="onbank_Link" href="https://ajou9770.github.io/usertip/loan"><img src="img/onbankgo.JPG" style="border-radius: 10px; border: double gray 2px;"></a>
-                  </div>
-             <hr>
-            </div>
-         # 대출 한도 : 최대 1억 9천만원 이내 [단, 개인별 신용평점에 따라 한도는 변경될 수 있음] <br/>
-              ▶ 신용대출 : 연봉 범위내 최대 1억원 <br/>
-              ▶ 생활안정(보증보험): 최대 9천만원 이내<br/><br/>
-         ☆ 신입 교직원 조합원 : 최대 9천만원(정규직 발령시)<br/> 
-              ▶ 신용대출 : 3천만원 <br/>
-              ▶ 생활안정(보증보험)대출: 6천만원 이내<br/><br/>    
-        <!--<mark style="background:linear-gradient(to top, yellow 20%, transparent 30%)">※단, 조합의 감독예대율 비율에 따라, 대출한도가 일시적으로 제한 될 수 있습니다.</mark><br/><br/>-->  
-        ☞ 대출은 이용고배당으로 약 0.5%를 돌려 받으실 수 있습니다.<br/>
-        ▶대출관련 이용고배당: 대출금평잔의 약0.23% + 간접(체크카드, 자동이체 등)실적 약 0.27%<br/><br/>    
-        # 대출기간: 5년 이내(만기 후 재연장 또는 재대출 가능)<br/><br/>
-        # 상환방법: 일시상환 또는 원금균등분할 <br/>
-           (중도상환방법: 모바일 온뱅크에서 직접상환 또는 조합으로 유선 요청)<br/><br/>
-        # 중도상환수수료: 없음<br/><br/>
-        # 인지세: 1억원까지 면제<br/>
-<div class="dropdown">
-  <button class="dropbtn" id="imgbtn">🧮셀프 대출계산기 🖱️ </button>
-  <div class="dropdown-content">
-    <!-- <a href="http://ajou9770.github.io/notice/loanlimit.html">🔎대출한도계산기</a> -->
-    <a href="http://ajou9770.github.io/notice/loanrate.html">🔎대출원리금(이자)계산기</a>
-    <!-- <a href="http://ajou9770.github.io/notice/loaninsu.html">🔎보증대출 보험료계산기</a> -->
-    <a href="http://ajou9770.github.io/notice/sgicsign.html">🔎보증보험개인정보동의방법</a>
-</div>
-</div>
-
-<br/><br/><br/><br/>
-
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfe26GlXafCN3Tr2ekEg4TE1jFyuReYn_Je0kMie4tZznIzig/viewform?usp=sf_link">✔️사전 대출한도 및 금리등 조회 요청하기▶️ </a>
-<h4>☞ 현재, 본인의 대출 현황(금리 등)조회 또는 대출금 중도 (일부 또는 전부) 상환은 신협모바일 "<a href="https://ajou9770.github.io/usertip/event/onbank_link.html">온뱅크</a>"를 이용바랍니다.</h4>
-<div id="box_btn">
-
- </div><br/>
-       
-                <div id="icon">
-                <div
-      id="kakao-talk-channel-chat-button"
-      data-channel-public-id="_dfhkK"
-      data-title="consult"
-      data-size="large"
-      data-color="yellow"
-      data-shape="mobile"
-      data-support-multiple-densities="true"
-    ></div></div>
-              <a href="https://ajou9770.github.io/usertip/" class="backButton" style="color: whitesmoke;"><i class="fas fa-chevron-left fa-lg"></i>  이전(홈)화면으로 돌아가기</a>
-    <br/>
+  <div class="container mt-4">
+    <div class="content-box">
+      <h4 class="text-primary mb-3"><i class="fas fa-hand-holding-usd"></i> 의료원신협 대출 안내</h4>
+      <ul>
+        <li><strong>대출자격:</strong> 아주대학교(의료원) 정규직 조합원</li>
+        <li><strong>최저금리:</strong> <span class="badge bg-warning text-dark">4.3%</span> ~ <small>(신입: <span class="badge bg-success text-light">3.8%</span> ~)</small></li>
+        <li><strong>한도:</strong> 최대 1억 9천만 원</li>
+        <li><strong>중도상환수수료:</strong> 없음</li>
+      </ul>
+      <hr/>
+      <p>
+        ▶ 대출 금리표 및 세부 안내는 아래 '📉 금리표 보기' 버튼을 참고해주세요.<br/>
+        ▶ 금리 조건 변경, 상환 방식, 우대 이율 등도 함께 설명되어 있습니다.
+      </p>
+      <button id="loancode" class="btn btn-outline-primary w-100">
+        <i class="fas fa-chart-line"></i> 📉 대출 금리표 보기 ▼
+      </button>
+      <div id="loanbox">
+        <h5>[시행일자: 2025.6.20~]</h5>
+        <ul>
+          <li>일시(분할)상환: <span class="badge bg-warning text-dark">최저 4.3%</span> ~</li>
+          <li>마이너스통장: <span class="badge bg-warning text-dark">최저 4.8%</span> ~</li>
+        </ul>
+      </div>
+     <div class="container">
+      <div class="content-box text-center">
+        <h5 class="mb-3"><i class="fas fa-calculator"></i> 셀프 대출 계산기</h5>
+        <div class="d-grid gap-2">
+          <a class="btn btn-outline-success" href="http://ajou9770.github.io/notice/loanlimit.html" target="_blank">🔎 대출한도 계산기</a>
+          <a class="btn btn-outline-success" href="http://ajou9770.github.io/notice/loanrate.html" target="_blank">🔎 대출 원리금(이자) 계산기</a>
+          <a class="btn btn-outline-success" href="http://ajou9770.github.io/notice/loaninsu.html" target="_blank">🔎 보증대출 보험료 계산기</a>
+          <a class="btn btn-outline-info" href="http://ajou9770.github.io/notice/sgicsign.html" target="_blank">🔎 보증보험 개인정보동의 방법</a>
+        </div>
+      </div>
     </div>
-  <!--온뱅크 디바이스 식별 연결-->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var linkElement = document.getElementById("onbank_Link");
-  
-    if (/Android/i.test(navigator.userAgent)) {
-      linkElement.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
-    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      linkElement.href = "https://apps.apple.com/kr/app/id1484456647";
-    } else if (/Windows/i.test(navigator.userAgent)) {
-      linkElement.href = "http://cu.co.kr";
-    } else {
-      linkElement.href = "http://ajou9770.github.io/usertip/draw";
-    }
-  });
-  </script>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  <div class="fixed-bottom text-center p-2 bg-light border-top shadow">
+    <a id="onbank_Link" class="btn btn-warning btn-lg btn-custom">
+      <i class="fas fa-mobile-alt"></i>💦 신협 모바일온뱅크 바로가기
+    </a>
+  </div>
 
   <script>
-    function modal_click() {
-      console.log("Modal 창 클릭~~~")
-      modal.classList.remove("none");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+      const link = document.getElementById("onbank_Link");
+      const toggleBtn = document.getElementById("loancode");
+      const loanBox = document.getElementById("loanbox");
 
-    function Ipon() {
-    if (window.confirm("아이폰계열 모바일 앱 설치화면으로 이동합니다")) {
-    document.location.href ="https://apps.apple.com/kr/app/id1484456647"; 
-    } else {
-        alert("취소하였습니다");
-    }
-    }
-    function Google() {
-    if (window.confirm("안드로이드(구글)계열 모바일 앱 설치화면으로 이동합니다")) {
-    document.location.href ="https://play.google.com/store/apps/details?id=kr.co.cu.onbank"; 
-    } else {
-        alert("취소하였습니다");
-    }
-   }
-   function Cancel() {
-    modal.classList.add("none"); 
-   }
-   /*-- window.conform 문구-- 
-     function Cancel() {
-    if (window.confirm("✔️모바일 앱 설치(열기)를 취소할까요?")) {
-     modal.classList.add("none"); 
-    } else {
-        modal.classList.remove("none");  
-    }
-   }*/
+      if (/Android/i.test(navigator.userAgent)) {
+        link.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+      } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        link.href = "https://apps.apple.com/kr/app/id1484456647";
+      } else {
+        link.href = "https://cu.co.kr";
+      }
+
+      toggleBtn.addEventListener("click", function () {
+        const isHidden = loanBox.style.display === "none" || loanBox.style.display === "";
+        loanBox.style.display = isHidden ? "block" : "none";
+        toggleBtn.innerHTML = isHidden
+          ? '<i class="fas fa-times-circle"></i> ❌ 대출 금리표 닫기 ▲'
+          : '<i class="fas fa-chart-line"></i> 📉 대출 금리표 보기 ▼';
+      });
+    });
   </script>
-  <script>  
-    function callon() {
-      if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞연결 할까요?")) {
-        document.location.href = "tel:031-219-6052"
-    } else {
-      alert("취소되었습니다~~")
-    }
-   } 
-   function google() {
-      if (window.confirm("모바일앱을 열기위해 구글앱스토어로 이동할까요?")) {
-        document.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank"
-    } else {
-      alert("취소되었습니다~~")
-    }
-   }
-   function apple() {
-      if (window.confirm("모바일앱을 열기위해 '애플스토어'로 이동할까요?")) {
-        document.location.href = "https://apps.apple.com/kr/app/id1484456647"
-    } else {
-      alert("취소되었습니다~~")
-    }
-   }                 
-  </script>
-    <script
-    src="https://kit.fontawesome.com/6478f529f2.js"
-    crossorigin="anonymous"
-    ></script>
-    <script>
-        window.kakaoAsyncInit = function() {
-          Kakao.Channel.createChatButton({
-            container: '#kakao-talk-channel-chat-button',
-          });    
-        };
-       
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        })(document, 'script', 'kakao-js-sdk');
-      </script>
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
-        </style> 
-      <!--<script>
-      alert(" 정부의 가계부채 관리계획에 따라 DSR(총부채상환비율) 50%~60%이내, 연간(근로)소득범위내 등 대출 한도가 축소 되오니 참고 바라며 자세한 사항은 신협으로 문의 바랍니다.")</script>-->
-</body>   
+</body>
 </html>
