@@ -1,437 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>의료원신협 가입방법</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <script 
-    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
-    </script>
-    <script>
-        $(document).ready(function(){
-            $("#item").click(function() {
-                $("#codebox").show("slow");
-                $("#item_Close").show(2000);
-                $("#item").hide("slow");  // 펼치기 클릭시 paner & 접기 버튼보이고
-                // 펼치기 버튼은 숨기기
-            });
-            $("#item_Close").click(function() {
-                $("#codebox").hide("slow");
-                $("#item").show("slow");
-                $("#item_Close").hide("slow"); // 접기 클릭시 panel & 접기 버튼 숨기고, 
-                 // 펼치기 버튼은 보여주기. 
-            });
-            $("#item2").click(function() {
-                $("#loanbox").show("slow");
-                $("#item2_Close").show(2000);
-                $("#item2").hide("slow");  // 펼치기 클릭시 paner & 접기 버튼보이고
-                // 펼치기 버튼은 숨기기
-            });
-            $("#item2_Close").click(function() {
-                $("#loanbox").hide("slow");
-                $("#item2").show("slow");
-                $("#item2_Close").hide("slow"); // 접기 클릭시 panel & 접기 버튼 숨기고, 
-                 // 펼치기 버튼은 보여주기. 
-            });
-        });
-    </script> 
-    <style>
-      body {
-          font-family: Arial, Helvetica, sans-serif;
-          background-color: #f4f4f4;
-          margin: 0;
-          padding: 0;
-      }
-      .top {
-          background-color: #e0e0e0;
-          padding: 20px;
-          text-align: center;
-          font-size: 24px;
-      }
-      .content {
-          background-color: #ffffff;
-          padding: 20px;
-          margin: 20px;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      button, .w3-button {
-          background-color: #4CAF50;
-          color: white;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          margin: 10px 0;
-          text-decoration: none;
-      }
-      button:hover, .w3-button:hover {
-          background-color: #45a049;
-      }
-      table {
-          width: 100%;
-          border-collapse: collapse;
-      }
-      table, th, td {
-          border: 1px solid #ddd;
-          padding: 8px;
-      }
-      th {
-          background-color: #f2f2f2;
-      }
-      .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-a {
-  text-decoration: none;
-  color: #f2f2f2;
-}
-#item_Close {
-  display: none;
-  width: 40%;
-  box-shadow: 0px 6px 12px 0px grey;
-}
-#item2_Close {
-  display: none;
-  width: 40%;
-  box-shadow: 0px 6px 12px 0px grey;
-}
-      /* ... 기타 필요한 스타일 ... */
-  </style> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>의료원신협 가입안내</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .top {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .content {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      margin-top: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .btn-custom {
+      margin: 1rem 0;
+    }
+    .section-toggle {
+      cursor: pointer;
+      color: #0d6efd;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #dee2e6;
+      padding: 0.75rem;
+    }
+    th {
+      background-color: #f1f3f5;
+    }
+    .modal-content {
+      border-radius: 1rem;
+    }
+    .app-image {
+      border-radius: 1rem;
+      border: 2px double #adb5bd;
+      box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+      width: 200px;
+      height: 100px;
+    }
+  </style>
 </head>
 <body>
-    <div>
-    <div class="top">    
-    신협 가입 및 예적금 개설 안내
-    </div><br/>
-    <div class="content"> 
-      <p>▶ 위치: 병원 본관 지하2층 (유전체자원센타 옆)<br/>
-        <mark style="background:linear-gradient(to top, yellow 20%, transparent 30%)">✔ 비대면온라인가입신청 : 💻신협온뱅크(아래에서 설치)에서도 조합원가입 가능합니다(입출금통장우선개설 => 가입신청 => 승인 => 가입 완료)</mark><br/>
-        ▶ 필요 서류: 신분증<br/>
-           ※ 주민등록증 또는 운전면허증 등 공인신분증<br/>
-        ▶ 출자금 초입금: 최소(1구좌)5,000원~최대(20구좌)10만원<br/>
-           ※ 월납입한도(20구좌) 10만원 / 최대 납입한도 2,000만원<br/>
-            ==> 현금 또는 계좌이체로 입금 가능<br/>
-        ▶ 출자 배당금: 매년2월 지급(3%내외/비과세)<br/><br/>
-        ☞ 가입 및 상담 (신협):<span onclick="callon()">📞 219-6052, 6971<br/><br/>
-          ✔ 아래, 신협 모바일 앱 "온뱅크"설치하시면 조합원 가입 및 예적금 개설을 비대면으로 진행하실 수 있습니다.</span></p>
-         <button onclick="join()" style="background-color: dodgerblue; color: whitesmoke;">📑온라인 (가입)출자금 개설 신청<i class="fas fa-chevron-right fa-lg"></i></button>
-          <br>
-          <!-- <img src="img/onbankgo.JPG" style="border-radius: 10px; width:200px; height:100px; border: double gray 2px; box-shadow: 0px 6px 12px 0px grey;" onclick="openModal()" id="imgbtn"/> -->
-          <a id="onbank_Link" href="http://ajou9770.gitgub.io/usertip/process"><img src="img/onbankgo.JPG" style="border-radius: 10px; width:200px; height:100px; border: double gray 2px; box-shadow: 0px 6px 12px 0px grey;"></a>
-          <i class="fa-light fa-computer-mouse-scrollwheel"></i><br/>
-        <br/>
-      <button class="btn btn-danger" style="margin-left: 15px;"><a href="http://ajou9770.github.io/usertip/draw.html">💰 비과세 예적금 개설 안내<i class="fas fa-chevron-right fa-lg"></i> </a></button>    
-    <br/>
-    <!--<span id="barcode" style="CURSOR: hand" onclick = "if(codebox.style.display==`none`)
-                    {codebox.style.display=``; barcode.innerText = `수신금리표 닫기▲`} else {codebox.style.display = `none`; 
-                      barcode.innerText = `💸수신금리표 보기▼`}">💸수신 금리표 보기 ▼</span>-->
-                        <div class="w3-container" style="box-shadow: none;">
-                        <div id="item" class="btn btn-info">💸수신금리표 보기</div>
-                        <div id="item_Close" class="w3-button w3-block w3-teal">❌닫기</div>
-                        <div id="codebox" style="display: none">
-                      <h4> [ 시행일자: 2025.6.23 ~ ]</h4>
-                      <table>
-                      <tr style="border-bottom: double;">  
-                      <th>구분 
-                        <td>상품명</td><td>기간</td><td>금리(우대)</td><td>비고(우대조건)</td>
-                      <tr></th>
-                      <th>요구불 
-                        <td>자립예탁금</td><td>없음</td><td>0.05%</td><td></td>
-                      </th></tr>
-                      <tr><th> 거치식<td>(유니온)정기예탁금<br/>(모바일/인터넷)</td><td>3개월<br/>6개월<br/>
-                         12개월<br/>24개월이상</td><td>
-                          1.94%<br/>
-                          2.25%<br/>
-                          2.46%<br/>
-                          2.25%</td>
-                        <td></td>
-                      </th>
-                      </tr>
-                      <tr>
-                        <th>거치식<td>파워정기예탁</td><td>
-                           3개월<br/>
-                           6개월<br/>
-                           12개월<br/>
-                           24개월이상</td>
-                          <td>
-                            1.85%(2.30%)<br/>
-                            2.15%(2.60%)<br/>
-                            2.35%(2.80%)<br/>
-                            2.15%(2.60%)</td>
-                          <td>
-                            * 참조합원: 0.15%~0.05%우대
-                            <br/>
-                            *1억원이상 예치 0.1% 우대</td>
-                        </th>
-                        </tr>
-                        <th>정액적립식<td>정기적금</td><td>
-                          3~11개월<br/>
-                          12개월<br/>
-                          24개월이상</td>
-                         <td>
-                           2.05%<br/>
-                           2.75%<br/>
-                           2.80%</td>
-                         <td>
-                       </th>
-                       </tr>
-                       <th>자유적립식<td>자유적립적금</td><td>
-                        3~11개월<br/>
-                        12개월이상~36개월미만<br/>
-                        36개월이상</td>
-                       <td>
-                         1.95%<br/>
-                         2.45%<br/>
-                         2.15%</td>
-                       <td>
-                         <br/>
-                     </th>
-                     </tr>                     
-                      </table>
-                     </div>
-                    <br/>
-                    <!--<span id="loancode" style="CURSOR: hand" onclick = "if(loanbox.style.display==`none`)
-                    {loanbox.style.display=``; loancode.innerText = `대출금리표 닫기▲`} else {loanbox.style.display = `none`; 
-                      loancode.innerText = `📉대출금리표 보기▼`}">📉대출 금리표 보기 ▼</span>-->
-                      <br>
-                      <div id="item2" class="btn btn-info">📰대출금리표 보기</div>
-                      <div id="item2_Close" class="w3-button w3-block w3-info"> ❌닫기</div>
-                      <div id="loanbox" style="display: none">
-                      <h4> [ 시행일자: 2025.6.23 ~ ]</h4>
-                       <table>
-                        <tr style="border-bottom: double;"> 
-                        <th> 구분 
-                          <td>상품명</td><td>이자변동주기</td><td>금리(우대)</td><td>비고(우대조건)</td>
-                        <tr></th>
-                        
-                        <tr><th> 일반대출<td>일시(분할)상환</td><td>3개월<br/>6개월<br/>
-                           12개월<br/>고정금리</td><td>
-                            최저 4.3% ~<br/>
-                            최저 4.4% ~<br/>
-                            최저 4.5% ~<br/>
-                            최저 4.6% ~</td>
-                        </th><td>#우대금리 조건</td>
-                        </tr>
-                        <tr>
-                          <!-- <th>일반대출<td>분할상환</td><td>3개월<br/>6개월<br/>
-                            12개월<br/>고정금리</td><td>
-                             최저 5.0% ~<br/>
-                             최저 5.1% ~<br/>
-                             최저 5.2% ~<br/>
-                             최저 5.3% ~</td> 
-                           <td># 우대금리 조건</td>-->
-                         </th>
-                         </tr>
-                         <th>수시 
-                          <td>자립대월<br/>(마이너스통장)</td><td>3개월<br/>
-                            6개월<br/>
-                            12개월<br/> 
-                          </td><td>최저 4.8% ~<br/>
-                               최저 4.9%~<br/>
-                               최저 5.0%~</td>
-                               <td># 우대금리 조건</td>
-                        </th></tr>
-                         </table>
-                         <h5><b>🎉<mark>신입교직원</mark>은 최초 대출시 상기 금리에서 <mark>-0.5 우대이율</mark>이 적용됩니다</b><br/> 
-                          # 가산금리: 신용등급, 급여이체, 참조합원 등급에 따른 +0.2% ~ +1.0% 가산됨</h5>
-                    </div>
-                    </div>
-                    </div>
-      <div style="text-align: center;">     
-                                    
-      <div id="kakao-talk-channel-chat-button"
-      data-channel-public-id="_dfhkK"
-      data-title="consult"
-      data-size="small"
-      data-color="yellow"
-      data-shape="mobile"
-      data-support-multiple-densities="true"
-    ></div>
-                  
-        <button class="btn btn-primary">    
-            <a href="https://ajou9770.github.io/usertip/"><i class="fas fa-chevron-left fa-lg"></i>  이전(홈)화면으로 돌아가기</a>
-        </button><br/>
-    <br/>
+  <div class="top">신협 가입 및 예적금 개설 안내</div>
+
+  <div class="container py-4">
+    <div class="content">
+      <p>📍 <strong>위치:</strong> 병원 본관 지하 2층 (유전체자원센타 옆)</p>
+      <p>💡 <mark>✔ 비대면 조합원가입: 신협 온뱅크 앱 설치 후 입출금통장 개설 → 가입신청 → 승인 → 완료</mark></p>
+      <ul>
+        <li>📄 필요서류: 주민등록증, 운전면허증 등 공인 신분증</li>
+        <li>💰 출자금: 최소 5,000원 ~ 최대 10만원 / 총불입한도 2,000만원</li>
+        <li>🎁 출자배당: 매년 2월 지급 (비과세)</li>
+      </ul>
+      <button onclick="join()" class="btn btn-primary btn-custom">📑 온라인 출자금 개설 신청</button>
+       <div class="app-banner">
+        <a id="onbank_Link">
+          <img src="img/onbankgo.JPG" alt="온뱅크 앱 설치">
+        </a>
+        <br>
+        <strong>📱 신협 모바일 ON뱅크 APP을 설치하시면 비대면 가입이 가능합니다</strong>
       </div>
-<!--     <div class="footer"> 
-    <footer>아주대학교의료원 신용협동조합 <br/>⏰업무시간: 평일 8시30분 ~ 17시 (⛳병원본관 B2)<address>
-      <span onclick="callon()">📞 031-219-6052</span>
-      <a href="mailto:ajou9770@ajoucu.page">ajou9770@ajoucu.page</a>
-      </address></footer> -->
+      <br>
+      <a href="http://ajou9770.github.io/usertip/draw.html" class="btn btn-danger btn-custom">💰 비과세 예적금 개설 안내</a>
+
+      <div class="section-toggle" id="item">💸 수신 금리표 보기 ▼</div>
+      <div class="d-none" id="codebox">
+        <h5 class="mt-3">[ 시행일자: 2025.6.23 ~ ]</h5>
+        <table>
+          <thead>
+            <tr><th>구분</th><th>상품명</th><th>기간</th><th>금리(우대)</th><th>비고(우대조건)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>요구불</td><td>자립예탁금</td><td>없음</td><td>0.05%</td><td>-</td></tr>
+            <tr><td rowspan="2">거치식</td><td>(유니온)정기예탁금</td><td>3/6/12/24개월</td><td>1.94 ~ 2.46%</td><td>모바일/인터넷 전용</td></tr>
+            <tr><td>파워정기예탁</td><td>3/6/12/24개월</td><td>1.85 ~ 2.80%</td><td>참조합원 우대 + 대액 예치</td></tr>
+            <tr><td>정액적립식</td><td>정기적금</td><td>3~24개월</td><td>2.05 ~ 2.80%</td><td>-</td></tr>
+            <tr><td>자유적립식</td><td>자유적립적금</td><td>3~36개월</td><td>1.95 ~ 2.45%</td><td>-</td></tr>
+          </tbody>
+        </table>
+        <div class="section-toggle text-end" id="item_Close">❌ 닫기 ▲</div>
+      </div>
+
+      <div class="section-toggle" id="item2">📰 대출 금리표 보기 ▼</div>
+      <div class="d-none" id="loanbox">
+        <h5 class="mt-3">[ 시행일자: 2025.6.23 ~ ]</h5>
+        <table>
+          <thead>
+            <tr><th>구분</th><th>상품명</th><th>이자변동주기</th><th>금리(우대)</th><th>비고(우대조건)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>일반대출</td><td>일시상환 / 분할상환</td><td>3/6/12개월, 고정</td><td>4.3% ~ 4.6%</td><td>신용등급 및 급여이체 우대</td></tr>
+            <tr><td>수시</td><td>자립대월(마이너스)</td><td>3/6/12개월</td><td>4.8% ~ 5.0%</td><td>참조합원, 실적우대</td></tr>
+          </tbody>
+        </table>
+        <div class="mt-2">🎉 <strong>신입교직원</strong>은 최초 대출 시 <mark>-0.5%</mark> 우대이율 적용!</div>
+        <div class="section-toggle text-end" id="item2_Close">❌ 닫기 ▲</div>
+      </div>
+
+      <div class="text-center mt-4">
+        <div id="kakao-talk-channel-chat-button"
+             data-channel-public-id="_dfhkK"
+             data-title="consult"
+             data-size="small"
+             data-color="yellow"
+             data-shape="mobile"
+             data-support-multiple-densities="true"></div>
+        <a href="https://ajou9770.github.io/usertip/" class="btn btn-outline-secondary mt-3">⬅ 이전(홈)화면으로 돌아가기</a>
+      </div>
     </div>
-    <!-- 모달창 -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-       <div id="box" style="text-align: center;">
-        <h5> <i class="fas fa-mobile-alt"></i> 모바일기기 운영체제를 선택하세요~~👌 </h5>
-        <div id="box_btn">
-          <button id="fab_fa-google-play" onclick="Google()" style="background-color: rgb(86, 86, 209); margin-right: 15px; width: 140px;">안드로이드<i class="fab fa-google-play"></i></button>
-          <button id="fab_fa-apple" onclick="Ipon()" style="background-color: rgb(111, 186, 101); width: 140px;">아이폰<i class="fab fa-apple"></i></button><br>
-          <button onclick="closeModal()" style="background-color: thistle;">❌</button>
-      </div>
   </div>
-</div>
 
-<!-- 모달창을 열 버튼 -->
-<!-- <button onclick="openModal()">모달창 열기</button>
+  <script>
+    $(function () {
+  $('#item').click(function () {
+    $('#codebox').removeClass('d-none').slideDown();
+    $('#item').hide();
+  });
+  $('#item_Close').click(function () {
+    $('#codebox').slideUp(function () {
+      $(this).addClass('d-none');
+    });
+    $('#item').show();
+  });
 
-       </aside>
-       <aside class="none" id="modal">
-        <div id="box">
-          <h2> <i class="fas fa-mobile-alt"></i> 모바일기기 운영체제를 선택하세요~~👌 </h2>
-          <div id="box_btn">
-            <div id="fab_fa-google-play" onclick="Google()">안드로이드<i class="fab fa-google-play"></i></div>
-            <div id="fab_fa-apple" onclick="Ipon()">아이폰<i class="fab fa-apple"></i></div><br/>
-            <div id="fab_cancel" onclick="Cancel()">닫기<br/>🔙<i class="fa-solid fa-delete-left"></i></div>
-          </div>
-        </div>
-       </aside> -->
-       <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        var linkElement = document.getElementById("onbank_Link");
-      
-        if (/Android/i.test(navigator.userAgent)) {
-          linkElement.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
-        } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-          linkElement.href = "https://apps.apple.com/kr/app/id1484456647";
-        } else if (/Windows/i.test(navigator.userAgent)) {
-          linkElement.href = "http://cu.co.kr";
-        } else {
-          linkElement.href = "http://ajou9770.gitgub.io/usertip/process";
-        }
+  $('#item2').click(function () {
+    $('#loanbox').removeClass('d-none').slideDown();
+    $('#item2').hide();
+  });
+  $('#item2_Close').click(function () {
+    $('#loanbox').slideUp(function () {
+      $(this).addClass('d-none');
+    });
+    $('#item2').show();
+  });
+});
+
+//디바이스 종류에 따라, 앱설치 또는 인터넷 뱅킹으로 이동
+      document.addEventListener("DOMContentLoaded", function () {
+  const link = document.getElementById("onbank_Link");
+  if (/Android/i.test(navigator.userAgent)) {
+    link.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+  } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    link.href = "https://apps.apple.com/kr/app/id1484456647";
+  } else {
+    link.href = "https://www.cu.co.kr"; // 신협 인터넷뱅킹 사이트
+  }
+});
+
+    function join() {
+      alert("온라인가입 페이지로 이동합니다");
+      location.href = "https://ajou9770.github.io/usertip/join01.html";
+    }
+
+    window.kakaoAsyncInit = function () {
+      Kakao.Channel.createChatButton({
+        container: "#kakao-talk-channel-chat-button",
       });
-      </script>
-
-       <script>
-       function openModal() {
-        document.getElementById("myModal").style.display = "block";
-    }
-    
-    function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-    }
-    
-    // 모달창 바깥쪽 클릭 시 닫기
-    window.onclick = function(event) {
-        var modal = document.getElementById("myModal");
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-        </script>
-       <script>
-        function join() {
-          alert("온라인가입 페이지로 이동합니다");
-          location.href="https://ajou9770.github.io/usertip/join01.html";
-        }
-        </script>
-       <script>  
-        function callon() {
-          if (window.confirm("☏ 상담가능시간: 평일 8:30~17:00 📞연결 할까요?")) {
-            document.location.href = "tel:031-219-6052"
-        } else {
-          console.log("canceled")
-        }
-       }                
-      </script>
-       <script> 
-        function googleform() {
-        if (window.confirm("🤷‍♂️ 급여공제는 의료원교직원만 가능합니다.  그외 자동이체를 이용 하실 수 있습니다. \n가입(출자금통장개설) 완료 되셨나요?  진행 하시겠습니까?")) {
-          document.location.href = "https://ajou9770.github.io/meet/googleapp/form_cul"
-        } else {
-          console.log("canceled")
-        }
-       }
-       </script>
-       <script>
-        function modal_click() {
-          console.log("Modal 창 클릭~~~")
-          modal.classList.remove("none");
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-
-        function Ipon() {
-        if (window.confirm("아이폰계열 모바일 앱 설치화면으로 이동합니다")) {
-        document.location.href ="https://apps.apple.com/kr/app/id1484456647"; 
-        } else {
-            alert("취소하였습니다");
-        }
-        }
-        function Google() {
-        if (window.confirm("안드로이드(구글)계열 모바일 앱 설치화면으로 이동합니다")) {
-        document.location.href ="https://play.google.com/store/apps/details?id=kr.co.cu.onbank"; 
-        } else {
-            alert("취소하였습니다");
-        }
-       }
-       function Cancel() {
-        modal.classList.add("none"); 
-       }
-       /*-- window.conform 문구-- 
-         function Cancel() {
-        if (window.confirm("✔️모바일 앱 설치(열기)를 취소할까요?")) {
-         modal.classList.add("none"); 
-        } else {
-            modal.classList.remove("none");  
-        }
-       }*/
-      </script>
-    </div>
-    <script
-    src="https://kit.fontawesome.com/6478f529f2.js"
-    crossorigin="anonymous"
-    ></script>
-    <script>
-        window.kakaoAsyncInit = function() {
-          Kakao.Channel.createChatButton({
-            container: '#kakao-talk-channel-chat-button',
-          });    
-        };
-       
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        })(document, 'script', 'kakao-js-sdk');
-      </script> 
-</body>   
+    };
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://developers.kakao.com/sdk/js/kakao.channel.min.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "kakao-js-sdk");
+  </script>
+</body>
 </html>
