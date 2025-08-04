@@ -222,28 +222,6 @@ style="background-color: #f1f6fb; z-index: 1000;">
   </a> -->
 </div>
 
-<!-- 📌 소개 모달 -->
-<div class="modal fade" id="introModal" tabindex="-1" aria-labelledby="introModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-sm">
-    <div class="modal-content shadow-lg rounded-4">
-      <div class="modal-header border-0">
-        <h5 class="modal-title fw-bold" id="introModalLabel">👋 환영합니다!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
-      </div>
-      <div class="modal-body text-center">
-        <p class="mb-2">
-          아주대의료원신협은<br>
-          <strong>교직원 조합원의 금융후생복리</strong> 증진을 위해<br>
-          설립·운영되고 있습니다.
-        </p>
-        <p class="mb-0 text-primary fw-semibold">
-          우리신협의 다양한 조합원 혜택을 누려 보세요.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <footer class="bg-light text-dark mt-5 pt-4 pb-3 border-top shadow-sm">
   <div class="container text-center">
     <h6 class="fw-bold mb-2">📍 아주대학교의료원 신용협동조합</h6>
@@ -270,24 +248,79 @@ style="background-color: #f1f6fb; z-index: 1000;">
   </div>
 </footer>
 
+<!-- 📌 소개 모달 -->
+<div class="modal fade" id="introModal" tabindex="-1" aria-labelledby="introModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content shadow-lg rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="introModalLabel">👋 환영합니다!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="mb-2">
+          아주대의료원신협은<br>
+          <strong>교직원 조합원의 금융후생복리</strong> 증진을 위해<br>
+          설립·운영되고 있습니다.
+        </p>
+        <p class="mb-0 text-primary fw-semibold">
+          우리신협의 다양한 조합원 혜택을 누려 보세요.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const introModal = new bootstrap.Modal(document.getElementById("introModal"));
-    setTimeout(() => introModal.show(), 400);
+  document.addEventListener("DOMContentLoaded", function () {
+    const modalEl = document.getElementById("introModal");
+    const introModal = new bootstrap.Modal(modalEl);
+
+    // 로딩 후 자동 표시
+    setTimeout(() => {
+      introModal.show();
+    }, 300); // 부드럽게 로딩되도록 약간의 지연
   });
 </script>
 
 
 <script>
+/*   document.addEventListener("DOMContentLoaded", function () {
+    const modalEl = document.getElementById("introModal");
+    const hideUntil = localStorage.getItem("hideIntroModalUntil");
+    const now = new Date();
+
+    const introModal = new bootstrap.Modal(modalEl);
+
+    // 📌 조건: 하루동안 보지 않기가 적용되지 않은 경우 → 무조건 모달 띄움
+    if (!hideUntil || new Date(hideUntil) < now) {
+      setTimeout(() => {
+        introModal.show();
+      }, 300);
+    }
+
+    // 📌 버튼 클릭 → 하루동안 보지 않기 설정
+    document.getElementById("hideModalToday")?.addEventListener("click", function () {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      tomorrow.setHours(0, 0, 0, 0); // 자정까지
+      localStorage.setItem("hideIntroModalUntil", tomorrow.toISOString());
+
+      introModal.hide();
+    });
+  });
+ */
+  // ✅ 5초 후 header 숨기기 (기존 2번 유지 가능)
   window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
-      document.getElementById("mainHeader").classList.add("hidden");
-    }, 5000); // 5초 후 자동 숨김
+      document.getElementById("mainHeader")?.classList.add("hidden");
+    }, 5000);
   });
 </script>
-
 </body>
 </html>
