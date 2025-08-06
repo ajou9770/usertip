@@ -58,6 +58,21 @@
       width: 200px;
       height: 100px;
     }
+      .img-enhanced {
+    max-width: 100%;
+    height: 120px;
+    width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .img-enhanced:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    border-color: #007bff;
+  }
   </style>
 </head>
 <body>
@@ -66,7 +81,7 @@
   <div class="container py-4">
     <div class="content">
       <p>📍 <strong>위치:</strong> 병원 본관 지하 2층 (유전체자원센타 옆)</p>
-      <p>💡 <mark>✔ 비대면 조합원가입: 신협 온뱅크 앱 설치 후 입출금통장 개설 → 가입신청 → 승인 → 완료</mark></p>
+      <p>💡 <mark>✔ 비대면 조합원가입: 신협 온뱅크 앱 설치 후 입출금통장 개설 → 출자금개설(가입 신청) → 승인 → 가입 완료</mark></p>
       <ul>
         <li>📄 필요서류: 주민등록증, 운전면허증 등 공인 신분증</li>
         <li>💰 출자금: 최소 5,000원 ~ 최대 10만원 / 총불입한도 2,000만원</li>
@@ -75,10 +90,10 @@
       <button onclick="join()" class="btn btn-primary btn-custom">📑 온라인 출자금 개설 신청</button>
        <div class="app-banner">
         <a id="onbank_Link">
-          <img src="img/onbankgo.JPG" alt="온뱅크 앱 설치">
-        </a>
+  <img src="img/onbankgo.JPG" alt="온뱅크 앱 설치" class="img-enhanced">
+</a>
         <br>
-        <strong>📱 신협 모바일 ON뱅크 APP을 설치하시면 비대면 가입이 가능합니다</strong>
+        <strong>📱상기 신협 모바일 ON뱅크 APP을 설치하시면 비대면 온라인 가입이 가능합니다</strong>
       </div>
       <br>
       <a href="http://ajou9770.github.io/usertip/draw.html" class="btn btn-danger btn-custom">💰 비과세 예적금 개설 안내</a>
