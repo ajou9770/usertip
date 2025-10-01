@@ -85,27 +85,55 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const link = document.getElementById("onbank_Link");
-      const toggleBtn = document.getElementById("loancode");
-      const loanBox = document.getElementById("loanbox");
+document.addEventListener("DOMContentLoaded", function () {
+  const link = document.getElementById("onbank_Link");
+  const toggleBtn = document.getElementById("loancode");
+  const loanBox = document.getElementById("loanbox");
 
-      if (/Android/i.test(navigator.userAgent)) {
-        link.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
-      } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        link.href = "https://apps.apple.com/kr/app/id1484456647";
-      } else {
-        link.href = "https://cu.co.kr";
-      }
+  // 📱 디바이스별 온뱅크 실행
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // 기본 링크 이동 막기
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    const now = Date.now();
+    const timeout = 2000; // 2초 후 fallback
 
-      toggleBtn.addEventListener("click", function () {
-        const isHidden = loanBox.style.display === "none" || loanBox.style.display === "";
-        loanBox.style.display = isHidden ? "block" : "none";
-        toggleBtn.innerHTML = isHidden
-          ? '<i class="fas fa-times-circle"></i> ❌ 대출 금리표 닫기 ▲'
-          : '<i class="fas fa-chart-line"></i> 📉 대출 금리표 보기 ▼';
-      });
-    });
-  </script>
+    if (/Android/i.test(ua)) {
+      // ✅ 안드로이드: 앱 실행 시도
+      window.location.href = "intent://onbank.cu.co.kr?SCHEME_ACTION=web&SCHEME_PARAM=1#Intent;scheme=cuonbank;package=kr.co.cu.onbank;end;";
+
+      // fallback: 앱 미설치 → 플레이스토어
+      setTimeout(function () {
+        if (Date.now() - now < timeout + 100) {
+          window.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+        }
+      }, timeout);
+
+    } else if (/iPhone|iPad|iPod/i.test(ua)) {
+      // ✅ iOS: 앱 실행 시도
+      window.location.href = "cuonbank://onbank.cu.co.kr?SCHEME_ACTION=web&SCHEME_PARAM=1";
+
+      // fallback: 앱 미설치 → 앱스토어
+      setTimeout(function () {
+        if (Date.now() - now < timeout + 100) {
+          window.location.href = "https://apps.apple.com/kr/app/id1484456647";
+        }
+      }, timeout);
+
+    } else {
+      // ✅ PC/기타 → 신협 인터넷뱅킹
+      window.location.href = "https://www.cu.co.kr";
+    }
+  });
+
+  // 📊 대출 금리표 토글 버튼
+  toggleBtn.addEventListener("click", function () {
+    const isHidden = loanBox.style.display === "none" || loanBox.style.display === "";
+    loanBox.style.display = isHidden ? "block" : "none";
+    toggleBtn.innerHTML = isHidden
+      ? '<i class="fas fa-times-circle"></i> ❌ 대출 금리표 닫기 ▲'
+      : '<i class="fas fa-chart-line"></i> 📉 대출 금리표 보기 ▼';
+  });
+});
+</script>
 </body>
 </html>
