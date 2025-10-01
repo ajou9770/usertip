@@ -171,16 +171,44 @@
 });
 
 //디바이스 종류에 따라, 앱설치 또는 인터넷 뱅킹으로 이동
-      document.addEventListener("DOMContentLoaded", function () {
+  // 디바이스 종류에 따라 앱 실행 → 스토어 → 웹 이동
+document.addEventListener("DOMContentLoaded", function () {
   const link = document.getElementById("onbank_Link");
-  if (/Android/i.test(navigator.userAgent)) {
-    link.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
-  } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    link.href = "https://apps.apple.com/kr/app/id1484456647";
-  } else {
-    link.href = "https://www.cu.co.kr"; // 신협 인터넷뱅킹 사이트
-  }
-});
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+  const timeout = 2000; // 2초 후 fallback
+
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // 기본 동작 막기
+    const start = Date.now();
+
+    if (/Android/i.test(ua)) {
+      // ✅ 안드로이드: 앱 실행 시도
+      window.location.href = "intent://onbank.cu.co.kr?SCHEME_ACTION=web&SCHEME_PARAM=1#Intent;scheme=cuonbank;package=kr.co.cu.onbank;end;";
+
+      // fallback: 앱 미설치 → 플레이스토어
+      setTimeout(function () {
+        if (Date.now() - start < timeout + 100) {
+          window.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+        }
+      }, timeout);
+
+    } else if (/iPhone|iPad|iPod/i.test(ua)) {
+      // ✅ iOS: 앱 실행 시도
+      window.location.href = "cuonbank://onbank.cu.co.kr?SCHEME_ACTION=web&SCHEME_PARAM=1";
+
+      // fallback: 앱 미설치 → 앱스토어
+      setTimeout(function () {
+        if (Date.now() - start < timeout + 100) {
+          window.location.href = "https://apps.apple.com/kr/app/id1484456647";
+        }
+      }, timeout);
+
+    } else {
+      // ✅ PC 등: 신협 인터넷뱅킹 웹으로 이동
+      window.location.href = "https://www.cu.co.kr";
+    }
+  });
+})
 
     function join() {
       alert("온라인가입 페이지로 이동합니다");
