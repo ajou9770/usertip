@@ -67,21 +67,24 @@
         대출, 예금, 체크카드, 자동이체, 보험료 납입 등 신용사업 실적에 따라 배당이 지급됩니다.
       </p>
       <ul>
-        <li>▶ 대출금: 연 평균잔액 * 약 0.25%</li>
-        <li>▶ 요구불 예금: 연 평균잔액 * 약 0.82%</li>
-        <li>▶ 적금: 연 평균잔액 * 약 0.45%</li>
-        <li>▶ 체크카드: 연 사용액 * 약 0.7%</li>
-        <li>▶ 자동이체: 월평균 건수 * 약 6,100원</li>
+        <li>▶ 대출금: 연 평균잔액 * 약 0.35%</li>
+        <li>▶ 요구불 예금: 연 평균잔액 * 약 1.2%</li>
+        <li>▶ 적금: 연 평균잔액 * 약 0.60%</li>
+        <li>▶ 체크카드: 연 사용액 * 약 1.0%</li>
+        <li>▶ 자동이체: 월평균 건수 * 약 8,450원</li>
         <li>▶ 지급 시기: 매년 2월 정기총회 후</li>
       </ul>
-      <span id="box_form" onclick="toggleBox()">🧾 최근 4개년 이용고 지급 내역 보기 ▼</span>
+      <span id="box_form" onclick="toggleBox()">🧾 최근 5개년 이용고 지급 내역 보기 ▼</span>
       <div id="showbox" style="display: none">
         <ul class="mt-3">
-          <li class="mileli text-primary">2024년: 약 310백만원 (평균 29만원, 최다수령 150만원)</li>
+          <li class="mileli text-primary">2025년: 약 410백만원 (평균 35만원, 최다수령 약 160만원)</li>
+          <li class="mileli">2024년: 약 310백만원 (평균 29만원, 최다수령 150만원)</li>
           <li class="mileli">2023년: 약 290백만원 (평균 25만원, 최다수령 349만원)</li>
           <li class="mileli">2022년: 약 365백만원 (평균 27만원, 최다수령 350만원)</li>
           <li class="mileli">2021년: 약 414백만원 (평균 32만원, 최다수령 245만원)</li>
         </ul>
+        
+        <img src="img/div_2025img.jpg" class="content-img">
         <img src="img/2024_share.jpg" class="content-img">
         <img src="img/div_list_2022.jpg" class="content-img">
         <img src="img/mile2021.JPG" class="content-img">
@@ -124,10 +127,10 @@
       const label = document.getElementById('box_form');
       if (box.style.display === 'none') {
         box.style.display = 'block';
-        label.innerText = '🧾 최근 4개년 이용고 지급 내역 닫기 ▲';
+        label.innerText = '🧾 최근 5개년 이용고 지급 내역 닫기 ▲';
       } else {
         box.style.display = 'none';
-        label.innerText = '🧾 최근 4개년 이용고 지급 내역 보기 ▼';
+        label.innerText = '🧾 최근 5개년 이용고 지급 내역 보기 ▼';
       }
     }
   </script>
