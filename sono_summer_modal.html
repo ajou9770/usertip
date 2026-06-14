@@ -1,0 +1,266 @@
+<!-- ✅ 2026년 하계성수기 사용신청 안내 모달 세트 -->
+<!-- 기존 소노호텔앤리조트 실시간 예약이용안내 페이지의 </body> 바로 위에 붙여 넣으세요. -->
+
+<style>
+  .sono-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.58);
+    backdrop-filter: blur(6px);
+    z-index: 9998;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+  }
+
+  .sono-modal-backdrop.show {
+    display: flex;
+  }
+
+  .sono-modal-box {
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+    animation: sonoPop .22s ease-out;
+    font-family: 'Pretendard', 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  @keyframes sonoPop {
+    from { transform: translateY(14px) scale(.98); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+  }
+
+  .sono-modal-hero {
+    padding: 28px 26px 22px;
+    color: #fff;
+    background:
+      radial-gradient(circle at top right, rgba(255,255,255,.32), transparent 32%),
+      linear-gradient(135deg, #2563eb, #0f766e);
+  }
+
+  .sono-modal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.18);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .sono-modal-hero h2 {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.28;
+    letter-spacing: -0.04em;
+  }
+
+  .sono-modal-hero p {
+    margin: 10px 0 0;
+    font-size: 15px;
+    opacity: .94;
+    line-height: 1.55;
+  }
+
+  .sono-modal-body {
+    padding: 24px 26px 22px;
+  }
+
+  .sono-info-list {
+    margin: 0 0 18px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sono-info-list li {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eef2f7;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #334155;
+  }
+
+  .sono-info-list li:last-child {
+    border-bottom: 0;
+  }
+
+  .sono-info-list b {
+    min-width: 86px;
+    color: #0f172a;
+  }
+
+  .sono-alert {
+    padding: 13px 14px;
+    border-radius: 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .sono-modal-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .sono-modal-actions a,
+  .sono-modal-actions button {
+    border: 0;
+    border-radius: 14px;
+    padding: 14px 12px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .sono-apply-btn {
+    background: #2563eb;
+    color: #fff;
+  }
+
+  .sono-close-btn {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+
+  .sono-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 26px 22px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .sono-today-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #475569;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .sono-today-check input {
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb;
+  }
+
+  .sono-x-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 0;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 420px) {
+    .sono-modal-hero h2 { font-size: 22px; }
+    .sono-modal-actions { grid-template-columns: 1fr; }
+    .sono-info-list li { flex-direction: column; gap: 3px; }
+    .sono-info-list b { min-width: auto; }
+  }
+</style>
+
+<div id="sonoSummerModal" class="sono-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="sonoSummerModalTitle">
+  <div class="sono-modal-box">
+    <div class="sono-modal-hero">
+      <div class="sono-modal-badge">🌊 2026 하계성수기</div>
+      <h2 id="sonoSummerModalTitle">소노호텔앤리조트<br>하계성수기 사용신청 안내</h2>
+      <p>조합원 복지서비스 이용을 위한 2026년 하계성수기 신청 페이지로 이동하실 수 있습니다.</p>
+    </div>
+
+    <div class="sono-modal-body">
+      <ul class="sono-info-list">
+        <li><b>대상</b><span>아주대의료원신협 조합원</span></li>
+        <li><b>내용</b><span>2026년 하계성수기 소노호텔앤리조트 사용 신청</span></li>
+        <li><b>신청방법</b><span>아래 “신청안내 바로가기” 버튼을 눌러 접수 페이지로 이동</span></li>
+      </ul>
+
+      <div class="sono-alert">
+        신청기간, 배정기준, 유의사항 등 세부내용은 신청안내 페이지에서 반드시 확인해 주세요.
+      </div>
+
+      <div class="sono-modal-actions">
+        <a class="sono-apply-btn" href="https://ajou9770.github.io/event/sono_vac.html" target="_blank" rel="noopener">신청안내 바로가기</a>
+        <button type="button" class="sono-close-btn" onclick="closeSonoSummerModal()">닫기</button>
+      </div>
+    </div>
+
+    <div class="sono-modal-footer">
+      <label class="sono-today-check">
+        <input type="checkbox" id="sonoHideToday">
+        하루동안 안보기
+      </label>
+      <button type="button" class="sono-x-btn" aria-label="닫기" onclick="closeSonoSummerModal()">×</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const SONO_MODAL_KEY = 'sonoSummerModalHideUntil_2026';
+
+  function getTomorrowMidnight() {
+    const now = new Date();
+    const tomorrow = new Date(now);
+    tomorrow.setDate(now.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+    return tomorrow.getTime();
+  }
+
+  function shouldShowSonoSummerModal() {
+    const hideUntil = Number(localStorage.getItem(SONO_MODAL_KEY) || 0);
+    return Date.now() > hideUntil;
+  }
+
+  function openSonoSummerModal() {
+    const modal = document.getElementById('sonoSummerModal');
+    if (modal) modal.classList.add('show');
+  }
+
+  function closeSonoSummerModal() {
+    const checkbox = document.getElementById('sonoHideToday');
+    const modal = document.getElementById('sonoSummerModal');
+
+    if (checkbox && checkbox.checked) {
+      localStorage.setItem(SONO_MODAL_KEY, String(getTomorrowMidnight()));
+    }
+
+    if (modal) modal.classList.remove('show');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    if (shouldShowSonoSummerModal()) {
+      setTimeout(openSonoSummerModal, 450);
+    }
+
+    const modal = document.getElementById('sonoSummerModal');
+    if (modal) {
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeSonoSummerModal();
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeSonoSummerModal();
+    });
+  });
+</script>
