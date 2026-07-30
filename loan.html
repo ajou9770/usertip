@@ -1,139 +1,696 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>📋 의료원신협 대출안내</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>의료원신협 대출안내</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  >
+
+  <script
+    src="https://kit.fontawesome.com/6478f529f2.js"
+    crossorigin="anonymous">
+  </script>
+
   <style>
     body {
-      font-family: 'Noto Sans KR', sans-serif;
-      padding-bottom: 80px;
+      margin: 0;
+      padding-bottom: 100px;
+      background: #f3f6fa;
+      font-family: "Noto Sans KR", sans-serif;
+      color: #263238;
     }
+
+    .page-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20px 14px;
+    }
+
+    .main-header {
+      position: relative;
+      overflow: hidden;
+      padding: 26px 22px;
+      margin-bottom: 18px;
+      border-radius: 18px;
+      color: #fff;
+      background: linear-gradient(135deg, #0d6efd, #0452b5);
+      box-shadow: 0 10px 25px rgba(13, 110, 253, 0.22);
+    }
+
+    .main-header::after {
+      content: "";
+      position: absolute;
+      right: -45px;
+      top: -45px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .main-header h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 8px;
+      font-size: 1.45rem;
+      font-weight: 800;
+    }
+
+    .main-header p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      opacity: 0.92;
+    }
+
     .content-box {
-      background: #f8f9fa;
-      border-radius: 10px;
       padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+      margin-bottom: 18px;
+      border: 1px solid #e6ebf1;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(33, 37, 41, 0.06);
     }
-    .btn-custom {
-      font-weight: bold;
-      font-size: 1rem;
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: #1e3a5f;
     }
-    .fixed-bottom {
-      z-index: 1030;
+
+    .loan-info-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
     }
+
+    .loan-info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid #edf0f4;
+      line-height: 1.5;
+    }
+
+    .loan-info-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .loan-info-list .icon {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      background: #eaf3ff;
+      color: #0d6efd;
+    }
+
+    .loan-info-list .label {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.82rem;
+      color: #6c757d;
+    }
+
+    .loan-info-list .value {
+      font-weight: 700;
+      color: #212529;
+    }
+
+    .rate-highlight {
+      color: #dc3545;
+      font-size: 1.06rem;
+      font-weight: 900;
+    }
+
+    .new-rate {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 3px 7px;
+      border-radius: 20px;
+      color: #087b43;
+      background: #e4f8ee;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    /* 모바일 대출 신청 강조 영역 */
+    .mobile-loan-card {
+      position: relative;
+      overflow: hidden;
+      padding: 22px;
+      margin-bottom: 18px;
+      border: 1px solid #ffe2a6;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fff9e9, #fff3cd);
+      box-shadow: 0 8px 20px rgba(255, 193, 7, 0.14);
+    }
+
+    .mobile-loan-card::after {
+      content: "₩";
+      position: absolute;
+      right: 12px;
+      top: -20px;
+      font-size: 7rem;
+      font-weight: 900;
+      color: rgba(255, 193, 7, 0.11);
+      line-height: 1;
+    }
+
+    .mobile-loan-card .card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .mobile-loan-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      border-radius: 30px;
+      color: #7a5000;
+      background: #ffe08a;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .mobile-loan-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #3c2a00;
+    }
+
+    .mobile-loan-card p {
+      margin: 0 0 16px;
+      color: #675518;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .btn-mobile-loan {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      min-height: 55px;
+      border: 0;
+      border-radius: 13px;
+      color: #fff;
+      background: linear-gradient(135deg, #f59f00, #e67700);
+      box-shadow: 0 6px 15px rgba(230, 119, 0, 0.25);
+      font-size: 1.03rem;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-mobile-loan:hover,
+    .btn-mobile-loan:focus {
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(230, 119, 0, 0.32);
+    }
+
+    .mobile-loan-note {
+      display: block;
+      margin-top: 9px;
+      text-align: center;
+      color: #7c6a36;
+      font-size: 0.76rem;
+    }
+
+    .guide-text {
+      padding: 13px 14px;
+      margin-bottom: 14px;
+      border-radius: 10px;
+      background: #f5f8fc;
+      color: #52606d;
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
     #loanbox {
       display: none;
-      background: #fff;
-      padding: 15px;
-      border: 1px solid #dee2e6;
-      border-radius: 8px;
-      margin-top: 15px;
+      padding: 16px;
+      margin-top: 12px;
+      border: 1px solid #dbe5f0;
+      border-radius: 12px;
+      background: #f8fbff;
+    }
+
+    #loanbox h5 {
+      margin-bottom: 13px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #0d6efd;
+    }
+
+    #loanbox ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    #loanbox li {
+      margin-bottom: 8px;
+    }
+
+    #loanbox li:last-child {
+      margin-bottom: 0;
+    }
+
+    .calculator-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .calculator-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 52px;
+      padding: 11px 15px;
+      border: 1px solid #dce6e1;
+      border-radius: 12px;
+      color: #146c43;
+      background: #f5fff9;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.15s ease;
+    }
+
+    .calculator-link:hover {
+      color: #0f5132;
+      background: #eaf9f0;
+      transform: translateY(-1px);
+    }
+
+    .calculator-link.info-link {
+      border-color: #d8edf2;
+      color: #087990;
+      background: #f1fcff;
+    }
+
+    .calculator-link.info-link:hover {
+      color: #055160;
+      background: #e4f8fc;
+    }
+
+    .fixed-action-bar {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1030;
+      padding: 10px 12px;
+      border-top: 1px solid #dfe3e7;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 -5px 18px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .fixed-action-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .btn-onbank {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      min-height: 54px;
+      border-radius: 13px;
+      color: #3c2a00;
+      background: #ffc107;
+      font-size: 1rem;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(255, 193, 7, 0.25);
+      cursor: pointer;
+    }
+
+    .btn-onbank:hover {
+      color: #3c2a00;
+      background: #ffca2c;
+    }
+
+    @media (max-width: 430px) {
+      .page-wrap {
+        padding: 14px 11px;
+      }
+
+      .main-header {
+        padding: 23px 18px;
+        border-radius: 15px;
+      }
+
+      .main-header h1 {
+        font-size: 1.3rem;
+      }
+
+      .content-box,
+      .mobile-loan-card {
+        padding: 17px;
+        border-radius: 14px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="container mt-4">
-    <div class="content-box">
-      <h4 class="text-primary mb-3"><i class="fas fa-hand-holding-usd"></i> 의료원신협 대출 안내</h4>
-      <ul>
-        <li><strong>대출자격:</strong> 아주대학교(의료원) 정규직 조합원</li>
-        <li><strong>최저금리:</strong> <span class="badge bg-warning text-dark">4.1%</span> ~ <small>(신입: <span class="badge bg-success text-light">3.6%</span> ~)</small></li>
-        <li><strong>한도:</strong> 최대 1억 9천만 원</li>
-        <li><strong>중도상환수수료:</strong> 없음</li>
-      </ul>
-      <hr/>
+
+  <main class="page-wrap">
+
+    <!-- 상단 안내 -->
+    <header class="main-header">
+      <h1>
+        <i class="fas fa-hand-holding-dollar"></i>
+        의료원신협 대출 안내
+      </h1>
+
       <p>
-        ▶ 대출 금리표 및 세부 안내는 아래 '📉 금리표 보기' 버튼을 참고해주세요.<br/>
-        ▶ 금리 조건 변경, 상환 방식, 우대 이율 등도 함께 설명되어 있습니다.
+        의료원 조합원을 위한 대출 조건과 예상 한도, 금리 및
+        모바일 신청 방법을 확인하실 수 있습니다.
       </p>
-      <button id="loancode" class="btn btn-outline-primary w-100">
-        <i class="fas fa-chart-line"></i> 📉 대출 금리표 보기 ▼
+    </header>
+
+    <!-- 주요 대출 조건 -->
+    <section class="content-box">
+      <div class="section-title">
+        <i class="fas fa-circle-info"></i>
+        주요 대출 조건
+      </div>
+
+      <ul class="loan-info-list">
+        <li>
+          <span class="icon">
+            <i class="fas fa-user-check"></i>
+          </span>
+
+          <div>
+            <span class="label">대출 자격</span>
+            <span class="value">아주대학교 및 의료원 정규직 조합원</span>
+          </div>
+        </li>
+
+        <li>
+          <span class="icon">
+            <i class="fas fa-percent"></i>
+          </span>
+
+          <div>
+            <span class="label">최저 금리</span>
+            <span class="rate-highlight">연 4.10%~</span>
+            <span class="new-rate">신입 연 3.60%~</span>
+          </div>
+        </li>
+
+        <li>
+          <span class="icon">
+            <i class="fas fa-coins"></i>
+          </span>
+
+          <div>
+            <span class="label">대출 한도</span>
+            <span class="value">최대 1억 9천만 원</span>
+          </div>
+        </li>
+
+        <li>
+          <span class="icon">
+            <i class="fas fa-circle-xmark"></i>
+          </span>
+
+          <div>
+            <span class="label">중도상환수수료</span>
+            <span class="value">없음</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 모바일 대출 신청 버튼 -->
+    <section class="mobile-loan-card">
+      <div class="card-content">
+
+        <div class="mobile-loan-badge">
+          <i class="fas fa-mobile-screen-button"></i>
+          모바일 간편 서비스
+        </div>
+
+        <h2>모바일 대출 상담·신청</h2>
+
+        <p>
+          영업점 방문 전 모바일에서 대출 상담 또는 신청을
+          편리하게 진행해 보세요.
+        </p>
+
+        <a
+          id="mobileLoanLink"
+          class="btn-mobile-loan"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fas fa-comments-dollar"></i>
+          모바일 대출 상담·신청하기
+          <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <small class="mobile-loan-note">
+          개인의 신용도 및 대출 조건에 따라 한도와 금리가 달라질 수 있습니다.
+        </small>
+
+      </div>
+    </section>
+
+    <!-- 금리표 -->
+    <section class="content-box">
+      <div class="section-title">
+        <i class="fas fa-chart-line"></i>
+        대출 금리 안내
+      </div>
+
+      <div class="guide-text">
+        금리 조건, 상환 방식 및 우대이율 등 자세한 내용은
+        아래 버튼을 눌러 확인해 주세요.
+      </div>
+
+      <button
+        id="loancode"
+        type="button"
+        class="btn btn-outline-primary w-100 fw-bold py-3"
+        aria-expanded="false"
+        aria-controls="loanbox"
+      >
+        <i class="fas fa-chart-line"></i>
+        대출 금리표 보기
+        <i class="fas fa-chevron-down ms-1"></i>
       </button>
+
       <div id="loanbox">
-        <h5>[시행일자: 2026.6.17~]</h5>
+        <h5>
+          <i class="fas fa-calendar-check"></i>
+          시행일자: 2026년 6월 17일부터
+        </h5>
+
         <ul>
-          <li>일시(분할)상환: <span class="badge bg-warning text-dark">최저 4.70%</span> ~</li>
-          <li>마이너스통장: <span class="badge bg-warning text-dark">최저 5.10%</span> ~</li>
+          <li>
+            일시·분할상환:
+            <strong class="text-danger">최저 연 4.70%~</strong>
+          </li>
+
+          <li>
+            마이너스통장:
+            <strong class="text-danger">최저 연 5.10%~</strong>
+          </li>
         </ul>
       </div>
-     <div class="container">
-      <div class="content-box text-center">
-        <h5 class="mb-3"><i class="fas fa-calculator"></i> 셀프 대출 계산기</h5>
-        <div class="d-grid gap-2">
-          <a class="btn btn-outline-success" href="http://ajou9770.github.io/notice/loanlimit.html" target="_blank">🔎 대출한도 계산기</a>
-          <a class="btn btn-outline-success" href="http://ajou9770.github.io/notice/loanrate.html" target="_blank">🔎 대출 원리금(이자) 계산기</a>
-          <a class="btn btn-outline-success" href="http://ajou9770.github.io/notice/loaninsu.html" target="_blank">🔎 보증대출 보험료 계산기</a>
-          <a class="btn btn-outline-info" href="http://ajou9770.github.io/notice/sgicsign.html" target="_blank">🔎 보증보험 개인정보동의 방법</a>
-        </div>
+    </section>
+
+    <!-- 계산기 -->
+    <section class="content-box">
+      <div class="section-title">
+        <i class="fas fa-calculator"></i>
+        셀프 대출 계산기
       </div>
-    </div>
-    </div>
-  </div>
 
-    </div>
-  </div>
+      <div class="calculator-grid">
 
-  <div class="fixed-bottom text-center p-2 bg-light border-top shadow">
-    <a id="onbank_Link" class="btn btn-warning btn-lg btn-custom">
-      <i class="fas fa-mobile-alt"></i>💦 신협 모바일온뱅크 바로가기
-    </a>
+        <a
+          class="calculator-link"
+          href="https://ajou9770.github.io/notice/loanlimit.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i class="fas fa-magnifying-glass-dollar me-2"></i>
+            대출한도 계산기
+          </span>
+
+          <i class="fas fa-chevron-right"></i>
+        </a>
+
+        <a
+          class="calculator-link"
+          href="https://ajou9770.github.io/notice/loanrate.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i class="fas fa-calculator me-2"></i>
+            대출 원리금·이자 계산기
+          </span>
+
+          <i class="fas fa-chevron-right"></i>
+        </a>
+
+        <a
+          class="calculator-link info-link"
+          href="https://ajou9770.github.io/notice/sgicsign.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i class="fas fa-file-signature me-2"></i>
+            보증보험 개인정보동의 방법
+          </span>
+
+          <i class="fas fa-chevron-right"></i>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 하단 고정 온뱅크 버튼 -->
+  <div class="fixed-action-bar">
+    <div class="fixed-action-inner">
+      <a id="onbank_Link" class="btn-onbank" href="#">
+        <i class="fas fa-mobile-screen-button"></i>
+        신협 모바일온뱅크 바로가기
+      </a>
+    </div>
   </div>
 
   <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const link = document.getElementById("onbank_Link");
-  const toggleBtn = document.getElementById("loancode");
-  const loanBox = document.getElementById("loanbox");
+    document.addEventListener("DOMContentLoaded", function () {
 
-  // 📱 디바이스별 온뱅크 실행
-  link.addEventListener("click", function (e) {
-    e.preventDefault(); // 기본 링크 이동 막기
-    const ua = navigator.userAgent || navigator.vendor || window.opera;
-    const now = Date.now();
-    const timeout = 2000; // 2초 후 fallback
+      /*
+       * =====================================================
+       * 모바일 대출 상담·신청 URL
+       * 아래 주소만 실제 연결 주소로 변경하세요.
+       * =====================================================
+       */
 
-    if (/Android/i.test(ua)) {
-      // ✅ 안드로이드: 앱 실행 시도
-      window.location.href = "intent://onbank.cu.co.kr?SCHEME_ACTION=web&SCHEME_PARAM=1#Intent;scheme=cuonbank;package=kr.co.cu.onbank;end;";
+      const onbankLink = document.getElementById("onbank_Link");
+      const toggleBtn = document.getElementById("loancode");
+      const loanBox = document.getElementById("loanbox");
+      const MOBILE_LOAN_URL =  "https://ajou9770.github.io/event/online_loan.html";
+      const mobileLoanLink = document.getElementById("mobileLoanLink");
 
-      // fallback: 앱 미설치 → 플레이스토어
-      setTimeout(function () {
-        if (Date.now() - now < timeout + 100) {
-          window.location.href = "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+      mobileLoanLink.href = MOBILE_LOAN_URL;
+
+      // 모바일 대출 버튼 URL 적용
+
+
+      /*
+       * URL을 변경하지 않은 상태에서 버튼을 눌렀을 경우
+       * 잘못된 페이지로 연결되지 않도록 안내합니다.
+       */
+    
+
+      // 신협 온뱅크 앱 또는 스토어 연결
+      onbankLink.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const userAgent =
+          navigator.userAgent ||
+          navigator.vendor ||
+          window.opera;
+
+        const startTime = Date.now();
+        const fallbackTime = 2000;
+
+        if (/Android/i.test(userAgent)) {
+
+          window.location.href =
+            "intent://onbank.cu.co.kr?SCHEME_ACTION=web&SCHEME_PARAM=1" +
+            "#Intent;" +
+            "scheme=cuonbank;" +
+            "package=kr.co.cu.onbank;" +
+            "end;";
+
+          setTimeout(function () {
+            if (Date.now() - startTime < fallbackTime + 300) {
+              window.location.href =
+                "https://play.google.com/store/apps/details?id=kr.co.cu.onbank";
+            }
+          }, fallbackTime);
+
+        } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+
+          window.location.href =
+            "cuonbank://onbank.cu.co.kr?SCHEME_ACTION=web&SCHEME_PARAM=1";
+
+          setTimeout(function () {
+            if (Date.now() - startTime < fallbackTime + 300) {
+              window.location.href =
+                "https://apps.apple.com/kr/app/id1484456647";
+            }
+          }, fallbackTime);
+
+        } else {
+          window.location.href = "https://www.cu.co.kr";
         }
-      }, timeout);
+      });
 
-    } else if (/iPhone|iPad|iPod/i.test(ua)) {
-      // ✅ iOS: 앱 실행 시도
-      window.location.href = "cuonbank://onbank.cu.co.kr?SCHEME_ACTION=web&SCHEME_PARAM=1";
+      // 대출 금리표 열기·닫기
+      toggleBtn.addEventListener("click", function () {
+        const isOpen = loanBox.style.display === "block";
 
-      // fallback: 앱 미설치 → 앱스토어
-      setTimeout(function () {
-        if (Date.now() - now < timeout + 100) {
-          window.location.href = "https://apps.apple.com/kr/app/id1484456647";
-        }
-      }, timeout);
+        loanBox.style.display = isOpen ? "none" : "block";
+        toggleBtn.setAttribute(
+          "aria-expanded",
+          isOpen ? "false" : "true"
+        );
 
-    } else {
-      // ✅ PC/기타 → 신협 인터넷뱅킹
-      window.location.href = "https://www.cu.co.kr";
-    }
-  });
+        toggleBtn.innerHTML = isOpen
+          ? `
+            <i class="fas fa-chart-line"></i>
+            대출 금리표 보기
+            <i class="fas fa-chevron-down ms-1"></i>
+          `
+          : `
+            <i class="fas fa-circle-xmark"></i>
+            대출 금리표 닫기
+            <i class="fas fa-chevron-up ms-1"></i>
+          `;
+      });
 
-  // 📊 대출 금리표 토글 버튼
-  toggleBtn.addEventListener("click", function () {
-    const isHidden = loanBox.style.display === "none" || loanBox.style.display === "";
-    loanBox.style.display = isHidden ? "block" : "none";
-    toggleBtn.innerHTML = isHidden
-      ? '<i class="fas fa-times-circle"></i> ❌ 대출 금리표 닫기 ▲'
-      : '<i class="fas fa-chart-line"></i> 📉 대출 금리표 보기 ▼';
-  });
-});
-</script>
+    });
+  </script>
+
 </body>
 </html>
