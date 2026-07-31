@@ -295,9 +295,9 @@
 
   <!-- 하단 고정 버튼 -->
   <div class="fixed-bottom-buttons">
-    <!-- <a id="link1" class="btn btn-outline-primary">
-      🏨 금호리조트 제휴
-    </a> -->
+    <a id="link1" class="btn btn-outline-primary">
+      🏨 금호리조트 제휴할인
+    </a>
    
     <a id="link2" class="btn btn-outline-dark" href="https://cuhs.cu.co.kr/cutih/jeju/fco/fco0100/FCOJ0101_S04.do" target="_blank">
       🏝 신협 제주연수원 예약하기</a>
@@ -460,7 +460,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("link1").addEventListener("click", function(e) {
       e.preventDefault();
       const url = isMobile()
-        ? "https://m.kumhoresort.co.kr/groupcp/company/cu.asp"
+        ? "https://kumhoresort.co.kr/reservation/tcompany/company/cu.html"
         : "https://www.kumhoresort.co.kr/reservation/tcompany/company/cu.html";
       window.open(url, "_blank");
     });
