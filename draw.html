@@ -1,119 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비과세(저율과세) 예적금 안내</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: 'Noto Sans KR', sans-serif;
-      padding: 2rem;
-    }
-    .container {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    h3 {
-      color: #0d6efd;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-    .highlight {
-      background-color: #e9f7ef;
-      padding: 1rem;
-      border-left: 4px solid #198754;
-      border-radius: 0.5rem;
-      margin-bottom: 2rem;
-    }
-    .img-fluid {
-      border-radius: 0.5rem;
-      margin: 1rem 0;
-    }
-    a {
-      color: #0d6efd;
-      font-weight: 500;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-  <script>
-function showNotice() {
-    alert("독도 愛사랑적금(최고 ~7%) 오프·온라인 판매가 모두 마감되었습니다.\n\n[2026년 8월 7일 15시부]");
-}
-</script>
-</head>
-<body onload="showNotice()">
-  <div class="container">
-    <h3>💰 비과세(저율과세) 예적금 안내</h3>
-    <div class="highlight">
-      <p>▶ 신협 예적금은 1인당 <strong>3,000만원까지 비과세 또는 저율과세</strong> 혜택이 적용됩니다.</p>
-      <p>📌 금리 안내 (2026.4.1기준)</p>
-      <ul>
-        <li><strong>거치식 예금</strong> _파워정기예탁금 (우대금리):
-          <ul>
-            <li>6개월: 2.61% (2.78%)</li>
-            <li>12개월: 2.86% (3.01%)</li>
-            <li>24개월 이상: 2.66% (2.66%)</li>
-          </ul>
-          <a href="http://m.cu.co.kr/otu/543ubD0C" onclick="notice()">✨ 유니온정기예탁 개설하기 →</a>
-        </li>
-        <hr>
-        <li><strong>적립식 예금</strong> _정기적금:
-          <ul>
-            <li>12개월: 3.16%</li>
-            <li>24개월 이상: 3.31%~</li>
-          </ul>
-          <a href="http://m.cu.co.kr/otu/743ubD0C" onclick="notice()">✨ 유니온정기적금 개설하기 →</a><br>
-          <a href="http://m.cu.co.kr/otu/843ubD0C" onclick="notice()">✨ 유니온자유적립적금 개설하기 →</a>
-        </li>
-      </ul>
-      <!-- ✅ 상호금융(신협) 예탁금 세제혜택 안내(개정 반영) -->
-<p>✔ 신협 예·적금(조합등 예탁금) 이자소득은 <mark>1인당 예탁금 3,000만원 한도</mark> 내에서
-  <mark>비과세 또는 저율 분리과세</mark> 혜택이 적용됩니다.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비과세(저율과세) 예적금 안내</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: "Noto Sans KR", sans-serif;
+        padding: 2rem;
+      }
+      .container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      h3 {
+        color: #0d6efd;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+      .highlight {
+        background-color: #e9f7ef;
+        padding: 1rem;
+        border-left: 4px solid #198754;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+      }
+      .img-fluid {
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+      }
+      a {
+        color: #0d6efd;
+        font-weight: 500;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <!-- <script>
+      function showNotice() {
+        alert(
+          "독도 愛사랑적금(최고 ~7%) 오프·온라인 판매가 모두 마감되었습니다.\n\n[2026년 8월 7일 15시부]",
+        );
+      }
+    </script> -->
+  </head>
+  <body>
+    <div class="container">
+      <h3>💰 비과세(저율과세) 예적금 안내</h3>
+      <div class="highlight">
+        <p>
+          ▶ 신협 예적금은 1인당
+          <strong>3,000만원까지 비과세 또는 저율과세</strong> 혜택이 적용됩니다.
+        </p>
+        <p>📌 금리 안내 (2026.9.2기준)</p>
+        <ul>
+          <li>
+            <strong>거치식 예금</strong> _파워정기예탁금 (우대금리):
+            <ul>
+              <li>6개월: 3.16% (3.31%)</li>
+              <li>12개월: 3.36% (3.52%)</li>
+              <li>24개월 이상: 3.16% (3.31%)</li>
+            </ul>
+            <a href="http://m.cu.co.kr/otu/543ubD0C" onclick="notice()"
+              >✨ 유니온정기예탁 개설하기 →</a
+            >
+          </li>
+          <hr />
+          <li>
+            <strong>적립식 예금</strong> _정기적금:
+            <ul>
+              <li>12개월: 3.76%</li>
+              <li>24개월 이상: 3.81%~</li>
+            </ul>
+            <a href="http://m.cu.co.kr/otu/743ubD0C" onclick="notice()"
+              >✨ 유니온정기적금 개설하기 →</a
+            ><br />
+            <a href="http://m.cu.co.kr/otu/843ubD0C" onclick="notice()"
+              >✨ 유니온자유적립적금 개설하기 →</a
+            >
+          </li>
+        </ul>
+        <!-- ✅ 상호금융(신협) 예탁금 세제혜택 안내(개정 반영) -->
+        <p>
+          ✔ 신협 예·적금(조합등 예탁금) 이자소득은
+          <mark>1인당 예탁금 3,000만원 한도</mark> 내에서
+          <mark>비과세 또는 저율 분리과세</mark> 혜택이 적용됩니다.
+        </p>
 
-<ul class="mb-0">
-  <li>
-    <b>2025.12.31까지 발생분</b> : 현행과 같이 <mark>비과세 적용</mark>
-    <small class="text-muted">※ 통상 상호금융 예탁금 비과세는 “이자소득세 면제” 취지로 안내됩니다.</small>
-  </li>
+        <ul class="mb-0">
+          <li>
+            <b>2025.12.31까지 발생분</b> : 현행과 같이 <mark>비과세 적용</mark>
+            <small class="text-muted"
+              >※ 통상 상호금융 예탁금 비과세는 “이자소득세 면제” 취지로
+              안내됩니다.</small
+            >
+          </li>
 
-  <li class="mt-1">
-    <b>2026.1.1 이후 신규 가입분</b> :
-    <ul class="mb-0">
-      <li>
-        <b>총급여 7,000만원(종합소득 6,000만원) 이하</b> 등(요건 충족자) :
-        <mark>비과세 3년 연장(~2028.12.31)</mark> → 2029년 5% 분리과세 → 2030년부터 9% 분리과세
-      </li>
-      <li>
-        <b>총급여 7,000만원(종합소득 6,000만원) 초과</b> :
-        2026년 5% 분리과세 → 2027년부터 9% 분리과세
-      </li>
-    </ul>
-    <small class="text-muted">※ 적용시점: 2026.1.1 이후 <b>신규 가입/출자</b>분부터</small>
-  </li>
-</ul>
+          <li class="mt-1">
+            <b>2026.1.1 이후 신규 가입분</b> :
+            <ul class="mb-0">
+              <li>
+                <b>총급여 7,000만원(종합소득 6,000만원) 이하</b> 등(요건 충족자)
+                : <mark>비과세 3년 연장(~2028.12.31)</mark> → 2029년 5% 분리과세
+                → 2030년부터 9% 분리과세
+              </li>
+              <li>
+                <b>총급여 7,000만원(종합소득 6,000만원) 초과</b> : 2026년 5%
+                분리과세 → 2027년부터 9% 분리과세
+              </li>
+            </ul>
+            <small class="text-muted"
+              >※ 적용시점: 2026.1.1 이후 <b>신규 가입/출자</b>분부터</small
+            >
+          </li>
+        </ul>
+      </div>
+      <p>🔍 신협 비과세 예적금 VS 은행 이자 비교</p>
+      <img src="img/new_tax_img02.jpg" class="img-fluid" alt="비교 이미지" />
+      <p>
+        <a href="https://youtu.be/jzjsg5sZRbo" target="_blank">
+          📺 신협 VS 은행 차이점 영상 보기 <i class="fab fa-youtube"></i>
+        </a>
+      </p>
     </div>
-    <p>🔍 신협 비과세 예적금 VS 은행 이자 비교</p>
-    <img src="img/new_tax_img02.jpg" class="img-fluid" alt="비교 이미지">
-    <p>
-      <a href="https://youtu.be/jzjsg5sZRbo" target="_blank">
-        📺 신협 VS 은행 차이점 영상 보기 <i class="fab fa-youtube"></i>
-      </a>
-    </p>
-  </div>
-  <script>
-    function notice() {
-      alert("🤷‍♂️비과세 예적금 개설을 위해 신협 리온브런치로 이동합니다.\n📢 핸드폰 본인확인을 거쳐, 금융인증서로 개설 진행됩니다.");
-    }
-  </script>
-</body>
+    <script>
+      function notice() {
+        alert(
+          "🤷‍♂️비과세 예적금 개설을 위해 신협 리온브런치로 이동합니다.\n📢 핸드폰 본인확인을 거쳐, 금융인증서로 개설 진행됩니다.",
+        );
+      }
+    </script>
+  </body>
 </html>
