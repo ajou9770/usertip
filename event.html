@@ -1,49 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>진행중 이벤트</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .event-card {
-      margin-bottom: 2rem;
-      border: none;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-    }
-    .event-card img {
-      border-top-left-radius: 0.75rem;
-      border-top-right-radius: 0.75rem;
-      max-height: 300px;
-      object-fit: cover;
-    }
-    .event-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    .event-btn {
-      margin-top: 0.5rem;
-    }
-    .footer {
-      text-align: center;
-      font-size: 14px;
-      color: #6c757d;
-      padding: 1.5rem 0;
-    }
-  </style>
-</head>
-<body>
-
-<div class="container py-4">
-  <h3 class="text-center mb-4">🎉 현재 진행중인 쿠폰 & 이벤트</h3>
-    <!--헌혈캠페인-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>진행중 이벤트</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .event-card {
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+      }
+      .event-card img {
+        border-top-left-radius: 0.75rem;
+        border-top-right-radius: 0.75rem;
+        max-height: 300px;
+        object-fit: cover;
+      }
+      .event-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .event-btn {
+        margin-top: 0.5rem;
+      }
+      .footer {
+        text-align: center;
+        font-size: 14px;
+        color: #6c757d;
+        padding: 1.5rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-4">
+      <h3 class="text-center mb-4">🎉 현재 진행중인 쿠폰 & 이벤트</h3>
+      <!--헌혈캠페인
       <div class="card event-card">
     <img src="https://ajou9770.github.io/notice/img/camp_top.jpg" class="card-img-top" alt="헌혈캠페인">
     <div class="card-body">
@@ -53,10 +58,10 @@
         🔎 자세히 보기
       </a>
     </div>
-  </div> 
+  </div> -->
 
-  <!--교직원가족농수산물 직거래장터 -->
-  <!-- <div class="card event-card">
+      <!--교직원가족농수산물 직거래장터 -->
+      <!-- <div class="card event-card">
     <img src="http://ajoucu.co.kr/farmdirect/uploads/products/20260403_100946_e43c5de8.jpg" class="card-img-top" alt="이벤트" onclick="alert('📍아래 자세히 보기를 참조해 주세요')">
     <div class="card-body">
       <div class="event-title">🛒가족 농수산물 직거래 장터 오픈</div>
@@ -67,8 +72,27 @@
     </div>
   </div> -->
 
+      <!--명절 특판몰운영. -->
+      <div class="card event-card">
+        <img
+          src="img/sp_sale_202609.png"
+          class="card-img-top"
+          alt="이벤트"
+          onclick="alert('📍아래 자세히 보기를 참조해 주세요')"
+        />
+        <div class="card-body">
+          <div class="event-title">🛒추석명절 온라인 특판몰 오픈예정</div>
+          <p>2026.9.7 ~ 9.16(9일간)</p>
+          <a
+            href="https://ajou9770.cafe24.com/"
+            class="btn btn-primary event-btn"
+          >
+            🔎 둘러보기 <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
 
-    <!--모바일 신규대출이벤트 -->
+      <!--모바일 신규대출이벤트 
   <div class="card event-card">
     <img src="img/mobileloan_img.jpg" class="card-img-top" alt="이벤트" onclick="alert('📍아래 자세히 보기를 참조해 주세요')">
     <div class="card-body">
@@ -78,10 +102,10 @@
         ✔ 자세히 보기 <i class="fas fa-chevron-right"></i>
       </a>
     </div>
-  </div>
+  </div>-->
 
-  <!--독도사랑적금 개설이벤트 -->
-  <!-- <div class="card event-card">
+      <!--독도사랑적금 개설이벤트 -->
+      <!-- <div class="card event-card">
     <img src="img/dokdodraw_img_half.jpg" class="card-img-top" alt="이벤트" onclick="alert('📍아래 자세히 보기를 참조해 주세요')">
     <div class="card-body">
       <div class="event-title">🧩7% 독도愛적금이벤트</div>
@@ -92,23 +116,28 @@
     </div>
   </div> -->
 
- 
+      <!--금호리조트 제휴 할인  
+      <div class="card event-card">
+        <img
+          src="img/kumho_resort_sale.jpg"
+          class="card-img-top"
+          alt="이벤트"
+          onclick="alert('📍아래 자세히 보기를 참조해 주세요')"
+        />
+        <div class="card-body">
+          <div class="event-title">🔗금호리조트 제휴할인</div>
+          <p>~ 12.31</p>
+          <a
+            href="http://pf.kakao.com/_dfhkK/114127691"
+            class="btn btn-primary event-btn"
+          >
+            ✔ 자세히 보기 <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>-->
 
-   <!--금호리조트 제휴 할인  -->
-  <div class="card event-card">
-    <img src="img/kumho_resort_sale.jpg" class="card-img-top" alt="이벤트" onclick="alert('📍아래 자세히 보기를 참조해 주세요')">
-    <div class="card-body">
-      <div class="event-title">🔗금호리조트 제휴할인</div>
-      <p> ~ 12.31</p>
-      <a href="http://pf.kakao.com/_dfhkK/114127691" class="btn btn-primary event-btn">
-        ✔ 자세히 보기 <i class="fas fa-chevron-right"></i>
-      </a>
-    </div>
-  </div>
-
-
-   <!--가족농수산물직거래 -->
-  <!-- <div class="card event-card">
+      <!--가족농수산물직거래 -->
+      <!-- <div class="card event-card">
     <img src="img/farm_img.jpg" class="card-img-top" alt="이벤트" onclick="alert('📍아래 자세히 보기를 참조해 주세요')">
     <div class="card-body">
       <div class="event-title">🔗조합원가족 농수산물 직거래서비스 신청</div>
@@ -119,8 +148,8 @@
     </div>
   </div> -->
 
-  <!-- 특판예금 -->
- <!--  <div class="card event-card">
+      <!-- 특판예금 -->
+      <!--  <div class="card event-card">
     <img src="img/draw_sale2512.jpg" class="card-img-top" alt="이벤트" onclick="alert('📍아래 자세히 보기를 참조해 주세요')">
     <div class="card-body">
       <div class="event-title">🎁유니온 정기예금 특판 2.78%</div>
@@ -131,8 +160,8 @@
     </div>
   </div> -->
 
-     <!-- 소노호텔앤리조트여름성수기-->
- <!--  <div class="card event-card">
+      <!-- 소노호텔앤리조트여름성수기-->
+      <!--  <div class="card event-card">
       <img src="img/sono_winter2025.png" class="card-img-top" alt="햇고구마" onclick="alert('🙏자세한 내용은 아레 주문하기를 터치해주세요')">
     <div class="card-body">
       <div class="event-title">🧩소노호텔앤리조트 겨울성수기 추첨</div>
@@ -143,7 +172,7 @@
     </div>
   </div>  -->
 
-   <!-- 저축공제안내 <div class="card event-card">
+      <!-- 저축공제안내 <div class="card event-card">
     <img src="img/draw_event_img.jpg" class="card-img-top" alt="공제이벤트" onclick="alert('🙏자세한 내용은 아레 자세히보기를 터치해주세요')">
     <div class="card-body">
       <div class="event-title">🎁저축공제 판매안내</div>
@@ -153,9 +182,9 @@
       </a>
     </div>
   </div> -->
-  
-    <!--가입이벤트    -->
-  <!--  <div class="card event-card">
+
+      <!--가입이벤트    -->
+      <!--  <div class="card event-card">
     <img src="img/join_gift2511.jpg" class="card-img-top" alt="대출우대">
     <div class="card-body">
       <div class="event-title">🧩신규가입이벤트</div>
@@ -166,52 +195,77 @@
     </div>
   </div> -->
 
-  <div class="card event-card">
-    <img src="https://cdn.seoulfn.com/news/photo/202108/429493_201493_3733.jpg" class="card-img-top" alt="대출우대">
-    <div class="card-body">
-      <div class="event-title">🧩신입교직원 & 용도별 우대금리 대출안내</div>
-      <p>~ 2026.12.31</p>
-      <a href="http://pf.kakao.com/_dfhkK/108782903" class="btn btn-info event-btn" target="_blank">
-        🔎 자세히 보기
-      </a>
-    </div>
-  </div>
-  
+      <div class="card event-card">
+        <img
+          src="https://cdn.seoulfn.com/news/photo/202108/429493_201493_3733.jpg"
+          class="card-img-top"
+          alt="대출우대"
+        />
+        <div class="card-body">
+          <div class="event-title">🧩신입교직원 & 용도별 우대금리 대출안내</div>
+          <p>~ 2026.12.31</p>
+          <a
+            href="http://pf.kakao.com/_dfhkK/108782903"
+            class="btn btn-info event-btn"
+            target="_blank"
+          >
+            🔎 자세히 보기
+          </a>
+        </div>
+      </div>
 
-  <div class="card event-card">
-    <img src="img/salecoupon.jpg" class="card-img-top" alt="세븐일레븐 할인쿠폰" onclick="alert('🤷‍♀️1일부터 카톡홈에서 받으실 수 있습니다.')">
-    <div class="card-body">
-      <div class="event-title">🛍️ 세븐일레븐 20% 할인쿠폰</div>
-      <p>매월 1일~말일</p>
-      <a href="http://pf.kakao.com/_dfhkK" class="btn btn-warning text-dark event-btn">
-        🎫 쿠폰받기
-      </a>
-    </div>
-  </div>
+      <div class="card event-card">
+        <img
+          src="img/salecoupon.jpg"
+          class="card-img-top"
+          alt="세븐일레븐 할인쿠폰"
+          onclick="alert('🤷‍♀️1일부터 카톡홈에서 받으실 수 있습니다.')"
+        />
+        <div class="card-body">
+          <div class="event-title">🛍️ 세븐일레븐 20% 할인쿠폰</div>
+          <p>매월 1일~말일</p>
+          <a
+            href="http://pf.kakao.com/_dfhkK"
+            class="btn btn-warning text-dark event-btn"
+          >
+            🎫 쿠폰받기
+          </a>
+        </div>
+      </div>
 
-  <div class="card event-card">
-    <img src="https://business.kakao.com/tenth/thumb/C720x720.fjpg/?fname=http%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fxip8U%2FdJMcaiWfxpK%2FeApOOOPMwg6EUovUeR8r50%2Fimg_xl.jpg" class="card-img-top" alt="신입교직원 우대쿠폰" onclick="alert('🙏신협 카톡홈에서 내려받으실 수 있습니다')">
-    <div class="card-body">
-      <div class="event-title">🧾 신입교직원 적금 우대 쿠폰</div>
-      <p>2026.1.1 ~ 12.31</p>
-      <a href="http://pf.kakao.com/_dfhkK" class="btn btn-danger event-btn">
-        🎫 쿠폰받기
-      </a>
-    </div>
-  </div>
+      <div class="card event-card">
+        <img
+          src="https://business.kakao.com/tenth/thumb/C720x720.fjpg/?fname=http%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fxip8U%2FdJMcaiWfxpK%2FeApOOOPMwg6EUovUeR8r50%2Fimg_xl.jpg"
+          class="card-img-top"
+          alt="신입교직원 우대쿠폰"
+          onclick="alert('🙏신협 카톡홈에서 내려받으실 수 있습니다')"
+        />
+        <div class="card-body">
+          <div class="event-title">🧾 신입교직원 적금 우대 쿠폰</div>
+          <p>2026.1.1 ~ 12.31</p>
+          <a href="http://pf.kakao.com/_dfhkK" class="btn btn-danger event-btn">
+            🎫 쿠폰받기
+          </a>
+        </div>
+      </div>
 
-   <div class="card event-card">
-    <img src="https://business.kakao.com/tenth/thumb/C720x720.fjpg/?fname=http%3A%2F%2Fk.kakaocdn.net%2Fdn%2F3sh91%2FdJMcad1GJoi%2FwLeGzVmCXG9STV5EwQUTL1%2Fimg_xl.jpg" class="card-img-top" alt="신입교직원 우대쿠폰" onclick="alert('🙏신협 카톡홈에서 내려받으실 수 있습니다')">
-    <div class="card-body">
-      <div class="event-title">🧾 신입교직원 대출우대쿠폰</div>
-      <p>2026.1.1 ~ 12.31</p>
-      <a href="http://pf.kakao.com/_dfhkK" class="btn btn-danger event-btn">
-        🎫 쿠폰받기
-      </a>
-    </div>
-  </div>
+      <div class="card event-card">
+        <img
+          src="https://business.kakao.com/tenth/thumb/C720x720.fjpg/?fname=http%3A%2F%2Fk.kakaocdn.net%2Fdn%2F3sh91%2FdJMcad1GJoi%2FwLeGzVmCXG9STV5EwQUTL1%2Fimg_xl.jpg"
+          class="card-img-top"
+          alt="신입교직원 우대쿠폰"
+          onclick="alert('🙏신협 카톡홈에서 내려받으실 수 있습니다')"
+        />
+        <div class="card-body">
+          <div class="event-title">🧾 신입교직원 대출우대쿠폰</div>
+          <p>2026.1.1 ~ 12.31</p>
+          <a href="http://pf.kakao.com/_dfhkK" class="btn btn-danger event-btn">
+            🎫 쿠폰받기
+          </a>
+        </div>
+      </div>
 
-<!--   <div class="card event-card">
+      <!--   <div class="card event-card">
     <img src="img/congrat_img-001.jpg" class="card-img-top" alt="경조금 신청안내">
     <div class="card-body">
       <div class="event-title">💐 경조금 신청 안내</div>
@@ -222,44 +276,69 @@
     </div>
   </div> -->
 
-  <div class="card event-card">
-        <img src="https://blog-static.kkday.com/ko/blog/wp-content/uploads/sono_hotels_and_resorts_2.jpg" class="card-img-top" alt="소노호텔앤리조트">
-   
-    <div class="card-body">
-      <div class="event-title">🏕️ 소노호텔앤리조트 실시간예약</div>
-      <a href="http://ajou9770.github.io/usertip/dm.html" class="btn btn-dark event-btn">
-        바로가기
-      </a>
+      <div class="card event-card">
+        <img
+          src="https://blog-static.kkday.com/ko/blog/wp-content/uploads/sono_hotels_and_resorts_2.jpg"
+          class="card-img-top"
+          alt="소노호텔앤리조트"
+        />
+
+        <div class="card-body">
+          <div class="event-title">🏕️ 소노호텔앤리조트 실시간예약</div>
+          <a
+            href="http://ajou9770.github.io/usertip/dm.html"
+            class="btn btn-dark event-btn"
+          >
+            바로가기
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <div class="text">📲 카카오톡 채널 추가 & 상담</div>
+        <br />
+        <div
+          id="kakao-talk-channel-add-button"
+          data-channel-public-id="_dfhkK"
+          data-size="large"
+        ></div>
+        <div
+          class="mt-2"
+          id="kakao-talk-channel-chat-button"
+          data-channel-public-id="_dfhkK"
+          data-title="consult"
+          data-size="small"
+          data-color="yellow"
+          data-shape="mobile"
+        ></div>
+        <a
+          href="https://ajou9770.github.io/usertip/"
+          class="btn btn-outline-primary mt-3"
+        >
+          <i class="fas fa-chevron-left"></i> 🔗홈으로 가기
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="text-center mt-5">
-    <div class="text">📲 카카오톡 채널 추가 & 상담</div>
-    <br>
-    <div id="kakao-talk-channel-add-button" data-channel-public-id="_dfhkK" data-size="large"></div>
-    <div class="mt-2" id="kakao-talk-channel-chat-button" data-channel-public-id="_dfhkK" data-title="consult" data-size="small" data-color="yellow" data-shape="mobile"></div>
-    <a href="https://ajou9770.github.io/usertip/" class="btn btn-outline-primary mt-3">
-      <i class="fas fa-chevron-left"></i> 🔗홈으로 가기
-    </a>
-  </div>
-
-</div>
-
-<!-- 카카오톡 스크립트 -->
-<script>
-  window.kakaoAsyncInit = function () {
-    Kakao.Channel.createAddChannelButton({container: '#kakao-talk-channel-add-button'});
-    Kakao.Channel.createChatButton({container: '#kakao-talk-channel-chat-button'});
-  };
-  (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, 'script', 'kakao-js-sdk');
-</script>
-
-</body>
+    <!-- 카카오톡 스크립트 -->
+    <script>
+      window.kakaoAsyncInit = function () {
+        Kakao.Channel.createAddChannelButton({
+          container: "#kakao-talk-channel-add-button",
+        });
+        Kakao.Channel.createChatButton({
+          container: "#kakao-talk-channel-chat-button",
+        });
+      };
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://developers.kakao.com/sdk/js/kakao.channel.min.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "kakao-js-sdk");
+    </script>
+  </body>
 </html>
